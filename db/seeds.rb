@@ -12,4 +12,4 @@ User.create!({ username: "StrawB3rrie5", email: "iceyice@abbymail.com", password
 User.create!({ username: "MonstrCookies123", email: "smoothestsmoothie.abbymail.com", password: "FullOfSweets"})
 
 # test signup
-# ({ username: "appleSauce", email: "mediumHeatBoil@abbymail.com", password: "forAcidReflux" })
+({ username: "appleSauce", email: "mediumHeatBoil@abbymail.com", password: "applePancakesYum" })
