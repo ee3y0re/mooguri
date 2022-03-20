@@ -1,18 +1,36 @@
-import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
+//keeps track of current user
+import {
+  RECEIEVE_CURRENT_USER,
+  LOGOUT_CURRENT_USER
+} from "../actions/session_actions"
 
-const _nullSession = {
-  id: null
-}
+/* 
+{entities: {…}, session: {…}, errors: {…}}
+entities:
+  users:
+    undefined: //WHY DOES THE ID KEEP GETTING UNDEFINED
+      email: "vanillabean@abbymail.com"
+      password: "BestIceCreamEver"
 
-export default (state = _nullSession, action) => {
-  Object.freeze(state)
+errors:
+  session: []
+session:
+  id: undefined //AHHH WHY IS THE ID UNDEFINED
+*/
 
+const SessionReducer = (state = { id: null }, action) => {
+  Object.freeze(state);
+  let newState = Object.assign({}, state);
   switch (action.type) {
-    case RECEIVE_CURRENT_USER:
-      return Object.assign({}, { id: action.user.id });
+    case RECEIEVE_CURRENT_USER:
+      debugger
+      return Object.assign({}, { id: action.currentUser.id });
     case LOGOUT_CURRENT_USER:
-      return _nullSession;
+      newState[id] = null;
+      return newState;
     default:
       return state;
   }
 }
+
+export default SessionReducer

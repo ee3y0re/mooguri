@@ -1,24 +1,19 @@
 class Api::UsersController < ApplicationController
-  def index
-    @users = User.all
-    render :index
-  end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      login!(@user)
-      render '/api/users/show'
+      render json: :show #i'm expecting show.json.jbuilder
     else
-      render json: @user.errors.full_messages, status: 422
+      #need to render the login page again with sign up
+      #temp place holder
+      render json: ['This user was already created or input info is invalid'] #@user.errors.full_messages, status: 422
     end
   end
-
-  def show
-  end
-
+  
   private
+
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+      params.require(:user).permit(:username, :email, :password)
   end
 end

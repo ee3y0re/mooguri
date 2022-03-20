@@ -1,23 +1,7 @@
 {
-  "name": "mooguri",
-  "private": true,
-  "dependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "babel-loader": "^8.2.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
-    "react-router-dom": "^6.2.2",
-    "redux": "^4.1.2",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.4.1",
-    "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2"
-  },
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "name": "mooguri_fullstack",
   "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -37,5 +21,20 @@
   "bugs": {
     "url": "https://github.com/ee3y0re/mooguri/issues"
   },
-  "homepage": "https://github.com/ee3y0re/mooguri#readme"
+  "homepage": "https://github.com/ee3y0re/mooguri#readme",
+  "dependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.3.0",
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
 }

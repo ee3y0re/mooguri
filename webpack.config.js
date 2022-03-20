@@ -1,10 +1,9 @@
 const path = require('path'); // require a module that has methods to get us a directory
 
 module.exports = {
-  context: __dirname,
   entry: './frontend/mooguri_entry.jsx', // specify where does webpack look?
   output: {
-    path: path.resolve(__dirname, "app", "assets", "javascripts"),
+    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'), // resolves path into an absolute
     filename: 'bundle.js'
   },
   module: {
