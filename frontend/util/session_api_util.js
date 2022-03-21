@@ -9,13 +9,11 @@ export const signup = (user) => {
 
 //login
 export const login = (user) => {
-  // debugger
   let response = $.ajax({
     url: '/api/session',
     method: "POST",
     data: { user }
   });
-  // debugger
   return response;
 };
 

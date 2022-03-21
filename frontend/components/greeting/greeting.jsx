@@ -1,65 +1,81 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Greeting = ({ currentUser, logout }) => {
+  const completedLogin = () => {
+    return (
+      <div className="complete-login">
+        <h1>Welcome back, {`${currentUser.username}`}!</h1>
+        <button onClick={logout}>Logout</button>
+      </div>
+    );
+  }
+
+  const needLogin = () => {
+    return (
+      <nav>
+        <h1>Explore what's unique and one of a kind, here.</h1>
+        <Link to="/signup">Sign Up</Link>
+        <br />
+        <Link to="/login">Log In</Link>
+      </nav>
+    )
+  }
+  console.log(currentUser) //starts null
+  return currentUser? completedLogin() : needLogin();
+}
+
+export default Greeting;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React from "react";
 // import { Link } from "react-router-dom";
 
-// // function component with destructured props
-// //currentUser comes from mapStateToProps
-// //logout comes from mapDispatchToProps
-// const Greeting = ({ currentUser, logout }) {
-//   //we don't need to keep track of state
-//   //we don't need a render since we aren't using a class component
-
-//   /*
-//   If the user is not logged in, then the Greeting should contain:
-
-//   A <Link to> /signup
-//   A <Link to> /login
-//   */
-
-//   const notLoggedIn = () => {
+// //pass in props from container destructured
+// //don't need to write this.props
+// //no render(){return()} just return()
+// const Greeting = ({currentUser, logout}) => {
+//   console.log(logout)
+//   const loginComplete = () => {
 //     return (
-//       <nav className="not-logged-in-greet">
-//         <Link to={"/api/session"}></Link>
-//         <Link to={"/api/users"}></Link>
-//       </nav>
-//     );
-//   };
-
-//   /*
-//   If the user is logged in, then the Greeting should contain:
-
-//   A welcome message including the user's username
-//   A button to logout
-//   */
-
-//   const loggedIn = () => {
-//     return (
-//       <div className="logged-in-greet">
-//         <h1>Hi old friend, {currentUser.username}~ C;</h1>
-//         <button></button>
+//       <div className="complete-login">
+//         <h1>From Greeting, logged in</h1>
+//         <h1>Welcome, {currentUser.username}!</h1>
+//         <button onClick={logout}>Sign Out</button>
 //       </div>
 //     )
 //   }
+//   const needLogin = () => {
+//     return (
+//       <nav className="pending-login">
+//         <h1>From Greeting, not logged in</h1>
+//         <Link to={"/signup"}>Sign Up</Link>
+//         <br />
+//         <Link to={"/login"}>Login</Link>
+//       </nav>
+//     )
+//   }
+
+//   return currentUser? loginComplete() : needLogin();
 // };
 
 // export default Greeting;
-
-// // const Greeting = ({ currentUser, logout }) => {
-// //   const sessionLinks = () => (
-// //     <nav className="login-signup">
-// //       <Link to=>Login</Link>
-// //       &nbsp;or&nbsp;
-// //       <Link to="/signup">Sign up!</Link>
-// //     </nav>
-// //   );
-// //   const personalGreeting = () => (
-// //     <hgroup className="header-group">
-// //       <h2 className="header-name">Hi, {currentUser.username}!</h2>
-// //       <button className="header-button" onClick={logout}>Log Out</button>
-// //     </hgroup>
-// //   );
-
-// //   return currentUser ? personalGreeting() : sessionLinks();
-// // };
-
-
-// // export default Greeting;

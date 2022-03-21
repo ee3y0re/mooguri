@@ -6,7 +6,6 @@ export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 //action creators return actions which are objects with a type and payload
 export const receiveCurrentUser = (currentUser) => {
-  // debugger
   return {
     type: RECEIEVE_CURRENT_USER,
     currentUser
@@ -43,10 +42,8 @@ export const signup = (user) => (dispatch) => {
 export const login = (user) => (dispatch) => {
   return SessionApiUtil.login(user)
     .then((modUser) =>{ 
-      debugger // for some reason response doesn't reach
       dispatch(receiveCurrentUser(modUser))}),
     error => {
-      debugger
       (
       dispatch(receiveErrors(error.responseJSON))
     )}

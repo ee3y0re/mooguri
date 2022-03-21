@@ -10,9 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def login!(user)
-    # debugger #did we hit login?
     @current_user = user
-    # debugger #is current_user nil? can we access id?
     session[:session_token] = user.reset_session_token!
   end
 
