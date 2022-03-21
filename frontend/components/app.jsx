@@ -10,14 +10,13 @@ import SignUpFormContiner from "./session_form/signup_form_container";
   //User show > user index > user container; just direct import presentation from show
 const App = () => {
   return (
-    // <div className="from-app">
+    <div className="from-app">
 
-    //   <GreetingContainer />
+      <GreetingContainer />
 
-    //   <Route path="/login" component={LoginFormContainer}/>
-    //   <Route path="/signup" component={SignUpFormContiner}/>
-    // </div>
-    <div>App Page Coming Soon</div>
+      <Route path="/login" component={LoginFormContainer}/>
+      <Route path="/signup" component={SignUpFormContiner}/>
+    </div>
   );
 };
 
