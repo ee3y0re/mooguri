@@ -25,6 +25,20 @@ export const receiveErrors = (errors) => {
   }
 };
 
+// corrected signup
+export const signup = (user) => (dispatch) => {
+  return SessionApiUtil.signup(user)
+    .then(
+      (modUser) => {
+        return dispatch(receiveCurrentUser(modUser))
+      },
+      (error) => {
+        return dispatch(receiveErrors(error.responseJSON))
+      }
+    );
+};
+
+// // wrong signup
 // export const signup = (user) => (dispatch) => {
 //   return SessionApiUtil.signup(user)
 //     .then((user) => dispatch(receiveCurrentUser(user))),
@@ -34,7 +48,7 @@ export const receiveErrors = (errors) => {
 // }
 
 
-//incorrect
+// // corrected login
 export const login = (user) => (dispatch) => {
   return SessionApiUtil.login(user)
     //promise is supposed to wrap around dispatching action for user and error
@@ -46,10 +60,10 @@ export const login = (user) => (dispatch) => {
       (error) => {
         return dispatch(receiveErrors(error.responseJSON))
       }
-    )
-}
+    );
+};
 
-// // implicit
+// // implicit login style
 // export const login2 = (user) => (dispatch) => {
 //   return SessionApiUtil.login(user)
 //     .then(
@@ -58,7 +72,7 @@ export const login = (user) => (dispatch) => {
 //     )
 // }
 
-// // explicit
+// // explicit login style
 // export const login3 = (user) => (dispatch) => {
 //   return SessionApiUtil.login(user)
 //     .then(

@@ -8,7 +8,7 @@ import LoginForm from "./login_form";
 const mapStateToProps = (state) => {
   return {
     errors: state.errors.session,
-    formType: "Login"
+    formType: "Log In"
   };
 };
 
