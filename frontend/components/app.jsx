@@ -1,8 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import GreetingContainer from "./greeting/greeting_container";
-import LoginFormContainer from "./session_form/login_form_container";
-import SignUpFormContiner from "./session_form/signup_form_container";
+import LoginFormContainer from "./login/login_form_container";
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -11,11 +10,8 @@ import SignUpFormContiner from "./session_form/signup_form_container";
 const App = () => {
   return (
     <div className="from-app">
-
       <GreetingContainer />
-
       <Route path="/login" component={LoginFormContainer}/>
-      <Route path="/signup" component={SignUpFormContiner}/>
     </div>
   );
 };
