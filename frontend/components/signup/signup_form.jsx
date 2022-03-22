@@ -17,6 +17,7 @@ class SignupForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state)
     this.props.processForm(user);
+    this.props.history.push("/")
   }
 
   update(field) {
@@ -60,6 +61,7 @@ class SignupForm extends React.Component {
             onChange={this.update("password")}
           />
         </label>
+        <br />
         <input type="submit" value={this.props.formType}/>
       </form>
     )

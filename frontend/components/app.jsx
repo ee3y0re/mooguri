@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import GreetingContainer from "./greeting/greeting_container";
 import LoginFormContainer from "./login/login_form_container";
 import SignupFormContainer from "./signup/signup_form_container";
@@ -11,11 +11,12 @@ import SignupFormContainer from "./signup/signup_form_container";
 const App = () => {
   return (
     <div className="from-app">
+      <h1 className="logo">Mooguri</h1>
       <GreetingContainer />
-      {/* <Switch> */}
-        {/* <Route path="/login" component={LoginFormContainer}/> */}
+      <Switch>
+        <Route path="/login" component={LoginFormContainer}/>
         <Route path="/signup" component={SignupFormContainer} />
-      {/* </Switch> */}
+      </Switch>
     </div>
   );
 };

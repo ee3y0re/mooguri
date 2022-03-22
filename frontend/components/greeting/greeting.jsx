@@ -14,9 +14,9 @@ const Greeting = ({ currentUser, logout }) => {
   const needLogin = () => {
     return (
       <nav>
-        <h1>Explore what's unique and one of a kind, here.</h1>
+        <h1>Unique and one-of-a-kind treasures, just like you.</h1>
         <Link to="/signup">Sign Up</Link>
-        <br />
+        <span> </span>
         <Link to="/login">Log In</Link>
       </nav>
     )

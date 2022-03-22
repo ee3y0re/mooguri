@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { signup } from "../../actions/session_actions";
 import SignupForm from "./signup_form";
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state) => {
   // debugger
@@ -17,4 +18,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SignupForm));

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { login } from "../../actions/session_actions";
 //remember to import the presentational component itself
 import LoginForm from "./login_form";
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state) => {
   return {
@@ -18,4 +19,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(LoginForm));
