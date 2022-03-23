@@ -21,7 +21,6 @@ class Api::UsersController < ApplicationController
       login!(@user)
       render 'api/users/show' #i'm expecting show.json.jbuilder
     else
-      # debugger
       #need to render the login page again with sign up
       #temp place holder
       render json: ['This user was already created or input info is invalid'], status: 422 #@user.errors.full_messages, status: 422

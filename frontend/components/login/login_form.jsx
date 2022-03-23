@@ -15,8 +15,9 @@ class LoginForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const user = Object.assign({}, this.state)
-    this.props.processForm(user);
-    this.props.history.push("/")
+    this.props.processForm(user)
+    if (this.props.errors.length === 0) this.props.history.push("/");
+
   }
 
   update(field) {

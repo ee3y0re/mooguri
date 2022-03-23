@@ -7,7 +7,10 @@ import LoginForm from "./login_form";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state) => {
+  let currentUserId = state.session.id;
+  let allUsers = state.entities.users;
   return {
+    currentUser: allUsers[currentUserId],
     errors: state.errors.session,
     formType: "Log In"
   };

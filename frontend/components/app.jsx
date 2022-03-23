@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+// import ModalContainer from "./modal/modal";
 import GreetingContainer from "./greeting/greeting_container";
 import LoginFormContainer from "./login/login_form_container";
 import SignupFormContainer from "./signup/signup_form_container";
@@ -11,6 +12,7 @@ import SignupFormContainer from "./signup/signup_form_container";
 const App = () => {
   return (
     <div className="from-app">
+      {/* <ModalContainer /> */}
       <h1 className="logo">Mooguri</h1>
       <GreetingContainer />
       <Switch>
