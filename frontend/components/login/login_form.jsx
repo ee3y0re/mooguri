@@ -10,14 +10,13 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
     const user = Object.assign({}, this.state)
-    this.props.processForm(user)
-    if (this.props.errors.length === 0) this.props.history.push("/");
-
+    this.props.processForm(user).then(this.props.closeModal)
   }
 
   update(field) {
@@ -28,37 +27,71 @@ class LoginForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors">
         {         
           this.props.errors.map((error, idx) => {
-            return (<li key={`error-${idx}`}>{error}</li>)
+            return (<li className="errors-li" key={`error-${idx}`}>{error}</li>)
           })
         }
       </ul>
     )
   }
 
+  demoLogin(e){
+    e.preventDefault();
+    const bestUser = Object.assign({}, 
+      {
+        email: "vanillab@abbymail.com",
+        password: "besticecream"
+      }
+    );
+    this.props.processForm(bestUser).then(this.props.closeModal);
+  }
+
 
   render(){
     return (
-      <form className="login-form" onSubmit={this.handleSubmit}>
-        {this.renderErrors()}
-        <label>Email:
-          <input 
-            type="text"
-            onChange={this.update("email")}
-          />
-        </label>
-        <br />
-        <label>Password:
-          <input 
-            type="password" 
-            onChange={this.update("password")}
-          />
-        </label>
-        <br />
-        <input type="submit" value={this.props.formType}/>
-      </form>
+      <div className="auth-container">
+
+        <button className="modal-close-x" onClick={this.props.closeModal}>&times;</button>
+
+        {this.props.otherForm}
+
+        <form className="auth-form-box" onSubmit={this.handleSubmit}>
+            <h1 className="form-title">Log In</h1>
+
+            <br />
+
+            <label id="login-email">Email:</label>
+            <br />
+            <input
+              id="login-email"
+              type="text"
+              onChange={this.update("email")}
+              className="user-auth-input"/>
+
+            <br />
+            
+            <label id="login-password">Password:</label>
+
+            <br />
+
+            <input
+              id="login-password"
+              type="password"
+              onChange={this.update("password")}
+              className="user-auth-input"/>
+              
+          <br />
+
+          {this.renderErrors()}
+
+          
+          <input id="auth-submit-button" type="submit" value={this.props.formType} />
+          <button id="auth-submit-button" onClick={this.demoLogin}>Demo User Login</button>
+        </form>
+      </div>
+
     );
   }
 }

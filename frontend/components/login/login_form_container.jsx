@@ -1,10 +1,11 @@
 //need connect to link presentational container and component container
+import React from "react";
 import { connect } from "react-redux";
 //remember to import the action you want to pass into props
 import { login } from "../../actions/session_actions";
 //remember to import the presentational component itself
 import LoginForm from "./login_form";
-import { withRouter } from "react-router-dom";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state) => {
   let currentUserId = state.session.id;
@@ -18,8 +19,14 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    processForm: user => dispatch(login(user))
+    processForm: user => dispatch(login(user)),
+    otherForm: (
+      <button id="signup-button" onClick={() => dispatch(openModal("Sign Up"))}>
+        Sign Up
+      </button>
+    ),
+    closeModal: () => dispatch(closeModal())
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(LoginForm));
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

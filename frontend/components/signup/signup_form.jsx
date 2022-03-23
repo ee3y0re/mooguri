@@ -15,7 +15,7 @@ class SignupForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const user = Object.assign({}, this.state)
-    this.props.processForm(user);
+    this.props.processForm(user).then(this.props.closeModal);
   }
 
   update(field) {
@@ -37,31 +37,57 @@ class SignupForm extends React.Component {
   }  
   render(){
     return (
-      <form className="signup-form" onSubmit={this.handleSubmit}>
-        {this.renderErrors()}
-        <label>Username:
-          <input
-            type="text"
-            onChange={this.update("username")}
-          />
-        </label> 
-        <br />
-        <label>Email:
-          <input
-            type="text"
-            onChange={this.update("email")}
-          />
-        </label>
-        <br />
-        <label>Password:
-          <input
-            type="password"
-            onChange={this.update("password")}
-          />
-        </label>
-        <br />
-        <input type="submit" value={this.props.formType}/>
-      </form>
+      <div className="auth-container">
+
+        <button className="modal-close-x" onClick={this.props.closeModal}>&times;</button>
+
+        <form className="auth-form-box" onSubmit={this.handleSubmit}>
+
+          <div className="auth-form-content">
+
+            <h1 className="form-title">Sign Up</h1>
+
+            <br />
+
+            <label id="signup-username">Username:</label>
+            <br />
+            <input
+              id="signup-username"
+              type="text"
+              onChange={this.update("username")}
+              className="user-auth-input"/>
+            <br />
+
+            <label id="signup-email">Email:</label>
+            <br />
+            <input
+              id="signup-email"
+              type="text"
+              onChange={this.update("email")}
+              className="user-auth-input"/>
+
+            <br />
+
+            <label id="signup-password">Password:</label>
+
+            <br />
+
+            <input
+              id="signup-password"
+              type="password"
+              onChange={this.update("password")}
+              className="user-auth-input"/>
+
+            <br />
+
+            {this.renderErrors()}
+            
+            <input id="auth-submit-button" type="submit" value={this.props.formType} />
+          </div>
+          
+        </form>
+      </div>
+      
     )
   }
 }
