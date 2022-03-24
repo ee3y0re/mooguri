@@ -22,10 +22,11 @@ Product.create!({
 })
 
 Product.create!({
-  productName: "Moldavite Pendant",
+  product_name: "Moldavite Pendant",
   description: "This crystal opens up the heart chakra. Side effects may include cold sweats, crying episodes, and rapid transformation.",
   price: 20.00,
   category: "metaphysical",
   seller_id: 3,
   availability: 16,
 })
+
