@@ -2,7 +2,7 @@
 import React from "react";
 import { connect } from "react-redux";
 //remember to import the action you want to pass into props
-import { login } from "../../actions/session_actions";
+import { login, clearSessionErrors } from "../../actions/session_actions";
 //remember to import the presentational component itself
 import LoginForm from "./login_form";
 import { openModal, closeModal } from "../../actions/modal_actions";
@@ -25,7 +25,8 @@ const mapDispatchToProps = (dispatch) => {
         Sign Up
       </button>
     ),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    clearSessionErrors: () => dispatch(clearSessionErrors())
   };
 };
 

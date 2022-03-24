@@ -3,6 +3,7 @@ import * as SessionApiUtil from '../util/session_api_util'
 export const RECEIEVE_CURRENT_USER = "RECEIEVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
 
 // //action creators return actions which are objects with a type and payload
 export const receiveCurrentUser = (currentUser) => {
@@ -24,6 +25,12 @@ export const receiveErrors = (errors) => {
     errors: errors
   }
 };
+
+export const clearSessionErrors = () => {
+  return {
+    type: CLEAR_SESSION_ERRORS
+  }
+}
 
 // corrected signup
 export const signup = (user) => (dispatch) => {
