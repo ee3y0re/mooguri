@@ -9,7 +9,12 @@ class SignupForm extends React.Component {
       password: ""
     };
 
+    console.log(props)
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.props.clearSessionErrors();
   }
 
   handleSubmit = (e) => {
@@ -35,6 +40,7 @@ class SignupForm extends React.Component {
       </ul>
     )
   }  
+
   render(){
     return (
       <div className="auth-container">
