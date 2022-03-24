@@ -4,7 +4,7 @@
   #   all product keys
   # }
 
-  json.set! item.id do
+  json.set! product.id do
     json.partial! "api/products/product", product: product
   end
 end

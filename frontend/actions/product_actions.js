@@ -17,12 +17,13 @@ const receiveProduct = (product) => {
   }
 }
 
-export const fetchProducts = (products) => {
-  return ProductApiUtil.fetchProducts(products)
+export const fetchProducts = () => (dispatch) => {
+  return ProductApiUtil.fetchProducts()
     .then((products) => dispatch(receiveProducts(products)));
 };
 
-export const fetchProduct = (product) => {
-  return ProductApiUtil.fetchProduct(product)
+export const fetchProduct = (productId) => (dispatch) => {
+  debugger
+  return ProductApiUtil.fetchProduct(productId)
     .then((product) => dispatch(receiveProduct(product)));
 };

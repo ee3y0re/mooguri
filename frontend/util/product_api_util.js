@@ -5,9 +5,10 @@ export const fetchProducts = () => {
   });
 };
 
-export const fetchProduct = (product) => {
+export const fetchProduct = (productId) => {
+  debugger
   return $.ajax({
-    url: `/api/product/${product.id}`,
+    url: `/api/products/${productId}`,
     method: "GET"
   });
 };

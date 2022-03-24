@@ -5,6 +5,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
+    debugger
     @product = Product.find_by(id: params[:id])
     render "api/products/show"
   end
