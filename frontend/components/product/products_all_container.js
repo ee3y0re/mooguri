@@ -4,7 +4,10 @@ import ProductsAll from "./products_all";
 
 const mapStateToProps = (state) => {
   return {
+    // // version 1
     products: state.entities.products
+    // // version 2
+    // products: Object.values[state.entities.products]
   };
 };
 

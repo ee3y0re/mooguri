@@ -5,6 +5,7 @@ const ProductsReducer = (state = {}, action) => {
   let nextState = Object.assign({}, state);
   switch(action.type) {
     case RECEIVE_PRODUCT:
+      debugger
       //if not hitting backend, will not end up here or second half of action
       nextState[action.product.id] = action.product;
       return nextState;

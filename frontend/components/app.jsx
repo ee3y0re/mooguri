@@ -7,6 +7,8 @@ import GreetingContainer from "./greeting/greeting_container";
 //need to import from util to fetch all products since splash page shows products
 import { fetchProducts } from "../util/product_api_util";
 import ProductsAllContainer from "./product/products_all_container"
+import ProductSingular from "./product/product_singular";
+import ProductSingularContainer from "./product/product_singular_container";
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -22,12 +24,17 @@ export default class App extends React.Component {
         <ModalContainer /> 
         <h1 className="logo">Mooguri</h1>
         <GreetingContainer />
-        <ProductsAllContainer />
-        {/* <Switch>
-        // other routes really
+
+        <Switch>
+
+          {/* do user auth later
           <Route path="/login" component={LoginFormContainer}/>
-          <Route path="/signup" component={SignupFormContainer} />
-        </Switch> */}
+          <Route path="/signup" component={SignupFormContainer} /> */}
+
+          <Route path="/products/:productId" component={ProductSingularContainer} />
+          <Route path="/" component={ProductsAllContainer} />
+        </Switch>
+
       </div>
     );
   }

@@ -1,14 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 class ProductsAll extends React.Component {
 
   componentDidMount(){
     this.props.fetchProducts();
+    // console.log(this.props.products)
   }
 
-
-
   render() { 
+    // // version 1
     const arrayOfAllProducts = Object.values(this.props.products);  
     return (
       <div>
@@ -17,9 +19,8 @@ class ProductsAll extends React.Component {
           {
             arrayOfAllProducts?.map((product) => {
               return (
-                // i want to replace this with pictures
                 <li key={product.id}>
-                  <img src={product.photoUrl} alt="" />
+                  <Link to={`/products/${product.id}`}><img src={product.photoUrl} alt={`${product.name}`} /></Link>
                 </li>              
               )
             })
@@ -29,6 +30,21 @@ class ProductsAll extends React.Component {
 
       </div>
     );
+
+    // // version 2 not working
+    // return (
+    //   <div>
+    //     <ul>
+    //       {
+    //         this.props.products.map((product) => {
+    //           return (
+    //             <li key={product.id}>{product.name}</li>
+    //           )
+    //         })
+    //       }
+    //     </ul>
+    //   </div>
+    // )
   };
 }
 
