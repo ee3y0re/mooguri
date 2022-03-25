@@ -19,11 +19,12 @@ const receiveProduct = (product) => {
 
 export const fetchProducts = () => (dispatch) => {
   return ProductApiUtil.fetchProducts()
-    .then((products) => dispatch(receiveProducts(products)));
+    .then((products) => {
+      return dispatch(receiveProducts(products));
+    })
 };
 
 export const fetchProduct = (productId) => (dispatch) => {
-  debugger
   return ProductApiUtil.fetchProduct(productId)
     .then((product) => dispatch(receiveProduct(product)));
 };
