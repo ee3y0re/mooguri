@@ -1,11 +1,7 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import ModalContainer from "./modal/modal";
 import GreetingContainer from "./greeting/greeting_container";
-
-//currently trying aws set up
-//need to import from util to fetch all products since splash page shows products
-import { fetchProducts } from "../util/product_api_util";
 import ProductSnapshotContainer from "./product/products_snapshot_container";
 import ProductSingularContainer from "./product/product_singular_container";
 
@@ -19,9 +15,10 @@ export default class App extends React.Component {
   render(){
     return (
       <div className="from-app">
-        {/* needs to show the login button */}
+        <h1 className="logo">
+          <Link to="/" id="logo-link">Mooguri</Link>
+        </h1>
         <ModalContainer /> 
-        <h1 className="logo">Mooguri</h1>
         <GreetingContainer />
 
         <Switch>
