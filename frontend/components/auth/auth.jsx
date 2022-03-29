@@ -11,7 +11,7 @@ const Auth = ({ currentUser, logout, openModal }) => {
 
   const needLogin = () => {
     return (
-      <nav className="nav">
+      <nav id="login-nav">
         <button id="login-button" onClick={() => openModal("Log In")}>Login</button>
       </nav>
     )

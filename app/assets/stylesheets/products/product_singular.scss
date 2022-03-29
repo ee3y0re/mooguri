@@ -9,6 +9,7 @@
 .show-listing { //whole show page container
   max-width: 1401px; //so that when resizing browser and zooming out, original template container is preserved
   height: 100%; //allow items to expand down; may disable if adding lots of reviews
+  margin-top: 2%;
 }
 
 .show-image-container{

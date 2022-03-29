@@ -14,17 +14,24 @@ export default class App extends React.Component {
 
   render(){
     return (
-      <div className="from-app">
+      <div id="from-app">
         {/* temp placeholder for logo, search, auth, cart, cat bar */}
-        <div id="nav-general"></div>
-        <div id="nav-cat"></div>
+        <div className="nav-container">
+          <div id="nav-general">
+            <h1 className="logo">
+              <Link to="/" id="logo-link">Mooguri</Link>
+            </h1>
+            <input type="text" value="Search Under Construction" id="temp-search" className="temp"/>
+            <ModalContainer /> 
+            <AuthContainer />   
+            <span className="temp">Cart WIP</span>
+          </div>          
+        </div>
+
+        {/* <div className="temp">Categories under construction</div> */}
 
         {/* incorporate these eventually */}
-        {/* <h1 className="logo">
-          <Link to="/" id="logo-link">Mooguri</Link>
-        </h1>
-        <ModalContainer /> 
-        <AuthContainer /> */}
+
 
 
 
