@@ -1,32 +1,270 @@
-.logo {
+.splash { //delete, serves as temporary splash structure
+  display: flex;
+  justify-content: center;
+  // background-color: #A5D6AF;
+  position: absolute;
+  height: auto;
+  width: 100%;
+}
+
+.show-listing { //whole show page container
+  // background-color: #A691DB;
+  max-width: 1400px; //so that when resizing browser and zooming out, original template container is preserved
+  height: 100%; //allow items to expand down; may disable if adding lots of reviews
+  // width: 1400px; //
+}
+
+.show-image-container{
+  display: flex;
+  float: left;
+  // background-color: #F591CD;
+  max-width: 954px;
+  width: 69%;
+  height: 794px;
+}
+
+.show-image-minis {
+  // background-color: #FFC894;
+  width: 66px;
+  height: 100%;
+}
+
+.show-image-big {
+  position: relative;
+  left: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px 4px #C6D5D8;
+}
+
+.show-image-big > img {
+  height: 100%;
+}
+
+.show-buy-quick {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  float: right;
+  // background-color: #FFF5BD;
+  width: 30%;
+  height: 794px;
+}
+
+.show-seller-name {
+  font-family: 'Cambay', sans-serif;
+  font-size: 16px;
+  margin-bottom: 2%;
+}
+
+.show-seller-info {
+  font-family: 'Cambay', sans-serif;
+  font-size: 13px;
+  margin-bottom: 6%;
+}
+
+.show-buy-title-lines > h1 {
+  height: max-content;
   font-family: 'Nanum Myeongjo', serif;
-  font-size: 34px;
-  font-weight: 900;
-  color: #f45800;
+  font-size: 35px;
+  overflow-wrap: break-word;
 }
 
-body {
-  font-family: 'Cambay', sans-serif;
-}
-
-button {
-  font-family: 'Cambay', sans-serif;
-  border-radius: 30px;
-  background-color: transparent;
-  cursor: pointer;
-  border: 0;
-  padding: .5%;
-}
-
-button:hover {
-  font-family: 'Cambay', sans-serif;
-  border-radius: 30px;
-  background-color: transparent;
-  cursor: pointer;
-  border: 0;
-}
-
-.nav {
+.show-price-avail {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  margin-top: 6%;
 }
+
+.show-price {
+  font-family: 'Cambay', sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.show-price-avail {
+  font-size: 17px;
+}
+
+.dark-button {
+  background-color: #222222;
+  color: white;
+  width: 100%;
+  height: 55px;
+  margin-top: 20px;
+}
+
+.shop-item-trends {
+  font-size: 16px;
+  margin-top: 6%;
+  line-height: 18px;
+}
+
+.shop-item-trends > li {
+  margin-bottom: 9%;
+}
+
+.highlights-head {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+.highlights-details {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.show-buy-info-full {
+  float: right;
+  background-color: #95FFF7;
+  width: 30%;
+  height: 1386.73px;
+  margin-top: 29px;
+}
+
+.show-reviews {
+  float: left;
+  background-color: #7C8BFF;
+  max-width: 954px;
+  width: 69%;
+  height: 1386.73px;
+  margin-top: 29px;
+}
+
+.show-reviews > h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 33px;
+  line-height: 42px;
+}
+
+//backgrounds only
+
+// .splash { //delete, serves as temporary splash structure
+//   display: flex;
+//   justify-content: center;
+//   background-color: #A5D6AF;
+//   position: absolute;
+//   height: auto;
+//   width: 100%;
+// }
+
+// .show-listing { //whole show page container
+//   // background-color: #A691DB;
+//   max-width: 1400px; //so that when resizing browser and zooming out, original template container is preserved
+//   height: 100%; //allow items to expand down; may disable if adding lots of reviews
+//   // width: 1400px; //
+// }
+
+// .show-image-container{
+//   display: flex;
+//   float: left;
+//   // background-color: #F591CD;
+//   max-width: 954px;
+//   width: 69%;
+//   height: 794px;
+// }
+
+// .show-image-minis {
+//   background-color: #FFC894;
+//   width: 66px;
+//   height: 100%;
+// }
+
+// .show-image-big > img {
+//   height: 100%;
+// }
+
+// .show-buy-quick {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   float: right;
+//   background-color: #FFF5BD;
+//   width: 30%;
+//   height: 794px;
+// }
+
+// .show-seller-name {
+//   margin-bottom: 2%;
+// }
+
+// .show-seller-info {
+//   margin-bottom: 6%;
+// }
+
+// .show-buy-title-lines > h1 {
+//   height: max-content;
+//   font-family: 'Nanum Myeongjo', serif;
+//   font-size: 35px;
+//   overflow-wrap: break-word;
+// }
+
+// .show-price-avail {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: row;
+//   margin-top: 6%;
+// }
+
+// .show-price {
+//   font-family: 'Cambay', sans-serif;
+//   font-size: 38px;
+//   font-weight: 900;
+// }
+
+// .show-price-avail {
+//   font-size: 17px;
+// }
+
+// .dark-button {
+//   background-color: #222222;
+//   color: white;
+//   width: 100%;
+//   height: 55px;
+//   margin-top: 20px;
+// }
+
+// .shop-item-trends {
+//   font-size: 16px;
+//   margin-top: 6%;
+//   line-height: 18px;
+// }
+
+// .shop-item-trends > li {
+//   margin-bottom: 9%;
+// }
+
+// .highlights-head {
+//   font-size: 30px;
+//   font-weight: bold;
+//   margin-bottom: 4%;
+// }
+
+// .highlights-details {
+//   font-size: 16px;
+//   line-height: 18px;
+// }
+
+// .show-buy-info-full {
+//   float: right;
+//   background-color: #95FFF7;
+//   width: 30%;
+//   height: 1386.73px;
+//   margin-top: 29px;
+// }
+
+// .show-reviews {
+//   float: left;
+//   background-color: #7C8BFF;
+//   max-width: 954px;
+//   width: 69%;
+//   height: 1386.73px;
+//   margin-top: 29px;
+// }

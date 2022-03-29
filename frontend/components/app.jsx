@@ -6,8 +6,7 @@ import GreetingContainer from "./greeting/greeting_container";
 //currently trying aws set up
 //need to import from util to fetch all products since splash page shows products
 import { fetchProducts } from "../util/product_api_util";
-import ProductsAllContainer from "./product/products_all_container"
-import ProductSingular from "./product/product_singular";
+import ProductSnapshotContainer from "./product/products_snapshot_container";
 import ProductSingularContainer from "./product/product_singular_container";
 
 //state change and props change cause rerender
@@ -32,7 +31,7 @@ export default class App extends React.Component {
           <Route path="/signup" component={SignupFormContainer} /> */}
 
           <Route path="/products/:productId" component={ProductSingularContainer} />
-          <Route path="/" component={ProductsAllContainer} />
+          <Route path="/" component={ProductSnapshotContainer} />
         </Switch>
 
       </div>

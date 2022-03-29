@@ -1,13 +1,10 @@
 import { connect } from "react-redux";
 import { fetchProducts } from "../../actions/product_actions";
-import ProductsAll from "./products_all";
+import ProductSnapshot from "./products_snapshot";
 
 const mapStateToProps = (state) => {
   return {
-    // // version 1
     products: state.entities.products
-    // // version 2
-    // products: Object.values[state.entities.products]
   };
 };
 
@@ -17,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductsAll);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductSnapshot);
