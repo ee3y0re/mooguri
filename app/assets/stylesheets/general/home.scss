@@ -2,7 +2,36 @@
   position: absolute; //allows div to stretch to bottom of browser
   display: flex; //enables centering from justify content
   justify-content: center; //centers horizontally since flex-direction is default
-  background-color: #F1EDEE; //shows the div container
+  // background-color: #F1EDEE; //shows the div container
   height: 100%; //full width of browser window
   width: 100%; //full height of browser window
+}
+
+#ribbon {
+  position: absolute;
+  background-color: #A8C898;
+  width: 100%;
+  height: 285px;
+  z-index: -1;
+}
+
+#front-page {
+  // position: absolute;
+  max-width: 1441px;
+  z-index: 1;
+}
+
+#top-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#greeting {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 61px;
+  text-align: center;
+  line-height: 56px;
+  padding-top: 52px;
+  padding-bottom: 24px;
 }
