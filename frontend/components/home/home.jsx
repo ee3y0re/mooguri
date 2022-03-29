@@ -14,25 +14,55 @@ const Home = () => {
   */
   return (
     <div id="home-container">
-      {/* after creating a general nav component */}
-      {/* after creating a category nav component */}
+
       <div id="ribbon"></div>
       <main id="frontpage">
         {/* after creating a bubbles component */}
         <div id="top-banner">
-          <h1 id="greeting">Cope with March Madness</h1>
+          <h1 id="greeting">Treasures with stories</h1>
+          {/* add categories table first */}
           <div className="bubbles-container">
-
+            <ul className="bubbles-list">
+              <li className="bubbles-list-items">
+                {/* <a href=""> */}
+                  <div className="bubble-img-container"><img src="" alt="" /></div>
+                {/* </a> */}
+                <p className="bubble-title">Beginning</p>
+              </li>
+              <li className="bubbles-list-items">
+                {/* <a href=""> */}
+                <div className="bubble-img-container"><img src="" alt="" /></div>
+                {/* </a> */}
+                <p className="bubble-title">Rising Action</p>
+              </li>
+              <li className="bubbles-list-items">
+                {/* <a href=""> */}
+                <div className="bubble-img-container"><img src="" alt="" /></div>
+                {/* </a> */}
+                <p className="bubble-title">Big fight</p>
+              </li>
+              <li className="bubbles-list-items">
+                {/* <a href=""> */}
+                <div className="bubble-img-container"><img src="" alt="" /></div>
+                {/* </a> */}
+                <p className="bubble-title">Falling Action</p>
+              </li>
+              <li className="bubbles-list-items">
+                {/* <a href=""> */}
+                <div className="bubble-img-container"><img src="" alt="" /></div>
+                {/* </a> */}
+                <p className="bubble-title">Resolution</p>
+              </li>
+            </ul>
           </div>
         </div>
-        {/* product snapshot */}
         <ProductSnapshotContainer />
       </main>
       <div id="about">
         <p id="overview"></p>
         {/* help link */}
       </div>
-      <footer id="footer-dir"></footer>
+      {/* footer component */}
     </div>
   )
 }

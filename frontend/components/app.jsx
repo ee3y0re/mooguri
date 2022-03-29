@@ -15,11 +15,18 @@ export default class App extends React.Component {
   render(){
     return (
       <div className="from-app">
-        <h1 className="logo">
+        {/* temp placeholder for logo, search, auth, cart, cat bar */}
+        <div id="nav-general"></div>
+        <div id="nav-cat"></div>
+
+        {/* incorporate these eventually */}
+        {/* <h1 className="logo">
           <Link to="/" id="logo-link">Mooguri</Link>
         </h1>
         <ModalContainer /> 
-        <AuthContainer />
+        <AuthContainer /> */}
+
+
 
         <Switch>
 
