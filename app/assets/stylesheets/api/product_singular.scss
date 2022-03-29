@@ -7,7 +7,6 @@
 }
 
 .show-listing { //whole show page container
-  // background-color: #A691DB;
   max-width: 1401px; //so that when resizing browser and zooming out, original template container is preserved
   height: 100%; //allow items to expand down; may disable if adding lots of reviews
 }
@@ -105,31 +104,47 @@
   margin-bottom: 9%;
 }
 
-.highlights-head {
+.product-info-head {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 2%;
 }
 
-.highlights-details {
+.product-info-details {
   font-size: 16px;
   line-height: 18px;
+  overflow-wrap: break-word;
+  margin-bottom: 2%;
 }
 
 .show-buy-info-full {
+  // display: flex;
+  // flex-direction: column;
+  justify-content: space-around;
   float: right;
-  background-color: #95FFF7;
   width: 30%;
-  height: 1385px;
+  height: 100%;
   margin-top: 29px;
+}
+
+.eta { 
+  margin-top: 12%;
+  margin-bottom: 12%;
+}
+
+
+.custom-small-title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 33px;
+  line-height: 42px;
 }
 
 .show-reviews {
   float: left;
-  background-color: #7C8BFF;
+  // background-color: #7C8BFF;
   max-width: 954px;
   width: 69%;
-  height: 1385px;
+  height: 100%;
   margin-top: 29px;
 }
 
