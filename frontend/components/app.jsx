@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
+import Home from "./home/home"
 import ModalContainer from "./modal/modal";
-import GreetingContainer from "./greeting/greeting_container";
-import ProductSnapshotContainer from "./product/products_snapshot_container";
+import AuthContainer from "./auth/auth_container";
 import ProductSingularContainer from "./product/product_singular_container";
 
 //state change and props change cause rerender
@@ -19,7 +19,7 @@ export default class App extends React.Component {
           <Link to="/" id="logo-link">Mooguri</Link>
         </h1>
         <ModalContainer /> 
-        <GreetingContainer />
+        <AuthContainer />
 
         <Switch>
 
@@ -28,11 +28,10 @@ export default class App extends React.Component {
           <Route path="/signup" component={SignupFormContainer} /> */}
 
           <Route path="/products/:productId" component={ProductSingularContainer} />
-          <Route path="/" component={ProductSnapshotContainer} />
+          <Route path="/" component={Home} />
         </Switch>
 
       </div>
     );
   }
-
 };

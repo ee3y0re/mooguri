@@ -1,6 +1,6 @@
 import React from "react";
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Auth = ({ currentUser, logout, openModal }) => {
   const completedLogin = () => {
     return (
       <div className="complete-login">
@@ -19,4 +19,4 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   return currentUser ? completedLogin() : needLogin();
 }
 
-export default Greeting;
+export default Auth;
