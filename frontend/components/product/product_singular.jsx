@@ -10,7 +10,6 @@ class ProductSingular extends React.Component {
   
 
   render(){
-    // debugger;
     //because constructor and render hits first before component did mount
     //so we need the conditional so that render returns null then component loads and triggers rerender
     if (!this.props.product) {

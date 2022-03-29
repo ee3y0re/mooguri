@@ -11,7 +11,6 @@ const receiveProducts = (products) => {
   
 }
 const receiveProduct = (product) => {
-  debugger
   return {
     type: RECEIVE_PRODUCT,
     product

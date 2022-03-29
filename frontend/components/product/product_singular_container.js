@@ -3,7 +3,6 @@ import { fetchProduct } from "../../actions/product_actions";
 import ProductSingular from "./product_singular";
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return {
     product: state.entities.products[ownProps.match.params.productId]
   };
