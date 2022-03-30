@@ -102,8 +102,10 @@
   width: 100%;
 }
 
-#login-button {
+#login-button, #logout-button {
   position: relative;
+  max-width: 70px;
+  min-width: 70px;
   font-size: 14px;
   font-weight: bold;
   padding: 19%;
