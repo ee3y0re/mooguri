@@ -5,10 +5,11 @@ import configureStore from "./store/store";
 
 // // // testing start
 //you have to test thunk actions to make sure actions and api util both work correctly
-import { signup, login, logout } from "./actions/session_actions";
-import { fetchProducts, fetchProduct } from "./actions/product_actions";
+// import { signup, login, logout } from "./actions/session_actions";
+// import { fetchProducts, fetchProduct } from "./actions/product_actions";
 // // going straight to action rather than the thunk action will send the action to reducer but will not make ajax request to save user
-import { receiveCurrentUser } from "./actions/session_actions"
+// import { receiveCurrentUser } from "./actions/session_actions"
+
 // // // testing end
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,11 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // // //testing start
-  // window.signup = signup;
-  // window.login = login;
-  // window.logout = logout;
-  // window.fetchProducts = fetchProducts;
-  // window.fetchProduct = fetchProduct;
+  window.signup = signup;
+  window.login = login;
+  window.logout = logout;
+  window.fetchProducts = fetchProducts;
+  window.fetchProduct = fetchProduct;
   window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
