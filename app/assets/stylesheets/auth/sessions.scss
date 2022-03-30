@@ -5,7 +5,7 @@
 .nav-container {
   display: flex;
   justify-content: center;
-  background-color: #9B94BE;
+  // background-color: #9B94BE;
   width: 100%;
   height: 100%;
   margin-top: 0.5%;
@@ -16,13 +16,40 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #FFDEDA;
+  align-items: center;
+  // background-color: #FFDEDA;
   width: 1401px;
+}
+
+#nav-categories-container {
+  display: flex;
+  justify-content: center;
+  // background-color: #FDB4C1;
+}
+
+#nav-cat-list {
+  display: flex;
+  justify-content: space-between;
+  width: 1401px;
+  padding-top: 1.5%;
+  padding-bottom: .65%;
 }
 
 #temp-search {
   width: 1004px;
-  padding-left: 18px;
+  text-align: left;
+  color: darkgray;
+  border-width: 2px;
+  border-color: #222222;
+  border-radius: 20px;
+  padding: 1%;
+}
+
+#cart-logo-container {
+  position: relative;
+  top: -4px;
+  height: 33px;
+  width: 33px;
 }
 
 .auth-container {
@@ -79,6 +106,7 @@
   position: relative;
   font-size: 14px;
   font-weight: bold;
+  padding: 19%;
 }
 
 #signup-button{
