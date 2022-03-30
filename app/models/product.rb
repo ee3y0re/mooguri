@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   validates :product_name, :description, :price, :category, :seller_id, :availability, presence: true
 
+  # for future reference, we want to work on this while working on product feature
   belongs_to :seller,
     foreign_key: :seller_id,
     class_name: :User
