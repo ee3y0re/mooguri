@@ -22,8 +22,8 @@ class ProductSnapshot extends React.Component {
               {
                 arrayOfAllProducts?.slice(0, 10).map((product) => {
                   return (
-                    <div className="product-index-row-list-items-container">
-                      <li key={product.id} className="product-index-row-list-items">
+                    <div className="product-index-row-list-items-container" key={product.id.toString()}>
+                      <li className="product-index-row-list-items">
                         <Link to={`/products/${product.id}`}><img src={product.photoUrl} alt={`${product.name}`} className="product-index-thumbnail" /></Link>
                       </li>
                     </div>

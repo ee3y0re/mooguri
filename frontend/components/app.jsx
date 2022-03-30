@@ -21,7 +21,7 @@ export default class App extends React.Component {
               <Link to="/" id="logo-link">MOOguri</Link>
             </h1>
             {/* TODO: create search component and change value to "Search" that disappears after clicking*/}
-            <input type="text" value="Search and Cart Under Construction" id="temp-search" className="temp"/>
+            <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/>
             <ModalContainer /> 
             <AuthContainer />
             {/* TODO: create cart componentturn into button after */}
