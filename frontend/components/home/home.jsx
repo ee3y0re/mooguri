@@ -19,7 +19,7 @@ const Home = () => {
       <main id="frontpage">
         {/* after creating a bubbles component */}
         <div id="top-banner">
-          <h1 id="greeting">Treasures with stories</h1>
+          <h1 id="greeting">Check out these cow-tegories</h1>
           {/* add categories table first */}
           <div className="bubbles-container">
             <ul className="bubbles-list">

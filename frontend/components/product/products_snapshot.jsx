@@ -14,7 +14,7 @@ class ProductSnapshot extends React.Component {
     return (
       <div className="section-product-index">
         <div className="product-index-title-container">
-          <h1 className="product-index-title">Stories with Treasures</h1>
+          <h1 className="product-index-title">See MOO-re</h1>
         </div>
         <div className="product-index-grid-container">
           <div className="product-index-row">

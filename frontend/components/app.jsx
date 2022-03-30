@@ -18,7 +18,7 @@ export default class App extends React.Component {
         <div className="nav-container">
           <div id="nav-general">
             <h1 className="logo">
-              <Link to="/" id="logo-link">Mooguri</Link>
+              <Link to="/" id="logo-link">MOOguri</Link>
             </h1>
             {/* TODO: create search component and change value to "Search" that disappears after clicking*/}
             <input type="text" value="Search and Cart Under Construction" id="temp-search" className="temp"/>
