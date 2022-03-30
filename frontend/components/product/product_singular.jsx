@@ -22,7 +22,7 @@ class ProductSingular extends React.Component {
       <div className="splash">
         <div className="show-listing">
           <div className="show-image-container">
-            <div className="show-image-minis"></div>
+            <div className="show-image-minis">Minis WIP</div>
             <div className="show-image-big">
               <img src={product.photoUrl} alt="" />
             </div>

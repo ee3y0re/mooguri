@@ -40,8 +40,11 @@ export default class App extends React.Component {
           <div className="temp" id="nav-categories-container">
             <ul id="nav-cat-list">
               <li className="nav-cat-list-items">Categories</li>
+              <li className="nav-cat-list-items">Are</li>
               <li className="nav-cat-list-items">Under</li>
               <li className="nav-cat-list-items">Construction</li>
+              <li className="nav-cat-list-items">Unfortunately</li>
+              <li className="nav-cat-list-items">*Sweats*</li>
             </ul>
           </div>          
         </div>

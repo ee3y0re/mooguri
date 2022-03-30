@@ -21,7 +21,7 @@
 }
 
 .show-image-minis {
-  width: 66px;
+  width: 74px;
   height: 100%;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .show-image-big > img {
-  height: 100%;
+  width: 100%;
 }
 
 .show-buy-quick {
@@ -173,9 +173,9 @@
 //   background-color: #F591CD;
 // }
 
-// .show-image-minis {
-//   background-color: #FFC894;
-// }
+.show-image-minis {
+  background-color: #FFC894;
+}
 
 // .show-buy-quick {
 //   background-color: #FFF5BD;
@@ -189,6 +189,7 @@
 //   background-color: #95FFF7;
 // }
 
-// .show-reviews {
-//   background-color: #7C8BFF;
-// }
+.show-reviews {
+  background-color: #7C8BFF;
+  height: 323px;
+}
