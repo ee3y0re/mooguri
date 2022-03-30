@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
   # TODO edit require_login to open modal instead of rendering root
-  # before_action :require_login, only: [:create, :update, :destroy]
+  before_action :require_login, only: [:create, :update, :destroy]
 
   def index
     @reviews = Review.all
