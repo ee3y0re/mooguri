@@ -39,12 +39,16 @@ export default class App extends React.Component {
         <div id="nav-categories-container-underline">
           <div className="temp" id="nav-categories-container">
             <ul id="nav-cat-list">
-              <li className="nav-cat-list-items">Categories</li>
-              <li className="nav-cat-list-items">Are</li>
-              <li className="nav-cat-list-items">Under</li>
-              <li className="nav-cat-list-items">Construction</li>
-              <li className="nav-cat-list-items">Unfortunately</li>
-              <li className="nav-cat-list-items">*Sweats*</li>
+              <li className="nav-cat-list-items">Mother's Day Gifts</li>
+              <li className="nav-cat-list-items">Jewelry &amp; Accessories</li>
+              <li className="nav-cat-list-items">Clothing &amp; Shoes</li>
+              <li className="nav-cat-list-items">Home &amp; Living</li>
+              <li className="nav-cat-list-items">Wedding &amp; Party</li>
+              <li className="nav-cat-list-items">Toys &amp; Entertainment</li>
+              <li className="nav-cat-list-items">Art &amp; Collectibles</li>
+              <li className="nav-cat-list-items">Craft Supplies</li>
+              <li className="nav-cat-list-items">Gifts &amp; Gift Cards</li>
+
             </ul>
           </div>          
         </div>

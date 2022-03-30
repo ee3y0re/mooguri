@@ -27,31 +27,31 @@ const Home = () => {
                 {/* <a href=""> */}
                   <div className="bubble-img-container"><img src="" alt="" /></div>
                 {/* </a> */}
-                <p className="bubble-title">Category</p>
+                <p className="bubble-title">Milk</p>
               </li>
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
                 <div className="bubble-img-container"><img src="" alt="" /></div>
                 {/* </a> */}
-                <p className="bubble-title">Bubbles</p>
+                <p className="bubble-title">Cheese</p>
               </li>
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
                 <div className="bubble-img-container"><img src="" alt="" /></div>
                 {/* </a> */}
-                <p className="bubble-title">Also</p>
+                <p className="bubble-title">Yogurt</p>
               </li>
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
                 <div className="bubble-img-container"><img src="" alt="" /></div>
                 {/* </a> */}
-                <p className="bubble-title">Under</p>
+                <p className="bubble-title">Lactose-free</p>
               </li>
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
                 <div className="bubble-img-container"><img src="" alt="" /></div>
                 {/* </a> */}
-                <p className="bubble-title">Construction</p>
+                <p className="bubble-title">Puns</p>
               </li>
             </ul>
           </div>
