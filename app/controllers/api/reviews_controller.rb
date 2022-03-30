@@ -19,7 +19,7 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      render '/api/reviews/show'
+      render "/api/reviews/show"
     else
       render json: ["Input is invalid. Please try again."], status: 422
     end
@@ -35,7 +35,7 @@ class Api::ReviewsController < ApplicationController
     #debugger showed what params looks like and how to key into it
     @user = User.find(@review.reviewer_id)
     if @user.id == current_user.id && @review.update(review_params)
-      render "api/reviews/show"
+      render "/api/reviews/show"
     else
       render json: ["Input is invalid. Please try again."], status: 422
     end
@@ -56,18 +56,18 @@ class Api::ReviewsController < ApplicationController
     if @review && @review.destroy
       render json: ["#{@review.id} has been deleted"]
     else
-      render json: ["Review was not found or could not be deleted."], status: 500
+      render json: ["Review was not found or could not be deleted."], status: 400
     end
 
-    # ## for testing
-    # ## put in id of a user with review to test destroy, sub for current user
+    ## for testing
+    ## put in id of a user with review to test destroy, sub for current user
     # @user = User.find_by(id: 3)
     # @review = @user.reviews.find_by(id: params[:id])
 
     # if @review && @review.destroy
     #   render json: ["#{@review.id} has been deleted"]
     # else
-    #   render json: ["Review was not found or could not be deleted."], status: 500
+    #   render json: ["Review was not found or could not be deleted."], status: 400
     # end
   end
 
