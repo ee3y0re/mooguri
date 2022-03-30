@@ -15,16 +15,16 @@ export default class App extends React.Component {
   render(){
     return (
       <div id="from-app">
-        {/* temp placeholder for logo, search, auth, cart, cat bar */}
         <div className="nav-container">
           <div id="nav-general">
             <h1 className="logo">
               <Link to="/" id="logo-link">Mooguri</Link>
             </h1>
+            {/* TODO: search component */}
             <input type="text" value="Search Under Construction" id="temp-search" className="temp"/>
             <ModalContainer /> 
             <AuthContainer />
-            {/* TODO: turn into button after created cart page */}
+            {/* TODO: create cart componentturn into button after */}
             <div id="cart-logo-container">
               <span className="temp" id="shop-logo">
                 <svg xmlns="http://www.w3.org/2000/svg">
@@ -36,18 +36,21 @@ export default class App extends React.Component {
           </div>          
         </div>
 
-        <div className="temp" id="nav-categories-container">
-          <ul id="nav-cat-list">
-            <li className="nav-cat-list-items">Categories</li>
-            <li className="nav-cat-list-items">Under</li>
-            <li className="nav-cat-list-items">Construction</li>
-          </ul>
+        <div id="nav-categories-container-underline">
+          <div className="temp" id="nav-categories-container">
+            <ul id="nav-cat-list">
+              <li className="nav-cat-list-items">Categories</li>
+              <li className="nav-cat-list-items">Under</li>
+              <li className="nav-cat-list-items">Construction</li>
+            </ul>
+          </div>          
         </div>
+
 
         <Switch>
 
-          {/* do user auth later
-          <Route path="/login" component={LoginFormContainer}/>
+          {/* TODO: protected routes */}
+          {/* <Route path="/login" component={LoginFormContainer}/>
           <Route path="/signup" component={SignupFormContainer} /> */}
 
           <Route path="/products/:productId" component={ProductSingularContainer} />

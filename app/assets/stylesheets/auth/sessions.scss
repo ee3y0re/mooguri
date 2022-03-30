@@ -19,6 +19,11 @@
   align-items: center;
   // background-color: #FFDEDA;
   width: 1401px;
+  min-width: 1401px;
+}
+
+#nav-categories-container-underline {
+  border-bottom: 2px solid lightgray;
 }
 
 #nav-categories-container {
@@ -30,8 +35,9 @@
 #nav-cat-list {
   display: flex;
   justify-content: space-between;
+  min-width: 1401px;
   width: 1401px;
-  padding-top: 1.5%;
+  padding-top: .75%;
   padding-bottom: .65%;
 }
 
@@ -47,7 +53,7 @@
 
 #cart-logo-container {
   position: relative;
-  top: -4px;
+  top: 2px;
   height: 33px;
   width: 33px;
 }
