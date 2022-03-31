@@ -87,7 +87,7 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             <h2>Reviews</h2>
-            {/* <ReviewFormContainer linkedReviewerId={reviewerId.id} linkedProductId={product.id} currentReviews={product.linkedReviews}/> */}
+            <ReviewFormContainer linkedReviewerId={reviewerId.id} linkedProductId={product.id} currentReviews={product.linkedReviews}/>
           </div>
         </div>
         
