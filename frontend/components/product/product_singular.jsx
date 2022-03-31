@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewFormContainer from "../review/create_review_form_container";
+import ReviewFormContainer from "../review/review_form_container";
 
 class ProductSingular extends React.Component {
   componentDidMount(){
@@ -19,7 +19,7 @@ class ProductSingular extends React.Component {
     if (!this.props.product) {
       return null;
     }
-    const { product, reviewerId } = this.props;
+    const { product, reviewer } = this.props;
     
     return (
       <div className="splash">
@@ -87,7 +87,7 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             <h2>Reviews</h2>
-            <ReviewFormContainer linkedReviewerId={reviewerId.id} linkedProductId={product.id} currentReviews={product.linkedReviews}/>
+            <ReviewFormContainer linkedReviewerId={reviewer} linkedProductId={product.id} currentReviews={product.linkedReviews}/>
           </div>
         </div>
         

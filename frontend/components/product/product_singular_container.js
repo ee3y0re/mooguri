@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   const currentUserId = state.session.id;
   const allUsers = state.entities.users;
   return {
-    reviewerId: allUsers[currentUserId],
+    reviewer: allUsers[currentUserId],
     product: state.entities.products[ownProps.match.params.productId]
   };
 };
