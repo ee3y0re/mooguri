@@ -9,7 +9,7 @@ import configureStore from "./store/store";
 // import { fetchProducts, fetchProduct } from "./actions/product_actions";
 // // going straight to action rather than the thunk action will send the action to reducer but will not make ajax request to save user
 // import { receiveCurrentUser } from "./actions/session_actions"
-import { fetchReviews, fetchReview, createReview, updateReview, deleteReview } from "./util/review_api_util"
+import { fetchReviews, fetchReview, createReview, updateReview, deleteReview } from "./actions/review_actions"
 // // // testing end
 
 document.addEventListener("DOMContentLoaded", () => {
