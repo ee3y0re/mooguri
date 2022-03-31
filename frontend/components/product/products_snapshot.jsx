@@ -38,6 +38,7 @@ class ProductSnapshot extends React.Component {
               <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
               <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
               <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
 
 
             </ul>

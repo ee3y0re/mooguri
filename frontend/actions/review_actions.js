@@ -3,30 +3,33 @@ import * as ReviewApiUtil from "../util/review_api_util";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
 export const CLEAR_REVIEW_ERRORS = "CLEAR_REVIEW_ERRORS";
 
-const receiveReviews = (reviewsPayload) => {
+const receiveReviews = (reviews) => {
   return {
     type: RECEIVE_REVIEWS,
-    reviewsPayload
+    reviews
   }
 }
-const receiveReview = (reviewPayload) => {
+const receiveReview = (review) => {
   return {
     type: RECEIVE_REVIEW,
-    reviewPayload
+    review
   }
 }
-const removeReview = () => {
+const removeReview = (reviewId) => {
   return {
-    type: REMOVE_REVIEW
+    type: REMOVE_REVIEW,
+    // need an id payload to key into for deleting in reducer
+    reviewId
   }
 }
 
-const receiveErrors = (errors) => {
+const receiveReviewErrors = (errors) => {
+  debugger
   return {
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_REVIEW_ERRORS,
     errors
   }
 }
@@ -53,19 +56,19 @@ export const createReview = (review) => (dispatch) => {
   return ReviewApiUtil.createReview(review)
     .then(
       (review) => { return dispatch(receiveReview(review)) },
-      (error) => { return dispatch(receiveErrors(error.responseJSON)) }
+      (error) => { return dispatch(receiveReviewErrors(error.responseJSON)) }
     );
 }
 export const updateReview = (review) => (dispatch) => {
   return ReviewApiUtil.updateReview(review)
     .then(
       (review) => { return dispatch(receiveReview(review)) },
-      (error) => { return dispatch(receiveErrors(error.responseJSON)) }
+      (error) => { return dispatch(receiveReviewErrors(error.responseJSON)) }
     );
 }
 export const deleteReview = (reviewId) => (dispatch) => {
   return ReviewApiUtil.deleteReview(reviewId)
-    .then(() => { return dispatch(removeReview()) });
+    .then(() => { return dispatch(removeReview(reviewId)) });
 }
 
 // test with the following:

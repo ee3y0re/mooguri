@@ -37,7 +37,7 @@ class Api::ReviewsController < ApplicationController
     if @user.id == current_user.id && @review.update(review_params)
       render "/api/reviews/show"
     else
-      render json: ["Input is invalid. Please try again."], status: 422
+      render json: @review.errors.full_messages, status: 422
     end
 
     ## for testing
@@ -56,7 +56,7 @@ class Api::ReviewsController < ApplicationController
     if @review && @review.destroy
       render json: ["#{@review.id} has been deleted"]
     else
-      render json: ["Review was not found or could not be deleted."], status: 400
+      render json: ["Review was not found or could not be deleted."], status: 404
     end
 
     ## for testing

@@ -3,14 +3,19 @@ import ReactDOM from "react-dom";
 import Root from "./components/root";
 import configureStore from "./store/store";
 
+
 // // // testing start
+
 //you have to test thunk actions to make sure actions and api util both work correctly
 // import { signup, login, logout } from "./actions/session_actions";
 // import { fetchProducts, fetchProduct } from "./actions/product_actions";
 // // going straight to action rather than the thunk action will send the action to reducer but will not make ajax request to save user
 // import { receiveCurrentUser } from "./actions/session_actions"
 import { fetchReviews, fetchReview, createReview, updateReview, deleteReview } from "./actions/review_actions"
+import { clearReviewErrors } from "./actions/review_actions"
+
 // // // testing end
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -53,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.createReview = createReview;
   window.updateReview = updateReview;
   window.deleteReview = deleteReview;
+  window.clearReviewErrors = clearReviewErrors;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // // //testing ended

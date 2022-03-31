@@ -9,6 +9,7 @@ require 'open-uri'
 
 User.destroy_all
 Product.destroy_all
+Review.destroy_all
 
 User.create!({ username: "0reoCookies", email: "vanillab@abbymail.com", password: "besticecream" })
 User.create!({ username: "StrawB3rries", email: "iceyice@abbymail.com", password: "YummyFruitsOfOurLabor" })
@@ -30,3 +31,9 @@ milk1_product.photo.attach(io: milk1_pic, filename: "/milk_il_1588xn.3239319059_
 # photoVariable = URI.open('Object Url')
 # # variableForProductInstance is an instance of the Product.create! or whatever your making
 # variableForProductInstance.photo.attach(io: photoVariable, filename: "/key")
+
+
+Review.create!({ body: "I've got some BEEF with whoever made this site!", reviewer_id: 3, product_id: 1})
+Review.create!({ body: "Now, now, let's settle this with proper cow-moo-nication!", reviewer_id: 2, product_id: 1})
+Review.create!({ body: "Okay, NOW you're making my blood boil! >:C", reviewer_id: 3, product_id: 1 })
+Review.create!({ body: "Well, you're making my milk curdle *sigh*", reviewer_id: 2, product_id: 1 })

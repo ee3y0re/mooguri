@@ -1,0 +1,22 @@
+import {
+    RECEIVE_REVIEW,
+    RECEIVE_REVIEW_ERRORS,
+    CLEAR_REVIEW_ERRORS
+} from "../actions/review_actions";
+
+const ReviewErrorsReducer = (state = [], action) => {
+  Object.freeze(state);
+  switch(action.type) {
+    case RECEIVE_REVIEW:
+      return [];
+    case RECEIVE_REVIEW_ERRORS:
+      debugger
+      return action.errors;
+    case CLEAR_REVIEW_ERRORS:
+      return [];
+    default:
+      return state;
+  }
+}
+
+export default ReviewErrorsReducer;
