@@ -6,6 +6,10 @@ class Product < ApplicationRecord
     foreign_key: :seller_id,
     class_name: :User
 
+  has_many :reviews,
+    foreign_key: :product_id,
+    class_name: :Review
+
   #Product.all[0].photo and Product.all[0].photo.attached? references the has_one_attached :photo association
   #attached returns false for now because no photo attached
   has_one_attached :photo

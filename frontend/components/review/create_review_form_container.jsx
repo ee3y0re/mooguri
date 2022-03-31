@@ -6,15 +6,16 @@ const napstablook = (state) => {
   return {
     review: {
       body: ""
-    },
-    formType: "Post Your Review"
+    }//,
+    // formType: "Post Your Review"
   };
 };
 
 const blookstanap = (dispatch) => {
+  debugger
   return {
-    magicalStuff: (reviewMagic) => dispatch(createReview(reviewMagic))
+    submitAction: (reviewMagic) => dispatch(createReview(reviewMagic))
   }
 }
 
-export default connect(napstablook, blookstanap)(ReviewForm);
+export default connect(napstablook,blookstanap)(ReviewForm);

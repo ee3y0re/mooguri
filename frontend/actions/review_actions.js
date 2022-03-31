@@ -13,6 +13,7 @@ const receiveReviews = (reviews) => {
   }
 }
 const receiveReview = (review) => {
+  debugger
   return {
     type: RECEIVE_REVIEW,
     review
@@ -53,6 +54,7 @@ export const fetchReview = (reviewId) => (dispatch) => {
     .then((review) => { return dispatch(receiveReview(review)) });
 }
 export const createReview = (review) => (dispatch) => {
+  debugger
   return ReviewApiUtil.createReview(review)
     .then(
       (review) => { return dispatch(receiveReview(review)) },

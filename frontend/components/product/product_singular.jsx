@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewForm from "../review/review_form";
+import ReviewFormContainer from "../review/create_review_form_container";
 
 class ProductSingular extends React.Component {
   componentDidMount(){
@@ -11,13 +11,15 @@ class ProductSingular extends React.Component {
   
 
   render(){
+    console.log(this.props)
+    //props are createReview, fetchProduct, product, and reviewerId
+
     //because constructor and render hits first before component did mount
     //so we need the conditional so that render returns null then component loads and triggers rerender
     if (!this.props.product) {
       return null;
     }
-
-    const { product } = this.props;
+    const { product, reviewerId } = this.props;
     
     return (
       <div className="splash">
@@ -84,7 +86,8 @@ class ProductSingular extends React.Component {
             <div ></div>
           </div>            
           <div className="show-reviews">
-            <ReviewForm />
+            <h2>Reviews</h2>
+            <ReviewFormContainer linkedReviewerId={reviewerId.id} linkedProductId={product.id} currentReviews={product.linkedReviews}/>
           </div>
         </div>
         
