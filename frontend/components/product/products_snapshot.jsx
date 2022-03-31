@@ -30,14 +30,14 @@ class ProductSnapshot extends React.Component {
                   )
                 })
               }
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
 
 
             </ul>
