@@ -5,6 +5,7 @@
   #   all product keys
   # }
   json.set! single_product.id do
+    
     #this navigates to api folder, products folder, then the product at the end of url stands for _product.json.jbuilder
     #replaces this line: json.extract! product, :id, :product_name, etc.
     json.partial! "/api/products/product", product: single_product

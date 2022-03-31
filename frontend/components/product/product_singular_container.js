@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import { fetchProduct } from "../../actions/product_actions";
 import { createReview } from "../../actions/review_actions"
-// import { productSpecificReviews } from "../../reducers/selectors";
 import ProductSingular from "./product_singular";
 
 const mapStateToProps = (state, ownProps) => {
@@ -10,14 +9,12 @@ const mapStateToProps = (state, ownProps) => {
   return {
     reviewerId: allUsers[currentUserId],
     product: state.entities.products[ownProps.match.params.productId]
-    // errors: state.errors.review
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchProduct: productId => dispatch(fetchProduct(productId)),
-    // fetchReviews: () => dispatch(fetchReviews()),
     createReview: (pleaseWorkThingy) => dispatch(createReview(pleaseWorkThingy))
   };
 };

@@ -32,6 +32,15 @@ milk1_product.photo.attach(io: milk1_pic, filename: "/milk_il_1588xn.3239319059_
 # # variableForProductInstance is an instance of the Product.create! or whatever your making
 # variableForProductInstance.photo.attach(io: photoVariable, filename: "/key")
 
+milk2_product = Product.create!({
+  product_name: "Cheese Flight from KeystoneFarmsCheese", 
+  description: "Any four 8 oz. blocks of cheese from our Best Sellers (NOTE: if you do not specify which 8 oz. blocks of cheese you would like to be included, we will choose four (2) blocks. Additional charges may occur on variety of cheese(s) selected). Pack of crackers. Do you have a large order of 10 or more gift packs? Learn more about our large quantity gift package options at our Business Gifts pages. Due to the perishable nature of our products, we do not ship over the weekend. Most orders placed Thursday-Sunday will ship the following Monday, unless Saturday delivery is available in your area. We will notify you with a tracking number once your package ships. *All orders will include an insulated box. Sorry, we do not ship to Hawaii or Alaska.", 
+  price: 54.50, 
+  category: "cheese", 
+  seller_id: 4, 
+  availability: 300,
+})
+
 
 Review.create!({ body: "I've got some BEEF with whoever made this site!", reviewer_id: 3, product_id: 1})
 Review.create!({ body: "Now, now, let's settle this with proper cow-moo-nication!", reviewer_id: 2, product_id: 1})

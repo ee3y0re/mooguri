@@ -4,7 +4,6 @@ import Home from "./home/home"
 import ModalContainer from "./modal/modal";
 import AuthContainer from "./auth/auth_container";
 import ProductSingularContainer from "./product/product_singular_container";
-import ReviewForm from "./review/review_form";
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -25,7 +24,7 @@ export default class App extends React.Component {
             <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/>
             <ModalContainer /> 
             <AuthContainer />
-            {/* TODO: create cart componentturn into button after */}
+            {/* TODO: create cart component turn into button after */}
             <div id="cart-logo-container">
               <span className="temp" id="shop-logo">
                 <svg xmlns="http://www.w3.org/2000/svg">
