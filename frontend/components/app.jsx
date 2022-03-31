@@ -4,6 +4,7 @@ import Home from "./home/home"
 import ModalContainer from "./modal/modal";
 import AuthContainer from "./auth/auth_container";
 import ProductSingularContainer from "./product/product_singular_container";
+import ReviewForm from "./review/review_form";
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational

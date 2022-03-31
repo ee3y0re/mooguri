@@ -68,6 +68,8 @@ export const updateReview = (review) => (dispatch) => {
 }
 export const deleteReview = (reviewId) => (dispatch) => {
   return ReviewApiUtil.deleteReview(reviewId)
+    //if the callback contains an argument, it won't show delete not until refresh
+    //if the dispatch has no argument, the reducer wouldn't know what gets deleted
     .then(() => { return dispatch(removeReview(reviewId)) });
 }
 

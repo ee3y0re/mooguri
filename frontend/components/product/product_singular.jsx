@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewForm from "../review/review_form";
 
 class ProductSingular extends React.Component {
   componentDidMount(){
@@ -83,7 +84,7 @@ class ProductSingular extends React.Component {
             <div ></div>
           </div>            
           <div className="show-reviews">
-            <h2>Reviews Under Construction</h2>
+            <ReviewForm />
           </div>
         </div>
         

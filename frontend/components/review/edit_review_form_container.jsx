@@ -1,0 +1,1 @@
+// etsy has some restrictions on editing so i think it's safe to move on
