@@ -25,4 +25,8 @@ milk1_product = Product.create!({
 })
 
 milk1_pic = URI.open('https://mooguri-dev.s3.us-west-1.amazonaws.com/milk_il_1588xn.3239319059_cwz1.jpeg')
-milk1_product.photos.attach(io: milk1_pic, filename: "/milk_il_1588xn.3239319059_cwz1.jpeg")
+milk1_product.photo.attach(io: milk1_pic, filename: "/milk_il_1588xn.3239319059_cwz1.jpeg")
+
+# photoVariable = URI.open('Object Url')
+# # variableForProductInstance is an instance of the Product.create! or whatever your making
+# variableForProductInstance.photo.attach(io: photoVariable, filename: "/key")
