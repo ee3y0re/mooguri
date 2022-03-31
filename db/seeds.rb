@@ -13,22 +13,16 @@ Product.destroy_all
 User.create!({ username: "0reoCookies", email: "vanillab@abbymail.com", password: "besticecream" })
 User.create!({ username: "StrawB3rries", email: "iceyice@abbymail.com", password: "YummyFruitsOfOurLabor" })
 User.create!({ username: "MonstrCookie", email: "smoothestsmoothie.abbymail.com", password: "FullOfSweets"})
+User.create!({ username: "EtsyListings", email: "etsyclone.com", password: "mooguriChild1" })
 
-Product.create!({
-  product_name: "Shadowscapes Tarot", 
-  description: "By author, Barbara Moore, and artist, Stephanie Pui-Mun Law.", 
-  price: 30.66, 
-  category: "metaphysical", 
-  seller_id: 3, 
+milk1_product = Product.create!({
+  product_name: "Milk Jug Charm Miniature Food Jewelry Resin Charms Handmade Jewelry from AllSoCharming", 
+  description: "Milk Jug Charm Miniature Food Jewelry Resin Charms Handmade Jewelry. A super realistic milk jug charm complete with it's own tiny nutrition label! Each charm comes attached to a silver lobster clasp and measures roughly 3/4 inches tall. If you are gifting this charm and would like to leave a short personal message with your order you can do so by adding the message to the 'notes to seller' section during checkout. All of my jewelry comes gift wrapped inside a padded jewelry box and is shipped via USPS First Class Mail inside a bubbled mailer.", 
+  price: 12, 
+  category: "milk", 
+  seller_id: 4, 
   availability: 3,
 })
 
-Product.create!({
-  product_name: "Moldavite Pendant",
-  description: "This crystal opens up the heart chakra. Side effects may include cold sweats, crying episodes, and rapid transformation.",
-  price: 20.00,
-  category: "metaphysical",
-  seller_id: 3,
-  availability: 16,
-})
-
+milk1_pic = URI.open('https://mooguri-dev.s3.us-west-1.amazonaws.com/milk_il_1588xn.3239319059_cwz1.jpeg')
+milk1_product.photos.attach(io: milk1_pic, filename: "/milk_il_1588xn.3239319059_cwz1.jpeg")
