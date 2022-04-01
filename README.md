@@ -1,24 +1,21 @@
-# README
+# MOOguri
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## It's like Etsy, but for cow-comrades, dairy-devotees, and everyone beyond and in-between!
+Mooguri is an Etsy clone, and like Etsy, it is an ecommerce site that keeps a focus for vintage goods and crafted items, but this time cow-themed. 
 
-Things you may want to cover:
+## Live Link
+https://mooguri.herokuapp.com/#/
 
-* Ruby version
+## Technologies Used
++ Rails for Database and Backend Route Management
++ Postman for Backend-Testing
++ React-Redux for Frontend Route and Rendering Management
 
-* System dependencies
+## Adventures with Features
+(Under Construction)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Future Goals
++ Fully-functioning reviews section
++ Clean shopping cart
++ Coordinating categories links and component
++ Sophisticated search bar
