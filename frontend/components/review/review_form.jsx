@@ -1,9 +1,10 @@
 import React from "react";
+import ReviewList from "./review_list";
 
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
+    console.log(this.state)
     this.state = {
       body: "",
       // TODO: delete this line because you need to fix opening the modal to log in when trying to write a comment
@@ -13,11 +14,13 @@ class ReviewForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this)
   }
+
   // TODO: do we really need to name it handleSubmit?
   handleSubmit(e){
     // debugger
-    e.preventDefault()
-    this.props.submitAction(this.state)
+    e.preventDefault();
+    const newReview = Object.assign({}, this.state);
+    this.props.submitAction(newReview).then(this.props.currentReviews.push(newReview));
   }
 
   updateField(field){
@@ -32,18 +35,8 @@ class ReviewForm extends React.Component {
         -we want to map all current reviews into a list
         -one day, get username from reviewer_id
         */}
-        <ul>
-          {
-            this.props.currentReviews.map((reviewObj, i) => {
-              return (
-                <li key={i}>
-                  <h2></h2>
-                  <p>{reviewObj.reviewerId} says, "{reviewObj.body}"</p>
-                </li>                
-              )
-            })
-          }
-        </ul>
+        <ReviewList listReviews={this.props.currentReviews}/>
+
 
         <div>
           <form onSubmit={this.handleSubmit}>

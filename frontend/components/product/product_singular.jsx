@@ -8,8 +8,6 @@ class ProductSingular extends React.Component {
     this.props.fetchProduct(this.props.match.params.productId)
   }
 
-  
-
   render(){
     console.log(this.props)
     //props are createReview, fetchProduct, product, and reviewerId
