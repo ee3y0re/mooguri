@@ -4,13 +4,13 @@ import ReviewList from "./review_list";
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.state)
+    console.log(props)
     this.state = {
       body: "",
-      // TODO: delete this line because you need to fix opening the modal to log in when trying to write a comment
+      // TODO: REMOVE HARD CODE; delete these line because you need to fix opening the modal to log in when trying to write a comment
       reviewer_id: 1,
-      // reviewer_id: this.props.linkedReviewer,
-      product_id: this.props.linkedProductId
+      // TODO: REMOVE HARD CODE; delete this line because it needs to be dynamic for all products
+      product_id: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -19,8 +19,7 @@ class ReviewForm extends React.Component {
   handleSubmit(e){
     // debugger
     e.preventDefault();
-    const newReview = Object.assign({}, this.state);
-    this.props.submitAction(newReview).then(this.props.currentReviews.push(newReview));
+    this.props.submitAction(this.state).then()
   }
 
   updateField(field){
@@ -31,13 +30,6 @@ class ReviewForm extends React.Component {
 
     return (
       <div>
-        {/*  
-        -we want to map all current reviews into a list
-        -one day, get username from reviewer_id
-        */}
-        <ReviewList listReviews={this.props.currentReviews}/>
-
-
         <div>
           <form onSubmit={this.handleSubmit}>
             {/* TODO: Review stars */}

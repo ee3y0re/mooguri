@@ -1,23 +1,26 @@
 import React from "react";
+import ReviewList from "../review/review_list"
 import ReviewFormContainer from "../review/review_form_container";
 
 class ProductSingular extends React.Component {
   componentDidMount(){
+    // console.log(this.props)
     // grabbing from url 
     // own props object has a match key that has a params key that has a productId key
     this.props.fetchProduct(this.props.match.params.productId)
+    // this.props.receiveReviews();
   }
 
   render(){
-    console.log(this.props)
-    //props are createReview, fetchProduct, product, and reviewerId
+    // console.log(this.props)
+    //props are createReview, fetchProduct, product, and reviewer
 
     //because constructor and render hits first before component did mount
     //so we need the conditional so that render returns null then component loads and triggers rerender
     if (!this.props.product) {
       return null;
     }
-    const { product, reviewer } = this.props;
+    const { product } = this.props;
     
     return (
       <div className="splash">
@@ -85,7 +88,10 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             <h2>Reviews</h2>
-            <ReviewFormContainer linkedReviewerId={reviewer} linkedProductId={product.id} currentReviews={product.linkedReviews}/>
+            {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
+            {/* aka review index */}
+            <ReviewList product={product}/> 
+            <ReviewFormContainer />
           </div>
         </div>
         

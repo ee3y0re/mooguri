@@ -18,6 +18,10 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+
+    #shaphen's suggestion
+    # @review.reviewer_id = User.find_by(id: params[:id])
+
     # debugger
     if @review.save
       render "/api/reviews/show"
