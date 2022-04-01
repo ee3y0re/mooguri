@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    render root_url unless current_user
+    # render root_url unless current_user
+    render json: ["Please login to leave a review (TODO: Login/Sign Up modal under construction)"], status: 404
   end
 
   def login!(user)

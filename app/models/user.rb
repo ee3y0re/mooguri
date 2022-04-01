@@ -9,6 +9,11 @@ class User < ApplicationRecord
       foreign_key: :seller_id,
       class_name: :Product
 
+    # for future reference, we want to make this when working on user features
+    has_many :reviews,
+      foreign_key: :reviewer_id,
+      class_name: :Review
+
     attr_reader :password
 
     def self.find_by_credentials(email, password)

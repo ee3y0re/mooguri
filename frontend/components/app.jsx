@@ -21,10 +21,10 @@ export default class App extends React.Component {
               <Link to="/" id="logo-link">MOOguri</Link>
             </h1>
             {/* TODO: create search component and change value to "Search" that disappears after clicking*/}
-            <input type="text" value="Search and Cart Under Construction" id="temp-search" className="temp"/>
+            <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/>
             <ModalContainer /> 
             <AuthContainer />
-            {/* TODO: create cart componentturn into button after */}
+            {/* TODO: create cart component turn into button after */}
             <div id="cart-logo-container">
               <span className="temp" id="shop-logo">
                 <svg xmlns="http://www.w3.org/2000/svg">

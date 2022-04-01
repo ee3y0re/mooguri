@@ -20,25 +20,24 @@ class ProductSnapshot extends React.Component {
           <div className="product-index-row">
             <ul className="ul-product-index-row-list">
               {
-                arrayOfAllProducts?.slice(0, 10).map((product) => {
+                arrayOfAllProducts?.map((product) => {
                   return (
-                    <div className="product-index-row-list-items-container">
-                      <li key={product.id} className="product-index-row-list-items">
+                    <div className="product-index-row-list-items-container" key={product.id.toString()}>
+                      <li className="product-index-row-list-items">
                         <Link to={`/products/${product.id}`}><img src={product.photoUrl} alt={`${product.name}`} className="product-index-thumbnail" /></Link>
                       </li>
                     </div>
                   )
                 })
               }
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="do you ever feel like a paper bag? squished in grocery bin, feeling weight of sin~" /></li></div>
-
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
+              <div id="delete" className="product-index-row-list-items-container"><li><img className="product-index-thumbnail" src={window.placeholder} alt="under construction~" /></li></div>
 
             </ul>
           </div>
