@@ -90,8 +90,8 @@ class ProductSingular extends React.Component {
             <h2>Reviews</h2>
             {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
             {/* aka review index */}
-            <ReviewList product={product}/> 
-            <ReviewFormContainer />
+            {/* <ReviewList product={product}/> 
+            <ReviewFormContainer /> */}
           </div>
         </div>
         
