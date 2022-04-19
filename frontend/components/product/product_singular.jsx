@@ -1,6 +1,4 @@
 import React from "react";
-import ReviewList from "../review/review_list"
-import ReviewFormContainer from "../review/review_form_container";
 
 class ProductSingular extends React.Component {
   componentDidMount(){
@@ -89,13 +87,10 @@ class ProductSingular extends React.Component {
           <div className="show-reviews">
             <h2>Reviews</h2>
             {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
-            {/* aka review index */}
-            {/* <ReviewList product={product}/> 
-            <ReviewFormContainer /> */}
           </div>
         </div>
         
-        {/* move to plash */}
+        {/* move to splash */}
         {/* <div className="show-footer-site-directory">
           <div className="show-shop"></div>
           <div className="show-sell"></div>
