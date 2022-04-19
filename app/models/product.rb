@@ -13,4 +13,9 @@ class Product < ApplicationRecord
   #Product.all[0].photo and Product.all[0].photo.attached? references the has_one_attached :photo association
   #attached returns false for now because no photo attached
   has_one_attached :photo
+
+  def average_rating
+    #calls on the reviews association
+    reviews.average(:rating)
+  end
 end
