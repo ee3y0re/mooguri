@@ -45,7 +45,7 @@ cheese1_pic = URI.open('https://mooguri-dev.s3.us-west-1.amazonaws.com/cheese_1_
 cheese1_product.photo.attach(io: cheese1_pic, filename: "/cheese_1_il_794xN.3383346041_1a5j.jpeg")
 
 
-Review.create!({ body: "I've got some BEEF with whoever made this site!", reviewer_id: 3, product_id: 1})
-Review.create!({ body: "Now, now, let's settle this with proper cow-moo-nication!", reviewer_id: 2, product_id: 1})
-Review.create!({ body: "Okay, NOW you're making my blood boil! >:C", reviewer_id: 3, product_id: 1 })
-Review.create!({ body: "Well, you're making my milk curdle *sigh*", reviewer_id: 2, product_id: 1 })
+Review.create!({ body: "I've got some BEEF with whoever made this site!", reviewer_id: 3, product_id: 1, rating: 2})
+Review.create!({ body: "Now, now, let's settle this with proper cow-moo-nication!", reviewer_id: 2, product_id: 1, rating: 4})
+Review.create!({ body: "Okay, NOW you're making my blood boil! >:C", reviewer_id: 3, product_id: 1, rating: 1})
+Review.create!({ body: "Well, you're making my milk curdle *sigh*", reviewer_id: 2, product_id: 1, rating: 5})
