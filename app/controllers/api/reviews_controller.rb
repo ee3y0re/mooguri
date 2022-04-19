@@ -19,41 +19,40 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
 
-    #shaphen's suggestion
-    # @review.reviewer_id = User.find_by(id: params[:id])
-
-    # debugger
+    debugger
     if @review.save
       render "/api/reviews/show"
     else
       render json: ["Input is invalid. Please try again."], status: 422
     end
   end
-  ## make sure @review.reviewer_id = params[:reviewer_id] is commented out before testing on postman
-  ## test these in postman
-  ### review[body] => Now, now, we can settle this beef with proper cow-moo-nication!
-  ### review[reviewer_id] => 2
-  ### review[product_id] => 1
+  ### make sure @review.reviewer_id = params[:reviewer_id] is commented out before testing on postman
+  ### test these in@review postman
+  ## review[body] => Now, now, we can settle this beef with proper cow-moo-nication!
+  ## review[reviewer_id] => 1
+  ## review[product_id] => 1
+  ## review[rating] => 3
+  ### If the above doesn't work, restart EVERYTHING
 
   def update
-    @review = Review.find(params[:id])
-    #debugger showed what params looks like and how to key into it
-    @user = User.find(@review.reviewer_id)
-    if @user.id == current_user.id && @review.update(review_params)
-      render "/api/reviews/show"
-    else
-      render json: @review.errors.full_messages, status: 422
-    end
-
-    ## for testing
     # @review = Review.find(params[:id])
+    # #debugger showed what params looks like and how to key into it
     # @user = User.find(@review.reviewer_id)
-    ## put in the id of the user with a review to test update, sub for current user
-    # if @user.id == 3 && @review.update(review_params)
-    #   render "api/reviews/show"
+    # if @user.id == current_user.id && @review.update(review_params)
+    #   render "/api/reviews/show"
     # else
-    #   render json: ["still not working"], status: 422
+    #   render json: @review.errors.full_messages, status: 422
     # end
+
+    # for testing
+    @review = Review.find(params[:id])
+    @user = User.find(@review.reviewer_id)
+    # put in the id of the user with a review to test update, sub for current user
+    if @user.id == 1 && @review.update(review_params)
+      render "api/reviews/show"
+    else
+      render json: ["still not working"], status: 422
+    end
   end
 
   def destroy
@@ -81,7 +80,7 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:body, :reviewer_id, :product_id)
+    params.require(:review).permit(:body, :reviewer_id, :product_id, :rating)
   end
 
 end
