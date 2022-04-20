@@ -36,6 +36,9 @@ class ReviewForm extends React.Component {
           <label for="rating-2">2</label>
           <input name="rating" type="radio" id="rating-1" value='1' onClick={this.update("rating")}/>
           <label for="rating-1">1</label>
+          <h3>Help others by sharing your feedback</h3>
+          <p>What do you like about this? Did it ship on time? Describe your experience with this shop.</p>
+          <textarea name="body" onChange={this.update("body")}/>
         </form>
       </div>
     )
