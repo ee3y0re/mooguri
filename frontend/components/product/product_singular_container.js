@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   // const allUsers = state.entities.users;
   return {
     product: state.entities.products[ownProps.match.params.productId],
-    // review: state.entities.reviews
+    currentUser: state.entities.users[state.session.id]
   };
 };
 

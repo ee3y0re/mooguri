@@ -2,13 +2,14 @@ import { connect } from "react-redux";
 import { createReview, fetchReviews } from "../../actions/review_actions";
 import ReviewForm from "./review_form";
 
-const napstablook = (state) => {
-  return {
-    review: {
-      body: ""
-    }
-  };
-};
+// const napstablook = (state) => {
+//   return {
+//     review: {
+//       body: ""
+
+//     }
+//   };
+// };
 
 const blookstanap = (dispatch) => {
   // debugger
@@ -18,4 +19,4 @@ const blookstanap = (dispatch) => {
   }
 }
 
-export default connect(napstablook,blookstanap)(ReviewForm);
+export default connect(null,blookstanap)(ReviewForm);

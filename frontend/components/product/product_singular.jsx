@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewForm from "../review/review_form";
 import ReviewList from "../review/review_list"
 
 class ProductSingular extends React.Component {
@@ -32,6 +33,9 @@ class ProductSingular extends React.Component {
     if (!this.props.product) {
       return null;
     }
+
+    console.log("props from product show", this.props)
+
     const { product } = this.props;
     // const reviewsArray = Object.values(product.reviews)
     // const selectedRev = reviewsArray?.filter(review => review.productId === product.id)
@@ -104,6 +108,9 @@ class ProductSingular extends React.Component {
             <h2>Reviews</h2>
             {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
             <ReviewList reviews={product.reviews}/>
+            {
+              this.props.currentUser ? <ReviewForm currentUser={this.props.currentUser} product={product}/> : <p>Please log in to leave a review</p>
+            }
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const ReviewList = ({ reviews }) => {
-  console.log("review list passed props: ", reviews)
+  // console.log("review list passed props: ", reviews)
   // debugger
   if (!reviews) return null;
   return (

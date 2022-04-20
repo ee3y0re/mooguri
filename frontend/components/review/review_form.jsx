@@ -1,54 +1,38 @@
 import React from "react";
-import ReviewList from "./review_list";
 
 class ReviewForm extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   console.log(props)
-  //   this.state = {
-  //     body: "",
-  //     // TODO: REMOVE HARD CODE; delete these line because you need to fix opening the modal to log in when trying to write a comment
-  //     reviewer_id: 1,
-  //     // TODO: REMOVE HARD CODE; delete this line because it needs to be dynamic for all products
-  //     product_id: 1
-  //   };
-  //   this.handleSubmit = this.handleSubmit.bind(this)
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      body: "",
+      reviewerId: "",// currentUser.id,
+      reviewerUsernane: "",// currentUser.username,
+      productId: "",// product.id
+    }
+  }
 
-  // // TODO: do we really need to name it handleSubmit?
-  // handleSubmit(e){
-  //   // debugger
-  //   e.preventDefault();
-  //   this.props.submitAction(this.state).then()
-  // }
 
-  // updateField(field){
-  //   return (e) => { this.setState( {[ field]: e.target.value } )}
-  // }
 
   render() {
-    console.log("review form props", this.props)
+    // console.log("review form props, current user", this.props.currentUser.id)
+    console.log("state", this.state)
     return (
-      <div>From the review form component</div>
-      // <div>
-      //   <div>
-      //     <form onSubmit={this.handleSubmit}>
-      //       {/* TODO: Review stars */}
-      //       <label id="review-body">Help others by sharing your feedback</label>
-      //       <p>What do you like about this? Did it ship on time? Describe your experience with this shop</p>
-      //       <textarea 
-      //         id="review-body" 
-      //         type="text" 
-      //         value={this.state.body}
-      //         onChange={this.updateField("body")}/>
-
-      //       <input type="submit" value="Post Your Review"/>
-      //     </form>       
-      //   </div>
-
-      // </div>
-
-
+      <div>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <h2>My review</h2>
+          {/* adding name attribute to rating prevents multiple from being selected */}
+          <input name="rating" type="radio" id="rating-5" value='5'/>
+          <label for="rating-5">5</label>
+          <input name="rating" type="radio" id="rating-4" value='4' />
+          <label for="rating-4">4</label>
+          <input name="rating" type="radio" id="rating-3" value='3' />
+          <label for="rating-3">3</label>
+          <input name="rating" type="radio" id="rating-2" value='2' />
+          <label for="rating-2">2</label>
+          <input name="rating" type="radio" id="rating-1" value='1' />
+          <label for="rating-1">1</label>
+        </form>
+      </div>
     )
   }
 }
