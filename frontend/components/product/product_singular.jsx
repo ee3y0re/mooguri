@@ -107,10 +107,12 @@ class ProductSingular extends React.Component {
           <div className="show-reviews">
             <h2>Reviews</h2>
             {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
-            <ReviewList reviews={product.reviews}/>
             {
               this.props.currentUser ? <ReviewForm currentUser={this.props.currentUser} product={product}/> : <p>Please log in to leave a review</p>
             }
+            <br />
+            <h2>Reviews for this item</h2>
+            <ReviewList reviews={product.reviews}/>
           </div>
         </div>
       </div>

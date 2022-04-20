@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createReview } from "../../actions/review_actions";
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -11,18 +13,21 @@ class ReviewForm extends React.Component {
     }
   }
 
-
   update(field){
     return (e) => {
       this.setState({ [field]: e.target.value })
     }
   }
 
+  handleSubmit(e){
+    e.preventDefault();
+    this.props.submitAction(this.state)
+  }
+
+
+
   render() {
-    // console.log("review form props, current user", this.props.currentUser.id)
-    console.log("state", this.state)
-    const { currentUser, product } = this.props
-    console.log(currentUser)
+    console.log(this.state)
     return (
       <div>
         <form onSubmit={(e) => handleSubmit(e)}>
@@ -43,10 +48,21 @@ class ReviewForm extends React.Component {
           <textarea name="body" onChange={this.update("body")}/>
           <h3>Reviewed by {this.state.reviewerUsername}</h3>
           <p>Your review and profile information will be publicly displayed.</p>
+          <button type="submit">Post Your Review</button>
         </form>
       </div>
     )
   }
 }
 
-export default ReviewForm;
+const blookstanap = (dispatch) => {
+  // debugger
+  return {
+    submitAction: (reviewMagic) => dispatch(createReview(reviewMagic)),
+    // updateAtion: () => dispatch(fetchReviews())
+  }
+}
+
+export default connect(null, blookstanap)(ReviewForm);
+
+// export default ReviewForm;
