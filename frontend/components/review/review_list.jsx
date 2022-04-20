@@ -1,6 +1,6 @@
 import React from "react";
 
-class ReviewList extends React.Component {
+// class ReviewList extends React.Component {
   // constructor(props) {
   //   super(props);
   //   console.log(this.props);
@@ -10,11 +10,20 @@ class ReviewList extends React.Component {
   //   this.props.fetchReviews();
   // }
 
-  render(){
-    console.log("review list props: ", this.props)
-    return (
-      <div>From Review List</div>
-    )
+const ReviewList = ({ selectedRev }) => {
+  // render(){
+  //   console.log("review list props: ", this.props)
+  return (
+    <ul>
+      {
+        selectedRev?.map((rev, i) => {
+          return <li key={i}>{rev.body}</li>
+        })
+      }
+    </ul>
+  )
+
+}
     // if (!this.props) { return null }
 
     // const { product, reviews } = this.props;
@@ -37,8 +46,8 @@ class ReviewList extends React.Component {
     //     }
     //   </ul>
     // )
-  }
-}
+  // }
+// }
 
 export default ReviewList;
 

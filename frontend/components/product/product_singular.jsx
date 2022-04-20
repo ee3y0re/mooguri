@@ -11,7 +11,6 @@ class ProductSingular extends React.Component {
   }
 
   render(){
-    console.log(this.props)
     /* 
     createReview
     fetchProduct
@@ -38,6 +37,8 @@ class ProductSingular extends React.Component {
       return null;
     }
     const { product } = this.props;
+    const reviewsArray = Object.values(product.reviews)
+    const selectedRev = reviewsArray.filter(review => review.productId === product.id)
     
     return (
       <div className="splash">
@@ -106,7 +107,7 @@ class ProductSingular extends React.Component {
           <div className="show-reviews">
             <h2>Reviews</h2>
             {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
-            <ReviewList />
+            <ReviewList selectedRev={selectedRev}/>
           </div>
         </div>
         
