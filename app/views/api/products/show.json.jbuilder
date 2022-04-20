@@ -2,6 +2,7 @@
 json.partial! 'api/products/product', product: @product
 json.photoUrl url_for(@product.photo)
 
+
 #putting a reviews key in products as filteredReviews
 # json.selectedReviews @product.reviews.map { |single_review| single_review.id }
 
