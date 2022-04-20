@@ -3,11 +3,7 @@ import ReviewList from "../review/review_list"
 
 class ProductSingular extends React.Component {
   componentDidMount(){
-    // console.log(this.props)
-    // grabbing from url 
-    // own props object has a match key that has a params key that has a productId key
     this.props.fetchProduct(this.props.match.params.productId)
-    // this.props.receiveReviews();
   }
 
   render(){
@@ -37,8 +33,8 @@ class ProductSingular extends React.Component {
       return null;
     }
     const { product } = this.props;
-    const reviewsArray = Object.values(product.reviews)
-    const selectedRev = reviewsArray.filter(review => review.productId === product.id)
+    // const reviewsArray = Object.values(product.reviews)
+    // const selectedRev = reviewsArray?.filter(review => review.productId === product.id)
     
     return (
       <div className="splash">
@@ -107,21 +103,9 @@ class ProductSingular extends React.Component {
           <div className="show-reviews">
             <h2>Reviews</h2>
             {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
-            <ReviewList selectedRev={selectedRev}/>
+            <ReviewList reviews={product.reviews}/>
           </div>
         </div>
-        
-        {/* move to splash */}
-        {/* <div className="show-footer-site-directory">
-          <div className="show-shop"></div>
-          <div className="show-sell"></div>
-          <div className="show-about"></div>
-          <div className="show-help"></div>
-        </div>
-        <div className="show-legal-stuff">
-          <div className="show-currency"></div>
-          <div className="show-legality"></div>
-        </div> */}
       </div>
     )
   }

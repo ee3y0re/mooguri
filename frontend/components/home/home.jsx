@@ -63,6 +63,16 @@ const Home = () => {
         {/* help link */}
       </div>
       {/* footer component */}
+      {/* <div className="show-footer-site-directory">
+        <div className="show-shop"></div>
+        <div className="show-sell"></div>
+        <div className="show-about"></div>
+        <div className="show-help"></div>
+      </div>
+      <div className="show-legal-stuff">
+        <div className="show-currency"></div>
+        <div className="show-legality"></div>
+      </div> */}
     </div>
   )
 }
