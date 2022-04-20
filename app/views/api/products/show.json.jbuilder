@@ -12,7 +12,9 @@ json.photoUrl url_for(@product.photo)
 
 #from benchbnb
 json.reviews do
-  @product.reviews.each do |single_review|
-    json.partial! "api/reviews/review", review: single_review
+  @product.reviews.map do |single_review|
+    json.set! single_review.id do
+      json.partial! "api/reviews/review", review: single_review
+    end
   end
 end

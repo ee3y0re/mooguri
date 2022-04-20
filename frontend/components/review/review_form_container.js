@@ -14,7 +14,7 @@ const blookstanap = (dispatch) => {
   // debugger
   return {
     submitAction: (reviewMagic) => dispatch(createReview(reviewMagic)),
-    updateAction: () => dispatch(fetchReviews())
+    // updateAction: () => dispatch(fetchReviews())
   }
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewList from "../review/review_list"
 
 class ProductSingular extends React.Component {
   componentDidMount(){
@@ -10,8 +11,26 @@ class ProductSingular extends React.Component {
   }
 
   render(){
-    // console.log(this.props)
-    //props are createReview, fetchProduct, product, and reviewer
+    console.log(this.props)
+    /* 
+    createReview
+    fetchProduct
+    fetchReviews
+    history
+    location
+    math
+    product
+      availability
+      category
+      description
+      id
+      photoUrl
+      price
+      productName
+      review
+        (all review objects regardless o if they are associated with reviews)
+    staticContext
+    */
 
     //because constructor and render hits first before component did mount
     //so we need the conditional so that render returns null then component loads and triggers rerender
@@ -87,6 +106,7 @@ class ProductSingular extends React.Component {
           <div className="show-reviews">
             <h2>Reviews</h2>
             {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
+            <ReviewList />
           </div>
         </div>
         

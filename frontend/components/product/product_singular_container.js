@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { fetchProduct } from "../../actions/product_actions";
-import { createReview } from "../../actions/review_actions";
+import { fetchReviews, createReview } from "../../actions/review_actions";
 // import { createReview, receiveReviews } from "../../actions/review_actions";
 import ProductSingular from "./product_singular";
 
@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchProduct: productId => dispatch(fetchProduct(productId)),
-    // receiveReviews: () => dispatch(receiveReviews()),
+    fetchReviews: () => dispatch(fetchReviews()),
     createReview: (pleaseWorkThingy) => dispatch(createReview(pleaseWorkThingy))
   };
 };
