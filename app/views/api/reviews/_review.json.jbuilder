@@ -1,2 +1,2 @@
 json.key_format! camelize: :lower
-json.extract! review, :id, :body, :reviewer_id, :product_id, :rating
+json.extract! review, :id, :body, :reviewer_id, :product_id, :rating, :reviewer_username
