@@ -5,9 +5,9 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = {
       body: "",
-      reviewerId: "",// currentUser.id,
-      reviewerUsernane: "",// currentUser.username,
-      productId: "",// product.id
+      reviewerId: this.props.currentUser.id,
+      reviewerUsername: this.props.currentUser.username,
+      productId: this.props.product.id
     }
   }
 
@@ -21,24 +21,28 @@ class ReviewForm extends React.Component {
   render() {
     // console.log("review form props, current user", this.props.currentUser.id)
     console.log("state", this.state)
+    const { currentUser, product } = this.props
+    console.log(currentUser)
     return (
       <div>
         <form onSubmit={(e) => handleSubmit(e)}>
           <h2>My review</h2>
           {/* adding name attribute to rating prevents multiple from being selected */}
           <input name="rating" type="radio" id="rating-5" value='5' onClick={this.update("rating")}/>
-          <label for="rating-5">5</label>
+          <label htmlFor="rating-5">5</label>
           <input name="rating" type="radio" id="rating-4" value='4' onClick={this.update("rating")}/>
-          <label for="rating-4">4</label>
+          <label htmlFor="rating-4">4</label>
           <input name="rating" type="radio" id="rating-3" value='3' onClick={this.update("rating")}/>
-          <label for="rating-3">3</label>
+          <label htmlFor="rating-3">3</label>
           <input name="rating" type="radio" id="rating-2" value='2' onClick={this.update("rating")}/>
-          <label for="rating-2">2</label>
+          <label htmlFor="rating-2">2</label>
           <input name="rating" type="radio" id="rating-1" value='1' onClick={this.update("rating")}/>
-          <label for="rating-1">1</label>
+          <label htmlFor="rating-1">1</label>
           <h3>Help others by sharing your feedback</h3>
           <p>What do you like about this? Did it ship on time? Describe your experience with this shop.</p>
           <textarea name="body" onChange={this.update("body")}/>
+          <h3>Reviewed by {this.state.reviewerUsername}</h3>
+          <p>Your review and profile information will be publicly displayed.</p>
         </form>
       </div>
     )
