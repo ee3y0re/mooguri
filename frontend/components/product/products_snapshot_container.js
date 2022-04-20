@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchProducts: () => dispatch(fetchProducts()),
-    fetchReviews: () => dispatch(fetchReviews())
+    // fetchReviews: () => dispatch(fetchReviews())
   };
 };
 

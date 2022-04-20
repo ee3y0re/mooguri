@@ -9,14 +9,14 @@ const mapStateToProps = (state, ownProps) => {
   // const allUsers = state.entities.users;
   return {
     product: state.entities.products[ownProps.match.params.productId],
-    review: state.entities.reviews
+    // review: state.entities.reviews
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchProduct: productId => dispatch(fetchProduct(productId)),
-    fetchReviews: () => dispatch(fetchReviews()),
+    // fetchReviews: () => dispatch(fetchReviews()),
     createReview: (pleaseWorkThingy) => dispatch(createReview(pleaseWorkThingy))
   };
 };
