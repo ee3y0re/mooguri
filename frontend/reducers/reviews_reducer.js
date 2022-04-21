@@ -6,6 +6,7 @@ import {
 
 
 const ReviewsReducer = (state = {}, action) => {
+  debugger
   Object.freeze(state);
   let nextState = Object.assign({}, state);
   switch (action.type) {

@@ -21,7 +21,7 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.submitAction(this.state)
+    this.props.createReview(this.state)
   }
 
 
@@ -58,7 +58,7 @@ class ReviewForm extends React.Component {
 const blookstanap = (dispatch) => {
   // debugger
   return {
-    submitAction: (reviewMagic) => dispatch(createReview(reviewMagic)),
+    createReview: (reviewMagic) => dispatch(createReview(reviewMagic)),
     // updateAtion: () => dispatch(fetchReviews())
   }
 }
