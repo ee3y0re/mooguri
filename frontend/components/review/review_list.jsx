@@ -60,23 +60,41 @@
 
 import React from "react";
 
-const ReviewList = ({ reviews }) => {
-  // console.log("review list passed props: ", reviews)
-  // debugger
-  if (!reviews) return null;
-  return (
+class ReviewList extends React.Component {
+
+  componentDidMount(){
+    this.props.fetchReviews;
+  }
+
+  render(){
+    console.log(this.props)
+
+    if (!this.props.reviews) return null;
+    return (
     <ul>
-      {
-        Object.values(reviews)?.map((rev, i) => {
+      {/* {
+        Object.values(this.props.reviews)?.map((rev, i) => {
           return (
             <li key={i}>
               <h1>{rev.reviewerUsername}</h1>
               <p>{rev.body}</p>
             </li>)
         })
+      } */}
+
+      {
+        this.props.reviews?.map((rev, i) => {
+          return (
+            <li key={i}>
+              <span>{rev}</span>
+            </li>
+          )
+        })
       }
     </ul>
-  )
+    )  
+  }
+
 }
 
 export default ReviewList;

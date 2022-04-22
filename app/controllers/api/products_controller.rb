@@ -5,6 +5,8 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
+    #when fetch product include review
+    #in jbuilder, include reviews in jbuilder
     @product = Product.find_by(id: params[:id])
     render "api/products/show"
   end

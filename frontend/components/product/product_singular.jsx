@@ -34,7 +34,7 @@ class ProductSingular extends React.Component {
       return null;
     }
 
-    console.log("props from product show", this.props)
+    // console.log("props from product show", this.props)
 
     const { product } = this.props;
     // const reviewsArray = Object.values(product.reviews)
@@ -112,7 +112,7 @@ class ProductSingular extends React.Component {
             }
             <br />
             <h2>Reviews for this item</h2>
-            <ReviewList reviews={product.reviews} />
+            <ReviewList reviews={product.reviews} fetchReviews={this.props.fetchReviews}/>
           </div>
         </div>
       </div>
