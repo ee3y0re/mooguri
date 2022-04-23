@@ -26,7 +26,9 @@ const Modal = ({ modal, closeModal, ...args }) => {
       component = <SignupFormContainer />;
       break;
     case "Create Review":
-      component= <CreateReviewFormContainer productId={args}/>
+      component= <ReviewFormContainer productId={args}/>;
+      //need a break or else will keep going to default null
+      break;
     default:
       return null; //if neither signin or login, close modal
   }

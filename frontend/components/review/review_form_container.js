@@ -13,7 +13,7 @@ const napstablook = (state) => {
 const blookstanap = (dispatch) => {
   return {
     submitAction: (reviewMagic) => dispatch(createReview(reviewMagic)),
-    updateAction: () => dispatch(fetchReviews())
+    updateAction: () => dispatch(fetchReviews()),
   }
 }
 

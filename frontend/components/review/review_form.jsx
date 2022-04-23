@@ -29,9 +29,8 @@ class ReviewForm extends React.Component {
 
     return (
       <div>
-        <div>
+        {/* <div>
           <form onSubmit={this.handleSubmit}>
-            {/* TODO: Review stars */}
             <label id="review-body">Help others by sharing your feedback</label>
             <p>What do you like about this? Did it ship on time? Describe your experience with this shop</p>
             <textarea 
@@ -39,14 +38,11 @@ class ReviewForm extends React.Component {
               type="text" 
               value={this.state.body}
               onChange={this.updateField("body")}/>
-
             <input type="submit" value="Post Your Review"/>
           </form>       
-        </div>
-
+        </div> */}
+        <h1>This is the review form modal C;</h1>
       </div>
-
-
     )
   }
 }

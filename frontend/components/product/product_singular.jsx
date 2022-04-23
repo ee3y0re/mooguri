@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewList from "../review/review_list";
+import ReviewListContainer from "../review/review_list_container";
 
 class ProductSingular extends React.Component {
   componentDidMount(){
@@ -88,7 +88,7 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             {/* product id will be going to review form */}
-            <ReviewList reviews={product.reviews} productId={product.id}/>
+            <ReviewListContainer reviews={product.reviews} productId={product.id}/>
           </div>
         </div>
       </div>
