@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewList from "../review/review_list";
 
 class ProductSingular extends React.Component {
   componentDidMount(){
@@ -20,6 +21,7 @@ class ProductSingular extends React.Component {
     }
     const { product } = this.props;
     
+    // debugger
     return (
       <div className="splash">
         <div className="show-listing">
@@ -85,8 +87,7 @@ class ProductSingular extends React.Component {
             <div ></div>
           </div>            
           <div className="show-reviews">
-            <h2>Reviews</h2>
-            {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
+            <ReviewList reviews={product.reviews}/>
           </div>
         </div>
       </div>
