@@ -17,7 +17,6 @@ class ReviewForm extends React.Component {
 
   // TODO: do we really need to name it handleSubmit?
   handleSubmit(e){
-    // debugger
     e.preventDefault();
     this.props.submitAction(this.state).then()
   }

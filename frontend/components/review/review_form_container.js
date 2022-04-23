@@ -11,7 +11,6 @@ const napstablook = (state) => {
 };
 
 const blookstanap = (dispatch) => {
-  // debugger
   return {
     submitAction: (reviewMagic) => dispatch(createReview(reviewMagic)),
     updateAction: () => dispatch(fetchReviews())

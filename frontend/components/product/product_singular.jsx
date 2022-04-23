@@ -89,18 +89,6 @@ class ProductSingular extends React.Component {
             {/* TODO: remember you need protected routes set up then you should be able to access user in the index */}
           </div>
         </div>
-        
-        {/* move to splash */}
-        {/* <div className="show-footer-site-directory">
-          <div className="show-shop"></div>
-          <div className="show-sell"></div>
-          <div className="show-about"></div>
-          <div className="show-help"></div>
-        </div>
-        <div className="show-legal-stuff">
-          <div className="show-currency"></div>
-          <div className="show-legality"></div>
-        </div> */}
       </div>
     )
   }
