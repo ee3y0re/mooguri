@@ -17,7 +17,7 @@ class ReviewList extends React.Component {
 
     return (
       <div>
-        <h1>{reviews.length} reviews</h1>
+        <h1 className="review-head">{reviews.length} reviews</h1>
         {
           reviews.map((review, idx) => (
             <div key={idx}>
