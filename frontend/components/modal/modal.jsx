@@ -3,10 +3,11 @@ import { closeModal } from "../../actions/modal_actions";
 import { connect } from "react-redux";
 import LoginFormContainer from "../login/login_form_container";
 import SignupFormContainer from "../signup/signup_form_container";
+import ReviewFormContainer from "../review/review_form_container";
 
 
 
-const Modal = ({ modal, closeModal }) => {
+const Modal = ({ modal, closeModal, ...args }) => {
   /* If our modal slice is null, we'll return null from our component, 
   effectively making it non-existent.  */
   if (!modal) {
@@ -24,6 +25,8 @@ const Modal = ({ modal, closeModal }) => {
     case "Sign Up":
       component = <SignupFormContainer />;
       break;
+    case "Create Review":
+      component= <CreateReviewFormContainer productId={args}/>
     default:
       return null; //if neither signin or login, close modal
   }

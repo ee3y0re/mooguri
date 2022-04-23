@@ -1,4 +1,5 @@
 import React from "react";
+import { openModal } from "../../actions/modal_actions";
 
 class ReviewList extends React.Component {
   constructor(props) {
@@ -13,11 +14,12 @@ class ReviewList extends React.Component {
   render(){
     if (!this.props) { return null }
 
-    const { reviews } = this.props;
+    const { reviews, productId } = this.props;
 
     return (
       <div>
         <h1 className="review-head">{reviews.length} reviews</h1>
+        <button onClick={() => openModal("Create Review", productId)}>Create a review</button>
         {
           reviews.map((review, idx) => (
             <div key={idx}>
