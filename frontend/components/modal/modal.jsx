@@ -5,8 +5,6 @@ import LoginFormContainer from "../login/login_form_container";
 import SignupFormContainer from "../signup/signup_form_container";
 import ReviewFormContainer from "../review/review_form_container";
 
-
-
 const Modal = ({ closeModal, modal, product }) => {
   /* If our modal slice is null, we'll return null from our component, 
   effectively making it non-existent.  */

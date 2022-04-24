@@ -1,36 +1,44 @@
 import React from "react";
-import ReviewList from "./review_list";
+import { closeModal } from "../../actions/modal_actions";
 
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props)
     this.state = {
+      reviewerId: this.props.currentUser.id,
+      username: this.props.currentUser.username,
+      productId: this.props.product.id,
       body: "",
-      // TODO: REMOVE HARD CODE; delete these line because you need to fix opening the modal to log in when trying to write a comment
-      reviewer_id: 1,
-      // TODO: REMOVE HARD CODE; delete this line because it needs to be dynamic for all products
-      product_id: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  // TODO: do we really need to name it handleSubmit?
   handleSubmit(e){
     e.preventDefault();
     this.props.submitAction(this.state).then()
   }
 
   updateField(field){
-    return (e) => { this.setState( {[ field]: e.target.value } )}
+    return (e) => { this.setState( { [field]: e.target.value } )}
+  }
+
+  renderErrors() {
+    return (
+      <ul className="errors">
+        {
+          this.props.errors?.map((error, idx) => {
+            return (<li className="errors-li" key={`error-${idx}`}>{error}</li>)
+          })
+        }
+      </ul>
+    )
   }
 
   render() {
     if (!this.props) return null;
     return (
-      <div>
-        {/* <div>
-          <form onSubmit={this.handleSubmit}>
+      <div className="review-container">
+          <form className="review-box" onSubmit={this.handleSubmit}>
             <label id="review-body">Help others by sharing your feedback</label>
             <p>What do you like about this? Did it ship on time? Describe your experience with this shop</p>
             <textarea 
@@ -38,10 +46,11 @@ class ReviewForm extends React.Component {
               type="text" 
               value={this.state.body}
               onChange={this.updateField("body")}/>
+
+              {this.renderErrors()}
+
             <input type="submit" value="Post Your Review"/>
           </form>       
-        </div> */}
-        <h1>This is the review form modal C;</h1>
       </div>
     )
   }

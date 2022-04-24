@@ -15,10 +15,10 @@ class ReviewList extends React.Component {
     const { reviews } = this.props;
     return (
       <div>
-        <h1 className="review-head">{reviews.length} reviews</h1>
+        <h1 className="review-head">{reviews?.length} reviews</h1>
         <button onClick={() => this.props.openModal("Create Review")}>Create a review</button>
         {
-          reviews.map((review, idx) => (
+          reviews?.map((review, idx) => (
             <div key={idx}>
               <h2>{review.username}</h2>
               <p>{review.body}</p>
