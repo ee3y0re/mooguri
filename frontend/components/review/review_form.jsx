@@ -26,7 +26,7 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-
+    if (!this.props) return null;
     return (
       <div>
         {/* <div>

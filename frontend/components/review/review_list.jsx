@@ -3,7 +3,6 @@ import React from "react";
 class ReviewList extends React.Component {
   constructor(props) {
     super(props);
-    // console.log(this.props);
   }
 
   // componentDidMount(){
@@ -13,12 +12,11 @@ class ReviewList extends React.Component {
   render(){
     if (!this.props) { return null }
 
-    const { reviews, productId } = this.props;
-
+    const { reviews } = this.props;
     return (
       <div>
         <h1 className="review-head">{reviews.length} reviews</h1>
-        <button onClick={() => this.props.openModal("Create Review", productId)}>Create a review</button>
+        <button onClick={() => this.props.openModal("Create Review")}>Create a review</button>
         {
           reviews.map((review, idx) => (
             <div key={idx}>

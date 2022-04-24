@@ -7,7 +7,7 @@ import ReviewFormContainer from "../review/review_form_container";
 
 
 
-const Modal = ({ modal, closeModal, ...args }) => {
+const Modal = ({ closeModal, modal, product }) => {
   /* If our modal slice is null, we'll return null from our component, 
   effectively making it non-existent.  */
   if (!modal) {
@@ -26,7 +26,7 @@ const Modal = ({ modal, closeModal, ...args }) => {
       component = <SignupFormContainer />;
       break;
     case "Create Review":
-      component= <ReviewFormContainer productId={args}/>;
+      component = <ReviewFormContainer product={product}/>;
       //need a break or else will keep going to default null
       break;
     default:
@@ -47,7 +47,8 @@ const Modal = ({ modal, closeModal, ...args }) => {
 
 const mapStateToProps = (state) => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    product: Object.values(state.entities.products)[0]
   };
 };
 

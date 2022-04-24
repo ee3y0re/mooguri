@@ -21,7 +21,6 @@ class ProductSingular extends React.Component {
     }
     const { product } = this.props;
     
-    // debugger
     return (
       <div className="splash">
         <div className="show-listing">
@@ -88,7 +87,7 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             {/* product id will be going to review form */}
-            <ReviewListContainer reviews={product.reviews} productId={product.id}/>
+            <ReviewListContainer reviews={product.reviews} />
           </div>
         </div>
       </div>
