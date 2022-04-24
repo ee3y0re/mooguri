@@ -1,5 +1,5 @@
+// REVIEW FORM
 import React from "react";
-import { closeModal } from "../../actions/modal_actions";
 
 class ReviewForm extends React.Component {
   constructor(props) {

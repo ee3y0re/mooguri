@@ -1,3 +1,4 @@
+//PRODUCT SHOW PT 1
 import React from "react";
 import ReviewListContainer from "../review/review_list_container";
 
@@ -16,7 +17,6 @@ class ProductSingular extends React.Component {
   }
 
   componentDidMount(){
-    // console.log(this.props)
     // grabbing from url 
     // own props object has a match key that has a params key that has a productId key
     this.props.fetchProduct(this.props.match.params.productId)
@@ -24,9 +24,6 @@ class ProductSingular extends React.Component {
   }
 
   render(){
-    // console.log(this.props)
-    //props are createReview, fetchProduct, product, and reviewer
-
     //because constructor and render hits first before component did mount
     //so we need the conditional so that render returns null then component loads and triggers rerender
     if (!this.props.product) {
@@ -57,6 +54,8 @@ class ProductSingular extends React.Component {
                 <div className="show-avail">In Stock</div>
               </div>              
             </div>
+
+{/* PRODUCT SHOW PT 2 */}
 
             <button className="dark-button">Add to Cart WIP</button>
             <ul className="shop-item-trends">
