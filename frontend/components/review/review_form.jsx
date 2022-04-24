@@ -5,9 +5,9 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reviewerId: this.props.currentUser.id,
+      reviewer_id: this.props.currentUser.id,
       username: this.props.currentUser.username,
-      productId: this.props.product.id,
+      product_id: this.props.product.id,
       body: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -15,7 +15,8 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.submitAction(this.state).then()
+    const newReview = Object.assign({}, this.state);
+    this.props.submitAction(newReview).then(this.props.closeModal);
   }
 
   updateField(field){

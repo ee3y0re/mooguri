@@ -16,11 +16,12 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
+    
     @review = Review.new(review_params)
 
     #shaphen's suggestion
     # @review.reviewer_id = User.find_by(id: params[:id])
-
+    debugger
     if @review.save
       render "/api/reviews/show"
     else
@@ -79,7 +80,7 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:body, :reviewer_id, :product_id)
+    params.require(:review).permit(:body, :reviewer_id, :product_id, :username)
   end
 
 end
