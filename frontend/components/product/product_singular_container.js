@@ -7,6 +7,7 @@ import ProductSingular from "./product_singular";
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    currentUser: state.entities.users[state.session.id],
     product: state.entities.products[ownProps.match.params.productId]
   };
 };
