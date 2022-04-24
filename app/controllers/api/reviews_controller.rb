@@ -21,7 +21,6 @@ class Api::ReviewsController < ApplicationController
 
     #shaphen's suggestion
     # @review.reviewer_id = User.find_by(id: params[:id])
-    debugger
     if @review.save
       render "/api/reviews/show"
     else

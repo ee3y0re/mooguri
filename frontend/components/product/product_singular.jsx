@@ -2,6 +2,19 @@ import React from "react";
 import ReviewListContainer from "../review/review_list_container";
 
 class ProductSingular extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      formProcessed: false
+    }
+  }
+
+  handleNewReview(){
+    this.setState({
+      formProcessed: !this.state.formProcessed
+    })
+  }
+
   componentDidMount(){
     // console.log(this.props)
     // grabbing from url 
@@ -87,7 +100,7 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             {/* product id will be going to review form */}
-            <ReviewListContainer reviews={product.reviews} />
+            <ReviewListContainer reviews={product.reviews} formProcessed={this.state.formProcessed} onChange={() => this.handleNewReview()}/>
           </div>
         </div>
       </div>
