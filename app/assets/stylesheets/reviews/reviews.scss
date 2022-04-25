@@ -9,9 +9,10 @@
 }
 
 #review-action {
-  height: 55px;
+  height: 69px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid lightgray;
 }
 
 #review-not-logged-in {
@@ -23,6 +24,10 @@
 #create-review {
   margin: 0;
   width: 126px;
+}
+
+.review-row-box {
+  margin-top: 34px;
 }
 
 .review-author {

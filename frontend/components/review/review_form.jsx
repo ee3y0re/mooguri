@@ -40,17 +40,18 @@ class ReviewForm extends React.Component {
     return (
       <div className="review-container">
           <form className="review-box" onSubmit={this.handleSubmit}>
-            <label id="review-body">Help others by sharing your feedback</label>
-            <p>What do you like about this? Did it ship on time? Describe your experience with this shop</p>
+            <label className="product-info-head">Help others by sharing your feedback</label>
+            <br />
+            <p className="review-suggestions">What do you like about this? Did it ship on time? Describe your experience with this shop</p>
             <textarea 
-              id="review-body" 
+            className="review-textarea"
               type="text" 
               value={this.state.body}
               onChange={this.updateField("body")}/>
 
               {this.renderErrors()}
 
-            <input type="submit" value="Post Your Review"/>
+            <input type="submit" className="dark-button" value="Post Your Review"/>
           </form>       
       </div>
     )

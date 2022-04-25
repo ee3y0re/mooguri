@@ -23,18 +23,19 @@ class ReviewList extends React.Component {
           }
         </div>
         <br />
-
-        {
-          reviews?.map((review, idx) => (
-            <div key={idx}>
-              <div className="review-row">
-                <h2 className="review-author">{review.username}</h2>
-                <p className="review-body">{review.body}</p>
+        <div className="review-row-box">
+          {
+            reviews?.map((review, idx) => (
+              <div key={idx}>
+                <div className="review-row">
+                  <h2 className="review-author">{review.username}</h2>
+                  <p className="review-body">{review.body}</p>
+                </div>
+                <br />
               </div>
-              <br />
-            </div>
-          ))
-        }
+            ))
+          }
+        </div>
       </div>
     )
   }
