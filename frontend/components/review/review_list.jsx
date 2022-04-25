@@ -13,9 +13,16 @@ class ReviewList extends React.Component {
       <div>
         <h1 className="review-head">{reviews?.length} reviews</h1>
         {
-          this.props.currentUser ? <button onClick={() => this.props.openModal("Create Review")}>Create a review</button> : <span> Please sign in to leave a review</span>
+          this.props.currentUser ? <button onClick={
+            () => this.props.openModal("Create Review")
+          } className="dark-button" id="create-review">
+            Create a review</button> : <span>
+              Please sign in to leave a review
+            </span>
         }
-
+        <br />
+        <br />
+        <br />
         {
           reviews?.map((review, idx) => (
             <div key={idx}>
