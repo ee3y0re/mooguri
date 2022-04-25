@@ -8,6 +8,29 @@
   line-height: 42px;
 }
 
+#review-action {
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+#review-not-logged-in {
+  font-size: 20px;
+  height: 55px;
+  margin-top: 20px;
+}
+
 #create-review {
+  margin: 0;
   width: 126px;
+}
+
+.review-author {
+  font-size: 14px;
+  color: gray;
+}
+
+.review-body {
+  font-size: 17px;
+  line-height: 1.4;
 }
