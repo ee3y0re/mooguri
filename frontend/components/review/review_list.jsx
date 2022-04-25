@@ -5,10 +5,6 @@ class ReviewList extends React.Component {
     super(props);
   }
 
-  // componentDidMount(){
-  //   this.props.fetchReviews();
-  // }
-
   render(){
     if (!this.props) { return null }
 
