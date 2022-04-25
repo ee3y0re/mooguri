@@ -53,7 +53,7 @@ class ReviewForm extends React.Component {
             {this.renderErrors()}
 
             <div className="review-submit-options">
-              <button onClick={this.props.closeModal}>Cancel</button>
+              <button onClick={this.props.closeModal} className="cancel-review">Cancel</button>
               <input type="submit" className="dark-button" id="submit-review" value="Post Your Review"/>
             </div>
           </form>       
