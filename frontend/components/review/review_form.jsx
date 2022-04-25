@@ -44,14 +44,18 @@ class ReviewForm extends React.Component {
             <br />
             <p className="review-suggestions">What do you like about this? Did it ship on time? Describe your experience with this shop</p>
             <textarea 
-            className="review-textarea"
+              className="review-textarea"
               type="text" 
               value={this.state.body}
-              onChange={this.updateField("body")}/>
+              onChange={this.updateField("body")}
+            />
 
-              {this.renderErrors()}
+            {this.renderErrors()}
 
-            <input type="submit" className="dark-button" value="Post Your Review"/>
+            <div className="review-submit-options">
+              <button onClick={this.props.closeModal}>Cancel</button>
+              <input type="submit" className="dark-button" id="create-review" value="Post Your Review"/>
+            </div>
           </form>       
       </div>
     )

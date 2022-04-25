@@ -40,3 +40,20 @@
   line-height: 1.4;
   margin-bottom: 42px;
 }
+
+.review-suggestions {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.review-textarea {
+  height: 200px;
+  width: 100%;
+  resize: none;
+}
+
+.review-submit-options {
+  display: flex;
+  margin-top: 19px;
+  justify-content: space-between;
+}
