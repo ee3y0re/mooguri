@@ -3,56 +3,43 @@ import React from "react";
 class ReviewList extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
-  }
-
-  componentDidMount(){
-    this.props.fetchReviews();
   }
 
   render(){
     if (!this.props) { return null }
 
-    const { product, reviews } = this.props;
-    const targetReviewIds = product?.selectedReviews;
-    const reviewsArray = Object.values(reviews)
-    const acquiredReviews = reviewsArray.filter(reviewObj => targetReviewIds?.includes(reviewObj.id));
-    console.log(acquiredReviews[0])
+    const { reviews } = this.props;
     return (
-      <ul>
-        {
-          acquiredReviews?.map((one_review, i) => {
-            return (
-              <li key={i}>
-                <h1>{one_review.reviewerId}</h1>
-                <p>{one_review.body}</p>
+      <div className="review-list-box">
+        <h1 className="review-head">{reviews?.length} reviews</h1>
+        <div id="review-action">
+          {
+            this.props.currentUser ? <button onClick={
+              () => this.props.openModal("Create Review")
+            } className="dark-button" id="create-review">
+              Create a review</button> : <span id="review-not-logged-in">
+                Please sign in to leave a review
+              </span>
+          }
+        </div>
+        <br />
+        <div className="review-row-box">
+          {
+            reviews?.map((review, idx) => (
+              <div key={idx}>
+                <div className="review-row">
+                  <h2 className="review-author">{review.username}</h2>
+                  <p className="review-body">{review.body}</p>
+                </div>
                 <br />
-              </li>
-            )
-          })
-        }
-      </ul>
+              </div>
+            ))
+          }
+        </div>
+      </div>
     )
   }
 }
 
-// export default ReviewList;
+export default ReviewList;
 
-//TODO: decided if this is needed
-import { connect } from "react-redux";
-import { fetchReviews } from "../../actions/review_actions";
-// import ReviewList from "./review_list";
-
-const mstp = (state) => {
-  return {
-    reviews: state.entities.reviews
-  }
-}
-
-const mdtp = (dispatch) => {
-  return {
-    fetchReviews: () => dispatch(fetchReviews())
-  }
-}
-
-export default connect(mstp, mdtp)(ReviewList);
