@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewFormContainer from  "./review_form_container"
 
 class ReviewList extends React.Component {
   constructor(props) {
@@ -8,18 +9,25 @@ class ReviewList extends React.Component {
   render(){
     if (!this.props) { return null }
 
-    const { reviews } = this.props;
+    const { reviews, product } = this.props;
     return (
       <div className="review-list-box">
         <h1 className="review-head">{reviews?.length} reviews</h1>
         <div id="review-action">
-          {
+          {/* {
             this.props.currentUser ? <button onClick={
               () => this.props.openModal("Create Review")
             } className="dark-button" id="create-review">
               Create a review</button> : <span id="review-not-logged-in">
                 Please sign in to leave a review
               </span>
+          } */}
+
+          {
+            this.props.currentUser ? <ReviewFormContainer product={product}/> :
+            <span id="review-not-logged-in">
+              Please sign in to leave a review.
+            </span>
           }
         </div>
         <br />

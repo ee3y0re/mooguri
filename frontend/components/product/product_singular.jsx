@@ -99,7 +99,7 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             {/* product id will be going to review form */}
-            <ReviewListContainer currentUser={this.props.currentUser} reviews={product.reviews} formProcessed={this.state.formProcessed} onChange={() => this.handleNewReview()}/>
+            <ReviewListContainer currentUser={this.props.currentUser} product={product} reviews={product.reviews} formProcessed={this.state.formProcessed} onChange={() => this.handleNewReview()}/>
           </div>
         </div>
       </div>
