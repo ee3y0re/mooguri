@@ -33,10 +33,32 @@ class ReviewList extends React.Component {
                 <div className="review-row">
                   <h2 className="review-author">{review.username}</h2>
                   <p className="review-body">{review.body}</p>
+                  {
+                    this.props.currentUser?.id === review.reviewerId ?
+                      <div>
+                        <button 
+                          className="dark-button" 
+                          id="submit-review" 
+                          onClick={() => console.log("work on edit review")}
+                        >
+                          Edit
+                        </button>
+                        <button 
+                          className="dark-button" 
+                          id="submit-review" 
+                          onClick={() => console.log("work on delete review")}
+                        >
+                          Delete
+                        </button>
+                        
+                      </div> :
+                      <></>
+
+                  }
                 </div>
                 <br />
               </div>
-            ))
+            )).reverse()
           }
         </div>
       </div>
