@@ -12,7 +12,6 @@ class ReviewList extends React.Component {
     const { reviews, product } = this.props;
     return (
       <div className="review-list-box">
-        <h1 className="review-head">{reviews?.length} reviews</h1>
         <br />
         <div id="review-action">
           {
