@@ -40,7 +40,7 @@ class ReviewForm extends React.Component {
     if (!this.props) return null;
     return (
       <div className="review-container">
-          {/* <form className="review-box" onSubmit={this.handleSubmit}>
+          <form className="review-box" onSubmit={this.handleSubmit}>
             <label className="product-info-head">Help others by sharing your feedback</label>
             <br />
             <p className="review-suggestions">What do you like about this? Did it ship on time? Describe your experience with this shop</p>
@@ -57,8 +57,7 @@ class ReviewForm extends React.Component {
               <button onClick={this.props.closeModal} className="cancel-review">Cancel</button>
               <input type="submit" className="dark-button" id="submit-review" value="Post Your Review"/>
             </div>
-          </form>        */}
-          CPR
+          </form>       
       </div>
     )
   }
