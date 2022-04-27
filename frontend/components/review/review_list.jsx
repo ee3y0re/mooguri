@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewFormContainer from  "./review_form_container"
+import CreateReviewFormContainer from  "./create_review_form_container"
 
 class ReviewList extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class ReviewList extends React.Component {
         <div id="review-form-action">
           {
             this.props.currentUser ? 
-              <ReviewFormContainer 
+              <CreateReviewFormContainer 
                 product={product}
                 refreshList={this.props.refreshList}
               /> :
@@ -39,6 +39,7 @@ class ReviewList extends React.Component {
                           className="dark-button" 
                           id="submit-review" 
                           onClick={() => console.log("work on delete review")}
+                          // link to edit review form component
                         >
                           Edit
                         </button>
