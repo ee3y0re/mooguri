@@ -15,10 +15,14 @@ class ReviewList extends React.Component {
         <br />
         <div id="review-action">
           {
-            this.props.currentUser ? <ReviewFormContainer product={product}/> :
-            <span id="review-not-logged-in">
-              Please sign in to leave a review.
-            </span>
+            this.props.currentUser ? 
+              <ReviewFormContainer 
+                product={product}
+                refreshList={this.props.refreshList}
+              /> :
+              <span id="review-not-logged-in">
+                Please sign in to leave a review.
+              </span>
           }
         </div>
         <br />

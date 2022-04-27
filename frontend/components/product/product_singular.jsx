@@ -8,12 +8,8 @@ class ProductSingular extends React.Component {
     this.state = {
       formProcessed: false
     }
-  }
 
-  handleNewReview(){
-    this.setState({
-      formProcessed: !this.state.formProcessed
-    })
+    this.refreshList = this.refreshList.bind(this);
   }
 
   componentDidMount(){
@@ -21,6 +17,15 @@ class ProductSingular extends React.Component {
     // own props object has a match key that has a params key that has a productId key
     this.props.fetchProduct(this.props.match.params.productId)
     // this.props.receiveReviews();
+  }
+
+  refreshList() {
+    const newState = !this.state.formProcessed;
+    this.setState({
+      formProcessed: newState,
+    });
+    this.componentDidMount();
+    console.log(this.state.formProcessed)
   }
 
   render(){
@@ -99,7 +104,12 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             <h1 className="review-head">{product.reviews?.length} reviews</h1>
-            <ReviewListContainer currentUser={this.props.currentUser} product={product} reviews={product.reviews} formProcessed={this.state.formProcessed} onChange={() => this.handleNewReview()}/>
+            <ReviewListContainer 
+              currentUser={this.props.currentUser} 
+              product={product} 
+              reviews={product.reviews} 
+              refreshList={this.refreshList}
+            />
           </div>
         </div>
       </div>

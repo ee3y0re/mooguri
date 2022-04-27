@@ -4,20 +4,21 @@ import React from "react";
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
     this.state = {
       reviewer_id: this.props.currentUser.id,
       username: this.props.currentUser.username,
       product_id: this.props.product.id,
       body: "",
     };
+
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e){
     e.preventDefault();
     const newReview = Object.assign({}, this.state);
-    this.props.submitAction(newReview);
+    this.setState({ body : "" });
+    this.props.submitAction(newReview).then(this.props.refreshList);
   }
 
   updateField(field){
