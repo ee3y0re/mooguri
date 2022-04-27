@@ -13,16 +13,8 @@ class ReviewList extends React.Component {
     return (
       <div className="review-list-box">
         <h1 className="review-head">{reviews?.length} reviews</h1>
+        <br />
         <div id="review-action">
-          {/* {
-            this.props.currentUser ? <button onClick={
-              () => this.props.openModal("Create Review")
-            } className="dark-button" id="create-review">
-              Create a review</button> : <span id="review-not-logged-in">
-                Please sign in to leave a review
-              </span>
-          } */}
-
           {
             this.props.currentUser ? <ReviewFormContainer product={product}/> :
             <span id="review-not-logged-in">
