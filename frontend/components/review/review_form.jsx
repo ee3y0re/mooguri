@@ -17,7 +17,7 @@ class ReviewForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     const newReview = Object.assign({}, this.state);
-    this.props.submitAction(newReview).then(this.props.closeModal);
+    this.props.submitAction(newReview);
   }
 
   updateField(field){
