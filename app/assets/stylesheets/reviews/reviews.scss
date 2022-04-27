@@ -53,7 +53,12 @@
 .review-body {
   font-size: 17px;
   line-height: 1.4;
-  margin-bottom: 42px;
+  margin-bottom: 39px;
+}
+
+.review-edit-delete-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .review-suggestions {

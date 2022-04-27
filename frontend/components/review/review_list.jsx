@@ -25,7 +25,6 @@ class ReviewList extends React.Component {
               </span>
           }
         </div>
-        <br />
         <div className="review-row-box">
           {
             reviews?.map((review, idx) => (
@@ -35,32 +34,34 @@ class ReviewList extends React.Component {
                   <p className="review-body">{review.body}</p>
                   {
                     this.props.currentUser?.id === review.reviewerId ?
-                      <div>
+                      <div className="review-edit-delete-buttons">
                         <button 
                           className="dark-button" 
                           id="submit-review" 
-                          onClick={() => console.log("work on edit review")}
+                          onClick={() => console.log("work on delete review")}
                         >
                           Edit
                         </button>
                         <button 
                           className="dark-button" 
                           id="submit-review" 
-                          onClick={() => console.log("work on delete review")}
+                          onClick={() => console.log("work on edit review")}
                         >
                           Delete
                         </button>
-                        
                       </div> :
                       <></>
-
                   }
+                  <br />
+                  <br />
                 </div>
                 <br />
               </div>
             )).reverse()
           }
+          <br />
         </div>
+        <br />
       </div>
     )
   }
