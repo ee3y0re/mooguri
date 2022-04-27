@@ -13,7 +13,7 @@ class ReviewList extends React.Component {
     return (
       <div className="review-list-box">
         <br />
-        <div id="review-action">
+        <div id="review-form-action">
           {
             this.props.currentUser ? 
               <ReviewFormContainer 
