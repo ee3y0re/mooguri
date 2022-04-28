@@ -18,7 +18,7 @@ class CreateReviewForm extends React.Component {
     e.preventDefault();
     const newReview = Object.assign({}, this.state);
     this.setState({ body : "" });
-    this.props.submitAction(newReview).then(this.props.refreshList);
+    this.props.createReview(newReview).then(this.props.refreshList);
   }
 
   updateField(field){

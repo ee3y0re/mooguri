@@ -12,6 +12,7 @@ const ProductsReducer = (state = {}, action) => {
     case RECEIVE_PRODUCTS:
       return Object.assign({}, state, action.products);
     case RECEIVE_REVIEW:
+      debugger
       nextState[action.review.productId].reviews.push(action.review);
       return nextState;
     default:

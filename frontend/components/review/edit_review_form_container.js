@@ -1,7 +1,7 @@
 // REVIEW FORM CONTAINER
 import { connect } from "react-redux";
-import { createReview } from "../../actions/review_actions";
-import CreateReviewForm from "./create_review_form";
+import { updateReview } from "../../actions/review_actions";
+import EditReviewForm from "./edit_review_form";
 
 const mstp = (state) => {
   return {
@@ -12,8 +12,8 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
   return {
-    createReview: (reviewMagic) => dispatch(createReview(reviewMagic)),
+    updateReview: (reviewMagic) => dispatch(updateReview(reviewMagic))
   }
 }
 
-export default connect(mstp,mdtp)(CreateReviewForm);
+export default connect(mstp, mdtp)(EditReviewForm);

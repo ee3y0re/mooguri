@@ -42,6 +42,7 @@ class ReviewList extends React.Component {
                   <ReviewListItem
                     key={review.id}
                     review={review}
+                    product={product}
                     dateFormatter={this.dateFormatter}
                     currentUser={currentUser}
                   />

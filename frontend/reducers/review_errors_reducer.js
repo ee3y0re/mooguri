@@ -5,6 +5,7 @@ import {
 } from "../actions/review_actions";
 
 const ReviewErrorsReducer = (state = [], action) => {
+  debugger
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_REVIEW:

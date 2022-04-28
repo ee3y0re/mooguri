@@ -1,6 +1,6 @@
 import React from "react";
 import ReviewActions from "./review_actions";
-import EditReviewForm from "./edit_review_form";
+import EditReviewFormContainer from "./edit_review_form_container";
 
 class ReviewListItem extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class ReviewListItem extends React.Component {
   }
 
   render(){
-    const { review, dateFormatter, currentUser } = this.props;
+    const { review, dateFormatter, currentUser, product } = this.props;
 
     return (
       <div className="review-row">
@@ -32,7 +32,7 @@ class ReviewListItem extends React.Component {
         <br />
         {
           this.state.editDisplay ?
-            <EditReviewForm review={review} /> :
+            <EditReviewFormContainer review={review} product={product} /> :
             <p className="review-body">{review.body}</p>
         }
         <br />
