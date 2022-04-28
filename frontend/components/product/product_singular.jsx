@@ -16,7 +16,6 @@ class ProductSingular extends React.Component {
     // grabbing from url 
     // own props object has a match key that has a params key that has a productId key
     this.props.fetchProduct(this.props.match.params.productId)
-    // this.props.receiveReviews();
   }
 
   refreshList() {
@@ -59,9 +58,6 @@ class ProductSingular extends React.Component {
                 <div className="show-avail">In Stock</div>
               </div>              
             </div>
-
-{/* PRODUCT SHOW PT 2 */}
-
             <button className="dark-button">Add to Cart WIP</button>
             <ul className="shop-item-trends">
               <li className="stock-sell-stats">Other people want this. OR Selling fast! <span className="stock-sell-details">Over # people have this in their carts right now. OR Only 1 left.</span></li>
@@ -71,7 +67,6 @@ class ProductSingular extends React.Component {
             <div className="highlights">
               <h2 className="product-info-head">Highlights</h2>
               <ul className="product-info-details">  
-                           {/* need to add additional features to schema */}
                 <li>Handmade</li>
                 <li>Height: </li>
                 <li>Width: </li>
@@ -82,8 +77,6 @@ class ProductSingular extends React.Component {
               </ul>              
             </div>
           </div>
-
-
           <div className="show-buy-info-full">
             <div className="description-container">
               <h2 className="product-info-head">Description</h2>
