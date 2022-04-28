@@ -1,7 +1,6 @@
 import React from "react";
 import CreateReviewFormContainer from  "./create_review_form_container";
-import EditReviewForm from "./edit_review_form";
-import ReviewActions from "./review_actions";
+import ReviewListItem from "./review_list_item"
 
 class ReviewList extends React.Component {
   constructor(props) {
@@ -36,7 +35,7 @@ class ReviewList extends React.Component {
 
   render(){
     if (!this.props) { return null }
-    const { reviews, product } = this.props;
+    const { reviews, product, currentUser } = this.props;
     return (
       <div className="review-list-box">
         <br />
@@ -54,34 +53,20 @@ class ReviewList extends React.Component {
         </div>
         <div className="review-row-box">
           {
-            reviews?.map((review, idx) => {
+            reviews?.map((review) => {
                 return (
-                  <div key={idx}>
-                  {/* <div className="review-row">
-                    <h2 className="review-author">{review.username}</h2>
-                    <br />
-                    <h3>{this.dateFormatter(review.createdAt)} </h3>
-                    <br />
-                    {
-                      this.state.editDisplay ?
-                        <EditReviewForm review={review} /> :
-                        <p className="review-body">{review.body}</p>
-                    }
-                    <br />
-                    {
-                      this.props.currentUser?.id === review.reviewerId ?
-                      <ReviewActions edit={this.handleEditClick} /> :
-                      <></>
-                    }
-                    <br />
-                    <br />
-                  </div>
-                  <br /> */}
-                  </div>
-                )
+                  <ReviewListItem
+                    key={review.id}
+                    review={review}
+                    dateFormatter={this.dateFormatter}
+                    currentUser={currentUser}
+                    editDisplay={this.state.editDisplay}
+                    handleEditClick={this.handleEditClick}
+                  />
+                  )
+                }
+                ).reverse()
               }
-            ).reverse()
-          }
           <br />
         </div>
         <br />
@@ -91,4 +76,3 @@ class ReviewList extends React.Component {
 }
 
 export default ReviewList;
-
