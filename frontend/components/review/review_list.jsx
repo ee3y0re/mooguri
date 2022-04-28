@@ -1,6 +1,7 @@
 import React from "react";
 import CreateReviewFormContainer from  "./create_review_form_container";
-import EditReviewForm from "./edit_review_form"
+import EditReviewForm from "./edit_review_form";
+import ReviewActions from "./review_actions";
 
 class ReviewList extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class ReviewList extends React.Component {
       editDisplay : false
     }
 
-    this.handleEditClick = this.handleEditClick.bind(this)
+    this.handleEditClick = this.handleEditClick.bind(this);
   }
 
   handleEditClick(e){
@@ -20,13 +21,22 @@ class ReviewList extends React.Component {
     // on handle submit edit, need to set edit display as false
   }
 
+  dateFormatter(dateNum) {
+    const monthsAbbrev = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    const month = monthsAbbrev[new Date(dateNum).getMonth()];
+    const date = new Date(dateNum).getDate();
+    const year = new Date(dateNum).getFullYear();
+    // const minutes = new Date(dateNum).getMinutes();
+
+    return month + " " + date + " " + year //+ " Time: " + minutes;
+  }
+
   render(){
     if (!this.props) { return null }
     const { reviews, product } = this.props;
-    const monthsAbbrev = [
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-    ];
     return (
       <div className="review-list-box">
         <br />
@@ -44,60 +54,33 @@ class ReviewList extends React.Component {
         </div>
         <div className="review-row-box">
           {
-            reviews?.map((review, idx) => (
-              <div key={idx}>
-                <div className="review-row">
-                  {/* reviewer */}
-                  <h2 className="review-author">{review.username}</h2>
-                  <br />
-                  {/* review date creation */}
-                  <h3>
+            reviews?.map((review, idx) => {
+                return (
+                  <div key={idx}>
+                  {/* <div className="review-row">
+                    <h2 className="review-author">{review.username}</h2>
+                    <br />
+                    <h3>{this.dateFormatter(review.createdAt)} </h3>
+                    <br />
                     {
-                      monthsAbbrev[new Date(review.createdAt).getMonth()] +
-                      " " + new Date(review.createdAt).getDate() + 
-                      " " + new Date(review.createdAt).getFullYear()
+                      this.state.editDisplay ?
+                        <EditReviewForm review={review} /> :
+                        <p className="review-body">{review.body}</p>
                     }
-                  </h3>
-                  <br />
-                  {/* either showing an edit review menu or the review's body */}
-                  {
-                    this.state.editDisplay ?
-                      <EditReviewForm review={review} /> :
-                      <p className="review-body">{review.body}</p>
-                  }
-                  <br />
-                  {/*
-                  toggle showing edit or delete review depending on if logged in
-                  and also the original creater of the review
-                   */}
-                  {
-                    this.props.currentUser?.id === review.reviewerId ?
-                    <div className="review-edit-delete-buttons">
-                      <button 
-                        className="dark-button" 
-                        id="submit-review" 
-                        onClick={this.handleEditClick}
-                      >
-                        Edit
-                      </button>
-
-                      <button 
-                        className="dark-button" 
-                        id="submit-review" 
-                        onClick={() => console.log("work on delete review")}
-                      >
-                        Delete
-                      </button>
-                    </div> :
-                    <></>
-                  }
-                  <br />
-                  <br />
-                </div>
-                <br />
-              </div>
-              // reversing the review order from most recent to oldest
-            )).reverse()
+                    <br />
+                    {
+                      this.props.currentUser?.id === review.reviewerId ?
+                      <ReviewActions edit={this.handleEditClick} /> :
+                      <></>
+                    }
+                    <br />
+                    <br />
+                  </div>
+                  <br /> */}
+                  </div>
+                )
+              }
+            ).reverse()
           }
           <br />
         </div>
