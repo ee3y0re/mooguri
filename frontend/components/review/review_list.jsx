@@ -8,10 +8,15 @@ class ReviewList extends React.Component {
     this.state = {
       editDisplay : false
     }
+
+    this.handleEditClick = this.handleEditClick.bind(this)
   }
 
-  handleEditClick(){
-    this.setState({ editDisplay : !this.state.editDisplay });
+  handleEditClick(e){
+    // console.log("in handle edit")
+    e.preventDefault;
+    const newStatus = !this.state.editDisplay
+    this.setState({ editDisplay : newStatus });
     // on handle submit edit, need to set edit display as false
   }
 
@@ -22,12 +27,6 @@ class ReviewList extends React.Component {
       "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ];
-    const test = reviews[reviews.length - 1].createdAt;
-    const testNum = new Date(test);
-    console.log(testNum.getMonth())
-    const index = testNum.getMonth();
-    console.log(monthsAbbrev[index] + " " + testNum.getDate() + " " + testNum.getFullYear())
-
     return (
       <div className="review-list-box">
         <br />
@@ -48,24 +47,36 @@ class ReviewList extends React.Component {
             reviews?.map((review, idx) => (
               <div key={idx}>
                 <div className="review-row">
+                  {/* reviewer */}
                   <h2 className="review-author">{review.username}</h2>
                   <br />
+                  {/* review date creation */}
                   <h3>
                     {
                       monthsAbbrev[new Date(review.createdAt).getMonth()] +
-                      " " + new Date(review.createdAt).getDate() + " " + 
-                      new Date(review.createdAt).getFullYear()
+                      " " + new Date(review.createdAt).getDate() + 
+                      " " + new Date(review.createdAt).getFullYear()
                     }
                   </h3>
                   <br />
-                  <p className="review-body">{review.body}</p>
+                  {/* either showing an edit review menu or the review's body */}
+                  {
+                    this.state.editDisplay ?
+                      <EditReviewForm review={review}/> :
+                      <p className="review-body">{review.body}</p>
+                  }
+                  <br />
+                  {/*
+                  toggle showing edit or delete review depending on if logged in
+                  and also the original creater of the review
+                   */}
                   {
                     this.props.currentUser?.id === review.reviewerId ?
                     <div className="review-edit-delete-buttons">
                       <button 
                         className="dark-button" 
                         id="submit-review" 
-                        onClick={() => console.log("work on edit")}
+                        onClick={this.handleEditClick}
                       >
                         Edit
                       </button>
@@ -85,6 +96,7 @@ class ReviewList extends React.Component {
                 </div>
                 <br />
               </div>
+              // reversing the review order from most recent to oldest
             )).reverse()
           }
           <br />
