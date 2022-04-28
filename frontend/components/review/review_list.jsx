@@ -62,7 +62,7 @@ class ReviewList extends React.Component {
                   {/* either showing an edit review menu or the review's body */}
                   {
                     this.state.editDisplay ?
-                      <EditReviewForm review={review}/> :
+                      <EditReviewForm review={review} /> :
                       <p className="review-body">{review.body}</p>
                   }
                   <br />
