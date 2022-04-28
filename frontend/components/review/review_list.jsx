@@ -6,20 +6,22 @@ class ReviewList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // flag for showing review edit
       editDisplay : false
     }
-
+    //binding function toggling flag for review edit
     this.handleEditClick = this.handleEditClick.bind(this);
   }
 
+  //function toggling flag for review edit
   handleEditClick(e){
-    // console.log("in handle edit")
     e.preventDefault;
     const newStatus = !this.state.editDisplay
     this.setState({ editDisplay : newStatus });
     // on handle submit edit, need to set edit display as false
   }
 
+  //function for formatting createdAt attribute of review
   dateFormatter(dateNum) {
     const monthsAbbrev = [
       "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -29,13 +31,12 @@ class ReviewList extends React.Component {
     const date = new Date(dateNum).getDate();
     const year = new Date(dateNum).getFullYear();
     // const minutes = new Date(dateNum).getMinutes();
-
-    return month + " " + date + " " + year //+ " Time: " + minutes;
+    return month + " " + date + " " + year
   }
 
   render(){
     if (!this.props) { return null }
-    const { reviews, product, currentUser } = this.props;
+    const { reviews, product, currentUser, deleteReview } = this.props;
     return (
       <div className="review-list-box">
         <br />
@@ -62,6 +63,7 @@ class ReviewList extends React.Component {
                     currentUser={currentUser}
                     editDisplay={this.state.editDisplay}
                     handleEditClick={this.handleEditClick}
+                    handleDeleteClick={deleteReview}
                   />
                   )
                 }
