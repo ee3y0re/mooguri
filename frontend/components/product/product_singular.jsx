@@ -1,6 +1,6 @@
 //PRODUCT SHOW PT 1
 import React from "react";
-import ReviewListContainer from "../review/review_list_container";
+import ReviewList from "../review/review_list";
 
 class ProductSingular extends React.Component {
   constructor(props) {
@@ -97,7 +97,7 @@ class ProductSingular extends React.Component {
           </div>            
           <div className="show-reviews">
             <h1 className="review-head">{product.reviews?.length} reviews</h1>
-            <ReviewListContainer 
+            <ReviewList
               currentUser={this.props.currentUser} 
               product={product} 
               reviews={product.reviews} 

@@ -1,13 +1,13 @@
 import React from "react";
 
-const ReviewActions = ({ edit }) => {
+const ReviewActions = ({ handleEditClick }) => {
   return (
     // edit
     <div className="review-edit-delete-buttons">
       <button
         className="dark-button"
         id="submit-review"
-        onClick={edit}
+        onClick={handleEditClick}
       >
         Edit
       </button>

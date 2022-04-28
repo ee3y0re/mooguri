@@ -16,7 +16,7 @@ class ReviewList extends React.Component {
   //function toggling flag for review edit
   handleEditClick(e){
     e.preventDefault;
-    const newStatus = !this.state.editDisplay
+    const newStatus = !this.state.editDisplay;
     this.setState({ editDisplay : newStatus });
     // on handle submit edit, need to set edit display as false
   }
@@ -36,7 +36,9 @@ class ReviewList extends React.Component {
 
   render(){
     if (!this.props) { return null }
-    const { reviews, product, currentUser, deleteReview } = this.props;
+    const { 
+      reviews, product, currentUser
+    } = this.props;
     return (
       <div className="review-list-box">
         <br />
@@ -62,8 +64,9 @@ class ReviewList extends React.Component {
                     dateFormatter={this.dateFormatter}
                     currentUser={currentUser}
                     editDisplay={this.state.editDisplay}
+                    // editAction={updateReview}
                     handleEditClick={this.handleEditClick}
-                    handleDeleteClick={deleteReview}
+                    // handleDeleteClick={deleteReview}
                   />
                   )
                 }

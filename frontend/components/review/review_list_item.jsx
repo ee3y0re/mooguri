@@ -3,7 +3,13 @@ import ReviewActions from "./review_actions";
 import EditReviewForm from "./edit_review_form";
 
 const ReviewListItem = ({ 
-  review, dateFormatter, currentUser, editDisplay, handleEditClick 
+  review, 
+  dateFormatter, 
+  currentUser, 
+  editDisplay, 
+  editAction, 
+  handleEditClick, 
+  handleDeleteClick 
 }) => {
   return (
     <div className="review-row">
@@ -19,7 +25,10 @@ const ReviewListItem = ({
       <br />
       {
         currentUser?.id === review.reviewerId ?
-          <ReviewActions edit={handleEditClick} /> :
+          <ReviewActions 
+            handleEditClick={handleEditClick} 
+            delete={handleDeleteClick} 
+          /> :
           <></>
       }
       <br />
