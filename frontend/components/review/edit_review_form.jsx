@@ -1,7 +1,7 @@
 // REVIEW FORM
 import React from "react";
 
-class CreateReviewForm extends React.Component {
+class EditReviewFormContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,12 +17,12 @@ class CreateReviewForm extends React.Component {
   handleUpdate(e) {
     e.preventDefault();
     const updatedReview = Object.assign({}, this.state);
-    console.log(updateReview)
-    this.props.updateReview(updatedReview)//.then(this.props.refreshList);
+    this.props.updateReview(updatedReview)
+    .then(this.props.refreshList)
+    .then(this.props.handleEditClick)
   }
 
   updateField(field) {
-    console.log("within update field")
     return (e) => { this.setState({ [field]: e.target.value }) }
   }
 
@@ -65,4 +65,4 @@ class CreateReviewForm extends React.Component {
   }
 }
 
-export default CreateReviewForm;
+export default EditReviewFormContainer;

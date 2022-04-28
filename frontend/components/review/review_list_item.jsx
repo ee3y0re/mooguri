@@ -15,14 +15,16 @@ class ReviewListItem extends React.Component {
 
   //function toggling flag for review edit
   handleEditClick(e) {
-    e.preventDefault;
+    e.preventDefault();
     const newStatus = !this.state.editDisplay;
     this.setState({ editDisplay: newStatus });
     // on handle submit edit, need to set edit display as false
   }
 
   render(){
-    const { review, dateFormatter, currentUser, product } = this.props;
+    const { 
+      review, dateFormatter, currentUser, product, refreshList 
+    } = this.props;
 
     return (
       <div className="review-row">
@@ -32,7 +34,12 @@ class ReviewListItem extends React.Component {
         <br />
         {
           this.state.editDisplay ?
-            <EditReviewFormContainer review={review} product={product} /> :
+            <EditReviewFormContainer 
+              review={review} 
+              product={product} 
+              refreshList={refreshList}
+              handleEditClick={this.handleEditClick}
+            /> :
             <p className="review-body">{review.body}</p>
         }
         <br />

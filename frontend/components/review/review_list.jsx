@@ -18,7 +18,7 @@ class ReviewList extends React.Component {
   render(){
     if (!this.props) { return null };
     const { 
-      reviews, product, currentUser
+      reviews, product, currentUser, refreshList
     } = this.props;
     return (
       <div className="review-list-box">
@@ -28,7 +28,7 @@ class ReviewList extends React.Component {
             this.props.currentUser ? 
               <CreateReviewFormContainer 
                 product={product}
-                refreshList={this.props.refreshList}
+                refreshList={refreshList}
               /> :
               <span id="review-not-logged-in">
                 Please sign in to leave a review.
@@ -40,11 +40,12 @@ class ReviewList extends React.Component {
             reviews?.map((review) => {
                 return (
                   <ReviewListItem
-                    key={review.id}
+                    key={review.body}
                     review={review}
                     product={product}
                     dateFormatter={this.dateFormatter}
                     currentUser={currentUser}
+                    refreshList={refreshList}
                   />
                   )
                 }

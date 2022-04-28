@@ -24,7 +24,6 @@ class ProductSingular extends React.Component {
       formProcessed: newState,
     });
     this.componentDidMount();
-    console.log(this.state.formProcessed)
   }
 
   render(){
