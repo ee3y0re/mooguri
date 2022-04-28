@@ -56,7 +56,12 @@ class EditReviewFormContainer extends React.Component {
           {this.renderErrors()}
 
           <div className="review-submit-options">
-            <input type="submit" className="dark-button" id="submit-review" value="Save" />
+            <input 
+              type="submit" 
+              className="save-review" 
+              id="submit-review"
+              value="Save" 
+            />
           </div>
           <br />
         </form>

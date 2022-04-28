@@ -45,7 +45,8 @@ class ReviewListItem extends React.Component {
         <br />
         {
           currentUser?.id === review.reviewerId ?
-            <ReviewActions 
+            <ReviewActions
+              editDisplay={this.state.editDisplay} 
               handleEditClick={this.handleEditClick} 
             /> :
             <></>

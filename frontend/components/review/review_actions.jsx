@@ -1,6 +1,6 @@
 import React from "react";
 
-const ReviewActions = ({ handleEditClick }) => {
+const ReviewActions = ({ handleEditClick, editDisplay}) => {
   return (
     // edit
     <div className="review-edit-delete-buttons">
@@ -9,7 +9,9 @@ const ReviewActions = ({ handleEditClick }) => {
         id="submit-review"
         onClick={handleEditClick}
       >
-        Edit
+        {
+          editDisplay ? "Cancel" : "Edit"
+        }
       </button>
       {/* delete */}
       <button
