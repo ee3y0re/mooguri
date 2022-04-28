@@ -3,24 +3,6 @@ import CreateReviewFormContainer from  "./create_review_form_container";
 import ReviewListItem from "./review_list_item"
 
 class ReviewList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // flag for showing review edit
-      editDisplay : false
-    }
-    //binding function toggling flag for review edit
-    this.handleEditClick = this.handleEditClick.bind(this);
-  }
-
-  //function toggling flag for review edit
-  handleEditClick(e){
-    e.preventDefault;
-    const newStatus = !this.state.editDisplay;
-    this.setState({ editDisplay : newStatus });
-    // on handle submit edit, need to set edit display as false
-  }
-
   //function for formatting createdAt attribute of review
   dateFormatter(dateNum) {
     const monthsAbbrev = [
@@ -30,12 +12,11 @@ class ReviewList extends React.Component {
     const month = monthsAbbrev[new Date(dateNum).getMonth()];
     const date = new Date(dateNum).getDate();
     const year = new Date(dateNum).getFullYear();
-    // const minutes = new Date(dateNum).getMinutes();
-    return month + " " + date + " " + year
+    return month + " " + date + " " + year;
   }
 
   render(){
-    if (!this.props) { return null }
+    if (!this.props) { return null };
     const { 
       reviews, product, currentUser
     } = this.props;
@@ -63,10 +44,6 @@ class ReviewList extends React.Component {
                     review={review}
                     dateFormatter={this.dateFormatter}
                     currentUser={currentUser}
-                    editDisplay={this.state.editDisplay}
-                    // editAction={updateReview}
-                    handleEditClick={this.handleEditClick}
-                    // handleDeleteClick={deleteReview}
                   />
                   )
                 }
