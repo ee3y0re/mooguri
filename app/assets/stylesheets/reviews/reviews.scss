@@ -88,15 +88,23 @@
   text-align: center;
 }
 
+#save-review:disabled {
+  cursor: not-allowed;
+  pointer-events: none;;
+  color: lightgray;
+}
+
 .review-submit-buttons button, .review-submit-buttons input {
   background-color: pink;
   font-family: 'Cambay', sans-serif;
   font-size: 21px;
+  color: #444444;
   border-radius: 30px;
   cursor: pointer;
   border: 0;
   padding: .5%;
   width: 86px;
+  // height: 43px;
   text-align: center;
   align-items: center;
   padding-bottom: 1px;
@@ -105,4 +113,12 @@
 .review-edit-delete-flexbox {
   display: flex;
   justify-content: space-between;
+}
+.review-delete-container {
+  display: block;
+  margin: auto;
+  padding-bottom: 7px;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
 }

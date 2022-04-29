@@ -60,7 +60,12 @@ class EditReviewFormContainer extends React.Component {
           <div className="review-submit-buttons">
             {
               this.state.initialReviewBody === this.state.body?
-              <></> :
+              <input
+                type="submit"
+                id="save-review"
+                value="Save"
+                disabled
+              /> :
               <input 
                 type="submit" 
                 id="save-review"
