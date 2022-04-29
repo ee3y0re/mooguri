@@ -57,14 +57,13 @@ class EditReviewFormContainer extends React.Component {
           {/* <p>FIRE ESCAPE BLACK PAINT CHIPPIN' I CAN'T BUT FEEL I'M TRIPPIN'</p> */}
           {this.renderErrors()}
 
-          <div className="review-submit-options">
+          <div className="review-submit-buttons">
             {
               this.state.initialReviewBody === this.state.body?
               <></> :
               <input 
                 type="submit" 
-                className="save-review" 
-                id="submit-review"
+                id="save-review"
                 value="Save" 
               />
             }

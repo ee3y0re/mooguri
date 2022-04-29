@@ -77,25 +77,28 @@
 }
 
 .review-textarea-edit {
-  // height: 100%;
   width: 100%;
   resize: none;
 }
 
-.review-submit-options {
-  display: flex;
-  margin-top: 19px;
-  justify-content: space-between;
-}
-
-#submit-review {
+#create-review {
   border-radius: 24px;
   margin-top: 0px;
-  width: 135px;
+  width: 137px;
   text-align: center;
 }
 
-.cancel-review{
-  font-size: 16px;
-  font-weight: 900;
+.review-submit-buttons button, .review-submit-buttons input {
+  background-color: pink;
+  font-family: 'Cambay', sans-serif;
+  font-size: 21px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  padding: .5%;
+}
+
+.review-edit-delete-flexbox {
+  display: flex;
+  justify-content: space-between;
 }

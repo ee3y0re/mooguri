@@ -54,8 +54,13 @@ class CreateReviewForm extends React.Component {
 
             {this.renderErrors()}
 
-            <div className="review-submit-options">
-              <input type="submit" className="dark-button" id="submit-review" value="Post Your Review"/>
+            <div>
+              <input 
+                type="submit" 
+                className="dark-button" 
+                id="create-review" 
+                value="Post Your Review"
+              />
             </div>
             <br />
           </form>       

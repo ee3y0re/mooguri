@@ -6,24 +6,25 @@ const ReviewButtons = ({
   const reviewId = review.id;
   return (
     // edit
-    <div className="review-edit-delete-buttons">
-      <button
-        className="review-edit-button"
-        id="submit-review"
-        onClick={handleEditClick}
-      >
-        {
-          editDisplay ? "Cancel" : "Edit"
-        }
-      </button>
-      {/* delete */}
-      <button
-        className="dreview-delete-button"
-        id="submit-review"
-        onClick={()=> handleDelete(reviewId).then(refreshList)}
-      >
-        Delete
-      </button>
+    <div className="review-submit-buttons">
+      <div className="review-edit-delete-flexbox">
+        <button
+          id="review-edit-button"
+          onClick={handleEditClick}
+        >
+          {
+            editDisplay ? "Cancel" : "Edit"
+          }
+        </button>
+        {/* delete */}
+        <button
+          id="review-delete-button"
+          onClick={()=> handleDelete(reviewId).then(refreshList)}
+        >
+          Delete
+        </button>
+      </div>
+        
     </div>
   )
 }
