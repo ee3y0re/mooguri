@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewActions from "./review_actions";
+import ReviewButtons from "./review_buttons";
 import EditReviewFormContainer from "./edit_review_form_container";
 
 class ReviewListItem extends React.Component {
@@ -45,7 +45,7 @@ class ReviewListItem extends React.Component {
         <br />
         {
           currentUser?.id === review.reviewerId ?
-            <ReviewActions
+            <ReviewButtons
               review={review}
               refreshList={refreshList}
               editDisplay={this.state.editDisplay} 

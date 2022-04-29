@@ -1,6 +1,6 @@
 import React from "react";
 
-const ReviewActions = ({ 
+const ReviewButtons = ({ 
   review, refreshList, editDisplay, handleEditClick, handleDelete
 }) => {
   const reviewId = review.id;
@@ -28,4 +28,4 @@ const ReviewActions = ({
   )
 }
 
-export default ReviewActions;
+export default ReviewButtons;
