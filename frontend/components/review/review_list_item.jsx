@@ -23,7 +23,7 @@ class ReviewListItem extends React.Component {
 
   render(){
     const { 
-      review, dateFormatter, currentUser, product, refreshList, deleteReview 
+      review, dateFormatter, currentUser, product, refreshList, deleteReview
     } = this.props;
 
     return (
