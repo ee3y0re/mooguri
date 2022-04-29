@@ -23,7 +23,7 @@ class ReviewListItem extends React.Component {
 
   render(){
     const { 
-      review, dateFormatter, currentUser, product, refreshList 
+      review, dateFormatter, currentUser, product, refreshList, deleteReview 
     } = this.props;
 
     return (
@@ -46,8 +46,11 @@ class ReviewListItem extends React.Component {
         {
           currentUser?.id === review.reviewerId ?
             <ReviewActions
+              review={review}
+              refreshList={refreshList}
               editDisplay={this.state.editDisplay} 
               handleEditClick={this.handleEditClick} 
+              handleDelete={deleteReview}
             /> :
             <></>
         }

@@ -1,6 +1,6 @@
 import React from "react";
 import CreateReviewFormContainer from  "./create_review_form_container";
-import ReviewListItem from "./review_list_item"
+import ReviewListItemContainer from "./review_list_item_container"
 
 class ReviewList extends React.Component {
   //function for formatting createdAt attribute of review
@@ -39,8 +39,8 @@ class ReviewList extends React.Component {
           {
             reviews?.map((review) => {
                 return (
-                  <ReviewListItem
-                    key={review.body}
+                  <ReviewListItemContainer
+                    key={`${review.body}-${review.id}`}
                     review={review}
                     product={product}
                     dateFormatter={this.dateFormatter}
