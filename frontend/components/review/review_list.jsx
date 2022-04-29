@@ -41,8 +41,8 @@ class ReviewList extends React.Component {
               return (
                 <div className=
                   {
-                  idx % 2 === 0 ? "review-row-box-gray" : "review-row-box-transparent"
-                }
+                    idx % 2 === 0 ? "review-row-box-gray" : "review-row-box-transparent"
+                  }
                 >
                   <ReviewListItemContainer
                     key={review.id + `${review.body}`}
