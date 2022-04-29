@@ -8,7 +8,7 @@ const ReviewButtons = ({
     // edit
     <div className="review-edit-delete-buttons">
       <button
-        className="dark-button"
+        className="review-edit-button"
         id="submit-review"
         onClick={handleEditClick}
       >

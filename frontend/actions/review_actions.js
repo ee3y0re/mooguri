@@ -59,11 +59,11 @@ export const createReview = (review) => (dispatch) => {
     );
 }
 export const updateReview = (review) => (dispatch) => {
-  debugger
+  
   return ReviewApiUtil.updateReview(review)
     .then(
       (review) => { return dispatch(receiveReview(review)) },
-      (error) => { debugger 
+      (error) => {  
         return dispatch(receiveReviewErrors(error.responseJSON)) }
     );
 }

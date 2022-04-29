@@ -10,6 +10,7 @@ class EditReviewFormContainer extends React.Component {
       username: this.props.currentUser.username,
       product_id: this.props.product.id,
       body: this.props.review.body,
+      initialReviewBody: this.props.review.body
     };
     this.handleUpdate = this.handleUpdate.bind(this)
   }
@@ -40,6 +41,7 @@ class EditReviewFormContainer extends React.Component {
 
   render() {
     if (!this.props) return null;
+    console.log(this.state.body !== this.state.initialReviewBody)
     return (
       <div className="review-container">
         <form className="review-box" onSubmit={this.handleUpdate}>
@@ -47,7 +49,7 @@ class EditReviewFormContainer extends React.Component {
           <br />
           <p className="review-suggestions">What do you like about this? Did it ship on time? Describe your experience with this shop</p> */}
           <textarea
-            className="review-textarea-edit"
+            className="review-textarea"
             type="text"
             value={this.state.body}
             onChange={this.updateField("body")}
@@ -56,12 +58,16 @@ class EditReviewFormContainer extends React.Component {
           {this.renderErrors()}
 
           <div className="review-submit-options">
-            <input 
-              type="submit" 
-              className="save-review" 
-              id="submit-review"
-              value="Save" 
-            />
+            {
+              this.state.initialReviewBody === this.state.body?
+              <></> :
+              <input 
+                type="submit" 
+                className="save-review" 
+                id="submit-review"
+                value="Save" 
+              />
+            }
           </div>
           <br />
         </form>

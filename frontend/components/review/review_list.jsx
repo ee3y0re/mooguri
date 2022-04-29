@@ -40,7 +40,7 @@ class ReviewList extends React.Component {
             reviews?.map((review) => {
                 return (
                   <ReviewListItemContainer
-                    key={`${review.body}-${review.id}`}
+                    key={review.id + `${review.body}` + review.createdAt}
                     review={review}
                     product={product}
                     dateFormatter={this.dateFormatter}
