@@ -38,19 +38,18 @@ class ReviewList extends React.Component {
         <div className="review-row-box">
           {
             reviews?.map((review) => {
-                return (
-                  <ReviewListItemContainer
-                    key={review.id + `${review.body}` + review.createdAt}
-                    review={review}
-                    product={product}
-                    dateFormatter={this.dateFormatter}
-                    currentUser={currentUser}
-                    refreshList={refreshList}
-                  />
-                  )
-                }
-                ).reverse()
-              }
+              return (
+                <ReviewListItemContainer
+                  key={review.id + `${review.body}` + review.createdAt}
+                  review={review}
+                  product={product}
+                  dateFormatter={this.dateFormatter}
+                  currentUser={currentUser}
+                  refreshList={refreshList}
+                />
+              )
+            }).reversed()
+          }
           <br />
         </div>
         <br />
