@@ -12,11 +12,9 @@ class ProductSnapshot extends React.Component {
     const arrayOfAllProducts = Object.values(this.props.products);  
     return (
       <div className="section-product-index">
-        <div className="product-index-title-container">
-          <h1 className="product-index-title">See MOO-re</h1>
-        </div>
         <div className="product-index-grid-container">
           <div className="product-index-row">
+            <h1 className="product-index-title">See MOO-re</h1>
             <ul className="ul-product-index-row-list">
               {
                 arrayOfAllProducts?.map((product) => {

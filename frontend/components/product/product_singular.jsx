@@ -58,12 +58,12 @@ class ProductSingular extends React.Component {
               </div>              
             </div>
             <button className="dark-button">Add to Cart WIP</button>
-            <ul className="shop-item-trends">
+            {/* <ul className="shop-item-trends">
               <li className="stock-sell-stats">Other people want this. OR Selling fast! <span className="stock-sell-details">Over # people have this in their carts right now. OR Only 1 left.</span></li>
               <li className="seller-trend">Star Seller (Sometimes)</li>
               <li className="ship-date">Arrives by Due Date of This Project</li>              
-            </ul>
-            <div className="highlights">
+            </ul> */}
+            {/* <div className="highlights">
               <h2 className="product-info-head">Highlights</h2>
               <ul className="product-info-details">  
                 <li>Handmade</li>
@@ -74,9 +74,7 @@ class ProductSingular extends React.Component {
                 <li>Materials: </li>
                 <li>Capacity: </li>
               </ul>              
-            </div>
-          </div>
-          <div className="show-buy-info-full">
+            </div> */}
             <div className="description-container">
               <h2 className="product-info-head">Description</h2>
               <p className="product-info-details">{product.description}</p>
@@ -93,7 +91,7 @@ class ProductSingular extends React.Component {
               </div>
             </div>
             <div ></div>
-          </div>            
+          </div>         
           <div className="show-reviews">
             <h1 className="review-head">{product.reviews?.length} reviews</h1>
             <ReviewList
