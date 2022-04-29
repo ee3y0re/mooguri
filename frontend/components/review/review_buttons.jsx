@@ -18,7 +18,7 @@ const ReviewButtons = ({
       </button>
       {/* delete */}
       <button
-        className="dark-button"
+        className="dreview-delete-button"
         id="submit-review"
         onClick={()=> handleDelete(reviewId).then(refreshList)}
       >
