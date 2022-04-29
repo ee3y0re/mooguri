@@ -12,7 +12,6 @@ export const fetchReview = (reviewId) => {
   });
 }
 export const createReview = (review) => {
-  // debugger
   return $.ajax({
     url: "/api/reviews",
     method: "POST",

@@ -3,10 +3,9 @@ import { closeModal } from "../../actions/modal_actions";
 import { connect } from "react-redux";
 import LoginFormContainer from "../login/login_form_container";
 import SignupFormContainer from "../signup/signup_form_container";
+import ReviewFormContainer from "../review/review_form_container";
 
-
-
-const Modal = ({ modal, closeModal }) => {
+const Modal = ({ closeModal, modal, product }) => {
   /* If our modal slice is null, we'll return null from our component, 
   effectively making it non-existent.  */
   if (!modal) {
@@ -23,6 +22,10 @@ const Modal = ({ modal, closeModal }) => {
       break;
     case "Sign Up":
       component = <SignupFormContainer />;
+      break;
+    case "Create Review":
+      component = <ReviewFormContainer product={product}/>;
+      //need a break or else will keep going to default null
       break;
     default:
       return null; //if neither signin or login, close modal
@@ -42,7 +45,8 @@ const Modal = ({ modal, closeModal }) => {
 
 const mapStateToProps = (state) => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    product: Object.values(state.entities.products)[0]
   };
 };
 

@@ -53,20 +53,20 @@
 
 .show-seller-name {
   font-family: 'Cambay', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 2%;
 }
 
 .show-seller-info {
   font-family: 'Cambay', sans-serif;
-  font-size: 13px;
+  font-size: 21px;
   margin-bottom: 6%;
 }
 
 .show-buy-title-lines > h1 {
   height: max-content;
   font-family: 'Nanum Myeongjo', serif;
-  font-size: 35px;
+  font-size: 39px;
   overflow-wrap: break-word;
 }
 
@@ -79,12 +79,12 @@
 
 .show-price {
   font-family: 'Cambay', sans-serif;
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 900;
 }
 
 .show-price-avail {
-  font-size: 17px;
+  font-size: 21px;
 }
 
 .dark-button {
@@ -96,7 +96,7 @@
 }
 
 .shop-item-trends {
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 6%;
   line-height: 18px;
 }
@@ -106,16 +106,16 @@
 }
 
 .product-info-head {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 2%;
 }
 
 .product-info-details {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 24px;
   overflow-wrap: break-word;
-  margin-bottom: 2%;
+  margin-bottom: 5px;
 }
 
 .show-buy-info-full {
@@ -125,7 +125,7 @@
   float: right;
   width: 30%;
   height: 100%;
-  margin-top: 29px;
+  margin-top: 61px;
 }
 
 .eta { 
@@ -151,12 +151,6 @@
   width: 69%;
   height: 100%;
   margin-top: 29px;
-}
-
-.show-reviews > h2 {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 33px;
-  line-height: 42px;
 }
 
 // // background colors only
@@ -189,7 +183,7 @@
 //   background-color: #95FFF7;
 // }
 
-.show-reviews {
-  background-color: #7C8BFF;
-  height: 323px;
-}
+// .show-reviews {
+//   background-color: #7C8BFF;
+//   height: 323px;
+// }
