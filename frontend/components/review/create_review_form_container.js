@@ -1,8 +1,7 @@
 // REVIEW FORM CONTAINER
 import { connect } from "react-redux";
 import { createReview } from "../../actions/review_actions";
-import { closeModal } from "../../actions/modal_actions";
-import ReviewForm from "./review_form";
+import CreateReviewForm from "./create_review_form";
 
 const mstp = (state) => {
   return {
@@ -13,9 +12,8 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
   return {
-    submitAction: (reviewMagic) => dispatch(createReview(reviewMagic)),
-    closeModal: () => dispatch(closeModal())
+    createReview: (reviewMagic) => dispatch(createReview(reviewMagic)),
   }
 }
 
-export default connect(mstp,mdtp)(ReviewForm);
+export default connect(mstp,mdtp)(CreateReviewForm);

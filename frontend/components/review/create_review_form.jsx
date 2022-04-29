@@ -1,7 +1,7 @@
 // REVIEW FORM
 import React from "react";
 
-class ReviewForm extends React.Component {
+class CreateReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,13 +10,15 @@ class ReviewForm extends React.Component {
       product_id: this.props.product.id,
       body: "",
     };
+
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e){
     e.preventDefault();
     const newReview = Object.assign({}, this.state);
-    this.props.submitAction(newReview).then(this.props.closeModal);
+    this.setState({ body : "" });
+    this.props.createReview(newReview).then(this.props.refreshList);
   }
 
   updateField(field){
@@ -53,13 +55,13 @@ class ReviewForm extends React.Component {
             {this.renderErrors()}
 
             <div className="review-submit-options">
-              <button onClick={this.props.closeModal} className="cancel-review">Cancel</button>
               <input type="submit" className="dark-button" id="submit-review" value="Post Your Review"/>
             </div>
+            <br />
           </form>       
       </div>
     )
   }
 }
 
-export default ReviewForm;
+export default CreateReviewForm;

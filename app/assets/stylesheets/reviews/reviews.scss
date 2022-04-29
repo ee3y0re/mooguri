@@ -2,7 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.review-container {
+  width: 100%;
+}
+
 .review-list-box {
+  display: flex;
+  flex-direction: column;
   max-width: 847px;
 }
 
@@ -16,8 +22,7 @@
   line-height: 42px;
 }
 
-#review-action {
-  height: 69px;
+#review-form-action {
   display: flex;
   align-items: center;
   border-bottom: 1px solid lightgray;
@@ -48,7 +53,12 @@
 .review-body {
   font-size: 17px;
   line-height: 1.4;
-  margin-bottom: 42px;
+  margin-bottom: 39px;
+}
+
+.review-edit-delete-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .review-suggestions {
@@ -56,8 +66,18 @@
   margin-bottom: 10px;
 }
 
+.review-action {
+  width: 100%;
+}
+
 .review-textarea {
   height: 200px;
+  width: 100%;
+  resize: none;
+}
+
+.review-textarea-edit {
+  // height: 100%;
   width: 100%;
   resize: none;
 }

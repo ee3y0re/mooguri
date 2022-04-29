@@ -48,22 +48,14 @@ export default class App extends React.Component {
               <li className="nav-cat-list-items">Art &amp; Collectibles</li>
               <li className="nav-cat-list-items">Craft Supplies</li>
               <li className="nav-cat-list-items">Gifts &amp; Gift Cards</li>
-
             </ul>
           </div>          
         </div>
 
-
         <Switch>
-
-          {/* TODO: protected routes */}
-          {/* <Route path="/login" component={LoginFormContainer}/>
-          <Route path="/signup" component={SignupFormContainer} /> */}
-
           <Route path="/products/:productId" component={ProductSingularContainer} />
           <Route path="/" component={Home} />
         </Switch>
-
       </div>
     );
   }

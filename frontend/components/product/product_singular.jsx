@@ -1,6 +1,6 @@
 //PRODUCT SHOW PT 1
 import React from "react";
-import ReviewListContainer from "../review/review_list_container";
+import ReviewList from "../review/review_list";
 
 class ProductSingular extends React.Component {
   constructor(props) {
@@ -8,19 +8,22 @@ class ProductSingular extends React.Component {
     this.state = {
       formProcessed: false
     }
-  }
 
-  handleNewReview(){
-    this.setState({
-      formProcessed: !this.state.formProcessed
-    })
+    this.refreshList = this.refreshList.bind(this);
   }
 
   componentDidMount(){
     // grabbing from url 
     // own props object has a match key that has a params key that has a productId key
     this.props.fetchProduct(this.props.match.params.productId)
-    // this.props.receiveReviews();
+  }
+
+  refreshList() {
+    const newState = !this.state.formProcessed;
+    this.setState({
+      formProcessed: newState,
+    });
+    this.componentDidMount();
   }
 
   render(){
@@ -54,9 +57,6 @@ class ProductSingular extends React.Component {
                 <div className="show-avail">In Stock</div>
               </div>              
             </div>
-
-{/* PRODUCT SHOW PT 2 */}
-
             <button className="dark-button">Add to Cart WIP</button>
             {/* <ul className="shop-item-trends">
               <li className="stock-sell-stats">Other people want this. OR Selling fast! <span className="stock-sell-details">Over # people have this in their carts right now. OR Only 1 left.</span></li>
@@ -93,8 +93,13 @@ class ProductSingular extends React.Component {
             <div ></div>
           </div>         
           <div className="show-reviews">
-            {/* product id will be going to review form */}
-            <ReviewListContainer currentUser={this.props.currentUser} reviews={product.reviews} formProcessed={this.state.formProcessed} onChange={() => this.handleNewReview()}/>
+            <h1 className="review-head">{product.reviews?.length} reviews</h1>
+            <ReviewList
+              currentUser={this.props.currentUser} 
+              product={product} 
+              reviews={product.reviews} 
+              refreshList={this.refreshList}
+            />
           </div>
         </div>
       </div>

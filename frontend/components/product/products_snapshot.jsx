@@ -6,7 +6,6 @@ class ProductSnapshot extends React.Component {
 
   componentDidMount(){
     this.props.fetchProducts();
-    // console.log(this.props.products)
   }
 
   render() { 
