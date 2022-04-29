@@ -45,7 +45,7 @@ class ReviewList extends React.Component {
                 }
                 >
                   <ReviewListItemContainer
-                    key={review.id + `${review.body}` + review.createdAt}
+                    key={review.id + `${review.body}`}
                     review={review}
                     product={product}
                     dateFormatter={this.dateFormatter}
@@ -54,7 +54,7 @@ class ReviewList extends React.Component {
                   /> 
                 </div>
               )
-            })
+            }).reverse()
           }
           <br />
         </div>
