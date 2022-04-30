@@ -41,7 +41,6 @@ class EditReviewFormContainer extends React.Component {
 
   render() {
     if (!this.props) return null;
-    console.log(this.state.body !== this.state.initialReviewBody)
     return (
       <div className="review-container">
         <form className="review-box" onSubmit={this.handleUpdate}>
