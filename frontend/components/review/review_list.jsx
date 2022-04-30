@@ -4,6 +4,7 @@ import ReviewListItemContainer from "./review_list_item_container"
 
 class ReviewList extends React.Component {
   //function for formatting createdAt attribute of review
+  
   dateFormatter(dateNum) {
     const monthsAbbrev = [
       "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -15,11 +16,34 @@ class ReviewList extends React.Component {
     return month + " " + date + " " + year;
   }
 
+  // dateSort(){
+  //   const compareIdx = (a, b) => {
+  //     if (a.dataset.date < b.dataset.date) {
+  //       return -1;
+  //     } else if (a.dataset.date > b.dataset.date) {
+  //       return 1;
+  //     } else {
+  //       return 0;
+  //     }
+  //   }
+  //   let dates = document.querySelectorAll("[data-date]");
+  //   let datesArr = Array.from(dates);
+  //   let descendDates = datesArr.sort(compareIdx).reverse();
+  //   descendDates.forEach((date) => {
+  //     document.querySelector("#products-dot-reviews").appendChild(date);
+  //   })
+  // }
+
+  // componentDidMount(){
+  //   this.dateSort();
+  // }
+
   render(){
     if (!this.props) { return null };
     const { 
       reviews, product, currentUser, refreshList
     } = this.props;
+
     return (
       <div className="review-list-box">
         <br />
@@ -39,20 +63,27 @@ class ReviewList extends React.Component {
           {
             reviews?.map((review, idx) => {
               return (
-                <div className=
-                  {
-                    idx % 2 === 0 ? "review-row-box-gray" : "review-row-box-transparent"
-                  }
+                <ul 
+                  className=
+                    {
+                      idx % 2 === 0 ? "review-row-box-gray" : "review-row-box-transparent"
+                    }
+                  id="products-dot-reviews"
                 >
-                  <ReviewListItemContainer
+                  <li 
                     key={review.id + `${review.body}`}
-                    review={review}
-                    product={product}
-                    dateFormatter={this.dateFormatter}
-                    currentUser={currentUser}
-                    refreshList={refreshList}
-                  /> 
-                </div>
+                    data-date={review.createdAt}
+                  >
+                    <ReviewListItemContainer
+                      // key={review.id + `${review.body}`}
+                      review={review}
+                      product={product}
+                      dateFormatter={this.dateFormatter}
+                      currentUser={currentUser}
+                      refreshList={refreshList}
+                    /> 
+                  </li>
+                </ul>
               )
             }).reverse()
           }
