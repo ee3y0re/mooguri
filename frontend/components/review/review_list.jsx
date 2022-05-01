@@ -60,33 +60,33 @@ class ReviewList extends React.Component {
           }
         </div>
         <div className="review-row-box">
-          {
-            reviews?.map((review, idx) => {
-              return (
-                <ul 
-                  className=
-                    {
-                      idx % 2 === 0 ? "review-row-box-gray" : "review-row-box-transparent"
-                    }
-                  id="products-dot-reviews"
-                >
+          <ul 
+            id="products-dot-reviews"
+            >
+            {
+              reviews?.map((review, idx) => {
+                return (
                   <li 
-                    key={review.id + `${review.body}`}
-                    data-date={review.createdAt}
-                  >
-                    <ReviewListItemContainer
-                      // key={review.id + `${review.body}`}
-                      review={review}
-                      product={product}
-                      dateFormatter={this.dateFormatter}
-                      currentUser={currentUser}
-                      refreshList={refreshList}
-                    /> 
-                  </li>
-                </ul>
-              )
-            }).reverse()
-          }
+                      className=
+                        {
+                          idx % 2 === 0 ? "review-row-box-gray" : "review-row-box-transparent"
+                        }
+                      key={review.id + ` - ${review.body} - ` + `${review.updatedAt}`}
+                      data-date={review.createdAt}
+                    >
+                      <ReviewListItemContainer
+                        // key={review.id + `${review.body}` + `${review.updatedAt}`}
+                        review={review}
+                        product={product}
+                        dateFormatter={this.dateFormatter}
+                        currentUser={currentUser}
+                        refreshList={refreshList}
+                      /> 
+                    </li>
+                )
+              }).reverse()
+            }
+          </ul>
           <br />
         </div>
         <br />
