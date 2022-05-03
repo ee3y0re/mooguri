@@ -37,8 +37,7 @@ const SearchBar = () => {
         type="text" 
         placeholder="Search for anything"
         passProp={actualSearchInput}
-        id="temp-search" 
-        className="temp"
+        id="search-box" 
         onChange={updateSearchInput}
       />
     </form>
