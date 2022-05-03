@@ -7,6 +7,11 @@ import { useLocation } from "react-router";
 import { fetchProducts } from "../../actions/product_actions";
 
 const SearchResult = () => {
+  // // set up the part of state that returns after calling fetchProducts
+  // // set up a variable for using dispatch
+  // // assign value from url that will be used to select specific products
+  // // parse the previous line into a string for reference in select products
+  // // find a way to call the fetching of products
   return (
     <div>Search Result</div>
     /*
