@@ -23,21 +23,22 @@ const SearchBar = () => {
     // // search?abbySpeak=actualSearchInput
     // // 
     console.log("varToProcessUrl after set", varToProcessUrl) 
-  let processedUrlInString = varToProcessUrl.toString();
+  let processedUrlInStringVal = varToProcessUrl.toString();
     // // 
-    console.log("processedUrlInString", processedUrlInString)
+    console.log("processedUrlInStringVal", processedUrlInStringVal)
 
   // //create a function to handle search submission and search result render
-  // const handleSearchSubmit = (e) => {
-  //   e.preventDefault();
-  //   whereYouveBeen.push(`/search?${spokenWishSearchVal}`);
-  //   //reset search bar state back to default blank for new searches
-  //   setWish("")
-  // }
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    whereYouveBeen.push(`/search?${processedUrlInStringVal}`);
+    // // reset search bar state back to default blank for new searches
+    setNSaveSearchToState("");
+  }
 
-  // const updateSearchInput = (e) => {
-  //   setWish(e.currentTarget.value);
-  // }
+  const updateSearchInput = (e) => {
+    // // setting state as search input is inputted
+    setNSaveSearchToState(e.currentTarget.value);
+  }
 
   return (
     // return the search form
