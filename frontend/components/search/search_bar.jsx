@@ -36,7 +36,7 @@ const SearchBar = () => {
       <input 
         type="text" 
         placeholder="Search for anything"
-        passProp={actualSearchInput}
+        value={actualSearchInput}
         id="search-box" 
         onChange={updateSearchInput}
       />
