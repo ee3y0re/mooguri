@@ -10,9 +10,10 @@ const SearchBar = () => {
   const youAreHere = useLocation();
 
 
-  //create variables to key into and change the search query
-  //TEST WITHOUT THE FOLLOWING LINE
-  // const spokenWish = new URLSearchParams(youAreHere.search);
+  // // create variables to key into and change the search query
+  // // TEST WITHOUT THE FOLLOWING LINE
+  const varToProcessUrl = new URLSearchParams(youAreHere.search); // result of useLocation();
+  console.log(varToProcessUrl)
   // spokenWish.set("theUltimateSmoothieButReallyAKeyForObj", wish);
   // let spokenWishSearchVal = spokenWish.toString();
 
