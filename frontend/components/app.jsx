@@ -4,6 +4,7 @@ import Home from "./home/home"
 import ModalContainer from "./modal/modal";
 import AuthContainer from "./auth/auth_container";
 import ProductSingularContainer from "./product/product_singular_container";
+// IMPORT SEARCH BAR
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -20,8 +21,8 @@ export default class App extends React.Component {
             <h1 className="logo">
               <Link to="/" id="logo-link">MOOguri</Link>
             </h1>
-            {/* TODO: create search component and change value to "Search" that disappears after clicking*/}
-            <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/>
+            {/* <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/> */}
+            {/* IMPORT SEARCH BAR */}
             <ModalContainer /> 
             <AuthContainer />
             {/* TODO: create cart component turn into button after */}
