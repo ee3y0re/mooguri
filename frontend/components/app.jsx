@@ -4,7 +4,6 @@ import Home from "./home/home"
 import ModalContainer from "./modal/modal";
 import AuthContainer from "./auth/auth_container";
 import ProductSingularContainer from "./product/product_singular_container";
-// import SearchRouteSetupContainer from "./search/search_route_setup_container"
 import SearchBar from "./search/search_bar";
 import SearchResult from "./search/search_result";
 
@@ -23,8 +22,6 @@ export default class App extends React.Component {
             <h1 className="logo">
               <Link to="/" id="logo-link">MOOguri</Link>
             </h1>
-            {/* <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/> */}
-            {/* IMPORT SEARCH BAR */}
             <SearchBar />
             <ModalContainer /> 
             <AuthContainer />
