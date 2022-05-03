@@ -7,15 +7,25 @@ const SearchBar = () => {
   // //   results component
   const [actualSearchInput, setNSaveSearchToState] = useState("");
   const whereYouveBeen = useHistory();
+    // // 
+    console.log("whereYouveBeen", whereYouveBeen)
   const youAreHere = useLocation();
-
+    // // 
+    console.log("youAreHere", youAreHere)
 
   // // create variables to key into and change the search query
   // // TEST WITHOUT THE FOLLOWING LINE
-  const varToProcessUrl = new URLSearchParams(youAreHere.search); // result of useLocation();
-  console.log(varToProcessUrl)
-  // spokenWish.set("theUltimateSmoothieButReallyAKeyForObj", wish);
-  // let spokenWishSearchVal = spokenWish.toString();
+  const varToProcessUrl = new URLSearchParams(youAreHere.search); 
+    // // result of useLocation();
+    // // 
+    console.log("varToProcessUrl", varToProcessUrl) 
+  varToProcessUrl.set("abbySpeak", actualSearchInput); 
+    // // search?abbySpeak=actualSearchInput
+    // // 
+    console.log("varToProcessUrl after set", varToProcessUrl) 
+  let processedUrlInString = varToProcessUrl.toString();
+    // // 
+    console.log("processedUrlInString", processedUrlInString)
 
   // //create a function to handle search submission and search result render
   // const handleSearchSubmit = (e) => {
