@@ -1,10 +1,11 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Route, Router, Switch } from "react-router-dom";
 import Home from "./home/home"
 import ModalContainer from "./modal/modal";
 import AuthContainer from "./auth/auth_container";
 import ProductSingularContainer from "./product/product_singular_container";
-// IMPORT SEARCH BAR
+// import SearchRouteSetupContainer from "./search/search_route_setup_container"
+import SearchBar from "./search/search_bar"
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -25,7 +26,8 @@ export default class App extends React.Component {
             {/* IMPORT SEARCH BAR */}
             <ModalContainer /> 
             <AuthContainer />
-            {/* TODO: create cart component turn into button after */}
+            {/* <SearchRouteSetupContainer /> */}
+            <Router><SearchBar /></Router>
             <div id="cart-logo-container">
               <span className="temp" id="shop-logo">
                 <svg xmlns="http://www.w3.org/2000/svg">
