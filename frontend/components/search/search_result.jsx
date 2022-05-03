@@ -18,7 +18,8 @@ const SearchResult = () => {
   // // parse the previous line into a string for reference in select products
   let searchExtractParams = new URLSearchParams(searchLocation.search);
   // // get the value of the key in the search; key is "abbySpeak"
-  // // replace each plus sign with a space to effectively compare with the other products
+  // // replace each plus sign with a space to effectively compare with the 
+  // //  other products
   let searchCompareRef = searchExtractParams
     .get("abbySpeak").replace("+", " ").toLowerCase();
 
@@ -36,16 +37,34 @@ const SearchResult = () => {
             if (productName.includes(searchCompareRef)) {
               counter += 1;
               return (
-                <div className="product-index-row-list-items-container" key={productEle.id.toString()}>
+                <div 
+                  className="product-index-row-list-items-container" 
+                  key={productEle.id.toString()}
+                >
                   <li className="product-index-row-list-items">
-                    <Link to={`/products/${productEle.id}`}><img src={productEle.photoUrl} alt={`${productEle.name}`} className="product-index-thumbnail" /></Link>
+                    <Link 
+                      to={`/products/${productEle.id}`}
+                    >
+                      <img 
+                        src={productEle.photoUrl} 
+                        alt={`${productEle.name}`} 
+                        className="product-index-thumbnail" 
+                      />
+                    </Link>
                   </li>
                 </div>
               )
             }
           })
         }
-
+        <h1>
+          {
+            !counter ? 
+              `We couldn't find any results for ${searchCompareRef}. 
+              Try searching something else instead?` :
+              null
+          }
+        </h1>
     </div>
   );
 };
