@@ -38,13 +38,20 @@ const SearchBar = () => {
   const updateSearchInput = (e) => {
     // // setting state as search input is inputted
     setNSaveSearchToState(e.currentTarget.value);
+    console.log("actualSearchInput updating", actualSearchInput)
   }
 
   return (
     // return the search form
-    <form action={handleSearchSubmit}>
+    <form onSubmit={handleSearchSubmit}>
       {/*  */}
-      <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/>
+      <input 
+        type="text" 
+        placeholder="Search for anything"
+        id="temp-search" 
+        className="temp"
+        onChange={updateSearchInput}
+      />
     </form>
 
   )

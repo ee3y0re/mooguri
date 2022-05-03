@@ -25,10 +25,10 @@ export default class App extends React.Component {
             </h1>
             {/* <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/> */}
             {/* IMPORT SEARCH BAR */}
+            <SearchBar />
             <ModalContainer /> 
             <AuthContainer />
             {/* <SearchRouteSetupContainer /> */}
-            <SearchBar />
             <div id="cart-logo-container">
               <span className="temp" id="shop-logo">
                 <svg xmlns="http://www.w3.org/2000/svg">
