@@ -5,9 +5,10 @@ const SearchBar = () => {
   // // set state for the input into the search bar
   // // initialize and declare variables for using location and history to render
   // //   results component
-  const [wish, setWish] = useState("");
+  const [actualSearchInput, setNSaveSearchToState] = useState("");
   const whereYouveBeen = useHistory();
   const youAreHere = useLocation();
+
 
   //create variables to key into and change the search query
   //TEST WITHOUT THE FOLLOWING LINE
