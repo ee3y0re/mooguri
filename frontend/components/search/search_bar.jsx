@@ -42,7 +42,10 @@ const SearchBar = () => {
 
   return (
     // return the search form
-    <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/>
+    <form action={handleSearchSubmit}>
+      {/*  */}
+      <input type="text" readOnly="Search and Cart Under Construction" id="temp-search" className="temp"/>
+    </form>
 
   )
 }
