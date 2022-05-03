@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { withRouter, useLocation, useHistory } from "react-router";
+import { withRouter, useLocation, useHistory } from "react-router-dom";
 
 const SearchBar = () => {
   // // set state for the input into the search bar
@@ -8,7 +8,6 @@ const SearchBar = () => {
   const [wish, setWish] = useState("");
   const whereYouveBeen = useHistory();
   const youAreHere = useLocation();
-  console.log(whereYouveBeen, youAreHere)
 
   //create variables to key into and change the search query
   //TEST WITHOUT THE FOLLOWING LINE
