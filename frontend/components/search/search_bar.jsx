@@ -7,25 +7,15 @@ const SearchBar = () => {
   // //   results component
   const [actualSearchInput, setNSaveSearchToState] = useState("");
   const whereYouveBeen = useHistory();
-    // // 
-    console.log("whereYouveBeen", whereYouveBeen)
   const youAreHere = useLocation();
-    // // 
-    console.log("youAreHere", youAreHere)
 
   // // create variables to key into and change the search query
   // // TEST WITHOUT THE FOLLOWING LINE
   const varToProcessUrl = new URLSearchParams(youAreHere.search); 
-    // // result of useLocation();
-    // // 
-    console.log("varToProcessUrl", varToProcessUrl) 
   varToProcessUrl.set("abbySpeak", actualSearchInput); 
-    // // search?abbySpeak=actualSearchInput
-    // // 
-    console.log("varToProcessUrl after set", varToProcessUrl) 
   let processedUrlInStringVal = varToProcessUrl.toString();
-    // // 
-    console.log("processedUrlInStringVal", processedUrlInStringVal)
+  // // actualSearchInput = after test search => abbySpeak=after+test+search
+  // // actualSearchInput = after test search => http://localhost:3000/#/search?abbySpeak=after+test+search
 
   // //create a function to handle search submission and search result render
   const handleSearchSubmit = (e) => {
@@ -38,7 +28,6 @@ const SearchBar = () => {
   const updateSearchInput = (e) => {
     // // setting state as search input is inputted
     setNSaveSearchToState(e.currentTarget.value);
-    console.log("actualSearchInput updating", actualSearchInput)
   }
 
   return (
@@ -47,6 +36,7 @@ const SearchBar = () => {
       <input 
         type="text" 
         placeholder="Search for anything"
+        passProp={actualSearchInput}
         id="temp-search" 
         className="temp"
         onChange={updateSearchInput}
