@@ -1,11 +1,12 @@
 import React from "react";
-import { Link, Route, Router, Switch } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 import Home from "./home/home"
 import ModalContainer from "./modal/modal";
 import AuthContainer from "./auth/auth_container";
 import ProductSingularContainer from "./product/product_singular_container";
 // import SearchRouteSetupContainer from "./search/search_route_setup_container"
-import SearchBar from "./search/search_bar"
+import SearchBar from "./search/search_bar";
+import SearchResult from "./search/search_result";
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -27,7 +28,7 @@ export default class App extends React.Component {
             <ModalContainer /> 
             <AuthContainer />
             {/* <SearchRouteSetupContainer /> */}
-            <Router><SearchBar /></Router>
+            <SearchBar />
             <div id="cart-logo-container">
               <span className="temp" id="shop-logo">
                 <svg xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +41,7 @@ export default class App extends React.Component {
         </div>
 
         <div id="nav-categories-container-underline">
-          <div className="temp" id="nav-categories-container">
+          {/* <div className="temp" id="nav-categories-container">
             <ul id="nav-cat-list">
               <li className="nav-cat-list-items">Mother's Day Gifts</li>
               <li className="nav-cat-list-items">Jewelry &amp; Accessories</li>
@@ -52,10 +53,11 @@ export default class App extends React.Component {
               <li className="nav-cat-list-items">Craft Supplies</li>
               <li className="nav-cat-list-items">Gifts &amp; Gift Cards</li>
             </ul>
-          </div>          
+          </div>           */}
         </div>
 
         <Switch>
+          <Route path="/search" component={SearchResult}/>
           <Route path="/products/:productId" component={ProductSingularContainer} />
           <Route path="/" component={Home} />
         </Switch>
