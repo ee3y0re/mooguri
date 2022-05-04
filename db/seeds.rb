@@ -5,18 +5,39 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+## Gem for S3 bucket file opening
 require 'open-uri'
 
 User.destroy_all
 Product.destroy_all
 Review.destroy_all
 
-User.create!([
-  { username: "0reoCookies", email: "vanillab@abbymail.com", password: "besticecream" },
-  { username: "StrawB3rries", email: "iceyice@abbymail.com", password: "YummyFruitsOfOurLabor" },
-  { username: "MonstrCookie", email: "smoothestsmoothie.abbymail.com", password: "FullOfSweets"},
-  { username: "EtsyListings", email: "etsyclone.com", password: "mooguriChild1" }
-])
+## All Users
+User.create!(
+  [
+    { 
+      username: "0reoCookies", 
+      email: "vanillab@abbymail.com", 
+      password: "besticecream" 
+    },
+    { 
+      username: "StrawB3rries", 
+      email: "iceyice@abbymail.com", 
+      password: "YummyFruitsOfOurLabor" 
+    },
+    { 
+      username: "MonstrCookie", 
+      email: "smoothestsmoothie.abbymail.com", 
+      password: "FullOfSweets"
+    },
+    { 
+      username: "EtsyListings", 
+      email: "etsyclone.com", 
+      password: "mooguriChild1" 
+    }
+  ]
+)
 
 # product = Product.create!({
 #   product_name:"",
@@ -33,6 +54,7 @@ User.create!([
 # # variableForProductInstance is an instance of the Product.create! or whatever your making
 # variableForProductInstance.photo.attach(io: photoVariable, filename: "/key")
 
+## First 10 Products
 milk1_product = Product.create!({
   product_name: "Milk Jug Charm Miniature Food Jewelry Resin Charms Handmade Jewelry from AllSoCharming", 
   description: "Milk Jug Charm Miniature Food Jewelry Resin Charms Handmade Jewelry. A super realistic milk jug charm complete with it's own tiny nutrition label! Each charm comes attached to a silver lobster clasp and measures roughly 3/4 inches tall. If you are gifting this charm and would like to leave a short personal message with your order you can do so by adding the message to the 'notes to seller' section during checkout. All of my jewelry comes gift wrapped inside a padded jewelry box and is shipped via USPS First Class Mail inside a bubbled mailer.", 
@@ -93,6 +115,68 @@ pun1_product = Product.create!({
 })
 pun1_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_il_1140xN.3414645890_angm.jpg")
 pun1_product.photo.attach(io: pun1_pic, filename:"/pun_il_1140xN.3414645890_angm.jpg")
+
+# product = Product.create!({
+#   product_name:"",
+#   description:"",
+#   price:,
+#   category:"",
+#   seller_id: User.fourth.id,
+#   availability: 300
+# })
+# pic = URI.open()
+# product.photo.attach(io:, filename:"")
+
+# product = Product.create!({
+#   product_name:"",
+#   description:"",
+#   price:,
+#   category:"",
+#   seller_id: User.fourth.id,
+#   availability: 300
+# })
+# pic = URI.open()
+# product.photo.attach(io:, filename:"")
+
+# product = Product.create!({
+#   product_name:"",
+#   description:"",
+#   price:,
+#   category:"",
+#   seller_id: User.fourth.id,
+#   availability: 300
+# })
+# pic = URI.open()
+# product.photo.attach(io:, filename:"")
+
+# product = Product.create!({
+#   product_name:"",
+#   description:"",
+#   price:,
+#   category:"",
+#   seller_id: User.fourth.id,
+#   availability: 300
+# })
+# pic = URI.open()
+# product.photo.attach(io:, filename:"")
+
+# product = Product.create!({
+#   product_name:"",
+#   description:"",
+#   price:,
+#   category:"",
+#   seller_id: User.fourth.id,
+#   availability: 300
+# })
+# pic = URI.open()
+# product.photo.attach(io:, filename:"")
+
+### Remaining Products
+## milk
+## cheese
+## yogurt
+## lactose free
+## pun
 
 Review.create!([
   { body: "I've got some BEEF with whoever made this site!", reviewer_id: User.third.id, username: User.third.username, product_id: Product.first.id },
