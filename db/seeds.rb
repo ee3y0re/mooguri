@@ -145,6 +145,7 @@ cheese2_product = Product.create!({
 cheese2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/cheese_2_il_794xN.2421706348_lgji.jpg")
 cheese2_product.photo.attach(io: cheese2_pic, filename:"/cheese_2_il_794xN.2421706348_lgji.jpg")
 
+##8
 lactosefree2_product = Product.create!({
   product_name:"Lactose intolerant, coffee mug, lactose free from mayoie",
   description:"- High quality mug makes the perfect gift for everyone. Printed on only the highest quality mugs. The print will never fade no matter how many times it is washed. Packaged, and shipped from the USA. Dishwasher and Microwave safe. Shipped in a custom made styrofoam package to ensure it arrives perfect. GUARANTEED.",
@@ -156,6 +157,7 @@ lactosefree2_product = Product.create!({
 lactosefree2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_2_il_794xN.3775381345_bkkr.jpg")
 lactosefree2_product.photo.attach(io: lactosefree2_pic, filename:"/lactose_free_2_il_794xN.3775381345_bkkr.jpg")
 
+##9
 pun2_product = Product.create!({
   product_name:"Friendship Wish Bracelet, Cheese Lover Card, Cheesy Gift, Cheddar Cheese Jewellery, Funny Wishlet from TheDreamingBuddha",
   description:"Friendship Wish Bracelet, Cheese Lover Card, Cheesy Gift, Cheddar Cheese Jewellery, Funny Wishlet. This handmade card reads - This may be cheesy, but I think you’re grate. Although perfect as a little gift on its own, this little wish bracelet can also be popped into a card or sent along with a present. The idea behind a wish bracelet is that you make a wish as you place it on your wrist. In time, the cord wears out and your wish comes true! This bracelet is meant to be tied on and has no closure. Each bracelet includes a charm and is made from quality coloured 1mm waxed cord in a variety of colours. The bracelet is mounted on recycled card, teamed with an envelope and carefully wrapped in a clear cellophane sleeve. The whole package measures 11.5 cm by 9.5 cm.",
@@ -167,16 +169,21 @@ pun2_product = Product.create!({
 pun2_pic = URI.open()
 pun2_product.photo.attach(io:, filename:"")
 
-# product = Product.create!({
-#   product_name:"",
-#   description:"",
-#   price:,
-#   category:"",
-#   seller_id: User.fourth.id,
-#   availability: 300
-# })
-# pic = URI.open()
-# product.photo.attach(io:, filename:"")
+##10
+yogurt2_product = Product.create!({
+  product_name:"The Yogurt Tube by TheYogurtTube",
+  description:"Meet The Yogurt Tube. A patentetd insertable yogurt straining device that takes all the fuss out of straining your yogurt.
+  Size Recommendations: Both sizes are universal, however, make your selection based on the size of your pot and the quantity of yogurt you make for best results. If you make yogurt in a 6-8qt slow cooker, instant pot or pressure cooker, the XL is the recommended size and will get you results quicker. If you make yogurt in a smaller pot (3-4qts) the Original will strain a sufficient amount of whey.
+  Basic Instructions: (To see The Yogurt Tube in use, follow us on Instagram and Facebook @TheYogurtTube)
+  Make yogurt in a crock pot, slow cooker, instant pot or stock pot using your favorite yogurt recipe. After it sets overnight, insert The Yogurt Tube in the center of your pot and store in the fridge. After a few hours, remove your yogurt pot from the fridge, and while leaving the filter in place, use the accompanying ladle to remove the strained whey from the center of the strainer. Leave the filter in place, and put your yogurt back in the fridge to continue straining. Repeat as necessary. Remove the filter once your yogurt is strained as desired, wash (dishwasher safe) and store for future use.
+  IMPORTANT NOTES BEFORE YOU ORDER AND DURING USE: 1. Measure the total interior height of your chosen yogurt making pot WITH the lid on. Most stock pots and crock pots will accommodate this strainer, but measure first to be safe! The lid is required to hold the strainer in place when it is first inserted. 2. When you insert the strainer, it will initially displace a small volume of yogurt. This is temporary, once the first strain is achieved, the yogurt levels back down. 3. Once straining begins, the yogurt that is closest to the strainer will be the thickest, so it's always nice to scoop from closest to the filter for each serving. Once you've removed your serving, keep the filter in place so it can continue to strain, and put it back in the fridge. Note: The Yogurt Tube Original will strain approximately 14oz of yogurt at a time, the XL will strain 28oz at a time when inserted into a full pot of yogurt (the yogurt reaches near the top of the strainer). 4. Enjoy your yogurt, and your free time!",
+  price: 24.95,
+  category:"yogurt",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+yogurt2_pic = URI.open()
+yogurt2_product.photo.attach(io:, filename:"")
 
 ### Remaining Products
 ## milk
