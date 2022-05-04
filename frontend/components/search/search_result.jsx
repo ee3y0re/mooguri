@@ -40,7 +40,7 @@ const SearchResult = () => {
               counter += 1;
               return (
                 <div
-                  className="product-index-row-list-items-container"
+                  className="not-product-index-row-list-items-container"
                   key={productEle.id.toString()}
                 >
                   <li className="product-index-row-list-items">
@@ -52,6 +52,8 @@ const SearchResult = () => {
                         alt={`${productEle.name}`}
                         className="product-index-thumbnail"
                       />
+                      <p>{productEle.productName}</p>
+                      <p>{productEle.price}</p>
                     </Link>
                   </li>
                 </div>
@@ -63,7 +65,7 @@ const SearchResult = () => {
       <h1>
         {
           !counter ? 
-            `We couldn't find any results for ${searchCompareRef}. 
+            `We couldn't find any results for "${searchCompareRef}". 
             Try searching something else instead?` :
             null
         }
