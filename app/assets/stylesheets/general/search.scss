@@ -15,6 +15,10 @@
   display: flex;
 }
 
+#search-comp-form > input::-webkit-search-cancel-button {
+  display: none;
+}
+
 #search-comp-form > button {
   position: absolute;
   margin-top: 4px;
