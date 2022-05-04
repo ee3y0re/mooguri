@@ -21,10 +21,10 @@ User.create!([
 # product = Product.create!({
 #   product_name:"",
 #   description:"",
-#   price:"",
+#   price:,
 #   category:"",
-#   seller_id:"",
-#   availability:""
+#   seller_id:,
+#   availability:
 # })
 
 # pic = URI.open()
@@ -73,6 +73,17 @@ yogurt1_product = Product.create!({
 yogurt1_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt_il_794xN.1966709327_46j2.jpg")
 yogurt1_product.photo.attach(io: yogurt1_pic, filename:"/yogurt_il_794xN.1966709327_46j2.jpg")
 
+lactosefree1_product = Product.create!({
+  product_name:'I WILL NOT TOLERATE: Hate, Bigotry, Racism, Homophobia, or Lactose. - Matte Vinyl 10" Bumper Sticker - Car Decal, from Curlworks',
+  description: "Stand up for what's right!! Beautifully and vibrantly printed on durable weatherproof vinyl with a matte finish. 10 inches by 3 inches. Printed lovingly by https://www.wildeprints.com/. A 10-inch weatherproof matte vinyl sticker, perfect for your water bottle, laptop, and car!",
+  price: 7,
+  category:"Lactose-Free",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+
+lactosefree1_pic = URI.open()
+lactosefree1_product.photo.attach(io:, filename:"")
 
 Review.create!([
   { body: "I've got some BEEF with whoever made this site!", reviewer_id: User.third.id, username: User.third.username, product_id: Product.first.id },
