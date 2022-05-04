@@ -34,7 +34,7 @@ const SearchBar = () => {
     // return the search form
     <form onSubmit={handleSearchSubmit} id="search-comp-form">
       <input 
-        type="text" 
+        type="search" 
         placeholder="Search for anything"
         value={actualSearchInput}
         id="search-box" 
