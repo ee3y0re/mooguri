@@ -24,7 +24,7 @@ milk1_product = Product.create!({
   price: 12, 
   category: "milk", 
   seller_id: User.fourth.id, 
-  availability: 3,
+  availability: 300,
 })
 
 milk1_pic = URI.open('https://mooguri-dev.s3.us-west-1.amazonaws.com/milk_il_1588xn.3239319059_cwz1.jpeg')
@@ -45,6 +45,36 @@ cheese1_product = Product.create!({
 
 cheese1_pic = URI.open('https://mooguri-dev.s3.us-west-1.amazonaws.com/cheese_1_il_794xN.3383346041_1a5j.jpeg')
 cheese1_product.photo.attach(io: cheese1_pic, filename: "/cheese_1_il_794xN.3383346041_1a5j.jpeg")
+
+# product = Product.create!({
+#   product_name:"",
+#   description:"",
+#   price:"",
+#   category:"",
+#   seller_id:"",
+#   availability:""
+# })
+
+# pic = URI.open()
+# product.photo.attach(io:, filename:"")
+
+yogurt1_product = Product.create!({
+  product_name:"Heirloom Yogurt Starter Cultures OR Sourdough Starters from PositivelyProbiotic",
+  description:"Check out our HUGE selection of probiotic cultures @ 
+  PositivelyProbiotic.com. PLEASE READ: Message me your SIX culture choices or 
+  note them in checkout. Thank you. Activation instructions available on our 
+  website. PositivelyProbiotic.com. You will receive a total of 6 TEASPOONS of 
+  cultures. One teaspoon of each culture selected. Activation instructions are 
+  available on our website. PositivelyProbiotic.com. Disclaimer: Please consult 
+  your doctor before adding anything new to your diet!",
+  price: 36.95,
+  category:"yogurt",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+
+pic = URI.open()
+product.photo.attach(io:, filename:"")
 
 
 Review.create!([
