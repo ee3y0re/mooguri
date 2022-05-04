@@ -145,16 +145,16 @@ cheese2_product = Product.create!({
 cheese2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/cheese_2_il_794xN.2421706348_lgji.jpg")
 cheese2_product.photo.attach(io: cheese2_pic, filename:"/cheese_2_il_794xN.2421706348_lgji.jpg")
 
-# product = Product.create!({
-#   product_name:"",
-#   description:"",
-#   price:,
-#   category:"",
-#   seller_id: User.fourth.id,
-#   availability: 300
-# })
-# pic = URI.open()
-# product.photo.attach(io:, filename:"")
+lactosefree2_product = Product.create!({
+  product_name:"Lactose intolerant, coffee mug, lactose free from mayoie",
+  description:"- High quality mug makes the perfect gift for everyone. Printed on only the highest quality mugs. The print will never fade no matter how many times it is washed. Packaged, and shipped from the USA. Dishwasher and Microwave safe. Shipped in a custom made styrofoam package to ensure it arrives perfect. GUARANTEED.",
+  price: 14.95,
+  category: "lactose-free",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+lactosefree2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_2_il_794xN.3775381345_bkkr.jpg")
+lactosefree2_product.photo.attach(io: lactosefree2_pic, filename:"/lactose_free_2_il_794xN.3775381345_bkkr.jpg")
 
 # product = Product.create!({
 #   product_name:"",
