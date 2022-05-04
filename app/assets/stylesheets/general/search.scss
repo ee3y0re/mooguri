@@ -15,6 +15,13 @@
   display: flex;
 }
 
+#search-comp-form > button {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 953px;
+  color: transparent;
+}
+
 #search-items-list-container {
   display: flex;
   position: absolute;

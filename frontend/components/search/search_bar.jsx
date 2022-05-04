@@ -40,7 +40,7 @@ const SearchBar = () => {
         id="search-box" 
         onChange={updateSearchInput}
       />
-      <button type="submit">InsertIconHere</button>
+      <button type="submit">Search</button>
     </form>
 
   )
