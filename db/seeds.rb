@@ -91,8 +91,8 @@ pun1_product = Product.create!({
   seller_id: User.fourth.id,
   availability: 300
 })
-pun1_pic = URI.open()
-pun1_product.photo.attach(io:, filename:"")
+pun1_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_il_1140xN.3414645890_angm.jpg")
+pun1_product.photo.attach(io: pun1_pic, filename:"/pun_il_1140xN.3414645890_angm.jpg")
 
 Review.create!([
   { body: "I've got some BEEF with whoever made this site!", reviewer_id: User.third.id, username: User.third.username, product_id: Product.first.id },
