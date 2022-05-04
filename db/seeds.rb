@@ -112,7 +112,7 @@ lactosefree1_product.photo.attach(io: lactosefree1_pic, filename:"/lactose_free_
 ##5
 pun1_product = Product.create!({
   product_name:"Legen-Dairy Pun | Sticker or Magnet | Cute Pun, Cow Pun, Funny | Water Bottles, Laptops from artportraitsbyrachel",
-  description:"'Legen-Dairy' Pun Design. Approximate size: 2.3x2.5. Sticker: This hand-drawn die-cut sticker is made of durable vinyl. The vinyl protects it from water, scratches, and sunlight. This makes it a perfect addition to any water bottle, journal, laptop, or more!. Note: These stickers are waterproof, but I do not recommend dishwasher use. For best results, gently hand wash with cool/warm water and mild soap. Magnet: This design is printed on thin flexible magnet and covered with a durable vinyl. The vinyl protects it from water, scratches, and other damage. This makes it the perfect addition to any refrigerator, whiteboard, locker, or more! The average magnet size is 2.5x2.5, with a thickness of 18 mil (457 microns). This means they are a thin magnet, but they are still strong! Each magnet can hold about 4 pieces of paper at once, but should not be used for heavy material or outdoor use (i.e. vehicles). Orders under $20 will be mailed in a sturdy envelope. This includes "estimated tracking" by Pitney Bowes. Please track your order through Etsy updates or https://tracking.pb.com/. Orders above $20 will be sent in a bubble poly mailer, which includes USPS tracking. © 2021 Art by Rachel",
+  description:"'Legen-Dairy' Pun Design. Approximate size: 2.3x2.5. Sticker: This hand-drawn die-cut sticker is made of durable vinyl. The vinyl protects it from water, scratches, and sunlight. This makes it a perfect addition to any water bottle, journal, laptop, or more!. Note: These stickers are waterproof, but I do not recommend dishwasher use. For best results, gently hand wash with cool/warm water and mild soap. Magnet: This design is printed on thin flexible magnet and covered with a durable vinyl. The vinyl protects it from water, scratches, and other damage. This makes it the perfect addition to any refrigerator, whiteboard, locker, or more! The average magnet size is 2.5x2.5, with a thickness of 18 mil (457 microns). This means they are a thin magnet, but they are still strong! Each magnet can hold about 4 pieces of paper at once, but should not be used for heavy material or outdoor use (i.e. vehicles). Orders under $20 will be mailed in a sturdy envelope. This includes 'estimated tracking' by Pitney Bowes. Please track your order through Etsy updates or https://tracking.pb.com/. Orders above $20 will be sent in a bubble poly mailer, which includes USPS tracking. © 2021 Art by Rachel",
   price: 3.20,
   category:"puns",
   seller_id: User.fourth.id,
@@ -166,8 +166,8 @@ pun2_product = Product.create!({
   seller_id: User.fourth.id,
   availability: 300
 })
-pun2_pic = URI.open()
-pun2_product.photo.attach(io:, filename:"")
+pun2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_2_il_794xN.1886781148_t57p.jpg")
+pun2_product.photo.attach(io: pun2_pic, filename:"/pun_2_il_794xN.1886781148_t57p.jpg")
 
 ##10
 yogurt2_product = Product.create!({
@@ -182,8 +182,8 @@ yogurt2_product = Product.create!({
   seller_id: User.fourth.id,
   availability: 300
 })
-yogurt2_pic = URI.open()
-yogurt2_product.photo.attach(io:, filename:"")
+yogurt2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt_2_il_794xN.3795506386_si5y.jpg")
+yogurt2_product.photo.attach(io: yogurt2_pic, filename:"/yogurt_2_il_794xN.3795506386_si5y.jpg")
 
 ### Remaining Products
 ## milk
