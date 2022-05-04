@@ -116,16 +116,16 @@ pun1_product = Product.create!({
 pun1_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_il_1140xN.3414645890_angm.jpg")
 pun1_product.photo.attach(io: pun1_pic, filename:"/pun_il_1140xN.3414645890_angm.jpg")
 
-# product = Product.create!({
-#   product_name:"",
-#   description:"",
-#   price:,
-#   category:"",
-#   seller_id: User.fourth.id,
-#   availability: 300
-# })
-# pic = URI.open()
-# product.photo.attach(io:, filename:"")
+milk2_product = Product.create!({
+  product_name:"Glass Milk Carton Creamer, Glass Milk Bottle, Glass Milk Jug, Glass Milk Jar, Glass Cup, Kitchen Accessories from HVSHome",
+  description:"Bring a touch of fun to your day with this cute glass milk carton. Made of non-toxic molded borosilicate glass. This novelty milk carton glass is perfect for smoothies, milkshakes, or even cocktails. This modern and quirky glass holds up to 10oz of liquid and is a brilliant addition to the breakfast table, to drink your morning coffee or a glass of juice. Hand wash. Imported. Glass Milk Carton Creamer. 4-inch W x 3-inch D x 4.25-inch H ● MADE OF MOLDED BOROSILICATE GLASS ● SUITABLE FOR HOT AND COLD DRINKS ● HOLDS 10OZ / 300 ML OF LIQUID ● HAND WASHING RECOMMENDED ● NON-TOXIC MATERIALS",
+  price:13.99,
+  category:"milk",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+milk2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/milk2_il_794xN.3164754577_j3qo.jpg")
+milk2_product.photo.attach(io: milk2_pic, filename:"/milk2_il_794xN.3164754577_j3qo.jpg")
 
 # product = Product.create!({
 #   product_name:"",
