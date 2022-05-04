@@ -156,16 +156,16 @@ lactosefree2_product = Product.create!({
 lactosefree2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_2_il_794xN.3775381345_bkkr.jpg")
 lactosefree2_product.photo.attach(io: lactosefree2_pic, filename:"/lactose_free_2_il_794xN.3775381345_bkkr.jpg")
 
-# product = Product.create!({
-#   product_name:"",
-#   description:"",
-#   price:,
-#   category:"",
-#   seller_id: User.fourth.id,
-#   availability: 300
-# })
-# pic = URI.open()
-# product.photo.attach(io:, filename:"")
+pun2_product = Product.create!({
+  product_name:"Friendship Wish Bracelet, Cheese Lover Card, Cheesy Gift, Cheddar Cheese Jewellery, Funny Wishlet from TheDreamingBuddha",
+  description:"Friendship Wish Bracelet, Cheese Lover Card, Cheesy Gift, Cheddar Cheese Jewellery, Funny Wishlet. This handmade card reads - This may be cheesy, but I think you’re grate. Although perfect as a little gift on its own, this little wish bracelet can also be popped into a card or sent along with a present. The idea behind a wish bracelet is that you make a wish as you place it on your wrist. In time, the cord wears out and your wish comes true! This bracelet is meant to be tied on and has no closure. Each bracelet includes a charm and is made from quality coloured 1mm waxed cord in a variety of colours. The bracelet is mounted on recycled card, teamed with an envelope and carefully wrapped in a clear cellophane sleeve. The whole package measures 11.5 cm by 9.5 cm.",
+  price: 3.93,
+  category:"puns",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+pun2_pic = URI.open()
+pun2_product.photo.attach(io:, filename:"")
 
 # product = Product.create!({
 #   product_name:"",
