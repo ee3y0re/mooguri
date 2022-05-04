@@ -1,0 +1,18 @@
+#search-box {
+  width: 1004px;
+  text-align: left;
+  border-width: 2px;
+  border-color: #222222;
+  border-radius: 20px;
+  padding: 1%;
+}
+
+#search-comp-form {
+  display: flex;
+}
+
+#search-items-list-container {
+  display: flex;
+  position: absolute;
+  margin-left: 29px;
+}
