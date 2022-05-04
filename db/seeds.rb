@@ -23,10 +23,9 @@ User.create!([
 #   description:"",
 #   price:,
 #   category:"",
-#   seller_id:,
-#   availability:
+#   seller_id: User.fourth.id,
+#   availability: 300
 # })
-
 # pic = URI.open()
 # product.photo.attach(io:, filename:"")
 
@@ -77,13 +76,23 @@ lactosefree1_product = Product.create!({
   product_name:'I WILL NOT TOLERATE: Hate, Bigotry, Racism, Homophobia, or Lactose. - Matte Vinyl 10" Bumper Sticker - Car Decal, from Curlworks',
   description: "Stand up for what's right!! Beautifully and vibrantly printed on durable weatherproof vinyl with a matte finish. 10 inches by 3 inches. Printed lovingly by https://www.wildeprints.com/. A 10-inch weatherproof matte vinyl sticker, perfect for your water bottle, laptop, and car!",
   price: 7,
-  category:"Lactose-Free",
+  category:"lactose-free",
   seller_id: User.fourth.id,
   availability: 300
 })
+lactosefree1_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_il_794xN.3446522359_91sl.jpg")
+lactosefree1_product.photo.attach(io: lactosefree1_pic, filename:"/lactose_free_il_794xN.3446522359_91sl.jpg")
 
-lactosefree1_pic = URI.open()
-lactosefree1_product.photo.attach(io:, filename:"")
+pun1_product = Product.create!({
+  product_name:"Legen-Dairy Pun | Sticker or Magnet | Cute Pun, Cow Pun, Funny | Water Bottles, Laptops from artportraitsbyrachel",
+  description:"'Legen-Dairy' Pun Design. Approximate size: 2.3x2.5. Sticker: This hand-drawn die-cut sticker is made of durable vinyl. The vinyl protects it from water, scratches, and sunlight. This makes it a perfect addition to any water bottle, journal, laptop, or more!. Note: These stickers are waterproof, but I do not recommend dishwasher use. For best results, gently hand wash with cool/warm water and mild soap. Magnet: This design is printed on thin flexible magnet and covered with a durable vinyl. The vinyl protects it from water, scratches, and other damage. This makes it the perfect addition to any refrigerator, whiteboard, locker, or more! The average magnet size is 2.5x2.5, with a thickness of 18 mil (457 microns). This means they are a thin magnet, but they are still strong! Each magnet can hold about 4 pieces of paper at once, but should not be used for heavy material or outdoor use (i.e. vehicles). Orders under $20 will be mailed in a sturdy envelope. This includes "estimated tracking" by Pitney Bowes. Please track your order through Etsy updates or https://tracking.pb.com/. Orders above $20 will be sent in a bubble poly mailer, which includes USPS tracking. © 2021 Art by Rachel",
+  price: 3.20,
+  category:"puns",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+pun1_pic = URI.open()
+pun1_product.photo.attach(io:, filename:"")
 
 Review.create!([
   { body: "I've got some BEEF with whoever made this site!", reviewer_id: User.third.id, username: User.third.username, product_id: Product.first.id },
