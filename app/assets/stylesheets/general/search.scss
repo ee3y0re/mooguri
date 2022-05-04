@@ -21,8 +21,8 @@
 
 #search-comp-form > button {
   position: absolute;
-  margin-top: 4px;
-  margin-left: 953px;
+  margin-top: 2px;
+  margin-left: 951px;
   color: transparent;
 }
 
@@ -30,4 +30,16 @@
   display: flex;
   position: absolute;
   margin-left: 29px;
+}
+
+#search-results-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+#search-items-list-container {
+  width: 1400px;
 }

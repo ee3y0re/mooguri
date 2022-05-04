@@ -39,7 +39,7 @@ const SearchResult = () => {
             if (productName.includes(searchCompareRef)) {
               counter += 1;
               return (
-                <div
+                <ul
                   className="not-product-index-row-list-items-container"
                   key={productEle.id.toString()}
                 >
@@ -56,7 +56,7 @@ const SearchResult = () => {
                       <p>{productEle.price}</p>
                     </Link>
                   </li>
-                </div>
+                </ul>
               )
             }
           })
