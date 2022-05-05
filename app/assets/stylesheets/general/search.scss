@@ -30,6 +30,7 @@
   display: flex;
   flex-wrap: wrap;
   position: absolute;
+  margin-top: 17px;
   margin-left: 29px;
   width: 1459px;
 }
@@ -44,8 +45,9 @@
 }
 
 #search-results-container > h1 {
-  position: absolute;
-  left: 109px;
+  position: relative;
+  left: -539px;
+  font-size: 27px;
 }
 
 .li-search-results {
