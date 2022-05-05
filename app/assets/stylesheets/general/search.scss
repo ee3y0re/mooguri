@@ -50,11 +50,14 @@
 }
 
 .search-result-image-container {
+  display: flex;
+  justify-content: center;
   height: 201px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 3px 3px 3px 3px #C6D5D8;
-
-  
 }
 
+.search-result-image-container > img {
+  max-height: 100%;
+}
