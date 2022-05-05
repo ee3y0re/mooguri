@@ -55,6 +55,7 @@ const SearchResult = () => {
                         />
                       </div>
                       <br />
+                      <br />
                       <h1 className="search-result-title">
                         {productEle.productName}
                       </h1>
