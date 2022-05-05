@@ -5,14 +5,96 @@
   border-color: #222222;
   border-radius: 20px;
   padding: 1%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23222222'%3E%3C!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z'/%3E%3C/svg%3E");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right 1.5% bottom 50%;
 }
 
 #search-comp-form {
   display: flex;
 }
 
+#search-comp-form > input::-webkit-search-cancel-button {
+  display: none;
+}
+
+#search-comp-form > button {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 951px;
+  color: transparent;
+}
+
 #search-items-list-container {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
+  margin-top: 17px;
   margin-left: 29px;
+  width: 1459px;
+}
+
+#search-results-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 48px;
+}
+
+#search-results-container > h1 {
+  position: relative;
+  left: -539px;
+  font-size: 27px;
+}
+
+.li-search-results {
+  width: 252px;
+  padding: 19px;
+}
+
+.cap-link {
+  text-decoration: none;
+  color: #222222
+}
+
+.cap-link:visited {
+  text-decoration: none;
+}
+
+.search-result-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 201px;
+  max-width: 252px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px 3px #C6D5D8;
+  background-color: black;
+}
+
+.search-result-image-container > img {
+  max-width: 100%;
+  background-color: black;
+}
+
+.search-result-title {
+  height: max-content;
+  font-family: 'Cambay', serif;
+  font-size: 21px; 
+  overflow-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 5px;
+}
+
+.search-results-price {
+  font-family: 'Cambay', sans-serif;
+  font-size: 27px;
+  font-weight: 900;
+  margin-left: 5px;
 }

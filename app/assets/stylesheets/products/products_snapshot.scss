@@ -31,19 +31,20 @@
   display: flex; //enables use of justify content and align items
   justify-content: center; //centers image in frame
   align-items: center; //centers image in frame
-  max-height: 201px; //keeps set max height of frame of thumbnail
+  height: 201px; //keeps set max height of frame of thumbnail
   max-width: 252px; //prevents thumbnail container from stretching to full width of list container
-  min-height: 201px; //keeps height from being too small i think
-  min-width: 252px; //keeps width from being too thin
+  // min-height: 201px; //keeps height from being too small i think
+  // min-width: 252px; //keeps width from being too thin
   border-radius: 20px; //rounds off the corners
   overflow: hidden; //hides parts of images larger than container
   box-shadow: 3px 3px 3px 3px #C6D5D8; //when photo doesn't fill up frame, allows shadow around boxes
   margin: 10px 10px; //5 space top 10 right, allows some before first thumbnail and after last thumbnail and more between thumbnails
-}
+  background-color: black;
+} 
 
 .product-index-thumbnail {
   max-width: 100%; //prevents an overly zoomed in look of picture
-  max-height: 100%; //can pass without but looks off-centered
+  // max-height: 100%; //can pass without but looks off-centered
 }
 
 .product-show {
