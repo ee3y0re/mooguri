@@ -55,9 +55,13 @@ const SearchResult = () => {
                         />
                       </div>
                       <br />
-                      <p>{productEle.productName}</p>
+                      <h1 className="search-result-title">
+                        {productEle.productName}
+                      </h1>
                       <br />
-                      <p>{productEle.price}</p>
+                      <p className="search-results-price">
+                        ${productEle.price}
+                      </p>
                     </Link>
                   </div>
                 </li>

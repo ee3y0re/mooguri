@@ -64,3 +64,16 @@
 .search-result-text-container {
   background-color: #F4ADAD;
 }
+
+.search-result-title {
+  height: max-content;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 21px; 
+  overflow-wrap: break-word;
+}
+
+.search-results-price {
+  font-family: 'Cambay', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+}
