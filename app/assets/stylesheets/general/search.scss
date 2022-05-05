@@ -28,8 +28,10 @@
 
 #search-items-list-container {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   margin-left: 29px;
+  width: 1459px;
 }
 
 #search-results-container {
@@ -38,8 +40,21 @@
   justify-content: center;
   height: 100%;
   width: 100%;
+  padding-top: 48px;
 }
 
-#search-items-list-container {
-  width: 1459px;
+.li-search-results {
+  background-color: #F4ADAD;
+  width: 252px;
+  padding: 19px;
 }
+
+.search-result-image-container {
+  height: 201px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px 3px #C6D5D8;
+
+  
+}
+
