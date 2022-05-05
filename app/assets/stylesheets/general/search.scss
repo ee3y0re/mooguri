@@ -44,7 +44,6 @@
 }
 
 .li-search-results {
-  background-color: #F4ADAD;
   width: 252px;
   padding: 19px;
 }
@@ -60,4 +59,8 @@
 
 .search-result-image-container > img {
   max-height: 100%;
+}
+
+.search-result-text-container {
+  background-color: #F4ADAD;
 }

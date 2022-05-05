@@ -54,7 +54,9 @@ const SearchResult = () => {
                           className="product-index-thumbnail"
                         />
                       </div>
+                      <br />
                       <p>{productEle.productName}</p>
+                      <br />
                       <p>{productEle.price}</p>
                     </Link>
                   </div>
