@@ -58,7 +58,6 @@ const SearchResult = () => {
                       <h1 className="search-result-title">
                         {productEle.productName}
                       </h1>
-                      <br />
                       <p className="search-results-price">
                         ${productEle.price}
                       </p>
