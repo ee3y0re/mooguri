@@ -45,6 +45,7 @@ const SearchResult = () => {
                 >
                   <div className="search-results-links">
                     <Link
+                      className="cap-link"
                       to={`/products/${productEle.id}`}
                     >
                       <div className="search-result-image-container">

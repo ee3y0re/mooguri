@@ -48,6 +48,15 @@
   padding: 19px;
 }
 
+.cap-link {
+  text-decoration: none;
+  color: #222222
+}
+
+.cap-link:visited {
+  text-decoration: none;
+}
+
 .search-result-image-container {
   display: flex;
   justify-content: center;
