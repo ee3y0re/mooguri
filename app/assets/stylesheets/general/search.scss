@@ -110,12 +110,6 @@
 }
 
 #search-footer-container {
-  // background-image: url("cow-bg.png");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // position: absolute;
-  // padding-top: 43px;
-  // padding-left: 108px;
   height: 100%;
   width: 100%;
 }
@@ -126,7 +120,6 @@
   background-size: cover;
   position: absolute;
   padding-top: 43px;
-  // padding-left: 108px;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -151,4 +144,5 @@
   font-family: 'Cambay', sans-serif;
   font-size: 20px;
   color: #6f3535;
+  margin-left: 40px;
 }
