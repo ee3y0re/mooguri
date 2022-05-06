@@ -110,10 +110,11 @@
 }
 
 #search-footer-container {
+  background-image: url("/app/assets/images/324144.png");
   position: absolute;
   padding-top: 43px;
   padding-left: 108px;
-  font-size: 32px;
+  font-size: 57px;
   font-family: 'Nanum Myeongjo',serif;
   color: #222222;
   height: 100%;
@@ -121,7 +122,7 @@
 }
 
 #search-footer-container > h1 {
-  margin-bottom: 58px;
+  margin-bottom: -58px;
 }
 
 #search-footer-container > span {
