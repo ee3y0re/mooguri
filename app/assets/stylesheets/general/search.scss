@@ -26,6 +26,16 @@
   color: transparent;
 }
 
+#search-header-container {
+  background-color: #F8EBE6;
+  color: #222222;
+  padding-top: 43px;
+  padding-bottom: 44px;
+  padding-left: 108px;
+  font-size: 32px;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
 #search-items-list-container {
   display: flex;
   flex-wrap: wrap;
