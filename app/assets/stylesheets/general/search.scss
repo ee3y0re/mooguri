@@ -110,7 +110,9 @@
 }
 
 #search-footer-container {
-  background-image: url("/app/assets/images/324144.png");
+  background-image: url("cow-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   padding-top: 43px;
   padding-left: 108px;
