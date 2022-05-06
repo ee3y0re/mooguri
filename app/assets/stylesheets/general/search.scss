@@ -110,13 +110,21 @@
 }
 
 #search-footer-container {
-  background-color: #F8EBE6;
-  color: #222222;
+  position: absolute;
   padding-top: 43px;
   padding-left: 108px;
   font-size: 32px;
   font-family: 'Nanum Myeongjo',serif;
+  color: #222222;
   height: 100%;
   width: 100%;
-  position: absolute;
+}
+
+#search-footer-container > h1 {
+  margin-bottom: 58px;
+}
+
+#search-footer-container > span {
+  font-family: 'Cambay', sans-serif;
+  font-size: 20px;
 }
