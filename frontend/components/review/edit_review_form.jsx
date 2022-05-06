@@ -53,7 +53,6 @@ class EditReviewFormContainer extends React.Component {
             value={this.state.body}
             onChange={this.updateField("body")}
           />
-          {/* <p>FIRE ESCAPE BLACK PAINT CHIPPIN' I CAN'T BUT FEEL I'M TRIPPIN'</p> */}
           {this.renderErrors()}
           <br />
           <div className="review-submit-buttons">

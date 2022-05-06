@@ -26,6 +26,16 @@
   color: transparent;
 }
 
+#search-header-container {
+  background-color: #F8EBE6;
+  color: #222222;
+  padding-top: 43px;
+  padding-bottom: 44px;
+  padding-left:291px;
+  font-size: 32px;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
 #search-items-list-container {
   display: flex;
   flex-wrap: wrap;
@@ -73,12 +83,12 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 3px 3px 3px 3px #C6D5D8;
-  background-color: black;
+  background-color: #242424;
 }
 
 .search-result-image-container > img {
   max-width: 100%;
-  background-color: black;
+  background-color: #242424;
 }
 
 .search-result-title {
@@ -97,4 +107,42 @@
   font-size: 27px;
   font-weight: 900;
   margin-left: 5px;
+}
+
+#search-footer-container {
+  height: 100%;
+  width: 100%;
+}
+
+#search-error-bg {
+  background-image: url("cow-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  padding-top: 43px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 35%;
+}
+
+#search-error-text {
+  position: absolute;
+  padding-top: 43px;
+  padding-left: 344px;
+  z-index: 1;
+  text-shadow: 1px 2px 2px #aabbd4;
+}
+
+#search-error-text > h1 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 57px;
+  color: #964b4b;
+}
+
+#search-error-text > span {
+  font-family: 'Cambay', sans-serif;
+  font-size: 20px;
+  color: #6f3535;
+  margin-left: 40px;
 }
