@@ -85,8 +85,7 @@ const SearchResult = () => {
         !counter ?
           <div id="search-footer-container">
             <h1>We couldn't find any results for "{searchCompareRef}"</h1>
-            <br />
-            <span>Try searching something else instead?</span>
+            {/* <span>Try searching something else instead?</span> */}
           </div> :
           null
       }
