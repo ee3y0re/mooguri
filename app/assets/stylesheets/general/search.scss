@@ -110,25 +110,44 @@
 }
 
 #search-footer-container {
+  // background-image: url("cow-bg.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // position: absolute;
+  // padding-top: 43px;
+  // padding-left: 108px;
+  height: 100%;
+  width: 100%;
+}
+
+#search-error-bg {
   background-image: url("cow-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   padding-top: 43px;
   padding-left: 108px;
-  font-size: 57px;
-  font-family: 'Nanum Myeongjo',serif;
-  color: #222222;
   height: 100%;
   width: 100%;
+  z-index: -1;
+  opacity: 35%;
 }
 
-#search-footer-container > h1 {
-  color: #e19494;
+#search-error-text {
+  position: absolute;
+  padding-top: 43px;
+  padding-left: 108px;
+  z-index: 1;
 }
 
-#search-footer-container > span {
+#search-error-text > h1 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 57px;
+  color: #964b4b;
+}
+
+#search-error-text > span {
   font-family: 'Cambay', sans-serif;
   font-size: 20px;
-  color: #e19494;
+  color: #6f3535;
 }
