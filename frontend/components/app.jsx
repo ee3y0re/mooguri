@@ -6,6 +6,7 @@ import AuthContainer from "./auth/auth_container";
 import ProductSingularContainer from "./product/product_singular_container";
 import SearchBar from "./search/search_bar";
 import SearchResult from "./search/search_result";
+import CartCheckout from "./cart/cart_checkout";
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -25,11 +26,13 @@ export default class App extends React.Component {
             <SearchBar />
             <ModalContainer /> 
             <AuthContainer />
-            <div className="cart-logo-container">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 22a2 2 0 100-4 2 2 0 000 4zm7 0a2 2 0 100-4 2 2 0 000 4zm5-17H5.665l-.687-3.21A1 1 0 004 1H1a1 1 0 000 2h2.191l2.831 13.21a.962.962 0 00.064.159c.017.053.038.105.063.155a.979.979 0 00.133.153.926.926 0 00.088.1c.058.041.12.077.185.105.034.022.07.042.107.06A.993.993 0 007 17h11a1 1 0 00.958-.713l3-10A1.001 1.001 0 0021 5zm-2.244 5H16V7h3.656l-.9 3zM7.819 15l-.6-3H9v3H7.819zM11 12h3v3h-3v-3zm0-2V7h3v3h-3zM9 7v3H6.82l-.6-3H9zm8.256 8H16v-3h2.156l-.9 3z"></path>
-              </svg>
-            </div>   
+            <Link to="/checkout">
+              <div className="cart-logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 22a2 2 0 100-4 2 2 0 000 4zm7 0a2 2 0 100-4 2 2 0 000 4zm5-17H5.665l-.687-3.21A1 1 0 004 1H1a1 1 0 000 2h2.191l2.831 13.21a.962.962 0 00.064.159c.017.053.038.105.063.155a.979.979 0 00.133.153.926.926 0 00.088.1c.058.041.12.077.185.105.034.022.07.042.107.06A.993.993 0 007 17h11a1 1 0 00.958-.713l3-10A1.001 1.001 0 0021 5zm-2.244 5H16V7h3.656l-.9 3zM7.819 15l-.6-3H9v3H7.819zM11 12h3v3h-3v-3zm0-2V7h3v3h-3zM9 7v3H6.82l-.6-3H9zm8.256 8H16v-3h2.156l-.9 3z"></path>
+                </svg>
+              </div>   
+            </Link>
 
           </div>          
         </div>
@@ -57,6 +60,7 @@ export default class App extends React.Component {
             component={ProductSingularContainer} 
           />
           {/* TODO figure out routes to have idea for Route for checkout */}
+          <Route path="/checkout" component={CartCheckout}/>
           <Route path="/" component={Home} />
         </Switch>
       </div>
