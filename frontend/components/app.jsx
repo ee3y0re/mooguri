@@ -53,7 +53,11 @@ export default class App extends React.Component {
 
         <Switch>
           <Route path="/search" component={SearchResult}/>
-          <Route path="/products/:productId" component={ProductSingularContainer} />
+          <Route 
+            path="/products/:productId" 
+            component={ProductSingularContainer} 
+          />
+          {/* TODO figure out routes to have idea for Route for checkout */}
           <Route path="/" component={Home} />
         </Switch>
       </div>
