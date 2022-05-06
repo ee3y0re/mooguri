@@ -9,7 +9,7 @@
   background-color: #E0BBE4;
 }
 
-.width-1400px {
+.flex-box-width-1400px {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,5 +33,19 @@
   }
 
   .checkout-title-and-main-redirect > button {
+    height: 35px;
     background-color: #FFDFD3;
   }
+
+.checkout-two-column {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: #FFDFB6;
+}
+
+.checkout-flex-box-product-info > img {
+  width: 210px;
+  height: 170px;
+}
