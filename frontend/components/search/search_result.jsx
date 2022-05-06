@@ -40,7 +40,6 @@ const SearchResult = () => {
       <div id="search-header-container">
         <h1>Here are your results for "{searchDeclare}"</h1>
       </div>
-      <br />
       <div id="search-results-container">
         <ul id="search-items-list-container">
           {
@@ -82,15 +81,14 @@ const SearchResult = () => {
           }
         </ul>
       </div>
-      <br />
-      <h1>
-        {
-          !counter ? 
-            `We couldn't find any results for "${searchCompareRef}". 
-            Try searching something else instead?` :
-            null
-        }
-      </h1>
+      {
+        !counter ?
+          <div id="search-footer-container">
+            <h1>We couldn't find any results for "{searchCompareRef}"</h1>
+            <span>Try searching something else instead?</span>
+          </div> :
+          null
+      }
     </div>
   );
 };
