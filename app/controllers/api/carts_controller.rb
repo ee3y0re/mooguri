@@ -1,11 +1,13 @@
 class Api::CartsController < ApplicationController
+  # before_action :require_login, only: [:create, :destroy] 
+  
   ## need current user's cart
   def index
     ## testing line
-    # @cart_items = User.find(1).cart_items
+    @cart_items = User.find(1).cart_items
 
     ## final line with current user
-    @cart_items = curent_user.cart_items
+    # @cart_items = current_user.cart_items
     render "/api/carts/index"
   end
 
@@ -20,14 +22,20 @@ class Api::CartsController < ApplicationController
   end
 
   ## would need update on cart if we have quantity attribute
-  def update
-    
-  end
+  # def update
+  # end
 
   ## delete a cart after user removes last item
-  def destroy
-    
-  end
+  # def destroy
+  #   ## @cart_item = current_user.cart_items.find
+  #   @cart_item = User.find(1).cart_items.find_by(id: params[:id])
+  #   if @cart_item.destroy
+  #     @cart_items = User.find(1).cart_items
+  #     render :index
+  #   else
+  #     render json: ["Cart item was not found or could not be deleted"], status: 404
+  #   end
+  # end
 
   private
 
