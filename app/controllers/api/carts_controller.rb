@@ -4,7 +4,7 @@ class Api::CartsController < ApplicationController
   ## need current user's cart
   def index
     ## testing line
-    @cart_items = User.find(1).cart_items
+    @cart_items = User.first.cart_items
 
     ## final line with current user
     # @cart_items = current_user.cart_items
@@ -26,16 +26,15 @@ class Api::CartsController < ApplicationController
   # end
 
   ## delete a cart after user removes last item
-  # def destroy
-  #   ## @cart_item = current_user.cart_items.find
-  #   @cart_item = User.find(1).cart_items.find_by(id: params[:id])
-  #   if @cart_item.destroy
-  #     @cart_items = User.find(1).cart_items
-  #     render :index
-  #   else
-  #     render json: ["Cart item was not found or could not be deleted"], status: 404
-  #   end
-  # end
+  def destroy
+    @cart_item = User.first.cart_items.find_by(id: params[:id])
+    if @cart_item.destroy
+      @cart_items = User.first.cart_items
+      render :index
+    else
+      render json: ["Cart item was not found or could not be deleted"], status: 404
+    end
+  end
 
   private
 
