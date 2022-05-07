@@ -2,14 +2,22 @@ class Api::CartsController < ApplicationController
   ## need current user's cart
   def index
     ## testing line
-    @cart_items = User.find(2).cart_items
+    # @cart_items = User.find(1).cart_items
 
     ## final line with current user
-    # @cart_items = curent_user.cart_items
+    @cart_items = curent_user.cart_items
     render "/api/carts/index"
   end
 
   ## create current user's cart after they start to add an item
+  def create
+    @cart = Cart.new(cart_params)
+    if @cart.save
+      redirect_to action: "index"
+    else
+      render json: @cart.errors.full_messages, status: 422
+    end
+  end
 
   ## would need update on cart if we have quantity attribute
   def update
