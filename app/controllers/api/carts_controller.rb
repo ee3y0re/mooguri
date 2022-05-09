@@ -27,16 +27,23 @@ class Api::CartsController < ApplicationController
 
   ## delete a cart after user removes last item
   def destroy
-    # @cart_item = User.first.cart_items.find_by(id: params[:id])
-    # if @cart_item.destroy
-    #   @cart_items = User.first.cart_items
+    ## testing line
+    # @cart = Cart.find_by(id: params[:id]) # expecting cart instance
+    # @cart_owner = User.first #expecting user
+    # if @cart && @cart_owner.id === 1 && @cart.destroy
+    #   @cart_items = current_user.cart_items
     #   render :index
-    @cart_item = current_user.cart_items.find_by(id: params[:id])
-    if @cart_item.destroy
+    # else
+    #   render json: ["Something went wrong"], status: 404
+    # end
+
+    @cart = Cart.find_by(id: params[:id]) # expecting cart instance
+    @cart_owner = User.find_by(id: @cart.buyer_id) #expecting user
+    if @cart && @cart_owner.id === current_user.id && @cart.destroy
       @cart_items = current_user.cart_items
       render :index
     else
-      render json: ["Cart item was not found or could not be deleted"], status: 404
+      render json: ["Something went wrong"], status: 404
     end
   end
 
