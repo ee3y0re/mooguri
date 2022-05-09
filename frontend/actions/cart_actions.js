@@ -6,7 +6,7 @@ export const RECEIVE_CART_ITEM = "RECEIVE_CART_ITEM";
 export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
 
 // regular action creators
-const receiveCartItems = () => {
+const receiveCartItems = (carts) => {
   return {
     type: "RECEIVE_CART_ITEMS",
     carts
@@ -26,3 +26,19 @@ const deleteCartItem = (cartItemId) => {
     cartItemId
   };
 };
+
+// thunk action creators
+export const fetchUserCartItems = () => (dispatch) => {
+  return CartApiUtil.fetchUserCartItems()
+    .then((carts) => dispatch(receiveCartItems(carts)));
+}
+
+export const addItemToCart = (cart) => (dispatch) => {
+  return CartApiUtil.addItemToCart(cart)
+    .then((cart) => dispatch(receiveCartItem(cart)));
+}
+
+export const deleteItemOnCart = (cartItemId) => (dispatch) => {
+  return CartApiUtil.deleteItemOnCart(cartItemId)
+    .then(() => dispatch(deleteCartItem(cartItemId)))
+}
