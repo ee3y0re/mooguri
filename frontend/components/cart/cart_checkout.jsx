@@ -5,7 +5,7 @@ const CartCheckout = () => {
     <div className="checkout-main-contain">
       <div className="checkout-flex-box-width-1400px">
         <header className="checkout-title-and-main-redirect">
-          <h1># item(s) in your cart</h1>
+          <h1>99 items in your cart</h1>
           <button>Keep Shopping</button>
         </header>
         <div className="checkout-two-column">
@@ -18,7 +18,7 @@ const CartCheckout = () => {
                   <span>Product Name</span>
                   <button>Remove</button>
                 </div>
-                <span>Product Price</span>
+                <span>$99.99</span>
               </div>
             </div>
           </article>
