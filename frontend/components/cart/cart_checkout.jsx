@@ -7,7 +7,7 @@ const CartCheckout = () => {
         <div className="checkout-single-item">
           <header className="checkout-title-and-main-redirect">
             <h1>99 items in your cart</h1>
-            <button>Keep Shopping</button>
+            <button className="checkout-bold-heading">Keep Shopping</button>
           </header>
           <div className="checkout-two-column">
             <article className="checkout-products-container">
@@ -35,23 +35,23 @@ const CartCheckout = () => {
                   <li>Payment 2: Paypal</li>
                   <li>Klarna</li>
                 </ul>
-                <div className="items-total">
+                <div className="price-line">
                   <span className="checkout-bold-heading">Item(s) total</span>
-                  <span>$99.99</span>
+                  <span className="price-num">$99.99</span>
                 </div>
-                <div className="happy-discount">
-                  <span className="checkout-bold-heading">Shop discount (HAPPYDISC25)</span>
-                  <span>Math taking a fourth off</span>
+                <div className="price-line" id="checkout-discount">
+                  <span className="checkout-bold-heading">Shop discount (THANKU25)</span>
+                  <span className="price-num">-25%</span>
                 </div>
-                <div className="subtotal">
+                <div className="price-line">
                   <span>Subtotal</span>
                   <span>$99.99</span>
                 </div>
-                <div className="shipping">
+                <div className="price-line">
                   <span>Shipping</span>
                   <span>FREE</span>
                 </div>
-                <button>Proceed to checkout</button>
+                <button id="auth-submit-button">Proceed to checkout</button>
               </div>
             </aside>
           </div>
