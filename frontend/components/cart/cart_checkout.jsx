@@ -28,12 +28,14 @@ const CartCheckout = () => {
               </div>
             </article>
             <aside className="checkout-payment-container">
-              <h1>How you'll pay</h1>
-              <ul>
-                <li>Payment 1: Visa, Master, Amex, and Discover</li>
-                <li>Payment 2: Paypal</li>
-                <li>Klarna</li>
-              </ul>
+              <div className="checkout-payment-padding">
+                <h1>How you'll pay</h1>
+                <ul>
+                  <li>Payment 1: Visa, Master, Amex, and Discover</li>
+                  <li>Payment 2: Paypal</li>
+                  <li>Klarna</li>
+                </ul>
+              </div>
             </aside>
           </div>
         </div>
