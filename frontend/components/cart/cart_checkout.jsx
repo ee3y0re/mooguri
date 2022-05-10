@@ -15,6 +15,9 @@ const CartCheckout = () => {
     dispatch(fetchUserCartItems());
   },[]); //empty array only has useEffect run on mount and unmount
 
+  const cartIds = Object.keys(currentCart);
+  const cartItems = Object.values(currentCart);
+
   return (
     <div className="checkout-main-contain">
       <div className="checkout-flex-box-width-1400px">
@@ -24,6 +27,16 @@ const CartCheckout = () => {
             <button className="checkout-bold-heading">Keep Shopping</button>
           </header>
           <div className="checkout-two-column">
+
+            {/* {
+              cartItems?.map((item, idx) => {
+                return(
+                  <li key={cartIds[idx]}>
+                    {item.productName}
+                  </li>
+                )
+              })
+            } */}
 
             <article className="checkout-products-container">
               <h2 className="checkout-bold-heading">Seller's name</h2>
