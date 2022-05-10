@@ -18,7 +18,7 @@ const CartCheckoutItem = ({wholeCart}) => {
               <div className="checkout-flex-box-product-info">
                 <img 
                   id="checkout-prod-temp" 
-                  src={window.placeholder} 
+                  src={item.photoUrl} 
                   alt="placeholder" 
                 />
                 <div className="checkout-flexbox-name-space-price">
