@@ -35,12 +35,12 @@ const CartCheckout = () => {
                   <li>Payment 2: Paypal</li>
                   <li>Klarna</li>
                 </ul>
-                <div className="checkout-bold-heading" id="items-total">
-                  <span>Item(s) total</span>
+                <div className="items-total">
+                  <span className="checkout-bold-heading">Item(s) total</span>
                   <span>$99.99</span>
                 </div>
-                <div className="checkout-bold-heading" id="happy-discount">
-                  <span>Shop discount (HAPPYDISC25)</span>
+                <div className="happy-discount">
+                  <span className="checkout-bold-heading">Shop discount (HAPPYDISC25)</span>
                   <span>Math taking a fourth off</span>
                 </div>
                 <div className="subtotal">
