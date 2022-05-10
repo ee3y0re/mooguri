@@ -1,3 +1,8 @@
+.checkout-bold-heading {
+  -webkit-text-stroke: black;
+  -webkit-text-stroke-width: 0.2px;
+  font-size: 20px;
+}
 .checkout-main-contain {
   display: flex;
   flex-direction: column;
@@ -48,9 +53,6 @@
     .checkout-products-container > h2 {
       // background-color: #D291BC;
       margin-bottom: .8%;
-      -webkit-text-stroke: black;
-      -webkit-text-stroke-width: 0.2px;
-      font-size: 20px;
     }
 
     .checkout-flex-box-product-info {
@@ -93,10 +95,7 @@
       }
 
     .checkout-flexbox-name-space-price > span {
-      font-size: 22px;
       padding: 8px;
-      -webkit-text-stroke: black;
-      -webkit-text-stroke-width: 1.2px;
     }
   
   .checkout-payment-container {
