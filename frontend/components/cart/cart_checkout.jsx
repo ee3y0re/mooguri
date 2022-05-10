@@ -21,7 +21,11 @@ const CartCheckout = () => {
       <div className="checkout-flex-box-width-1400px">
         <div className="checkout-single-item">
           <header className="checkout-title-and-main-redirect">
-            <h1>99 items in your cart</h1>
+            {
+              !currentCart ?
+                <h1>Your cart is empty.</h1> :
+                <h1>{Object.keys(currentCart).length} items in your cart</h1>
+            }
             <button className="checkout-bold-heading">Keep Shopping</button>
           </header>
 
