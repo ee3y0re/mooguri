@@ -16,11 +16,13 @@ const CartCheckoutItem = ({wholeCart}) => {
                 Seller Id: {item.sellerId}
               </h2>
               <div className="checkout-flex-box-product-info">
-                <img 
-                  id="checkout-prod-temp" 
-                  src={item.photoUrl} 
-                  alt="placeholder" 
-                />
+                <div className="cart-item-img-contain">
+                  <img 
+                    id="checkout-prod-temp" 
+                    src={item.photoUrl} 
+                    alt="placeholder" 
+                  />
+                </div>
                 <div className="checkout-flexbox-name-space-price">
                   <div className="checkout-flex-box-prod-mid">
                     <span>{item.productName}</span>
