@@ -3,7 +3,7 @@ import React from "react";
 const CartCheckout = () => {
   return (
     <div className="checkout-main-contain">
-      <div className="flex-box-width-1400px">
+      <div className="checkout-flex-box-width-1400px">
         <header className="checkout-title-and-main-redirect">
           <h1># item(s) in your cart</h1>
           <button>Keep Shopping</button>
@@ -13,11 +13,13 @@ const CartCheckout = () => {
             <h2>Seller's name</h2>
             <div className="checkout-flex-box-product-info">
               <img id="checkout-prod-temp" src={window.placeholder} alt="placeholder" />
-              <div className="checkout-flex-box-prod-mid">
-                <span>Product Name</span>
-                <button>Remove</button>
+              <div className="checkout-flexbox-name-space-price">
+                <div className="checkout-flex-box-prod-mid">
+                  <span>Product Name</span>
+                  <button>Remove</button>
+                </div>
+                <span>Product Price</span>
               </div>
-              <span>Product Price</span>
             </div>
           </article>
           <aside className="checkout-payment-container">
