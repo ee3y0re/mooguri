@@ -1,5 +1,9 @@
-@cart_items.map do |product|
-  json.set! product.id do
-    json.partial! "api/products/product", product: product
+@carts.map do |cart|
+  json.set! cart.id do
+    json.product cart.cart_item
   end
 end
+
+# carts : {
+#   cartId : {product}
+# }
