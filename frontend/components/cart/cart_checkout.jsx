@@ -39,7 +39,7 @@ const CartCheckout = () => {
                   <span>Item(s) total</span>
                   <span>$99.99</span>
                 </div>
-                <div className="happy-discount">
+                <div className="checkout-bold-heading" id="happy-discount">
                   <span>Shop discount (HAPPYDISC25)</span>
                   <span>Math taking a fourth off</span>
                 </div>
