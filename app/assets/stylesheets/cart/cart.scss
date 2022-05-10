@@ -43,13 +43,15 @@
 
   .checkout-products-container {
     width: 69%;
-    background-color: #E0BBE4;
+    // background-color: #E0BBE4;
   }
 
     .checkout-products-container > h2 {
-      background-color: #D291BC;
-      font-size: 20px;
+      // background-color: #D291BC;
       margin-bottom: 1.5%;
+      -webkit-text-stroke: black;
+      -webkit-text-stroke-width: 0.2px;
+      font-size: 20px;
     }
 
     .checkout-flex-box-product-info {
@@ -74,7 +76,20 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-start;
       padding: 8px;
+    }
+
+    .checkout-flex-box-prod-mid > button {
+      margin-left: 1px;
+      -webkit-text-stroke: black;
+      -webkit-text-stroke-width: 1px;
+    }
+
+    .checkout-flexbox-name-space-price > span {
+      padding: 8px;
+      -webkit-text-stroke: black;
+      -webkit-text-stroke-width: 1.2px;
     }
   
   .checkout-payment-container {
