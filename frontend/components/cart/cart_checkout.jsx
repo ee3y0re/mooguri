@@ -47,7 +47,7 @@ const CartCheckout = () => {
                   <span>Subtotal</span>
                   <span>$99.99</span>
                 </div>
-                <div className="price-line">
+                <div className="price-line" id="checkout-shipping">
                   <span>Shipping</span>
                   <span>FREE</span>
                 </div>
