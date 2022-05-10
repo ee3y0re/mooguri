@@ -102,14 +102,16 @@
     }
   
   .checkout-payment-container {
+    height: fit-content;
     width: 28%;
-    background-color: #957DAD; 
+    // background-color: #957DAD; 
     line-height: 30px;
   }
 
     .checkout-payment-padding {
       padding: 26px;
-      background-color: #E0BBE4;
+      box-shadow: 4px 4px 4px 4px #c6d5d8;
+      border-radius: 20px;
     }
 
     .checkout-payment-padding > ul {
@@ -129,4 +131,8 @@
       border-bottom: 1px solid gray;
       padding-bottom: 1%;
       margin-bottom: 4%;
+    }
+
+    #checkout-shipping {
+      margin-bottom: 7%
     }
