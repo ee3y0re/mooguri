@@ -14,6 +14,15 @@ class User < ApplicationRecord
       foreign_key: :reviewer_id,
       class_name: :Review
 
+    has_one :cart,
+      foreign_key: :buyer_id,
+      class_name: :Cart
+    
+    has_many :cart_items,
+    #through an existing association
+      through: :cart,
+      source: :cart_item
+
     attr_reader :password
 
     def self.find_by_credentials(email, password)

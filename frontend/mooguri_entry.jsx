@@ -7,13 +7,7 @@ import configureStore from "./store/store";
 // // // testing start
 
 //you have to test thunk actions to make sure actions and api util both work correctly
-// import { signup, login, logout } from "./actions/session_actions";
-import { fetchProducts, fetchProduct } from "./actions/product_actions";
-// // going straight to action rather than the thunk action will send the action to reducer but will not make ajax request to save user
-// import { receiveCurrentUser } from "./actions/session_actions"
-import { fetchReviews, fetchReview, createReview, updateReview, deleteReview } from "./actions/review_actions"
-import { clearReviewErrors } from "./actions/review_actions"
-
+// import { fetchUserCartItems, addItemToCart, deleteItemOnCart } from "./actions/cart_actions"
 // // // testing end
 
 
@@ -45,21 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // // testing start
-  // // import or initialize function
-  // // window.function = function
-  // window.signup = signup;
-  // window.login = login;
-  // window.logout = logout;
-  window.fetchProducts = fetchProducts;
-  // window.fetchProduct = fetchProduct;
-  // // check responseJSON
-  window.fetchReviews = fetchReviews;
-  window.fetchReview = fetchReview;
-  window.createReview = createReview;
-  window.updateReview = updateReview;
-  window.deleteReview = deleteReview;
-  window.clearReviewErrors = clearReviewErrors;
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
   // // //testing ended
 })
