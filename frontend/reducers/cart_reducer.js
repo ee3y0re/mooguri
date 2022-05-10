@@ -11,8 +11,6 @@ const CartsReducer = (state = {}, action) => {
   case RECEIVE_CART_ITEMS:
     return action.carts;
   case RECEIVE_CART_ITEM:
-    // nextState[action.cart.id] = action.cart;
-    // return nextState;
     return action.cart
   case DELETE_CART_ITEM:
     delete nextState[action.cartItemId];
