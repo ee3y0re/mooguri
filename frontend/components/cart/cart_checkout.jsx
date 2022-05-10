@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchUserCartItems } from "../../actions/cart_actions"
 
 const CartCheckout = () => {
+
+  /* container */
+  const currentCart = useSelector((wholeState) => {
+    return wholeState.entities.carts;
+  });
+  const dispatch = useDispatch();
+
+  /* componentDidMount */
+  useEffect(() => {
+    dispatch(fetchUserCartItems());
+  },[]); //empty array only has useEffect run on mount and unmount
+
   return (
     <div className="checkout-main-contain">
       <div className="checkout-flex-box-width-1400px">
@@ -10,6 +24,7 @@ const CartCheckout = () => {
             <button className="checkout-bold-heading">Keep Shopping</button>
           </header>
           <div className="checkout-two-column">
+
             <article className="checkout-products-container">
               <h2 className="checkout-bold-heading">Seller's name</h2>
               <div className="checkout-flex-box-product-info">
@@ -27,6 +42,9 @@ const CartCheckout = () => {
                 </div>
               </div>
             </article>
+
+
+
             <aside className="checkout-payment-container">
               <div className="checkout-payment-padding">
                 <h2 className="checkout-bold-heading">How you'll pay</h2>
