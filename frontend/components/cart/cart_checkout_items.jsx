@@ -11,12 +11,16 @@ const CartCheckoutItem = ({wholeCart}) => {
       {
         cartItems?.map((item, idx) => {
           return(
-            <li
-              key={cartIds[idx]}
-            >
-              <h2 className="checkout-bold-heading">Seller Id: {item.sellerId}</h2>
+            <li key={cartIds[idx]} >
+              <h2 className="checkout-bold-heading">
+                Seller Id: {item.sellerId}
+              </h2>
               <div className="checkout-flex-box-product-info">
-                <img id="checkout-prod-temp" src={window.placeholder} alt="placeholder" />
+                <img 
+                  id="checkout-prod-temp" 
+                  src={window.placeholder} 
+                  alt="placeholder" 
+                />
                 <div className="checkout-flexbox-name-space-price">
                   <div className="checkout-flex-box-prod-mid">
                     <span>{item.productName}</span>
