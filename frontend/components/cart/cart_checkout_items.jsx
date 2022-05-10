@@ -7,7 +7,7 @@ const CartCheckoutItem = ({wholeCart}) => {
   console.log("cartItems", cartItems);
 
   return (
-    <ul>
+    <ul className="checkout-products-container">
       {
         cartItems?.map((item, idx) => {
           return(

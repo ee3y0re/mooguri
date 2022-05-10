@@ -26,13 +26,14 @@ const CartCheckout = () => {
           </header>
 
 
-          <br />
+          {/* <br />
           <CartCheckoutItem wholeCart={currentCart}/>
           <br />
-          <br />
+          <br /> */}
 
 
           <div className="checkout-two-column">
+            <CartCheckoutItem wholeCart={currentCart} />
             {/* <ul>
               {
                 cartItems?.map((item, idx) => {
@@ -49,7 +50,7 @@ const CartCheckout = () => {
             </ul> */}
 
 
-            <article className="checkout-products-container">
+            {/* <article className="checkout-products-container">
               <h2 className="checkout-bold-heading">Seller's name</h2>
               <div className="checkout-flex-box-product-info">
                 <img id="checkout-prod-temp" src={window.placeholder} alt="placeholder" />
@@ -65,7 +66,7 @@ const CartCheckout = () => {
                   <span className="checkout-bold-heading">$99.99</span>
                 </div>
               </div>
-            </article>
+            </article> */}
 
 
 
