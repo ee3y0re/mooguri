@@ -1,6 +1,6 @@
 @carts.map do |cart|
   json.set! cart.id do
-    json.product cart.cart_item
+    json.partial! "/api/products/product", product: cart.cart_item
   end
 end
 
