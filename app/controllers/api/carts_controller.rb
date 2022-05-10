@@ -4,10 +4,10 @@ class Api::CartsController < ApplicationController
   ## need current user's cart
   def index
     ## testing line
-    # @cart_items = User.first.cart_items
+    # @carts = Cart.where(buyer_id: User.first.id);
 
     ## final line with current user
-    @cart_items = current_user.cart_items
+    @carts = Cart.where(buyer_id: current_user.id);
     render "/api/carts/index"
   end
 
@@ -40,7 +40,7 @@ class Api::CartsController < ApplicationController
     @cart = Cart.find_by(id: params[:id]) # expecting cart instance
     @cart_owner = User.find_by(id: @cart.buyer_id) #expecting user
     if @cart && @cart_owner.id === current_user.id && @cart.destroy
-      @cart_items = current_user.cart_items
+      @carts = Cart.where(buyer_id: current_user.id);
       render :index
     else
       render json: ["Something went wrong"], status: 404
