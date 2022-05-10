@@ -37,6 +37,7 @@
 
   .checkout-title-and-main-redirect > button {
     height: 35px;
+    font-size: 16px;
   }
 
 .checkout-two-column {
@@ -54,7 +55,6 @@
   }
 
     .checkout-products-container > h2 {
-      // background-color: #D291BC;
       margin-bottom: .8%;
     }
 
@@ -110,4 +110,23 @@
     .checkout-payment-padding {
       padding: 26px;
       background-color: #E0BBE4;
+    }
+
+    .checkout-payment-padding > ul {
+      margin-bottom: 13%;
+    }
+
+    .price-line {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .price-num, .checkout-main-contain span {
+      font-size: 20px;
+    }
+
+    #checkout-discount {
+      border-bottom: 1px solid gray;
+      padding-bottom: 1%;
+      margin-bottom: 4%;
     }
