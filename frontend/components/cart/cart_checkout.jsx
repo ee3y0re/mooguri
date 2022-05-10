@@ -35,7 +35,7 @@ const CartCheckout = () => {
                   <li>Payment 2: Paypal</li>
                   <li>Klarna</li>
                 </ul>
-                <div className="items-total">
+                <div className="checkout-bold-heading" id="items-total">
                   <span>Item(s) total</span>
                   <span>$99.99</span>
                 </div>
