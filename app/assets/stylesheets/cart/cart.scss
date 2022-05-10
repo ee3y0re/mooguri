@@ -47,7 +47,10 @@
 }
 
   .checkout-products-container {
+    height: fit-content;
     width: 69%;
+    border-bottom: 1px solid gray;
+    padding-bottom: 2%;
   }
 
     .checkout-products-container > h2 {
