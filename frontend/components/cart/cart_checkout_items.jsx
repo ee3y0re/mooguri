@@ -1,11 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteItemOnCart } from "../../actions/cart_actions"
 
-const CartCheckoutItem = ({wholeCart}) => {
+const CartCheckoutItem = ({wholeCart }) => {
+  const dispatch = useDispatch();
+
   const cartIds = Object.keys(wholeCart);
   const cartItems = Object.values(wholeCart);
-  console.log("wholeCart: ", wholeCart)
-  console.log("cartIds: ", cartIds);
-  console.log("cartItems: ", cartItems);
 
   return (
     <ul className="checkout-products-container">
@@ -27,7 +28,11 @@ const CartCheckoutItem = ({wholeCart}) => {
                 <div className="checkout-flexbox-name-space-price">
                   <div className="checkout-flex-box-prod-mid">
                     <span>{item.productName}</span>
-                    <button>Remove</button>
+                    <button 
+                      onClick={() => dispatch(deleteItemOnCart(cartIds[idx]))}
+                    >
+                      Remove
+                    </button>
                   </div>
                   <span className="checkout-bold-heading">{item.price}</span>
                 </div>
