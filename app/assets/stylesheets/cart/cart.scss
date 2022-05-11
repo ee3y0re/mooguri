@@ -27,6 +27,7 @@
 }
 
 .checkout-null {
+  width: 100%;
   border-bottom: 1px solid lightgray;
 }
 
@@ -45,9 +46,15 @@
   font-size: 17px;
 }
 
-.checkout-null-flexbox > p {
+.checkout-carbo-message {
+  display: flex;
   margin-top: 83px;
   margin-bottom: 69px;
+}
+
+.checkout-leaf {
+  width: 15px;
+  padding-right: 4px;
 }
 
 .checkout-null-flexbox {
