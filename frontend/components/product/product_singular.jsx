@@ -35,6 +35,24 @@ class ProductSingular extends React.Component {
     this.props.addItemToCart(newCart);
   }
 
+  priceFormatter(num) {
+    let numWord = String(num);
+    let numWordSplit = numWord.split(".");
+    let afterDec = "";
+    if (!numWordSplit[1]) {
+      afterDec = "00";
+    } else if (numWordSplit[1].length === 1) {
+      afterDec = numWordSplit[1];
+      afterDec += "0";
+      numWordSplit.pop();
+    } else {
+      afterDec = numWordSplit[1];
+      numWordSplit.pop();
+    }
+    numWordSplit.push(afterDec);
+    return numWordSplit.join(".");
+  }
+
   render(){
     //because constructor and render hits first before component did mount
     //so we need the conditional so that render returns null then component 
@@ -42,6 +60,7 @@ class ProductSingular extends React.Component {
     if (!this.props.product) {
       return null;
     }
+
     const { product } = this.props;
     
     return (
@@ -63,7 +82,9 @@ class ProductSingular extends React.Component {
                 <h1>{product.productName}</h1>
               </div>
               <div className="show-price-avail">
-                <div className="show-price">${product.price}</div>
+                <div className="show-price">
+                  ${this.priceFormatter(product.price)}
+                </div>
                 <div className="show-avail">In Stock</div>
               </div>              
             </div>
