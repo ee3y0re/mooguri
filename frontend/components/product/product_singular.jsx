@@ -70,6 +70,7 @@ class ProductSingular extends React.Component {
               </div>              
             </div>
             <button 
+              id="auth-submit-button"
               className="dark-button"
               onClick={this.handleAddToCartClick}
             >Add to Cart</button>
