@@ -5,13 +5,7 @@ import configureStore from "./store/store";
 
 
 // // // testing start
-
 // test thunk actions to make sure actions and api util both work correctly
-// import { 
-//   fetchUserCartItems, 
-//   addItemToCart, 
-//   deleteItemOnCart } 
-// from "./actions/cart_actions"
 // // // testing end
 
 
@@ -43,10 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // // testing start
-  // window.fetchUserCartItems = fetchUserCartItems;
-  // window.addItemToCart = addItemToCart;
-  // window.deleteItemOnCart = deleteItemOnCart;
-
+  // // window.function = function;
   // window.getState = store.getState;
   // window.dispatch = store.dispatch;
   // // //testing ended
