@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteItemOnCart } from "../../actions/cart_actions"
+import { Link } from "react-router-dom";
+import { deleteItemOnCart } from "../../actions/cart_actions";
 
 const CartCheckoutItem = ({wholeCart}) => {
   const dispatch = useDispatch();
@@ -37,15 +38,19 @@ const CartCheckoutItem = ({wholeCart}) => {
               </h2>
               <div className="checkout-flex-box-product-info">
                 <div className="cart-item-img-contain">
-                  <img 
-                    id="checkout-prod-temp" 
-                    src={item.photoUrl} 
-                    alt="placeholder" 
-                  />
+                  <Link to={`/products/${item.id}`}>
+                    <img
+                      id="checkout-prod-temp"
+                      src={item.photoUrl}
+                      alt="placeholder"
+                    />
+                  </Link>
                 </div>
                 <div className="checkout-flexbox-name-space-price">
                   <div className="checkout-flex-box-prod-mid">
-                    <span>{item.productName}</span>
+                    <Link to={`/products/${item.id}`}>
+                      <span>{item.productName}</span>
+                    </Link>
                     <button 
                       onClick={() => dispatch(deleteItemOnCart(cartIds[idx]))}
                     >
