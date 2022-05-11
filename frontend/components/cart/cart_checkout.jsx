@@ -50,28 +50,6 @@ const CartCheckout = () => {
   /* for presenting subtotal */
   let subTotal = priceFormatter(Math.round((itemsTotal - mathDiscount) * 100) / 100);
 
-/*
-> test
-89.2
-> String(test)
-'89.2'
-> numWord = String(test)
-'89.2'
-> numWordSplit = numWord.split(".")
-[ '89', '2' ]
-> afterDec = numWordSplit[1]
-'2'
-> newAfterDec = afterDec += "0"
-'20'
-> numWordSplit.pop()
-'2'
-> numWordSplit.push(newAfterDec)
-2
-> numWordSplit.join(".")
-'89.20'
-> 
-*/
-
   return (
     <div className="checkout-main-contain">
       {
