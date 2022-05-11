@@ -28,14 +28,21 @@ const CartCheckout = () => {
         <div className="checkout-single-item">
           {
             !activeSession ?
-            <div className="checkout-null-session">
+            <div className="checkout-null">
               <header className="checkout-title-and-main-redirect">
-                <h1>Your cart is empty.</h1>
-                  <Link to="/search?abbySpeak=">Discover something unique to fill it up</Link>
-                <span>
-                  Mooguri offsets carbon emissions from not actually delivering.
-                </span>
+                <h1 className="checkout-null-header">Your cart is empty.</h1>
               </header>
+              <div className="checkout-null-flexbox">
+                <Link 
+                  to="/" 
+                  id="checkout-null-link"
+                >
+                  Discover something unique to fill it up
+                </Link>
+                <p>
+                  Mooguri offsets carbon emissions from being a demo site.
+                </p>
+              </div>
             </div>:
             <div>
               <header className="checkout-title-and-main-redirect">
