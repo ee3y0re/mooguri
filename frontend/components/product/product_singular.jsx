@@ -14,7 +14,7 @@ class ProductSingular extends React.Component {
 
   componentDidMount(){
     // grabbing from url 
-    // own props object has a match key that has a params key that has a productId key
+    // own props object has match key that has params key that has productId key
     this.props.fetchProduct(this.props.match.params.productId)
   }
 
@@ -74,30 +74,15 @@ class ProductSingular extends React.Component {
               className="dark-button"
               onClick={this.handleAddToCartClick}
             >Add to Cart</button>
-            {/* <ul className="shop-item-trends">
-              <li className="stock-sell-stats">Other people want this. OR Selling fast! <span className="stock-sell-details">Over # people have this in their carts right now. OR Only 1 left.</span></li>
-              <li className="seller-trend">Star Seller (Sometimes)</li>
-              <li className="ship-date">Arrives by Due Date of This Project</li>              
-            </ul> */}
-            {/* <div className="highlights">
-              <h2 className="product-info-head">Highlights</h2>
-              <ul className="product-info-details">  
-                <li>Handmade</li>
-                <li>Height: </li>
-                <li>Width: </li>
-                <li>Depth: </li>
-                <li>OR</li>
-                <li>Materials: </li>
-                <li>Capacity: </li>
-              </ul>              
-            </div> */}
             <div className="description-container">
               <h2 className="product-info-head">Description</h2>
               <p className="product-info-details">{product.description}</p>
             </div>
             <div className="eta">
               <div className="eta-1">
-                <h2 className="product-info-head">Shipping and Return Policies</h2>
+                <h2 className="product-info-head">
+                  Shipping and Return Policies
+                </h2>
                 <h3 className="product-info-subtitle1">Estimated Arrival</h3>                  
                 <span className="custom-small-title">April 1-5</span>
               </div>
