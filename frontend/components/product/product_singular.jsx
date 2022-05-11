@@ -28,9 +28,6 @@ class ProductSingular extends React.Component {
 
   handleAddToCartClick = (e) => {
     e.preventDefault();
-    // const newCart = {buyerId:"", cartItemId:""};
-    // newCart[buyerId] = this.props.currentUser.id;
-    // newCart[cartItemId] = this.props.product.id;
     const newCart = Object.assign({}, {
       buyer_id: this.props.currentUser.id,
       cart_item_id: this.props.product.id
@@ -40,7 +37,8 @@ class ProductSingular extends React.Component {
 
   render(){
     //because constructor and render hits first before component did mount
-    //so we need the conditional so that render returns null then component loads and triggers rerender
+    //so we need the conditional so that render returns null then component 
+    //  loads and triggers rerender
     if (!this.props.product) {
       return null;
     }
@@ -50,15 +48,15 @@ class ProductSingular extends React.Component {
       <div className="splash">
         <div className="show-listing">
           <div className="show-image-container">
-            {/* <div className="show-image-minis">Minis WIP</div> */}
             <div className="show-image-big">
               <img className="main-product-img" src={product.photoUrl} alt="" />
             </div>
           </div>
           <div className="show-buy-quick">
             <div className="show-seller">
-              <h3 className="product-info-subtitle1">Seller Id: {product.sellerId}</h3>
-              {/* <h4 className="product-info-subtitle2">1 sale, ??? stars</h4>               */}
+              <h3 className="product-info-subtitle1">
+                Seller Id: {product.sellerId}
+              </h3>
             </div>
             <div id="no-extra-space">
               <div className="show-buy-title-lines">
