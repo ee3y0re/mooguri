@@ -40,7 +40,7 @@ const CartCheckoutItem = ({wholeCart}) => {
                 <div className="cart-item-img-contain">
                   <Link to={`/products/${item.id}`}>
                     <img
-                      id="checkout-prod-temp"
+                      id="checkout-prod-thumbnail"
                       src={item.photoUrl}
                       alt="placeholder"
                     />
