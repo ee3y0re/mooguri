@@ -28,11 +28,12 @@ const CartCheckout = () => {
   }
   let discountTotal = itemsTotal / 4;
   let subTotal = itemsTotal - discountTotal;
+  console.log(cartItems)
 
   return (
     <div className="checkout-main-contain">
       {
-        !activeSession?
+        !activeSession || cartItems.length === 0 ?
         <EmptyCart /> :
         <div className="checkout-flex-box-width-1400px">
           <div className="checkout-single-item">
