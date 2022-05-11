@@ -20,8 +20,6 @@ const CartCheckout = () => {
     dispatch(fetchUserCartItems());
   },[]); //empty array only has useEffect run on mount and unmount
 
-  console.log(activeSession)
-
   return (
     <div className="checkout-main-contain">
       {
