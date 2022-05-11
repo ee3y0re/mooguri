@@ -26,6 +26,18 @@ class ProductSingular extends React.Component {
     this.componentDidMount();
   }
 
+  handleAddToCartClick = (e) => {
+    e.preventDefault();
+    // const newCart = {buyerId:"", cartItemId:""};
+    // newCart[buyerId] = this.props.currentUser.id;
+    // newCart[cartItemId] = this.props.product.id;
+    const newCart = Object.assign({}, {
+      buyer_id: this.props.currentUser.id,
+      cart_item_id: this.props.product.id
+    })
+    this.props.addItemToCart(newCart);
+  }
+
   render(){
     //because constructor and render hits first before component did mount
     //so we need the conditional so that render returns null then component loads and triggers rerender
@@ -57,7 +69,10 @@ class ProductSingular extends React.Component {
                 <div className="show-avail">In Stock</div>
               </div>              
             </div>
-            <button className="dark-button">Add to Cart</button>
+            <button 
+              className="dark-button"
+              onClick={this.handleAddToCartClick}
+            >Add to Cart</button>
             {/* <ul className="shop-item-trends">
               <li className="stock-sell-stats">Other people want this. OR Selling fast! <span className="stock-sell-details">Over # people have this in their carts right now. OR Only 1 left.</span></li>
               <li className="seller-trend">Star Seller (Sometimes)</li>
