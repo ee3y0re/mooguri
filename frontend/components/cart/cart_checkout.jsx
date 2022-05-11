@@ -92,7 +92,7 @@ const CartCheckout = () => {
                     </div>
                     <div className="price-line" id="checkout-shipping">
                       <span>Shipping</span>
-                      <span>FREE</span>
+                      <span id="shipping-price">FREE</span>
                     </div>
                     <button id="auth-submit-button">Proceed to checkout</button>
                   </div>
