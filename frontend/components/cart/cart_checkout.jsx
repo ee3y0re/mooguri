@@ -28,7 +28,6 @@ const CartCheckout = () => {
   }
   let discountTotal = itemsTotal / 4;
   let subTotal = itemsTotal - discountTotal;
-  console.log(cartItems)
 
   return (
     <div className="checkout-main-contain">
