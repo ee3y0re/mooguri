@@ -106,4 +106,4 @@ const CartCheckout = () => {
   )
 }
 
-export default CartCheckout
+export default CartCheckout;
