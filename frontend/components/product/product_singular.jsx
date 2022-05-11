@@ -57,7 +57,7 @@ class ProductSingular extends React.Component {
                 <div className="show-avail">In Stock</div>
               </div>              
             </div>
-            <button className="dark-button">Add to Cart WIP</button>
+            <button className="dark-button">Add to Cart</button>
             {/* <ul className="shop-item-trends">
               <li className="stock-sell-stats">Other people want this. OR Selling fast! <span className="stock-sell-details">Over # people have this in their carts right now. OR Only 1 left.</span></li>
               <li className="seller-trend">Star Seller (Sometimes)</li>
