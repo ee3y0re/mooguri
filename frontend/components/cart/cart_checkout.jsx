@@ -21,6 +21,14 @@ const CartCheckout = () => {
     dispatch(fetchUserCartItems());
   },[]); //empty array only has useEffect run on mount and unmount
 
+  const cartItems = Object.values(currentCart);
+  let itemsTotal = 0;
+  for (let i = 0; i < cartItems.length; i++) {
+    itemsTotal += cartItems[i].price;
+  }
+  let discountTotal = itemsTotal / 4;
+  let subTotal = itemsTotal - discountTotal;
+
   return (
     <div className="checkout-main-contain">
       {
