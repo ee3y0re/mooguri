@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteItemOnCart } from "../../actions/cart_actions"
 
-const CartCheckoutItem = ({wholeCart }) => {
+const CartCheckoutItem = ({wholeCart}) => {
   const dispatch = useDispatch();
 
   const cartIds = Object.keys(wholeCart);
