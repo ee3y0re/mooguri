@@ -8,6 +8,24 @@ const CartCheckoutItem = ({wholeCart}) => {
   const cartIds = Object.keys(wholeCart);
   const cartItems = Object.values(wholeCart);
 
+  const priceFormatter = (num) => {
+    let numWord = String(num);
+    let numWordSplit = numWord.split(".");
+    let afterDec = "";
+    if (!numWordSplit[1]) {
+      afterDec = "00";
+    } else if (numWordSplit[1].length === 1) {
+      afterDec = numWordSplit[1];
+      afterDec += "0";
+      numWordSplit.pop();
+    } else {
+      afterDec = numWordSplit[1];
+      numWordSplit.pop();
+    }
+    numWordSplit.push(afterDec);
+    return numWordSplit.join(".");
+  }
+
   return (
     <ul className="checkout-products-container">
       {
@@ -34,7 +52,7 @@ const CartCheckoutItem = ({wholeCart}) => {
                       Remove
                     </button>
                   </div>
-                  <span className="checkout-bold-heading">{item.price}</span>
+                  <span className="checkout-bold-heading">${priceFormatter(item.price)}</span>
                 </div>
               </div>
             </li>
