@@ -48,7 +48,10 @@ const CartCheckoutItem = ({wholeCart}) => {
                 </div>
                 <div className="checkout-flexbox-name-space-price">
                   <div className="checkout-flex-box-prod-mid">
-                    <Link to={`/products/${item.id}`}>
+                    <Link 
+                      to={`/products/${item.id}`} 
+                      className="cart-item-link"
+                    >
                       <span>{item.productName}</span>
                     </Link>
                     <button 

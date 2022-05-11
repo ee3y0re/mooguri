@@ -153,6 +153,14 @@
         -webkit-text-stroke-width: 1px;
       }
 
+      .cart-item-link:link, .cart-item-link:visited {
+        color: black;
+      }
+
+      .cart-item-link:hover {
+        color: #4D4B4B;
+      }
+
     .checkout-flexbox-name-space-price > span {
       padding: 8px;
     }
