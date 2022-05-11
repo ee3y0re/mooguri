@@ -18,13 +18,59 @@ const CartCheckout = () => {
     dispatch(fetchUserCartItems());
   },[]); //empty array only has useEffect run on mount and unmount
 
+  /* pricing */
+  const priceFormatter = (num) => {
+    let numWord = String(num);
+    let numWordSplit = numWord.split(".");
+    let afterDec = "";
+    if (!numWordSplit[1]) {
+      afterDec = "00";
+    } else if (numWordSplit[1].length === 1) {
+      afterDec = numWordSplit[1];
+      afterDec += "0";
+      numWordSplit.pop();
+    } else {
+      afterDec = numWordSplit[1];
+      numWordSplit.pop();
+    }
+    numWordSplit.push(afterDec);
+    return numWordSplit.join(".");
+  }
   const cartItems = Object.values(currentCart);
   let itemsTotal = 0;
   for (let i = 0; i < cartItems.length; i++) {
     itemsTotal += cartItems[i].price;
   }
-  let discountTotal = itemsTotal / 4;
-  let subTotal = Math.round((itemsTotal - discountTotal) * 100) / 100;
+  /* for presenting items total */
+  let finItemsTotal = priceFormatter(Math.round(itemsTotal * 100) / 100)
+  /* for accurate math measure */
+  let mathDiscount = itemsTotal / 4;
+  /* for presenting shop discount deduction */
+  let shopDiscount = priceFormatter(Math.round((itemsTotal / 4) * 100) / 100);
+  /* for presenting subtotal */
+  let subTotal = priceFormatter(Math.round((itemsTotal - mathDiscount) * 100) / 100);
+
+/*
+> test
+89.2
+> String(test)
+'89.2'
+> numWord = String(test)
+'89.2'
+> numWordSplit = numWord.split(".")
+[ '89', '2' ]
+> afterDec = numWordSplit[1]
+'2'
+> newAfterDec = afterDec += "0"
+'20'
+> numWordSplit.pop()
+'2'
+> numWordSplit.push(newAfterDec)
+2
+> numWordSplit.join(".")
+'89.20'
+> 
+*/
 
   return (
     <div className="checkout-main-contain">
@@ -54,13 +100,13 @@ const CartCheckout = () => {
                       <span className="checkout-bold-heading">
                         Item(s) total
                       </span>
-                      <span className="price-num">${itemsTotal}</span>
+                      <span className="price-num">${finItemsTotal}</span>
                     </div>
                     <div className="price-line" id="checkout-discount">
                       <span className="checkout-bold-heading">
                         Shop discount (THANKU25)
                       </span>
-                      <span className="price-num">-${discountTotal}</span>
+                      <span className="price-num">-${shopDiscount}</span>
                     </div>
                     <div className="price-line">
                       <span>Subtotal</span>
