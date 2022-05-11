@@ -11,9 +11,6 @@ const CartCheckout = () => {
   const currentCart = useSelector((wholeState) => {
     return wholeState.entities.carts;
   });
-  const activeSession = useSelector((state) => {
-    return state.session.id
-  })
   const dispatch = useDispatch();
 
   /* componentDidMount */
@@ -27,12 +24,12 @@ const CartCheckout = () => {
     itemsTotal += cartItems[i].price;
   }
   let discountTotal = itemsTotal / 4;
-  let subTotal = itemsTotal - discountTotal;
+  let subTotal = Math.round((itemsTotal - discountTotal) * 100) / 100;
 
   return (
     <div className="checkout-main-contain">
       {
-        !activeSession || cartItems.length === 0 ?
+        cartItems.length === 0 ?
         <EmptyCart /> :
         <div className="checkout-flex-box-width-1400px">
           <div className="checkout-single-item">
