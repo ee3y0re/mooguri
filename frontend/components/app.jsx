@@ -9,6 +9,7 @@ import ProductSingularContainer from "./product/product_singular_container";
 import SearchBar from "./search/search_bar";
 import SearchResult from "./search/search_result";
 import CartCheckout from "./cart/cart_checkout";
+import Directory from "./footer/directory";
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -70,7 +71,7 @@ const App = () => {
           </ul>
         </div>           */}
       </div>
-
+      <Directory />
       <Switch>
         <Route path="/search" component={SearchResult}/>
         <Route 
