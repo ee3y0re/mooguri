@@ -53,10 +53,8 @@ const App = () => {
               </svg>
             </div>   
           </Link>
-
         </div>          
       </div>
-
       <div id="nav-categories-container-underline">
         {/* <div className="temp" id="nav-categories-container">
           <ul id="nav-cat-list">
