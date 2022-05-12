@@ -3,18 +3,32 @@
   top: -3px;
   height: 22px;
   width: 22px;
+  padding: 9px 9px;
+  border-radius: 20px;
 }
+  .cart-logo-container:hover {
+    background-color: lightgray;
+  }
+
+  #cart-logo-container:link,
+  #cart-logo-container:focus,
+  #cart-logo-container:visited,
+  #cart-logo-container:active {
+    color: black;
+  }
+
   .cart-logo-container > svg {
     width: 100%;
     height: 100%;
   }
 
 .cart-counter {
-  top: 4px;
-  right: -7px;
+  top: 3px;
+  right: 0px;
   position: absolute;
   background: #F4ADAD;
   padding: 3px 6px 0px;
+  border: 1px solid white;
   border-radius: 30px;
   z-index: 1;
 }
