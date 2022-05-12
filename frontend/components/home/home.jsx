@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div id="home-container">
       <div id="ribbon"></div>
-      <main id="frontpage">
+      <main id="front-page">
         {/* after creating a bubbles component */}
         <div id="top-banner">
           <h1 id="greeting">Check out these cow-tegories</h1>
@@ -65,7 +65,7 @@ const Home = () => {
       </svg> */}
       {/* footer component */}
     </div>
-  )
-}
+  );
+};
 
 export default Home;
