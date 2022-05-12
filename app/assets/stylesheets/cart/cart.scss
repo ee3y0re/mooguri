@@ -1,0 +1,242 @@
+.cart-logo-container {
+  position: relative;
+  top: -3px;
+  height: 22px;
+  width: 22px;
+}
+  .cart-logo-container > svg {
+    width: 100%;
+    height: 100%;
+  }
+
+.cart-counter {
+  top: 4px;
+  right: -7px;
+  position: absolute;
+  background: #F4ADAD;
+  padding: 3px 6px 0px;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+#cart-counter-link:link, 
+#cart-counter-link:focus, 
+#cart-counter-link:visited,
+#cart-counter-link:active {
+  color: #242424;
+}
+
+.no-cart-counter {
+  display: none;
+}
+
+.checkout-bold-heading {
+  -webkit-text-stroke: black;
+  -webkit-text-stroke-width: 0.2px;
+  font-size: 20px;
+  margin-bottom: 1.5%;
+}
+.checkout-main-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // I honestly don't know which to choose
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.checkout-flex-box-width-1400px {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1400px;
+  height: 100%;
+}
+
+.checkout-single-item, .checkout-null {
+  width: 100%;
+}
+
+.checkout-null {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+.checkout-null > header {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout-null > header > h1 {
+  font-size: 42px;
+  margin-top: 105px;
+}
+
+#checkout-null-link:link, #checkout-null-link:visited {
+  color: black;
+  font-size: 17px;
+}
+
+.checkout-carbo-message {
+  display: flex;
+  margin-top: 83px;
+  margin-bottom: 69px;
+}
+
+.checkout-leaf {
+  width: 15px;
+  padding-right: 4px;
+}
+
+.checkout-null-flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-title-and-main-redirect {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+  .checkout-title-and-main-redirect > h1 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 29px;
+    margin-top: 36px;
+    margin-bottom: 40px;
+  }
+
+  .checkout-title-and-main-redirect > button {
+    height: 35px;
+    font-size: 16px;
+  }
+
+.checkout-two-column {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+  .checkout-products-container {
+    height: fit-content;
+    width: 69%;
+  }
+
+    .checkout-products-container > li {
+      border-bottom: 1px solid lightgray;
+      padding-top: 4%;
+      padding-bottom: 2%;
+      padding-bottom: 5%;
+    }
+
+    .checkout-products-container > h2 {
+      margin-bottom: .8%;
+    }
+
+    .checkout-flex-box-product-info {
+      display: flex;
+    }
+
+    .cart-item-img-contain {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 201px;
+      max-width: 252px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 3px 3px 3px 3px #C6D5D8;
+      background-color: #242424;
+    }
+
+    #checkout-prod-thumbnail {
+      width: 100%;
+      background-color: #242424;
+    }
+
+    .checkout-flexbox-name-space-price {
+      display: flex;
+      justify-content: space-between;
+      width: 77%;
+    }
+
+    .checkout-flex-box-prod-mid {
+      // background-color: #FFDFB6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 8px;
+      padding-left: 29px;
+      width: 81%
+    }
+
+      .checkout-flex-box-prod-mid > span {
+        font-size: 21px;
+      }
+
+      .checkout-flex-box-prod-mid > button {
+        margin-left: 1px;
+        -webkit-text-stroke: black;
+        -webkit-text-stroke-width: 1px;
+      }
+
+      .cart-item-link:link, .cart-item-link:visited {
+        color: black;
+      }
+
+      .cart-item-link:hover {
+        color: #4D4B4B;
+      }
+
+    .checkout-flexbox-name-space-price > span {
+      padding: 8px;
+    }
+  
+  .checkout-payment-container {
+    height: fit-content;
+    width: 28%;
+    // background-color: #957DAD; 
+    line-height: 30px;
+  }
+
+    .checkout-payment-padding {
+      padding: 26px;
+      box-shadow: 4px 4px 4px 4px #c6d5d8;
+      border-radius: 20px;
+    }
+
+    .checkout-payment-padding > button {
+      font-size: 18px;
+    }
+
+    .checkout-payment-padding > ul {
+      margin-bottom: 13%;
+    }
+
+    .price-line {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .price-num, .checkout-main-contain span {
+      font-size: 20px;
+    }
+
+    #checkout-discount {
+      border-bottom: 1px solid gray;
+      padding-bottom: 1%;
+      margin-bottom: 4%;
+    }
+
+    #checkout-shipping {
+      margin-bottom: 7%
+    }
+
+    #shipping-price {
+      color: #53965e;
+    }
