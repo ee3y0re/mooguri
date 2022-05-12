@@ -1,8 +1,8 @@
 .cart-logo-container {
   position: relative;
-  top: 2px;
-  height: 33px;
-  width: 33px;
+  top: -3px;
+  height: 22px;
+  width: 22px;
 }
   .cart-logo-container > svg {
     width: 100%;
@@ -11,12 +11,19 @@
 
 .cart-counter {
   top: 4px;
-  right: 4px;
+  right: -7px;
   position: absolute;
   background: #F4ADAD;
   padding: 3px 6px 0px;
   border-radius: 30px;
   z-index: 1;
+}
+
+#cart-counter-link:link, 
+#cart-counter-link:focus, 
+#cart-counter-link:visited,
+#cart-counter-link:active {
+  color: #242424;
 }
 
 .no-cart-counter {
