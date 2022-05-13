@@ -51,6 +51,7 @@ const CartCheckout = () => {
   let subTotal = priceFormatter(Math.round((itemsTotal - mathDiscount) * 100) / 100);
 
   return (
+    // for main divs, avoid giving position absolute
     <div className="checkout-main-contain">
       {
         cartItems.length === 0 ?
