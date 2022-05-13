@@ -26,6 +26,10 @@
   color: transparent;
 }
 
+#search-res-comp {
+  min-height: 100vh;
+}
+
 #search-header-container {
   background-color: #F8EBE6;
   color: #222222;
@@ -49,7 +53,6 @@
   // position: absolute;
   display: flex;
   justify-content: center;
-  height: 100%;
   width: 100%;
   padding-top: 48px;
 }
