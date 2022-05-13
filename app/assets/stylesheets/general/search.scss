@@ -110,7 +110,8 @@
 }
 
 #search-footer-container {
-  height: 100%;
+  position: relative;
+  height: 100vh;
   width: 100%;
 }
 
@@ -118,8 +119,6 @@
   background-image: url("cow-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  // position: relative;
-  padding-top: 43px;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -127,9 +126,9 @@
 }
 
 #search-error-text {
-  // position: absolute;
-  padding-top: 43px;
-  padding-left: 344px;
+  position: absolute;
+  top: 43px;
+  left: 344px;
   z-index: 1;
   text-shadow: 1px 2px 2px #aabbd4;
 }
