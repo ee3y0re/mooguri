@@ -59,15 +59,15 @@ const CartCheckout = () => {
         <div className="checkout-flex-box-width-1400px">
           <div className="checkout-single-item">
             <div>
-              <header className="checkout-title-and-main-redirect">
+              <div className="checkout-title-and-main-redirect">
                 <h1>{Object.keys(currentCart).length} items in your cart</h1>
                 <button className="checkout-bold-heading">
                   <Link to="/">Keep Shopping</Link>
                 </button>
-              </header>
+              </div>
               <div className="checkout-two-column">
                 <CartCheckoutItem wholeCart={currentCart} />
-                <aside className="checkout-payment-container">
+                <div className="checkout-payment-container">
                   <div className="checkout-payment-padding">
                     <h2 className="checkout-bold-heading">How you'll pay</h2>
                     <ul>
@@ -97,7 +97,7 @@ const CartCheckout = () => {
                     </div>
                     <button id="auth-submit-button">Proceed to checkout</button>
                   </div>
-                </aside>
+                </div>
               </div>
             </div>
           </div>
