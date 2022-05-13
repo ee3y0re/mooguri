@@ -104,12 +104,20 @@
 
 .checkout-title-and-main-redirect {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   align-items: center;
 }
 
-  .checkout-title-and-main-redirect > h1 {
+  .checkout-title-and-main-redirect-empty {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  .checkout-title-and-main-redirect > h1, 
+  .checkout-title-and-main-redirect-empty {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 29px;
     margin-top: 36px;
@@ -120,6 +128,13 @@
     height: 35px;
     font-size: 16px;
   }
+
+.checkout-empty-cart-space {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
 
 .checkout-two-column {
   display: flex;

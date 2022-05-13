@@ -9,7 +9,7 @@ const EmptyCart = () => {
 
   return (
     <div className="checkout-null">
-    <div className="checkout-title-and-main-redirect">
+    <div className="checkout-title-and-main-redirect-empty">
       {
         !activeSession ?
         <h1 className="checkout-null-div">Please login to start shopping.</h1> :
