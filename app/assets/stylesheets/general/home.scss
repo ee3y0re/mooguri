@@ -1,5 +1,4 @@
 #home-container {
-  position: absolute; //allows div to stretch to bottom of browser
   display: flex; //enables centering from justify content
   justify-content: center; //centers horizontally since flex-direction is default
   // background-color: #F1EDEE; //shows the div container
@@ -16,7 +15,6 @@
 }
 
 #front-page {
-  // position: absolute;
   max-width: 1441px;
   z-index: 1;
 }
