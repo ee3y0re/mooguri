@@ -23,8 +23,8 @@
   }
 
 .cart-counter {
-  top: 2px;
-  right: -4px;
+  top: 16px;
+  right: 35px;
   position: absolute;
   background: #F4ADAD;
   padding: 4px 6px 0px;
@@ -54,10 +54,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // I honestly don't know which to choose
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .checkout-flex-box-width-1400px {
@@ -75,11 +73,6 @@
 .checkout-null {
   width: 100%;
   border-bottom: 1px solid lightgray;
-}
-
-.checkout-null > header {
-  display: flex;
-  justify-content: center;
 }
 
 .checkout-null > header > h1 {
@@ -116,7 +109,15 @@
   align-items: center;
 }
 
-  .checkout-title-and-main-redirect > h1 {
+  .checkout-title-and-main-redirect-empty {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  .checkout-title-and-main-redirect > h1, 
+  .checkout-title-and-main-redirect-empty {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 29px;
     margin-top: 36px;
@@ -127,6 +128,13 @@
     height: 35px;
     font-size: 16px;
   }
+
+.checkout-empty-cart-space {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
 
 .checkout-two-column {
   display: flex;

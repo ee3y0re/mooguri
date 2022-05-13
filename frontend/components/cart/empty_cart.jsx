@@ -9,13 +9,13 @@ const EmptyCart = () => {
 
   return (
     <div className="checkout-null">
-    <header className="checkout-title-and-main-redirect">
+    <div className="checkout-title-and-main-redirect-empty">
       {
         !activeSession ?
-        <h1 className="checkout-null-header">Please login to start shopping.</h1> :
+        <h1 className="checkout-null-div">Please login to start shopping.</h1> :
         <h1 className="checkout-null-header">Your cart is empty.</h1>
       }
-    </header>
+    </div>
     <div className="checkout-null-flexbox">
       <Link
         to="/"

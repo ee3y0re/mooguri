@@ -26,6 +26,10 @@
   color: transparent;
 }
 
+#search-res-comp {
+  min-height: 100vh;
+}
+
 #search-header-container {
   background-color: #F8EBE6;
   color: #222222;
@@ -39,17 +43,16 @@
 #search-items-list-container {
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
+  // position: absolute;
   margin-top: 17px;
   margin-left: 29px;
   width: 1459px;
 }
 
 #search-results-container {
-  position: absolute;
+  // position: absolute;
   display: flex;
   justify-content: center;
-  height: 100%;
   width: 100%;
   padding-top: 48px;
 }
@@ -110,7 +113,8 @@
 }
 
 #search-footer-container {
-  height: 100%;
+  position: relative;
+  height: 100vh;
   width: 100%;
 }
 
@@ -118,8 +122,6 @@
   background-image: url("cow-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
-  padding-top: 43px;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -128,8 +130,8 @@
 
 #search-error-text {
   position: absolute;
-  padding-top: 43px;
-  padding-left: 344px;
+  top: 43px;
+  left: 344px;
   z-index: 1;
   text-shadow: 1px 2px 2px #aabbd4;
 }
