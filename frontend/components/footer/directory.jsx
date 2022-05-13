@@ -5,7 +5,7 @@ import React from "react";
 
 const Directory = () => {
   return (
-    <div>
+    <div className="social-links-list-container">
       <ul className="social-links-list">
         <li className="social-links-list__list-items">
           <a href="#" className="social-links-list__a-tags">
