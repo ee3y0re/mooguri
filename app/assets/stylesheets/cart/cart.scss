@@ -66,11 +66,11 @@
   height: 100%;
 }
 
-.checkout-single-item, .checkout-null {
+.checkout-single-item {
   width: 100%;
 }
 
-.checkout-null {
+.checkout-null, .checkout-complete {
   width: 100%;
   border-bottom: 1px solid lightgray;
 }
@@ -118,7 +118,7 @@
 
   .checkout-title-and-main-redirect > h1, 
   .checkout-title-and-main-redirect-empty,
-  .checkout-complete-container > h1 {
+  .checkout-complete > h1 {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 29px;
     margin-top: 36px;
@@ -265,7 +265,10 @@
     }
 
 .checkout-complete-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
 }
+  .checkout-complete {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
