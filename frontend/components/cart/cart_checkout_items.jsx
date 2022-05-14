@@ -29,18 +29,6 @@ const CartCheckoutItem = ({wholeCart}) => {
 
   let cartInventory = {};
   for (let i = 0; i < cartItems.length; i++) {
-    /* cartItems is an array of product objects */
-    /*
-      {
-        productId: {
-          sellerId,
-          name,
-          photoUrl,
-          price,
-          qty
-        }
-      }
-    */
     let productObj = cartItems[i];
     if (cartInventory[productObj.id] === undefined) {
       cartInventory[productObj.id] = {
@@ -48,15 +36,34 @@ const CartCheckoutItem = ({wholeCart}) => {
         "name" : productObj.productName,
         "photoUrl" : productObj.photoUrl,
         "price" : productObj.price,
-        "cartId" : cartIds[i],
+        "cartId" : [cartIds[i]],
         "qty" : 1
       }
     } else {
       cartInventory[productObj.id]["qty"] += 1;
+      cartInventory[productObj.id]["cartId"].push(cartIds[i]);
     }
   }
+  console.log(cartInventory)
+  /* cartItems is an array of product objects */
+  /*
+    {
+      productId: {
+        sellerId,
+        name,
+        photoUrl,
+        price,
+        qty
+      }
+    }
+  */
 
-  console.log(Object.keys(cartInventory))
+  const handleDeleteCartItem = (item) => {
+    const carts = item.cartId;
+    for (let i = 0; i < carts.length; i++) {
+      dispatch(deleteItemOnCart(carts[i]));
+    }
+  }
 
   return (
     <ul className="checkout-products-container">
@@ -87,7 +94,7 @@ const CartCheckoutItem = ({wholeCart}) => {
                       <span>{item.name}</span>
                     </Link>
                     <button 
-                      onClick={() => dispatch(deleteItemOnCart(item.cartId))}
+                      onClick={() => handleDeleteCartItem(item)}
                     >
                       Remove
                     </button>
