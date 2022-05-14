@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchUserCartItems } from "../../actions/cart_actions";
+import { fetchUserCartItems, deleteItemOnCart } from "../../actions/cart_actions";
 import CartCheckoutItem from "./cart_checkout_items";
 import EmptyCart from "./empty_cart";
 
@@ -12,6 +12,9 @@ const CartCheckout = () => {
     return wholeState.entities.carts;
   });
   const dispatch = useDispatch();
+
+  /* display checkout message toggle */
+  const [checkoutMessage, toggleCheckoutMessage] = useState(false)
 
   /* componentDidMount */
   useEffect(() => {
@@ -48,7 +51,14 @@ const CartCheckout = () => {
   /* for presenting shop discount deduction */
   let shopDiscount = priceFormatter(Math.round((itemsTotal / 4) * 100) / 100);
   /* for presenting subtotal */
-  let subTotal = priceFormatter(Math.round((itemsTotal - mathDiscount) * 100) / 100);
+  let subTotal = priceFormatter(
+    Math.round((itemsTotal - mathDiscount) * 100) / 100
+  );
+
+  const confettiCanon = () => {
+    console.log("confetti shows and print message of ordering!")
+    toggleCheckoutMessage(true);
+  }
 
   return (
     // for main divs, avoid giving position absolute
@@ -95,7 +105,19 @@ const CartCheckout = () => {
                       <span>Shipping</span>
                       <span id="shipping-price">FREE</span>
                     </div>
-                    <button id="auth-submit-button">Proceed to checkout</button>
+                    <div className={
+                        checkoutMessage? 
+                        "checkout-complete-display-block":
+                        "checkout-complete-display-none"
+                      }
+                    >
+                      Thank you for demo ordering! You can go through the 
+                      actual purchasing process on&nbsp;
+                      <a href="https://www.etsy.com/" target="_blank">
+                        Etsy.com
+                      </a>
+                    </div>
+                    <button onClick={confettiCanon} id="auth-submit-button">Proceed to checkout</button>
                   </div>
                 </div>
               </div>
