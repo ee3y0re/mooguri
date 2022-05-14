@@ -93,7 +93,11 @@ const CartCheckoutItem = ({wholeCart}) => {
                     </button>
                   </div>
                   <span>&times;{item.qty}</span>
-                  <span className="checkout-bold-heading">${priceFormatter(item.price * item.qty)}</span>
+                  <span className="checkout-bold-heading">
+                    ${priceFormatter(
+                      Math.round((item.price * item.qty) * 100) / 100
+                    )}
+                  </span>
                 </div>
               </div>
             </li>
