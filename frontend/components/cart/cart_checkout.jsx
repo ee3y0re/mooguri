@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, withRouter, useHistory } from "react-router-dom";
 import { fetchUserCartItems, deleteItemOnCart } from "../../actions/cart_actions";
 import CartCheckoutItem from "./cart_checkout_items";
 import EmptyCart from "./empty_cart";
@@ -14,7 +14,10 @@ const CartCheckout = () => {
   const dispatch = useDispatch();
 
   /* display checkout message toggle */
-  const [checkoutMessage, toggleCheckoutMessage] = useState(false)
+  // const [checkoutMessage, toggleCheckoutMessage] = useState(false)
+
+  /* moving to completing checkout */
+  const proceedToCheckout = useHistory();
 
   /* componentDidMount */
   useEffect(() => {
@@ -55,12 +58,13 @@ const CartCheckout = () => {
     Math.round((itemsTotal - mathDiscount) * 100) / 100
   );
 
-  const confettiCanon = () => {
+  const completeCheckout = () => {
     const cartItems = Object.keys(currentCart);
     for (let i = 0; i < cartItems.length; i++) {
       dispatch(deleteItemOnCart([cartItems[i]]));
     }
-    toggleCheckoutMessage(true);
+    proceedToCheckout.push("/checkout-complete")
+    // toggleCheckoutMessage(true);
   }
 
   return (
@@ -108,19 +112,7 @@ const CartCheckout = () => {
                       <span>Shipping</span>
                       <span id="shipping-price">FREE</span>
                     </div>
-                    <div className={
-                        checkoutMessage? 
-                        "checkout-complete-display-block":
-                        "checkout-complete-display-none"
-                      }
-                    >
-                      Thank you for demo ordering! You can go through the 
-                      actual purchasing process on&nbsp;
-                      <a href="https://www.etsy.com/" target="_blank">
-                        Etsy.com
-                      </a>
-                    </div>
-                    <button onClick={confettiCanon} id="auth-submit-button">Proceed to checkout</button>
+                    <button onClick={completeCheckout} id="auth-submit-button">Proceed to checkout</button>
                   </div>
                 </div>
               </div>
@@ -132,4 +124,4 @@ const CartCheckout = () => {
   )
 }
 
-export default CartCheckout;
+export default withRouter(CartCheckout);
