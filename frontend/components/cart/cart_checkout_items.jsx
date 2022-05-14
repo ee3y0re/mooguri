@@ -27,12 +27,43 @@ const CartCheckoutItem = ({wholeCart}) => {
     return numWordSplit.join(".");
   }
 
+  let cartInventory = {};
+  for (let i = 0; i < cartItems.length; i++) {
+    /* cartItems is an array of product objects */
+    /*
+      {
+        productId: {
+          sellerId,
+          name,
+          photoUrl,
+          price,
+          qty
+        }
+      }
+    */
+    let productObj = cartItems[i];
+    if (cartInventory[productObj.id] === undefined) {
+      cartInventory[productObj.id] = {
+        "sellerId" : productObj.sellerId,
+        "name" : productObj.productName,
+        "photoUrl" : productObj.photoUrl,
+        "price" : productObj.price,
+        "qty" : 1
+      }
+    } else {
+      cartInventory[productObj.id]["qty"] += 1;
+    }
+  }
+
+  console.log(Object.keys(cartInventory))
+
   return (
     <ul className="checkout-products-container">
       {
-        cartItems?.map((item, idx) => {
+        Object.keys(cartInventory)?.map((itemId, idx) => {
+          let item = cartInventory[itemId];
           return(
-            <li key={cartIds[idx]} >
+            <li key={idx} >
               <h2 className="checkout-bold-heading">
                 Seller Id: {item.sellerId}
               </h2>
@@ -49,10 +80,10 @@ const CartCheckoutItem = ({wholeCart}) => {
                 <div className="checkout-flexbox-name-space-price">
                   <div className="checkout-flex-box-prod-mid">
                     <Link 
-                      to={`/products/${item.id}`} 
+                      to={`/products/${itemId}`} 
                       className="cart-item-link"
                     >
-                      <span>{item.productName}</span>
+                      <span>{item.name}</span>
                     </Link>
                     <button 
                       onClick={() => dispatch(deleteItemOnCart(cartIds[idx]))}
@@ -60,7 +91,8 @@ const CartCheckoutItem = ({wholeCart}) => {
                       Remove
                     </button>
                   </div>
-                  <span className="checkout-bold-heading">${priceFormatter(item.price)}</span>
+                  <span>&times;{item.qty}</span>
+                  <span className="checkout-bold-heading">${priceFormatter(item.price * item.qty)}</span>
                 </div>
               </div>
             </li>
