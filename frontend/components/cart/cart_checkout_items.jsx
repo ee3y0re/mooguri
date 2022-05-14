@@ -48,6 +48,7 @@ const CartCheckoutItem = ({wholeCart}) => {
         "name" : productObj.productName,
         "photoUrl" : productObj.photoUrl,
         "price" : productObj.price,
+        "cartId" : cartIds[i],
         "qty" : 1
       }
     } else {
@@ -63,7 +64,7 @@ const CartCheckoutItem = ({wholeCart}) => {
         Object.keys(cartInventory)?.map((itemId, idx) => {
           let item = cartInventory[itemId];
           return(
-            <li key={itemId + idx} >
+            <li key={item.name + idx} >
               <h2 className="checkout-bold-heading">
                 Seller Id: {item.sellerId}
               </h2>
@@ -86,7 +87,7 @@ const CartCheckoutItem = ({wholeCart}) => {
                       <span>{item.name}</span>
                     </Link>
                     <button 
-                      onClick={() => dispatch(deleteItemOnCart(cartIds[idx]))}
+                      onClick={() => dispatch(deleteItemOnCart(item.cartId))}
                     >
                       Remove
                     </button>
