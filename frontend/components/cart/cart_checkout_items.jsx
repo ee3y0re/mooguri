@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addItemToCart, deleteItemOnCart } from "../../actions/cart_actions";
 
 const CartCheckoutItem = ({wholeCart}) => {
+  const currentUserId = useSelector((state) => {
+    return state.session.id
+  })
   const dispatch = useDispatch();
 
   const cartIds = Object.keys(wholeCart);
@@ -95,12 +98,17 @@ const CartCheckoutItem = ({wholeCart}) => {
     let newAmt = Number(e.target.value);
     newCheckoutCart[itemId].qty = newAmt;
     if (newAmt < oldAmt) {
-      console.log("delete")
       for (let i = 0; i < (oldAmt - newAmt); i++) {
         dispatch(deleteItemOnCart(focusProduct.cartId.pop()))
       }
     } else if (newAmt > oldAmt) {
-      console.log("create")
+      let addObj = {
+        cart_item_id : itemId,
+        buyer_id : currentUserId
+      }
+      for (let i = 0; i < (newAmt - oldAmt); i++) {
+        dispatch(addItemToCart(addObj));
+      }
     }
     updateQty(newCheckoutCart);
   }
