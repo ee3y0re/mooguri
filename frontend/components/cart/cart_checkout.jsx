@@ -56,7 +56,10 @@ const CartCheckout = () => {
   );
 
   const confettiCanon = () => {
-    console.log("confetti shows and print message of ordering!")
+    const cartItems = Object.keys(currentCart);
+    for (let i = 0; i < cartItems.length; i++) {
+      dispatch(deleteItemOnCart([cartItems[i]]));
+    }
     toggleCheckoutMessage(true);
   }
 
