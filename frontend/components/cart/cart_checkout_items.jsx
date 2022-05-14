@@ -63,7 +63,7 @@ const CartCheckoutItem = ({wholeCart}) => {
         Object.keys(cartInventory)?.map((itemId, idx) => {
           let item = cartInventory[itemId];
           return(
-            <li key={idx} >
+            <li key={itemId + idx} >
               <h2 className="checkout-bold-heading">
                 Seller Id: {item.sellerId}
               </h2>
