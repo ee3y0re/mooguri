@@ -105,7 +105,7 @@ class ProductSingular extends React.Component {
                 <label htmlFor="qty">Quantity</label>
                 <br />
                 <br />
-                <select name="qty" id="qty" onChange={this.handleUpdateQty}>
+                <select name="qty" id="qty" className="show-dropdown" onChange={this.handleUpdateQty}>
                   {
                     dropDownArr.map((choice, i) => {
                       return (
