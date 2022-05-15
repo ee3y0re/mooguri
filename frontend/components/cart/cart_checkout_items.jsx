@@ -44,7 +44,6 @@ const CartCheckoutItem = ({wholeCart}) => {
   */
 
   const [checkoutCart, updateQty] = useState(cartInventory)
-  console.log(checkoutCart[5].qty)
 
   const priceFormatter = (num) => {
     let numWord = String(num);
@@ -82,17 +81,6 @@ const CartCheckoutItem = ({wholeCart}) => {
   const handleUpdateQty = (e, itemId) => {
     e.preventDefault();
     let newCheckoutCart = Object.assign({}, checkoutCart);
-    /*
-    {5: {…}}
-    5:
-      availability: 300
-      cartId: (2) ['739', '756']
-      name: "Legen-Dairy Pun | Sticker or Magnet | Cute Pun, Cow Pun, Funny | Water Bottles, Laptops from artportraitsbyrachel"
-      photoUrl: "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e227e90b5d14dbefd76d0044ffd2c347498a1064/-pun_il_1140xN.3414645890_angm.jpg"
-      price: 3.2
-      qty: 5
-      sellerId: 4
-    */
     let focusProduct = newCheckoutCart[itemId]
     let oldAmt = focusProduct.qty;
     let newAmt = Number(e.target.value);
@@ -148,9 +136,6 @@ const CartCheckoutItem = ({wholeCart}) => {
                       Remove
                     </button>
                   </div>
-
-
-                  {/* <span>&times;{item.qty}</span> */}
                   <div className="checkout-dropdown-container">
                     <select 
                       name="qty" 
@@ -172,8 +157,6 @@ const CartCheckoutItem = ({wholeCart}) => {
                       }
                     </select>
                   </div>
-
-
                   <span className="checkout-bold-heading">
                     ${priceFormatter(
                       Math.round((item.price * item.qty) * 100) / 100
