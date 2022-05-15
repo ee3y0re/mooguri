@@ -69,7 +69,7 @@ class ProductSingular extends React.Component {
       return null;
     }
 
-    const { product } = this.props;
+    const { product, currentUser } = this.props;
     let dropDownArr = [];
     for (let i = 1; i <= product.availability; i++) {
       dropDownArr.push(i);
@@ -124,11 +124,20 @@ class ProductSingular extends React.Component {
                 </select>
               </div>
             </div>
-            <button 
-              id="auth-submit-button"
-              className="dark-button"
-              onClick={this.handleAddToCartClick}
-            >Add to Cart</button>
+            {
+              !currentUser ?
+              <button
+                id="auth-submit-button"
+                className="dark-button disabled"
+                disabled
+              >Please log in to add to cart</button> :
+              <button 
+                id="auth-submit-button"
+                className="dark-button"
+                onClick={this.handleAddToCartClick}
+              >Add to Cart</button>
+            }
+            
             <div className="description-container">
               <h2 className="product-info-head">Description</h2>
               <p className="product-info-details">{product.description}</p>
