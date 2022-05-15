@@ -6,9 +6,10 @@ class ProductSingular extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formProcessed: false
+      formProcessed: false,
+      qty: 1
     }
-
+    this.handleUpdateQty = this.handleUpdateQty.bind(this);
     this.refreshList = this.refreshList.bind(this);
   }
 
@@ -26,13 +27,20 @@ class ProductSingular extends React.Component {
     this.componentDidMount();
   }
 
+  handleUpdateQty(e) {
+    e.preventDefault();
+    this.setState({ qty : e.target.value })
+  } 
+
   handleAddToCartClick = (e) => {
     e.preventDefault();
     const newCart = Object.assign({}, {
       buyer_id: this.props.currentUser.id,
       cart_item_id: this.props.product.id
-    })
-    this.props.addItemToCart(newCart);
+    });
+    for (let i = 1; i <= this.state.qty; i++) {
+      this.props.addItemToCart(newCart);
+    }
   }
 
   priceFormatter(num) {
@@ -61,7 +69,11 @@ class ProductSingular extends React.Component {
       return null;
     }
 
-    const { product } = this.props;
+    const { product, currentUser } = this.props;
+    let dropDownArr = [];
+    for (let i = 1; i <= product.availability; i++) {
+      dropDownArr.push(i);
+    }
     
     return (
       <div className="splash">
@@ -87,12 +99,45 @@ class ProductSingular extends React.Component {
                 </div>
                 <div className="show-avail">In Stock</div>
               </div>              
+              <br />
+              <br />
+              <div className="show-dropdown-container">
+                <label htmlFor="qty">Quantity</label>
+                <br />
+                <br />
+                <select 
+                  name="qty" 
+                  id="qty" 
+                  className="show-dropdown" 
+                  onChange={this.handleUpdateQty}
+                >
+                  {
+                    dropDownArr.map((choice, i) => {
+                      return (
+                        <option 
+                          value={choice} 
+                          key={i}
+                        >{choice}</option>
+                      )
+                    })
+                  }
+                </select>
+              </div>
             </div>
-            <button 
-              id="auth-submit-button"
-              className="dark-button"
-              onClick={this.handleAddToCartClick}
-            >Add to Cart</button>
+            {
+              !currentUser ?
+              <button
+                id="auth-submit-button"
+                className="dark-button disabled"
+                disabled
+              >Please log in to add to cart</button> :
+              <button 
+                id="auth-submit-button"
+                className="dark-button"
+                onClick={this.handleAddToCartClick}
+              >Add to Cart</button>
+            }
+            
             <div className="description-container">
               <h2 className="product-info-head">Description</h2>
               <p className="product-info-details">{product.description}</p>

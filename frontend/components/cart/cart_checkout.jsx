@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { fetchUserCartItems } from "../../actions/cart_actions";
+import { Link, withRouter, useHistory } from "react-router-dom";
+import { fetchUserCartItems, deleteItemOnCart } from "../../actions/cart_actions";
 import CartCheckoutItem from "./cart_checkout_items";
 import EmptyCart from "./empty_cart";
 
@@ -12,6 +12,12 @@ const CartCheckout = () => {
     return wholeState.entities.carts;
   });
   const dispatch = useDispatch();
+
+  /* display checkout message toggle */
+  // const [checkoutMessage, toggleCheckoutMessage] = useState(false)
+
+  /* moving to completing checkout */
+  const proceedToCheckout = useHistory();
 
   /* componentDidMount */
   useEffect(() => {
@@ -48,7 +54,18 @@ const CartCheckout = () => {
   /* for presenting shop discount deduction */
   let shopDiscount = priceFormatter(Math.round((itemsTotal / 4) * 100) / 100);
   /* for presenting subtotal */
-  let subTotal = priceFormatter(Math.round((itemsTotal - mathDiscount) * 100) / 100);
+  let subTotal = priceFormatter(
+    Math.round((itemsTotal - mathDiscount) * 100) / 100
+  );
+
+  const completeCheckout = () => {
+    const cartItems = Object.keys(currentCart);
+    for (let i = 0; i < cartItems.length; i++) {
+      dispatch(deleteItemOnCart([cartItems[i]]));
+    }
+    proceedToCheckout.push("/checkout-complete")
+    // toggleCheckoutMessage(true);
+  }
 
   return (
     // for main divs, avoid giving position absolute
@@ -95,7 +112,7 @@ const CartCheckout = () => {
                       <span>Shipping</span>
                       <span id="shipping-price">FREE</span>
                     </div>
-                    <button id="auth-submit-button">Proceed to checkout</button>
+                    <button onClick={completeCheckout} id="auth-submit-button">Proceed to checkout</button>
                   </div>
                 </div>
               </div>
@@ -107,4 +124,4 @@ const CartCheckout = () => {
   )
 }
 
-export default CartCheckout;
+export default withRouter(CartCheckout);

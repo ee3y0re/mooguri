@@ -6,6 +6,7 @@ import SearchResult from "./search/search_result";
 import CartCheckout from "./cart/cart_checkout";
 import Directory from "./footer/directory";
 import Nav from "./nav/nav";
+import CompleteCheckout from "./cart/complete_checkout";
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -28,6 +29,10 @@ const App = () => {
         <Route 
           path="/checkout" 
           component={CartCheckout}
+        />
+        <Route
+          path="/checkout-complete"
+          component={CompleteCheckout}
         />
         <Route 
           path="/" 
