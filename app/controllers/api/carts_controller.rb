@@ -21,9 +21,15 @@ class Api::CartsController < ApplicationController
     end
   end
 
-  ## would need update on cart if we have quantity attribute
-  # def update
-  # end
+  def update
+    @cart = Cart.find_by(id: params[:id])
+    if @cart.update(cart_params)
+      @carts = Cart.where(buyer_id: current_user.id);
+      render "/api/carts/index"
+    else
+      render json: @cart.errors.full_messages, status: 404
+    end
+  end
 
   ## delete a cart after user removes last item
   def destroy
@@ -50,6 +56,6 @@ class Api::CartsController < ApplicationController
   private
 
   def cart_params
-    params.require(:cart).permit(:buyer_id, :cart_item_id)
+    params.require(:cart).permit(:buyer_id, :cart_item_id, :qty)
   end
 end
