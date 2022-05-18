@@ -3,12 +3,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link, withRouter, useHistory } from "react-router-dom";
 import { fetchUserCartProducts, deleteProductInCart } from "../../actions/cart_actions";
 // import CartCheckoutItem from "./cart_checkout_items";
+import IndividualCart from "./individual_cart_item";
 import EmptyCart from "./empty_cart";
 
 const CartCheckout = () => {
 
   /* container and variables*/
   // // mstp
+  const activeSession = useSelector(state => {
+    return state.session.id;
+  })
   const cartIds = useSelector((wholeState) => {
     return Object.keys(wholeState.entities.carts);
   });
@@ -112,9 +116,8 @@ const CartCheckout = () => {
   return (
     // for main divs, avoid giving position absolute
     <div className="checkout-main-contain">
-
       {
-        cartIds.length === 0 ?
+        cartIds.length === 0 || !activeSession ?
           <EmptyCart /> :
           <div className="checkout-flex-box-width-1400px">
             <div className="checkout-single-item">
@@ -132,9 +135,21 @@ const CartCheckout = () => {
                   </button>
                 </div>
                 <div className="checkout-two-column">
-
+                  {/* cart item of single cart item instead mapping cart items */}
+                  {/* map cart item component here */}
                   <ul className="checkout-products-container">
                     {
+                      cartIds.map((cartId, idx) => {
+                        let product = cartProducts[idx];
+                        let cart = currentCart[cartId];
+                        return (
+                          <li key={cartId}>
+                            <IndividualCart/>
+                          </li>
+                        )
+                      })
+                    }
+                    {/* {
                       cartIds.map((cartId, idx) => {
                         let product = cartProducts[idx];
                         let cart = currentCart[cartId];
@@ -161,17 +176,17 @@ const CartCheckout = () => {
                                   >
                                     <span>{product.productName}</span>
                                   </Link>
-                                  {/* <button
+                                  <button
                                     onClick={() => handleDeleteCartItem(cartId)}
                                   >
                                     Remove
-                                  </button> */}
+                                  </button>
                                 </div>
                                 <div className="checkout-dropdown-container">
                                   <span className="DELETETHIS">
                                     {cart.qty}
                                   </span>
-                                  {/* <select
+                                  <select
                                     name="qty"
                                     value={checkoutCart[itemId].qty}
                                     className="checkout-dropdown"
@@ -189,7 +204,7 @@ const CartCheckout = () => {
                                         )
                                       })
                                     }
-                                  </select> */}
+                                  </select>
                                 </div>
                                 <span className="checkout-bold-heading">
                                   ${priceFormatter(
@@ -201,7 +216,7 @@ const CartCheckout = () => {
                           </li>
                         )
                       })
-                    }
+                    } */}
                   </ul>
 
                   {/* set up payment box */}
