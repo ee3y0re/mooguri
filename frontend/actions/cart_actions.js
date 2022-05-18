@@ -38,6 +38,11 @@ export const addProductToCart = (cart) => (dispatch) => {
     .then((cart) => dispatch(receiveCartProduct(cart)));
 }
 
+export const updateProductInCart = (cart) => (dispatch) => {
+  return CartApiUtil.updateProductInCart(cart)
+    .then(cart => dispatch(receiveCartProduct(cart)))
+}
+
 export const deleteProductInCart = (cartItemId) => (dispatch) => {
   return CartApiUtil.deleteProductInCart(cartItemId)
     .then(() => dispatch(deleteCartProduct(cartItemId)))
