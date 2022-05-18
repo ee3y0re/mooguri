@@ -11,6 +11,11 @@ class Api::CartsController < ApplicationController
     render "/api/carts/index"
   end
 
+  def show
+    @cart = Cart.find_by(id: params[:id])
+    render "/api/carts/show"
+  end
+
   ## create current user's cart after they start to add an item
   def create
     @cart = Cart.new(cart_params)
