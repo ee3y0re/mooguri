@@ -85,6 +85,10 @@ const CartCheckout = () => {
     return numWordSplit.join(".");
   }
 
+  const handleDeleteCartItem = (id) => {
+    dispatch(deleteProductInCart(id));
+  }
+
   /* initial cart total */
 
   // const cartItems = Object.values(currentCart);
@@ -140,11 +144,14 @@ const CartCheckout = () => {
                   <ul className="checkout-products-container">
                     {
                       cartIds.map((cartId, idx) => {
-                        let product = cartProducts[idx];
-                        let cart = currentCart[cartId];
+                        let cartProduct = cartProducts[idx];
                         return (
                           <li key={cartId}>
-                            <IndividualCart/>
+                            <IndividualCart
+                              cartProduct={cartProduct}
+                              cartId={cartId}
+                              handleDeleteCartItem={handleDeleteCartItem}
+                            />
                           </li>
                         )
                       })
