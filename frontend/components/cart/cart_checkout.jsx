@@ -150,80 +150,13 @@ const CartCheckout = () => {
                             <IndividualCart
                               cartProduct={cartProduct}
                               cartId={cartId}
+                              priceFormatter={priceFormatter}
                               handleDeleteCartItem={handleDeleteCartItem}
                             />
                           </li>
                         )
                       })
                     }
-                    {/* {
-                      cartIds.map((cartId, idx) => {
-                        let product = cartProducts[idx];
-                        let cart = currentCart[cartId];
-                        return (
-                          <li key={cartId} >
-                            <h2 className="checkout-bold-heading">
-                              Seller Id: {product.sellerId}
-                            </h2>
-                            <div className="checkout-flex-box-product-info">
-                              <div className="cart-item-img-contain">
-                                <Link to={`/products/${product.id}`}>
-                                  <img
-                                    id="checkout-prod-thumbnail"
-                                    src={product.photoUrl}
-                                    alt="placeholder"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="checkout-flexbox-name-space-price">
-                                <div className="checkout-flex-box-prod-mid">
-                                  <Link
-                                    to={`/products/${product.id}`}
-                                    className="cart-item-link"
-                                  >
-                                    <span>{product.productName}</span>
-                                  </Link>
-                                  <button
-                                    onClick={() => handleDeleteCartItem(cartId)}
-                                  >
-                                    Remove
-                                  </button>
-                                </div>
-                                <div className="checkout-dropdown-container">
-                                  <span className="DELETETHIS">
-                                    {cart.qty}
-                                  </span>
-                                  <select
-                                    name="qty"
-                                    value={checkoutCart[itemId].qty}
-                                    className="checkout-dropdown"
-                                    onChange={(e) => handleUpdateQty(e, itemId)}
-                                  >
-                                    {
-                                      numArrCreate(item.availability).map((optionVal, i) => {
-                                        return (
-                                          <option
-                                            value={optionVal}
-                                            key={i}
-                                          >
-                                            {optionVal}
-                                          </option>
-                                        )
-                                      })
-                                    }
-                                  </select>
-                                </div>
-                                <span className="checkout-bold-heading">
-                                  ${priceFormatter(
-                                    Math.round((product.price * cart.qty) * 100) / 100
-                                  )}
-                                </span>
-                              </div>
-                            </div>
-                          </li>
-                        )
-                      })
-                    } */}
                   </ul>
 
                   {/* set up payment box */}
