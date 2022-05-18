@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, withRouter, useHistory } from "react-router-dom";
-import { fetchUserCartItems, deleteItemOnCart } from "../../actions/cart_actions";
+import { fetchUserCartProducts, deleteProductInCart } from "../../actions/cart_actions";
 // import CartCheckoutItem from "./cart_checkout_items";
 import EmptyCart from "./empty_cart";
 
@@ -17,6 +17,9 @@ const CartCheckout = () => {
   const cartProducts = useSelector((state) => {
     return Object.values(state.entities.carts);
   });
+  const currentCart = useSelector((state) => {
+    return state.entities.carts;
+  })
   // console.log("cartProducts", cartProducts);
   /*
   [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
@@ -57,7 +60,7 @@ const CartCheckout = () => {
 
   /* componentDidMount and componentwillunmount*/
   useEffect(() => {
-    dispatch(fetchUserCartItems());
+    dispatch(fetchUserCartProducts());
   },[]); //empty array only has useEffect run on mount and unmount
 
   const priceFormatter = (num) => {
@@ -77,6 +80,8 @@ const CartCheckout = () => {
     numWordSplit.push(afterDec);
     return numWordSplit.join(".");
   }
+
+  /* initial cart total */
 
   // const cartItems = Object.values(currentCart);
   // let itemsTotal = 0;
@@ -98,7 +103,7 @@ const CartCheckout = () => {
   // const completeCheckout = () => {
   //   const cartItems = Object.keys(currentCart);
   //   for (let i = 0; i < cartItems.length; i++) {
-  //     dispatch(deleteItemOnCart([cartItems[i]]));
+  //     dispatch(deleteProductInCart([cartItems[i]]));
   //   }
   //   proceedToCheckout.push("/checkout-complete")
   //   // toggleCheckoutMessage(true);
@@ -108,7 +113,6 @@ const CartCheckout = () => {
     // for main divs, avoid giving position absolute
     <div className="checkout-main-contain">
 
-
       {
         cartIds.length === 0 ?
           <EmptyCart /> :
@@ -116,49 +120,57 @@ const CartCheckout = () => {
             <div className="checkout-single-item">
               <div>
                 <div className="checkout-title-and-main-redirect">
-                  <h1>## of items in your cart</h1>
+                  <h1>
+                    {
+                      cartIds.length === 1 ?
+                      "1 item in your cart" :
+                      `${cartIds.length} items in your cart`
+                    }
+                  </h1>
                   <button className="checkout-bold-heading">
                     <Link to="/">Keep Shopping</Link>
                   </button>
                 </div>
-                {/* originally from cart item component */}
                 <div className="checkout-two-column">
 
-                  {/* map the products first */}
                   <ul className="checkout-products-container">
-                    {/* {
-                      Object.keys(cartInventory)?.map((itemId, idx) => {
-                        let item = cartInventory[itemId];
+                    {
+                      cartIds.map((cartId, idx) => {
+                        let product = cartProducts[idx];
+                        let cart = currentCart[cartId];
                         return (
-                          <li key={item.name + idx} > */}
+                          <li key={cartId} >
                             <h2 className="checkout-bold-heading">
-                              Seller Id: ##
+                              Seller Id: {product.sellerId}
                             </h2>
                             <div className="checkout-flex-box-product-info">
                               <div className="cart-item-img-contain">
-                                {/* <Link to={`/products/${item.id}`}> */}
+                                <Link to={`/products/${product.id}`}>
                                   <img
                                     id="checkout-prod-thumbnail"
-                                    // src={item.photoUrl}
+                                    src={product.photoUrl}
                                     alt="placeholder"
                                   />
-                                {/* </Link> */}
+                                </Link>
                               </div>
                               <div className="checkout-flexbox-name-space-price">
                                 <div className="checkout-flex-box-prod-mid">
-                                  {/* <Link
-                                    to={`/products/${itemId}`}
+                                  <Link
+                                    to={`/products/${product.id}`}
                                     className="cart-item-link"
-                                  > */}
-                                    <span>Product Name##</span>
-                                  {/* </Link> */}
-                                  <button
-                                    // onClick={() => handleDeleteCartItem(item)}
+                                  >
+                                    <span>{product.productName}</span>
+                                  </Link>
+                                  {/* <button
+                                    onClick={() => handleDeleteCartItem(cartId)}
                                   >
                                     Remove
-                                  </button>
+                                  </button> */}
                                 </div>
                                 <div className="checkout-dropdown-container">
+                                  <span className="DELETETHIS">
+                                    {cart.qty}
+                                  </span>
                                   {/* <select
                                     name="qty"
                                     value={checkoutCart[itemId].qty}
@@ -180,16 +192,16 @@ const CartCheckout = () => {
                                   </select> */}
                                 </div>
                                 <span className="checkout-bold-heading">
-                                  {/* ${priceFormatter(
-                                    Math.round((item.price * item.qty) * 100) / 100
-                                  )} */}
+                                  ${priceFormatter(
+                                    Math.round((product.price * cart.qty) * 100) / 100
+                                  )}
                                 </span>
                               </div>
                             </div>
-                          {/* </li> */}
-                        {/* )
+                          </li>
+                        )
                       })
-                    } */}
+                    }
                   </ul>
 
                   {/* set up payment box */}

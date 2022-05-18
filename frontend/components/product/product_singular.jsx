@@ -39,7 +39,7 @@ class ProductSingular extends React.Component {
       cart_item_id: this.props.product.id
     });
     for (let i = 1; i <= this.state.qty; i++) {
-      this.props.addItemToCart(newCart);
+      this.props.addProductToCart(newCart);
     }
   }
 

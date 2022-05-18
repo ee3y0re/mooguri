@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchUserCartItems } from "../../actions/cart_actions";
+import { fetchUserCartProducts } from "../../actions/cart_actions";
 import { Link } from "react-router-dom";
 import SearchBar from "../search/search_bar";
 import ModalContainer from "../modal/modal";
@@ -13,7 +13,7 @@ const Nav = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchUserCartItems());
+    dispatch(fetchUserCartProducts());
   }, []);
 
   let cartVal = Object.values(currentCart);
