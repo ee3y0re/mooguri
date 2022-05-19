@@ -5,14 +5,15 @@ import { updateProductInCart } from "../../actions/cart_actions";
 
 const IndividualCart = ({
   cartProduct, 
-  cartId, 
+  associatedCart,
   priceFormatter,
   handleDeleteCartItem,
+  refreshCartList
 }) => {
 
   const dispatch = useDispatch();
 
-  const [qty, setQty] = useState(cartProduct.qty);
+  const [updatedQty, setQty] = useState(cartProduct.qty);
 
   const numArrCreate = (max) => {
     let returnArr = [];
@@ -25,21 +26,17 @@ const IndividualCart = ({
 
   const handleUpdateQty = (e) => {
     e.preventDefault();
-    setQty(e.currentTarget.value)
+    setQty(e.currentTarget.value);
+    const newCart = {
+      buyer_id : associatedCart.buyerId,
+      cart_item_id : associatedCart.cartItemId,
+      qty : updatedQty
+    }
+    updateProductInCart(newCart)
+    refreshCartList()
   }
 
   return(
-    // <div>To Do List
-    //   <ol>
-    //     <li>map products here</li>
-    //     <li>figure out how to display a rendering total</li>
-    //     <li>figure out how to create drop down of options that update back</li>
-    //     <li>sync the dropdown with total and discount etc</li>
-    //   </ol>
-    // </div>
-
-
-
     <div>
       <h2 className="checkout-bold-heading">
         Seller Id: {cartProduct.sellerId}
@@ -72,7 +69,7 @@ const IndividualCart = ({
           <div className="checkout-dropdown-container">
             <select
               name="qty"
-              value={qty}
+              value={updatedQty}
               className="checkout-dropdown"
               onChange={(e) => handleUpdateQty(e)}
             >
@@ -93,7 +90,7 @@ const IndividualCart = ({
           <span className="checkout-bold-heading">
             ${priceFormatter(
               // Math.round((product.price * cart.qty) * 100) / 100
-              Math.round((cartProduct.price * qty) * 100) / 100
+              Math.round((cartProduct.price * updatedQty) * 100) / 100
             )}
           </span>
         </div>

@@ -21,9 +21,6 @@ const CartCheckout = () => {
   const cartProducts = useSelector((state) => {
     return Object.values(state.entities.carts);
   });
-  const currentCart = useSelector((state) => {
-    return state.entities.carts;
-  })
   // console.log("cartProducts", cartProducts);
   /*
   [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
@@ -48,19 +45,23 @@ const CartCheckout = () => {
   "category"
   "seller_id"
   "availability"
-
   */
-  // // mdtp
+
+
+  const currentCart = useSelector((state) => {
+    return state.entities.carts;
+  })
+
+  /* mdtp */
   const dispatch = useDispatch();
-  // // moving to order confirmation component
+  /* moving to order confirmation component */
   const proceedToCheckout = useHistory();
 
   /* state */
-  const [collectPrices, setCollectPrices] = useState([]);
-  const [grandQty, setGrandQty] = useState(0);
-  const [discTotal, setDiscTotal] = useState(0);
-  const [subTotal, setSubTotal] = useState(0);
-  const [grandTotal, setGrandTotal] = useState(0);
+  const [updateFlag, setOffUpdateFlag] = useState(false)
+  // const [discTotal, setDiscTotal] = useState(0);
+  // const [subTotal, setSubTotal] = useState(0);
+  // const [grandTotal, setGrandTotal] = useState(0);
 
   /* componentDidMount and componentwillunmount*/
   useEffect(() => {
@@ -88,14 +89,18 @@ const CartCheckout = () => {
   const handleDeleteCartItem = (id) => {
     dispatch(deleteProductInCart(id));
   }
+
+  const refreshCartList = () => {
+    setOffUpdateFlag(true);
+  }
   
   /* number of items in cart */
-  let cartAmt = 0;
-  for (let i = 0; i < cartIds.length; i++) {
-    let keyNum = cartIds[i];
-    cartAmt += currentCart[keyNum].qty
-  }
-
+  // let cartAmt = 0;
+  // for (let i = 0; i < cartIds.length; i++) {
+  //   let keyNum = cartIds[i];
+  //   cartAmt += currentCart[keyNum].qty
+  // }
+  
   /* total calculations */
 
   // const cartItems = Object.values(currentCart);
@@ -136,11 +141,11 @@ const CartCheckout = () => {
                 <div className="checkout-title-and-main-redirect">
                   <h1>
                     {
-                      // cartIds.length === 1 ?
-                      cartAmt === 1 ?
+                      cartIds.length === 1 ?
+                      // cartAmt === 1 ?
                       "1 item in your cart" :
-                      // `${cartIds.length} items in your cart`
-                      `${cartAmt} items in your cart`
+                      `${cartIds.length} items in your cart`
+                      // `${cartAmt} items in your cart`
                     }
                   </h1>
                   <button className="checkout-bold-heading">
@@ -158,8 +163,10 @@ const CartCheckout = () => {
                           <li key={cartId}>
                             <IndividualCart
                               cartProduct={cartProduct}
-                              cartId={cartId}
+                              // cartId={cartId}
+                              associatedCart={currentCart[cartId]}
                               priceFormatter={priceFormatter}
+                              refreshCartList={refreshCartList}
                               handleDeleteCartItem={handleDeleteCartItem}
                             />
                           </li>
