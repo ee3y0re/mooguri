@@ -25,31 +25,56 @@ const Home = () => {
             <ul className="bubbles-list">
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
-                  <div className="bubble-img-container"><img src="" alt="" /></div>
+                <div className="bubble-img-container">
+                  <img 
+                    src="https://mooguri-dev.s3.us-west-1.amazonaws.com/milk2_il_794xN.3164754577_j3qo.jpg" 
+                    alt="milk-category" 
+                  />
+                </div>
                 {/* </a> */}
                 <p className="bubble-title">Milk</p>
               </li>
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
-                <div className="bubble-img-container"><img src="" alt="" /></div>
+                <div className="bubble-img-container">
+                  <img 
+                    src="https://mooguri-dev.s3.us-west-1.amazonaws.com/cheese_2_il_794xN.2421706348_lgji.jpg" 
+                    alt="" 
+                  />
+                </div>
                 {/* </a> */}
                 <p className="bubble-title">Cheese</p>
               </li>
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
-                <div className="bubble-img-container"><img src="" alt="" /></div>
+                <div className="bubble-img-container">
+                  <img 
+                    src="https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt_2_il_794xN.3795506386_si5y.jpg" 
+                    alt="" 
+                  />
+                </div>
                 {/* </a> */}
                 <p className="bubble-title">Yogurt</p>
               </li>
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
-                <div className="bubble-img-container"><img src="" alt="" /></div>
+                <div className="bubble-img-container">
+                  <img 
+                    src="https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_2_il_794xN.3775381345_bkkr.jpg" 
+                    alt="" 
+                  />
+                </div>
                 {/* </a> */}
                 <p className="bubble-title">Lactose-free</p>
               </li>
               <li className="bubbles-list-items">
                 {/* <a href=""> */}
-                <div className="bubble-img-container"><img src="" alt="" /></div>
+                <div className="bubble-img-container">
+                  <img 
+                    src="https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_2_il_794xN.1886781148_t57p.jpg" 
+                    alt="" 
+                  />
+                </div>
                 {/* </a> */}
                 <p className="bubble-title">Puns</p>
               </li>
