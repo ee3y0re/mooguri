@@ -36,11 +36,10 @@ class ProductSingular extends React.Component {
     e.preventDefault();
     const newCart = Object.assign({}, {
       buyer_id: this.props.currentUser.id,
-      cart_item_id: this.props.product.id
+      cart_item_id: this.props.product.id,
+      qty: this.state.qty
     });
-    for (let i = 1; i <= this.state.qty; i++) {
-      this.props.addItemToCart(newCart);
-    }
+    this.props.addProductToCart(newCart);
   }
 
   priceFormatter(num) {
@@ -62,6 +61,7 @@ class ProductSingular extends React.Component {
   }
 
   render(){
+    // console.log(Number(this.state.qty))
     //because constructor and render hits first before component did mount
     //so we need the conditional so that render returns null then component 
     //  loads and triggers rerender

@@ -1,44 +1,49 @@
 import * as CartApiUtil from "../util/cart_api_util";
 
 // constants to be exported to reducers
-export const RECEIVE_CART_ITEMS = "RECEIVE_CART_ITEMS";
-export const RECEIVE_CART_ITEM = "RECEIVE_CART_ITEM";
-export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
+export const RECEIVE_CART_PRODUCTS = "RECEIVE_CART_PRODUCTS";
+export const RECEIVE_CART_PRODUCT = "RECEIVE_CART_PRODUCT";
+export const DELETE_CART_PRODUCT = "DELETE_CART_PRODUCT";
 
 // regular action creators
-const receiveCartItems = (carts) => {
+const receiveCartProducts = (carts) => {
   return {
-    type: "RECEIVE_CART_ITEMS",
+    type: "RECEIVE_CART_PRODUCTS",
     carts
   };
 };
 
-const receiveCartItem = (cart) => {
+const receiveCartProduct = (cart) => {
   return {
-    type: "RECEIVE_CART_ITEM",
+    type: "RECEIVE_CART_PRODUCT",
     cart
   };
 };
 
-const deleteCartItem = (cartItemId) => {
+const deleteCartProduct = (cartItemId) => {
   return {
-    type: "DELETE_CART_ITEM",
+    type: "DELETE_CART_PRODUCT",
     cartItemId
   };
 };
 
 // thunk action creators
-export const fetchUserCartItems = () => (dispatch) => {
-  return CartApiUtil.fetchUserCartItems()
-    .then((carts) => dispatch(receiveCartItems(carts)));
+export const fetchUserCartProducts = () => (dispatch) => {
+  return CartApiUtil.fetchUserCartProducts()
+    .then((carts) => dispatch(receiveCartProducts(carts)));
 }
 
-export const addItemToCart = (cart) => (dispatch) => {
-  return CartApiUtil.addItemToCart(cart)
-    .then((cart) => dispatch(receiveCartItem(cart)));
+export const addProductToCart = (cart) => (dispatch) => {
+  return CartApiUtil.addProductToCart(cart)
+    .then((cart) => dispatch(receiveCartProduct(cart)));
 }
 
-export const deleteItemOnCart = (cartItemId) => (dispatch) => {
-  return CartApiUtil.deleteItemOnCart(cartItemId)
-    .then(() => dispatch(deleteCartItem(cartItemId)))
+export const updateProductInCart = (cart) => (dispatch) => {
+  return CartApiUtil.updateProductInCart(cart)
+    .then(cart => dispatch(receiveCartProduct(cart)))
+}
+
+export const deleteProductInCart = (cartItemId) => (dispatch) => {
+  return CartApiUtil.deleteProductInCart(cartItemId)
+    .then(() => dispatch(deleteCartProduct(cartItemId)))
 }

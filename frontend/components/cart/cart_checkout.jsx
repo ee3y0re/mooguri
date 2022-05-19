@@ -1,30 +1,64 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, withRouter, useHistory } from "react-router-dom";
-import { fetchUserCartItems, deleteItemOnCart } from "../../actions/cart_actions";
-import CartCheckoutItem from "./cart_checkout_items";
+import { Link, withRouter } from "react-router-dom";
+import { fetchUserCartProducts, deleteProductInCart } from "../../actions/cart_actions";
+import IndividualCart from "./individual_cart_item";
 import EmptyCart from "./empty_cart";
+import Payment from "./payment";
 
 const CartCheckout = () => {
 
-  /* container */
-  const currentCart = useSelector((wholeState) => {
-    return wholeState.entities.carts;
+  /* container and variables*/
+  // // mstp
+  const activeSession = useSelector(state => {
+    return state.session.id;
+  })
+  const cartIds = useSelector((wholeState) => {
+    return Object.keys(wholeState.entities.carts);
   });
+  // console.log("cartIds", cartIds);
+  //['1', '2', '3', '4', '5', '6', '7', '8']
+  const cartProducts = useSelector((state) => {
+    return Object.values(state.entities.carts);
+  });
+  // console.log("cartProducts", cartProducts);
+  /*
+  [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+  0: {
+        id: 2, 
+        productName: 'Cheese Flight from KeystoneFarmsCheese', 
+        description: 'Any four 8 oz. blocks of cheese from our Best Sell…d box. 
+        Sorry, we do not ship to Hawaii or Alaska.', price: 54.5, category: 'cheese', 
+        …
+      }
+  1: {
+        id: 2, 
+        productName: 'Cheese Flight from KeystoneFarmsCheese', 
+        description: 'Any four 8 oz. blocks of cheese from our Best Sell…d box. 
+        Sorry, we do not ship to Hawaii or Alaska.', price: 54.5, category: 'cheese', 
+        …
+      }
+  etc. etc.
+  "product_name"
+  "description"
+  "price"
+  "category"
+  "seller_id"
+  "availability"
+  */
+
+  const currentCart = useSelector((state) => {
+    return state.entities.carts;
+  })
+
+  /* mdtp */
   const dispatch = useDispatch();
 
-  /* display checkout message toggle */
-  // const [checkoutMessage, toggleCheckoutMessage] = useState(false)
-
-  /* moving to completing checkout */
-  const proceedToCheckout = useHistory();
-
-  /* componentDidMount */
+  /* componentDidMount and componentwillunmount*/
   useEffect(() => {
-    dispatch(fetchUserCartItems());
+    dispatch(fetchUserCartProducts());
   },[]); //empty array only has useEffect run on mount and unmount
 
-  /* pricing */
   const priceFormatter = (num) => {
     let numWord = String(num);
     let numWordSplit = numWord.split(".");
@@ -42,83 +76,64 @@ const CartCheckout = () => {
     numWordSplit.push(afterDec);
     return numWordSplit.join(".");
   }
-  const cartItems = Object.values(currentCart);
-  let itemsTotal = 0;
-  for (let i = 0; i < cartItems.length; i++) {
-    itemsTotal += cartItems[i].price;
-  }
-  /* for presenting items total */
-  let finItemsTotal = priceFormatter(Math.round(itemsTotal * 100) / 100)
-  /* for accurate math measure */
-  let mathDiscount = itemsTotal / 4;
-  /* for presenting shop discount deduction */
-  let shopDiscount = priceFormatter(Math.round((itemsTotal / 4) * 100) / 100);
-  /* for presenting subtotal */
-  let subTotal = priceFormatter(
-    Math.round((itemsTotal - mathDiscount) * 100) / 100
-  );
 
-  const completeCheckout = () => {
-    const cartItems = Object.keys(currentCart);
-    for (let i = 0; i < cartItems.length; i++) {
-      dispatch(deleteItemOnCart([cartItems[i]]));
-    }
-    proceedToCheckout.push("/checkout-complete")
-    // toggleCheckoutMessage(true);
+  const handleDeleteCartItem = (id) => {
+    dispatch(deleteProductInCart(id));
   }
 
+  let itemsTotalCopy = 0;
   return (
     // for main divs, avoid giving position absolute
     <div className="checkout-main-contain">
       {
-        cartItems.length === 0 ?
-        <EmptyCart /> :
-        <div className="checkout-flex-box-width-1400px">
-          <div className="checkout-single-item">
-            <div>
-              <div className="checkout-title-and-main-redirect">
-                <h1>{Object.keys(currentCart).length} items in your cart</h1>
-                <button className="checkout-bold-heading">
-                  <Link to="/">Keep Shopping</Link>
-                </button>
-              </div>
-              <div className="checkout-two-column">
-                <CartCheckoutItem wholeCart={currentCart} />
-                <div className="checkout-payment-container">
-                  <div className="checkout-payment-padding">
-                    <h2 className="checkout-bold-heading">How you'll pay</h2>
-                    <ul>
-                      <li>Payment 1: Visa, Master, Amex, and Discover</li>
-                      <li>Payment 2: Paypal</li>
-                      <li>Klarna</li>
-                    </ul>
-                    <div className="price-line">
-                      <span className="checkout-bold-heading">
-                        Item(s) total
-                      </span>
-                      <span className="price-num">${finItemsTotal}</span>
-                    </div>
-                    <div className="price-line" id="checkout-discount">
-                      <span className="checkout-bold-heading">
-                        Shop discount (THANKU25)
-                      </span>
-                      <span className="price-num">-${shopDiscount}</span>
-                    </div>
-                    <div className="price-line">
-                      <span>Subtotal</span>
-                      <span>${subTotal}</span>
-                    </div>
-                    <div className="price-line" id="checkout-shipping">
-                      <span>Shipping</span>
-                      <span id="shipping-price">FREE</span>
-                    </div>
-                    <button onClick={completeCheckout} id="auth-submit-button">Proceed to checkout</button>
-                  </div>
+        cartIds.length === 0 || !activeSession ?
+          <EmptyCart /> :
+          <div className="checkout-flex-box-width-1400px">
+            <div className="checkout-single-item">
+              <div>
+                <div className="checkout-title-and-main-redirect">
+                  <h1>
+                    {
+                      cartIds.length === 1 ?
+                      "1 item in your cart" :
+                      `${cartIds.length} items in your cart`
+                    }
+                  </h1>
+                  <button className="checkout-bold-heading">
+                    <Link to="/">Keep Shopping</Link>
+                  </button>
+                </div>
+                <div className="checkout-two-column">
+                  <ul className="checkout-products-container">
+                    {
+                      cartIds.map((cartId, idx) => {
+                        let cartProduct = cartProducts[idx];
+                        let associatedCart = currentCart[cartId]
+                        itemsTotalCopy += (cartProduct.price * associatedCart.qty)
+                        return (
+                          <li key={cartId}>
+                            <IndividualCart
+                              cartProduct={cartProduct}
+                              cartId={cartId}
+                              associatedCart={associatedCart}
+                              priceFormatter={priceFormatter}
+                              // refreshCartList={refreshCartList}
+                              handleDeleteCartItem={handleDeleteCartItem}
+                            />
+                          </li>
+                        )
+                      })
+                    }
+                  </ul>
+                  <Payment 
+                    priceFormatter={priceFormatter }
+                    currentCart={currentCart} 
+                    itemsTotalProp={itemsTotalCopy}
+                  />
                 </div>
               </div>
             </div>
           </div>
-        </div>
       }
     </div>
   )

@@ -2,7 +2,7 @@
 import { connect } from "react-redux";
 import { fetchProduct } from "../../actions/product_actions";
 import { createReview } from "../../actions/review_actions";
-import { addItemToCart } from "../../actions/cart_actions";
+import { fetchUserCartProducts, addProductToCart, updateProductInCart } from "../../actions/cart_actions";
 import ProductSingular from "./product_singular";
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,7 +16,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchProduct: productId => dispatch(fetchProduct(productId)),
     createReview: (pleaseWorkThingy) => dispatch(createReview(pleaseWorkThingy)),
-    addItemToCart: (cart) => dispatch(addItemToCart(cart))
+    fetchUserCartProducts: () => dispatch(fetchUserCartProducts),
+    updateProductInCart: (cart) => dispatch(updateProductInCart(cart)),
+    addProductToCart: (cart) => dispatch(addProductToCart(cart))
   };
 };
 
