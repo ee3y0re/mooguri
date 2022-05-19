@@ -8,7 +8,7 @@ const IndividualCart = ({
   associatedCart,
   priceFormatter,
   handleDeleteCartItem,
-  refreshCartList
+  // refreshCartList
 }) => {
 
   const dispatch = useDispatch();
@@ -33,9 +33,9 @@ const IndividualCart = ({
       qty : updatedQty
     }
     updateProductInCart(newCart)
-    refreshCartList()
+    // refreshCartList()
   }
-
+  
   return(
     <div>
       <h2 className="checkout-bold-heading">

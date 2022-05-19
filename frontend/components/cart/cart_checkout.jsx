@@ -5,6 +5,7 @@ import { fetchUserCartProducts, deleteProductInCart } from "../../actions/cart_a
 // import CartCheckoutItem from "./cart_checkout_items";
 import IndividualCart from "./individual_cart_item";
 import EmptyCart from "./empty_cart";
+import Payment from "./payment";
 
 const CartCheckout = () => {
 
@@ -47,21 +48,15 @@ const CartCheckout = () => {
   "availability"
   */
 
-
   const currentCart = useSelector((state) => {
     return state.entities.carts;
   })
 
   /* mdtp */
   const dispatch = useDispatch();
-  /* moving to order confirmation component */
-  const proceedToCheckout = useHistory();
 
   /* state */
-  const [updateFlag, setOffUpdateFlag] = useState(false)
-  // const [discTotal, setDiscTotal] = useState(0);
-  // const [subTotal, setSubTotal] = useState(0);
-  // const [grandTotal, setGrandTotal] = useState(0);
+  const [itemsTotal, setItemsTotal] = useState(0);
 
   /* componentDidMount and componentwillunmount*/
   useEffect(() => {
@@ -90,9 +85,9 @@ const CartCheckout = () => {
     dispatch(deleteProductInCart(id));
   }
 
-  const refreshCartList = () => {
-    setOffUpdateFlag(true);
-  }
+  // const refreshCartList = () => {
+  //   setOffUpdateFlag(true);
+  // }
   
   /* number of items in cart */
   // let cartAmt = 0;
@@ -100,35 +95,7 @@ const CartCheckout = () => {
   //   let keyNum = cartIds[i];
   //   cartAmt += currentCart[keyNum].qty
   // }
-  
-  /* total calculations */
-
-  // const cartItems = Object.values(currentCart);
-  // let itemsTotal = 0;
-  // for (let i = 0; i < cartItems.length; i++) {
-  //   itemsTotal += cartItems[i].price;
-  // }
-  // /* for presenting items total */
-  // let finItemsTotal = priceFormatter(Math.round(itemsTotal * 100) / 100)
-  // /* for accurate math measure */
-  // let mathDiscount = itemsTotal / 4;
-  // /* for presenting shop discount deduction */
-  // let shopDiscount = priceFormatter(Math.round((itemsTotal / 4) * 100) / 100);
-  // /* for presenting subtotal */
-  // let subTotal = priceFormatter(
-  //   Math.round((itemsTotal - mathDiscount) * 100) / 100
-  // );
-
-  /* completing checkout */
-  // const completeCheckout = () => {
-  //   const cartItems = Object.keys(currentCart);
-  //   for (let i = 0; i < cartItems.length; i++) {
-  //     dispatch(deleteProductInCart([cartItems[i]]));
-  //   }
-  //   proceedToCheckout.push("/checkout-complete")
-  //   // toggleCheckoutMessage(true);
-  // }
-
+  let itemsTotalCopy = 0;
   return (
     // for main divs, avoid giving position absolute
     <div className="checkout-main-contain">
@@ -159,14 +126,16 @@ const CartCheckout = () => {
                     {
                       cartIds.map((cartId, idx) => {
                         let cartProduct = cartProducts[idx];
+                        let associatedCart = currentCart[cartId]
+                        itemsTotalCopy += (cartProduct.price * associatedCart.qty)
                         return (
                           <li key={cartId}>
                             <IndividualCart
                               cartProduct={cartProduct}
                               // cartId={cartId}
-                              associatedCart={currentCart[cartId]}
+                              associatedCart={associatedCart}
                               priceFormatter={priceFormatter}
-                              refreshCartList={refreshCartList}
+                              // refreshCartList={refreshCartList}
                               handleDeleteCartItem={handleDeleteCartItem}
                             />
                           </li>
@@ -174,47 +143,16 @@ const CartCheckout = () => {
                       })
                     }
                   </ul>
-
-                  {/* set up payment box */}
-                  {/* <div className="checkout-payment-container">
-                    <div className="checkout-payment-padding">
-                      <h2 className="checkout-bold-heading">How you'll pay</h2>
-                      <ul>
-                        <li>Payment 1: Visa, Master, Amex, and Discover</li>
-                        <li>Payment 2: Paypal</li>
-                        <li>Klarna</li>
-                      </ul>
-                      <div className="price-line">
-                        <span className="checkout-bold-heading">
-                          Item(s) total
-                        </span>
-                        <span className="price-num">${finItemsTotal}</span>
-                      </div>
-                      <div className="price-line" id="checkout-discount">
-                        <span className="checkout-bold-heading">
-                          Shop discount (THANKU25)
-                        </span>
-                        <span className="price-num">-${shopDiscount}</span>
-                      </div>
-                      <div className="price-line">
-                        <span>Subtotal</span>
-                        <span>${subTotal}</span>
-                      </div>
-                      <div className="price-line" id="checkout-shipping">
-                        <span>Shipping</span>
-                        <span id="shipping-price">FREE</span>
-                      </div>
-                      <button onClick={completeCheckout} id="auth-submit-button">Proceed to checkout</button>
-                    </div>
-                  </div> */}
-
+                  <Payment 
+                    priceFormatter={priceFormatter}
+                    currentCart={currentCart} 
+                    itemsTotalProp={itemsTotalCopy}
+                  />
                 </div>
               </div>
             </div>
           </div>
       }
-
-
     </div>
   )
 }
