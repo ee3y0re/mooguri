@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const IndividualCart = ({cartProduct, cartId, handleDeleteCartItem}) => {
-  console.log("cart id", cartId)
-  // console.log("cart", specificCart)
+const IndividualCart = ({
+  cartProduct, 
+  cartId, 
+  priceFormatter,
+  handleDeleteCartItem,
+}) => {
+
+  const [qty, setQty] = useState(cartProduct.qty);
+
   return(
     // <div>To Do List
     //   <ol>
@@ -70,10 +76,10 @@ const IndividualCart = ({cartProduct, cartId, handleDeleteCartItem}) => {
             </select> */}
           </div>
           <span className="checkout-bold-heading">
-            ##some sort of price
-            {/* ${priceFormatter(
-              Math.round((product.price * cart.qty) * 100) / 100
-            )} */}
+            ${priceFormatter(
+              // Math.round((product.price * cart.qty) * 100) / 100
+              Math.round(cartProduct.price * 100) / 100
+            )}
           </span>
         </div>
       </div>
