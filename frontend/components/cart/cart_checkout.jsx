@@ -132,7 +132,7 @@ const CartCheckout = () => {
                           <li key={cartId}>
                             <IndividualCart
                               cartProduct={cartProduct}
-                              // cartId={cartId}
+                              cartId={cartId}
                               associatedCart={associatedCart}
                               priceFormatter={priceFormatter}
                               // refreshCartList={refreshCartList}
@@ -144,7 +144,7 @@ const CartCheckout = () => {
                     }
                   </ul>
                   <Payment 
-                    priceFormatter={priceFormatter}
+                    priceFormatter={priceFormatter }
                     currentCart={currentCart} 
                     itemsTotalProp={itemsTotalCopy}
                   />

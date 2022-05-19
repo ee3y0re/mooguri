@@ -5,6 +5,7 @@ import { updateProductInCart } from "../../actions/cart_actions";
 
 const IndividualCart = ({
   cartProduct, 
+  cartId,
   associatedCart,
   priceFormatter,
   handleDeleteCartItem,
@@ -13,7 +14,8 @@ const IndividualCart = ({
 
   const dispatch = useDispatch();
 
-  const [updatedQty, setQty] = useState(cartProduct.qty);
+  // const [updatedQty, setQty] = useState(1);
+  const [currentQty, setQty] = useState(cartProduct.qty)
 
   const numArrCreate = (max) => {
     let returnArr = [];
@@ -26,14 +28,17 @@ const IndividualCart = ({
 
   const handleUpdateQty = (e) => {
     e.preventDefault();
-    setQty(e.currentTarget.value);
-    const newCart = {
-      buyer_id : associatedCart.buyerId,
-      cart_item_id : associatedCart.cartItemId,
-      qty : updatedQty
-    }
-    updateProductInCart(newCart)
-    // refreshCartList()
+    let updatedProduct = Object.assign({}, cartProduct);
+    let newAmt = Number(e.target.value);
+    updatedProduct.qty = newAmt;
+    let newCartProduct = {
+      id: cartId,
+      buyer_id: updatedProduct.buyerId,
+      cart_item_id: updatedProduct.cartItemId,
+      qty : Number(updatedProduct.qty)
+    };
+    dispatch(updateProductInCart(newCartProduct))
+      .then(setQty(newCartProduct.qty))
   }
   
   return(
@@ -69,8 +74,10 @@ const IndividualCart = ({
           <div className="checkout-dropdown-container">
             <select
               name="qty"
-              value={updatedQty}
+              value={currentQty}
+              // defaultValue={cartProduct.qty}
               className="checkout-dropdown"
+              // onChange={handleUpdateQty}
               onChange={(e) => handleUpdateQty(e)}
             >
               {
@@ -90,7 +97,7 @@ const IndividualCart = ({
           <span className="checkout-bold-heading">
             ${priceFormatter(
               // Math.round((product.price * cart.qty) * 100) / 100
-              Math.round((cartProduct.price * updatedQty) * 100) / 100
+              Math.round((cartProduct.price * currentQty) * 100) / 100
             )}
           </span>
         </div>
