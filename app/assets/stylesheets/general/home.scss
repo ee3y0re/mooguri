@@ -53,11 +53,32 @@
   max-height: 114px;
   width: 114px;
   height: 114px;
-  border: #F4ADAD solid 6px;
+  border: #c6d5d8 solid 1px;
   border-radius: 50%;
   overflow: hidden;
   margin-top: 12px;
   margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(2px 4px 6px #c6d5d8);
+  transition: all .2s ease-out;
+}
+
+.bubble-img-container:hover {
+  transform: scale(1.05);
+}
+
+.bubble-img-container > img {
+  width: auto;
+  height: 122%;
+  opacity: 37%;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+}
+
+.bubble-img-container >img:hover {
+  opacity: 100%;
 }
 
 .bubble-title {
