@@ -89,6 +89,13 @@ const CartCheckout = () => {
     dispatch(deleteProductInCart(id));
   }
 
+  let cartAmt = 0;
+  for (let i = 0; i < cartIds.length; i++) {
+    let keyNum = cartIds[i];
+    cartAmt += currentCart[keyNum].qty
+  }
+  console.log(cartAmt);
+
   /* initial cart total */
 
   // const cartItems = Object.values(currentCart);
@@ -129,9 +136,11 @@ const CartCheckout = () => {
                 <div className="checkout-title-and-main-redirect">
                   <h1>
                     {
-                      cartIds.length === 1 ?
+                      // cartIds.length === 1 ?
+                      cartAmt === 1 ?
                       "1 item in your cart" :
-                      `${cartIds.length} items in your cart`
+                      // `${cartIds.length} items in your cart`
+                      `${cartAmt} items in your cart`
                     }
                   </h1>
                   <button className="checkout-bold-heading">
