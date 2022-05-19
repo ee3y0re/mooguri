@@ -7,22 +7,16 @@ const Payment = ({ currentCart, itemsTotalProp, priceFormatter }) => {
   const dispatch = useDispatch();
   /* moving to order confirmation component */
   const proceedToCheckout = useHistory();
-  /* total calculations */
-  // const cartItems = Object.values(currentCart);
-  // let itemsTotal = 0;
-  // for (let i = 0; i < cartItems.length; i++) {
-  //   itemsTotal += cartItems[i].price;
-  // }
-  // /* for presenting items total */
-  // let finItemsTotal = priceFormatter(Math.round(itemsTotal * 100) / 100)
-  // /* for accurate math measure */
-  // let mathDiscount = itemsTotal / 4;
-  // /* for presenting shop discount deduction */
-  // let shopDiscount = priceFormatter(Math.round((itemsTotal / 4) * 100) / 100);
-  // /* for presenting subtotal */
-  // let subTotal = priceFormatter(
-  //   Math.round((itemsTotal - mathDiscount) * 100) / 100
-  // );
+  /* for presenting items total */
+  let itemsTotal = priceFormatter(Math.round(itemsTotalProp * 100) / 100)
+  /* for accurate math measure */
+  let mathDiscount = itemsTotal / 4;
+  /* for presenting shop discount deduction */
+  let shopDiscount = priceFormatter(Math.round((itemsTotal / 4) * 100) / 100);
+  /* for presenting subtotal */
+  let subTotal = priceFormatter(
+    Math.round((itemsTotal - mathDiscount) * 100) / 100
+  );
 
   /* completing checkout */
   const completeCheckout = () => {
@@ -48,17 +42,17 @@ const Payment = ({ currentCart, itemsTotalProp, priceFormatter }) => {
           <span className="checkout-bold-heading">
             Item(s) total
           </span>
-          <span className="price-num">${priceFormatter(itemsTotalProp)}</span>
+          <span className="price-num">${itemsTotal}</span>
         </div>
         <div className="price-line" id="checkout-discount">
           <span className="checkout-bold-heading">
             Shop discount (THANKU25)
           </span>
-          <span className="price-num">-$shop discount</span>
+          <span className="price-num">-${shopDiscount}</span>
         </div>
         <div className="price-line">
           <span>Subtotal</span>
-          <span>$subtotal with discount</span>
+          <span>${subTotal}</span>
         </div>
         <div className="price-line" id="checkout-shipping">
           <span>Shipping</span>

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, withRouter, useHistory } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { fetchUserCartProducts, deleteProductInCart } from "../../actions/cart_actions";
-// import CartCheckoutItem from "./cart_checkout_items";
 import IndividualCart from "./individual_cart_item";
 import EmptyCart from "./empty_cart";
 import Payment from "./payment";
@@ -55,9 +54,6 @@ const CartCheckout = () => {
   /* mdtp */
   const dispatch = useDispatch();
 
-  /* state */
-  const [itemsTotal, setItemsTotal] = useState(0);
-
   /* componentDidMount and componentwillunmount*/
   useEffect(() => {
     dispatch(fetchUserCartProducts());
@@ -85,16 +81,6 @@ const CartCheckout = () => {
     dispatch(deleteProductInCart(id));
   }
 
-  // const refreshCartList = () => {
-  //   setOffUpdateFlag(true);
-  // }
-  
-  /* number of items in cart */
-  // let cartAmt = 0;
-  // for (let i = 0; i < cartIds.length; i++) {
-  //   let keyNum = cartIds[i];
-  //   cartAmt += currentCart[keyNum].qty
-  // }
   let itemsTotalCopy = 0;
   return (
     // for main divs, avoid giving position absolute
@@ -109,10 +95,8 @@ const CartCheckout = () => {
                   <h1>
                     {
                       cartIds.length === 1 ?
-                      // cartAmt === 1 ?
                       "1 item in your cart" :
                       `${cartIds.length} items in your cart`
-                      // `${cartAmt} items in your cart`
                     }
                   </h1>
                   <button className="checkout-bold-heading">
@@ -120,8 +104,6 @@ const CartCheckout = () => {
                   </button>
                 </div>
                 <div className="checkout-two-column">
-                  {/* cart item of single cart item instead mapping cart items */}
-                  {/* map cart item component here */}
                   <ul className="checkout-products-container">
                     {
                       cartIds.map((cartId, idx) => {

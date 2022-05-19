@@ -6,15 +6,12 @@ import { updateProductInCart } from "../../actions/cart_actions";
 const IndividualCart = ({
   cartProduct, 
   cartId,
-  associatedCart,
   priceFormatter,
   handleDeleteCartItem,
-  // refreshCartList
 }) => {
 
   const dispatch = useDispatch();
 
-  // const [updatedQty, setQty] = useState(1);
   const [currentQty, setQty] = useState(cartProduct.qty)
 
   const numArrCreate = (max) => {
@@ -75,9 +72,7 @@ const IndividualCart = ({
             <select
               name="qty"
               value={currentQty}
-              // defaultValue={cartProduct.qty}
               className="checkout-dropdown"
-              // onChange={handleUpdateQty}
               onChange={(e) => handleUpdateQty(e)}
             >
               {
@@ -96,7 +91,6 @@ const IndividualCart = ({
           </div>
           <span className="checkout-bold-heading">
             ${priceFormatter(
-              // Math.round((product.price * cart.qty) * 100) / 100
               Math.round((cartProduct.price * currentQty) * 100) / 100
             )}
           </span>
