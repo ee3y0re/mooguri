@@ -27,9 +27,9 @@ class Api::CartsController < ApplicationController
       end
     else
       @cart = Cart.find_by(cart_item_id: cart_params[:cart_item_id])
-      debugger
-      cart_params[:qty] = @cart.qty + cart_params[:qty].to_i
-      @cart.update(cart_params)
+      cart_params_copy = cart_params
+      cart_params_copy["qty"] = @cart.qty + cart_params[:qty].to_i
+      @cart.update(cart_params_copy)
       redirect_to action: "index"
     end
   end
