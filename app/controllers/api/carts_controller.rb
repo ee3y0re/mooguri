@@ -18,11 +18,19 @@ class Api::CartsController < ApplicationController
 
   ## create current user's cart after they start to add an item
   def create
-    @cart = Cart.new(cart_params)
-    if @cart.save
-      redirect_to action: "index"
+    if !Cart.find_by(cart_item_id: cart_params[:cart_item_id])
+      @cart = Cart.new(cart_params)
+      if @cart.save
+        redirect_to action: "index"
+      else
+        render json: @cart.errors.full_messages, status: 422
+      end
     else
-      render json: @cart.errors.full_messages, status: 422
+      @cart = Cart.find_by(cart_item_id: cart_params[:cart_item_id])
+      debugger
+      cart_params[:qty] = @cart.qty + cart_params[:qty].to_i
+      @cart.update(cart_params)
+      redirect_to action: "index"
     end
   end
 
@@ -57,6 +65,11 @@ class Api::CartsController < ApplicationController
       render json: ["Something went wrong"], status: 404
     end
   end
+
+  # def reset_order
+  #   @carts = Cart.where(buyer_id: current_user.id)
+  #   @carts.destroy_all
+  # end
 
   private
 
