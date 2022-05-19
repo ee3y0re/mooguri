@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { updateProductInCart } from "../../actions/cart_actions";
 
 const IndividualCart = ({
   cartProduct, 
@@ -8,7 +10,23 @@ const IndividualCart = ({
   handleDeleteCartItem,
 }) => {
 
+  const dispatch = useDispatch();
+
   const [qty, setQty] = useState(cartProduct.qty);
+
+  const numArrCreate = (max) => {
+    let returnArr = [];
+    for (let i = 1; i <= max; i++) {
+      returnArr.push(i);
+    }
+
+    return returnArr;
+  }
+
+  const handleUpdateQty = (e) => {
+    e.preventDefault();
+    setQty(e.currentTarget.value)
+  }
 
   return(
     // <div>To Do List
@@ -52,17 +70,14 @@ const IndividualCart = ({
             </button>
           </div>
           <div className="checkout-dropdown-container">
-            <span className="DELETETHIS">
-              {cartProduct.qty}
-            </span>
-            {/* <select
+            <select
               name="qty"
-              value={checkoutCart[itemId].qty}
+              value={qty}
               className="checkout-dropdown"
-              onChange={(e) => handleUpdateQty(e, itemId)}
+              onChange={(e) => handleUpdateQty(e)}
             >
               {
-                numArrCreate(item.availability).map((optionVal, i) => {
+                numArrCreate(cartProduct.availability).map((optionVal, i) => {
                   return (
                     <option
                       value={optionVal}
@@ -73,12 +88,12 @@ const IndividualCart = ({
                   )
                 })
               }
-            </select> */}
+            </select>
           </div>
           <span className="checkout-bold-heading">
             ${priceFormatter(
               // Math.round((product.price * cart.qty) * 100) / 100
-              Math.round(cartProduct.price * 100) / 100
+              Math.round((cartProduct.price * qty) * 100) / 100
             )}
           </span>
         </div>

@@ -88,15 +88,15 @@ const CartCheckout = () => {
   const handleDeleteCartItem = (id) => {
     dispatch(deleteProductInCart(id));
   }
-
+  
+  /* number of items in cart */
   let cartAmt = 0;
   for (let i = 0; i < cartIds.length; i++) {
     let keyNum = cartIds[i];
     cartAmt += currentCart[keyNum].qty
   }
-  console.log(cartAmt);
 
-  /* initial cart total */
+  /* total calculations */
 
   // const cartItems = Object.values(currentCart);
   // let itemsTotal = 0;
@@ -114,7 +114,7 @@ const CartCheckout = () => {
   //   Math.round((itemsTotal - mathDiscount) * 100) / 100
   // );
 
-  // /* completing checkout */
+  /* completing checkout */
   // const completeCheckout = () => {
   //   const cartItems = Object.keys(currentCart);
   //   for (let i = 0; i < cartItems.length; i++) {
