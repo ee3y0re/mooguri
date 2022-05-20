@@ -23,7 +23,8 @@ While class components and life-cycle methods will always have a special place i
 ### Cart
 #### Cart Create Backend Method
 Create functionality allows users to add items to their cart. If an item already exists, user will be able to increase the quantity of their cart item with further additions.
-```
+```ruby
+# carts_controller.rb
   def create
     if !Cart.find_by(cart_item_id: cart_params[:cart_item_id])
       @cart = Cart.new(cart_params)
@@ -43,7 +44,8 @@ Create functionality allows users to add items to their cart. If an item already
 ```
 #### Cart Update Backend and Frontend
 These are the portions of code, from backend to frontend, that enable users to have the ability to edit quantity of their items in their cart while having a fast and actively updated total cost of their cart.
-```
+```ruby
+# carts_controller.rb
   def update
     @cart = Cart.find_by(id: params[:id])
     if @cart.update(cart_params)
@@ -53,8 +55,9 @@ These are the portions of code, from backend to frontend, that enable users to h
       render json: @cart.errors.full_messages, status: 404
     end
   end
-___________________________________________________________________________________
-  
+```
+```javascript
+// individual_cart_item.jsx
   const handleUpdateQty = (e) => {
     e.preventDefault();
     let updatedProduct = Object.assign({}, cartProduct);
@@ -69,8 +72,9 @@ ________________________________________________________________________________
     dispatch(updateProductInCart(newCartProduct))
       .then(setQty(newCartProduct.qty))
   }
-___________________________________________________________________________________ 
-
+```
+```javascript
+// individual_cart_item.jsx
   <div className="checkout-dropdown-container">
     <select
       name="qty"
@@ -96,7 +100,8 @@ ________________________________________________________________________________
 
 ### Review
 Making reviews, I learned the importance of analyzing for the parent component and ensuring that it holds most control over state for accurate rendering as opposed to its children like the review list item.
-```
+```javascript
+// product_singular.jsx
 class ProductSingular extends React.Component {
   constructor(props) {
     super(props);
@@ -119,22 +124,25 @@ class ProductSingular extends React.Component {
     });
     this.componentDidMount();
   }
-___________________________________________________________________________________
+}
 
+render(){
   const { product, currentUser } = this.props;
-___________________________________________________________________________________
-
-  <div className="show-reviews">
-    <h1 className="review-head">{product.reviews?.length} reviews</h1>
-    <ReviewList
-      currentUser={this.props.currentUser} 
-      product={product} 
-      reviews={product.reviews} 
-      refreshList={this.refreshList}
-    />
-  </div>
-___________________________________________________________________________________
-
+  return (
+      <div className="show-reviews">
+        <h1 className="review-head">{product.reviews?.length} reviews</h1>
+        <ReviewList
+          currentUser={this.props.currentUser} 
+          product={product} 
+          reviews={product.reviews} 
+          refreshList={this.refreshList}
+        />
+      </div>
+  )
+}
+```
+```javascript
+// review_list_item.jsx
 class ReviewListItem extends React.Component {
   constructor(props) {
     super(props);
