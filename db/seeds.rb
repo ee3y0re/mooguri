@@ -662,6 +662,160 @@ pun2_product = Product.create!({
 pun2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_2_il_794xN.1886781148_t57p.jpg")
 pun2_product.photo.attach(io: pun2_pic, filename:"/pun_2_il_794xN.1886781148_t57p.jpg")
 
+
+pun3_product = Product.create!({
+  product_name:"I Know It's Cheesy But...* Love Card * Anniversary * Valentines * Husband * Wife * Boyfriend * Girlfriend * Cheese * Significant Other * Partner * Jelly Armchair from Catherinedoart",
+  description:"I know its cheesy but…
+
+A brie-liant greetings card for a legend-dairy loved one. If you are so much better to-cheddar and camembert to be apart, then don’t wine about it, take a slice form this selection and you’ll be top of the board.
+
+This card is from my Multi pun collection. Each card is 150mm square and comes with one of three fully illustrated envelope designs. Please be aware the illustrated envelope may change.
+
+The inside has been left blank for your message.
+
+If you’d like us to handwrite your card for you, this will be sent directly to the addressee with your message in the card, in the card envelope, just like you’d sent it yourself! Please leave your message in the ‘gift message’ section of the basket, and remember to use the recipient's address as the shipping address!
+
+If you get your order in before 12 pmwe’ll aim to get it sent out the same day. If you miss this cut off it will be sent the next working day.  Please get in touch if you need it shipped sooner, or if you’d like your order to be posted Special Delivery.  Bear in mind that Special Delivery requires a signature, this means that frustratingly sometimes your item can end up in the depot, sometimes 1st class can be better lso just as quick!
+
+Occasionally items do go missing in the post. We have no control over this, unfortunately.  If your card hasn’t arrived 5 working days after you place your order (UK), please do get in touch and we will try to rectify this to the best of our ability.
+
+This card ships from the UK so for any international orders please allow 7-14 business days.  
+
+We use First Class post in the UK and Royal Mail International Tracked and Signed post for orders outside the UK.
+
+
+
+Feel free to message if you have any questions/requests and either me, my sister Liz, or our friend Anne, will be happy to help!
+
+Catherine Faulkner © all rights reserved
+Image copyright is not transferred with the sale
+
+@catherinedoart
+@jellyarmchair",
+  price: 5.15,
+  category:"pun",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+pun3_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_3_il_794xN.3121609316_7f70.jpg")
+pun3_product.photo.attach(io: pun3_pic, filename:"/pun_3_il_794xN.3121609316_7f70.jpg")
+
+
+pun4_product = Product.create!({
+  product_name:"Grilled Cheese Mug, You Make Me Melt Cheese Valentine, Funny Valentines Day Coffee Mugs, Cute Valentine Gift, Pun Gifts for Couples, Tumbler from BeanMugs",
+  description:"Please see below for product descriptions. As always feel free to reach out with any questions!— Coffee Mugs —
+* Design printed on both sides.
+* Dishwasher and microwave safe
+* The highest quality printing possible is used. It will never fade no matter how many times you wash it.
+
+— Tumbler Details —
+* Stainless steel
+* Design Printed on One Side
+* 10oz and 16oz
+* Rounded corners
+* See-thru plastic lid
+
+
+— Travel Mug Details —
+* Stainless steel
+* 15oz (0.44 l)
+* Rounded corners
+* Black plastic lid
+
+— Travel Mug W/ Handle Details —
+* This holds 14 oz worth of liquid and comes with an easy-grip handle and thumb rest. The tapered bottom fits in a standard cup holder. Lid has slide opening and slanted drinking surface.
+* Made out of stainless steel for durability.
+* Lid is dishwasher safe and shatter resistant.
+* NOTE: These are not "officially" endorsed as dishwasher safe by our vendor, although we have run them through hundreds of times with no problems. Hand wash is official recommendation for cleaning.
+
+— Can Holder —
+* Stainless steel
+* Fits a 12oz can or bottle
+* Removable plastic lid with rubber overlayPlease see below for descriptions on each product:",
+  price: 16.95,
+  category:"pun",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+pun4_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun4_il_794xN.2822017769_ef6l.jpg")
+pun4_product.photo.attach(io: pun4_pic, filename:"/pun4_il_794xN.2822017769_ef6l.jpg")
+
+
+pun5_product = Product.create!({
+  product_name:"I Love Moo Cow Pun Greeting Card / Handmade Gift / Love Anniversary Friendship / Farm Animal Puns Punny Play on Words / Beef Angus Cow Milk from SkpInk",
+  description:"LISTING INCLUDES:
+
+- Hand drawn image printed to card stock.
+- Card measures approximately 5.5x4.25 inches.
+- Item comes with an A2 envelope and wrapping in a cellophane sleeve.
+- The inside of the card is blank.
+- Add a note at checkout and I will put a message on the inside for you!
+
+SHIPPING:
+
+- Individual cards are sent USPS with a stamp.
+- Tracking is available if shipping is upgraded to Express during checkout!
+
+=============================
+
+Looking for a deal? Use one of the bulk purchasing options featured at the top of the shop page here → www.skpink.etsy.com
+
+- 4 Cards for $12
+- 10 Cards for $28
+- 20 Cards for $50
+- 50 Cards for $100",
+  price: 3.75,
+  category:"pun",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+pun5_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun5_il_1588xN.2828827873_89d5.jpg")
+pun5_product.photo.attach(io: pun5_pic, filename:"/pun5_il_1588xN.2828827873_89d5.jpg")
+
+
+pun6_product = Product.create!({
+  product_name:"Butter Half Card, Valentines Day Cards, Valentines Day Card, Pun Cards, Butter Half Card Greeting Card, Anniversary Card, Food Puns from BespokeBridalStudio",
+  description:"LISTING INCLUDES:
+
+- Original artwork printed to card stock
+
+- Square card measures 5.5x5.5 inches
+
+- Item comes with envelope(s)
+
+- The inside of the card is blank, leaving room for a custom greeting.
+
+- Made to order and printed in the USA
+
+SHIPPING:
+
+- Individual cards are sent USPS with a stamp in a flat mailer.
+
+- Tracking is available if shipping is upgraded during checkout!
+
+EGGCELLENT FOR ANY OCCASION!
+
+
+QUESTIONS?
+
+If you have any questions about this template, use the “Message Seller” button and I’ll get back to you ASAP.
+
+
+
+Butter Half Card, Valentines Day Cards, Valentines Day Card, Pun Cards, Butter Half Card Greeting Card, Anniversary Card, Food Puns
+
+Breakfast Club Comics©",
+  price: 5.85,
+  category:"pun",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+pun6_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/pun6_il_1588xN.3578189566_q2s8.jpg")
+pun6_product.photo.attach(io: pun6_pic, filename:"pun6_il_1588xN.3578189566_q2s8.jpg")
+
+
+
+
 ## yogurt
 
 yogurt1_product = Product.create!({
@@ -696,12 +850,81 @@ yogurt2_product = Product.create!({
 yogurt2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt_2_il_794xN.3795506386_si5y.jpg")
 yogurt2_product.photo.attach(io: yogurt2_pic, filename:"/yogurt_2_il_794xN.3795506386_si5y.jpg")
 
-### Remaining Products
-## milk
-## cheese
-## yogurt
-## lactose free
-## pun
+
+yogurt3_product = Product.create!({
+  product_name:"STRAWBERRY BODY YOGURT, not as thick as body butter but not as watery as commercial lotion from genkiskincare",
+  description:"DESCRIPTION:
+
+*PRODUCT IS NOT EDIBLE*
+
+This body yogurt smells like real strawberry yogurt! It is a half way between a lotion and body butter. There is no greasy after feel, and its light, and perfect for a quick all over freshen up!
+
+INGREDIENTS:
+
+Purified Water, Shea Butter, Vegetable Glycerin, Apricot Kernel Oil, Golden Jojoba Oil, Emulsifying Wax, Aloe Vera Gel, Cetyl Stearyl Alcohol, Phenonip, Strawberry Fragrance Oil, Pink Mica
+
+STORAGE AND USAGE:
+
+Apply Strawberry Body Yogurt to clean, dry skin in gentle circular motion until fully absorbed. Storage In cool and dry place after each use and avoid direct sunlight.
+
+SOAP BAR SIZE:
+
+Net Weight: Approximately 4 oz.
+
+PACKAGING AND SHIPPING:
+
+In effort to keep our carbon footprint as low as possible, we use minimal recycled materials for packaging and well protected during transit. We also encourage you to reuse any materials you can to extend their lifespan!
+
+QUESTION?
+
+Please feel free to message us with any questions or concerns you may have, we love to hear from you!
+
+Follow us on social media platforms @genkiskincare for behind the scenes, product updates and seasonal promotions!",
+  price: 9.00,
+  category:"yogurt",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+yogurt3_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt_3_il_794xN.3618339063_n4v6.jpg")
+yogurt3_product.photo.attach(io: yogurt3_pic, filename:"/yogurt_3_il_794xN.3618339063_n4v6.jpg")
+
+
+yogurt4_product = Product.create!({
+  product_name:"",
+  description:"",
+  price:,
+  category:"yogurt",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+yogurt4_pic = URI.open("")
+yogurt4_product.photo.attach(io: yogurt4_pic, filename:"")
+
+
+# yogurt5_product = Product.create!({
+#   product_name:"",
+#   description:"",
+#   price:,
+#   category:"yogurt",
+#   seller_id: User.fourth.id,
+#   availability: 300
+# })
+# yogurt5_pic = URI.open("")
+# yogurt5_product.photo.attach(io: yogurt5_pic, filename:"")
+
+
+# yogurt6_product = Product.create!({
+#   product_name:"",
+#   description:"",
+#   price:,
+#   category:"yogurt",
+#   seller_id: User.fourth.id,
+#   availability: 300
+# })
+# yogurt6_pic = URI.open("")
+# yogurt6_product.photo.attach(io: yogurt6_pic, filename:"")
+
+
 
 Review.create!([
   { body: "I've got some BEEF with whoever made this site!", reviewer_id: User.third.id, username: User.third.username, product_id: Product.first.id },
