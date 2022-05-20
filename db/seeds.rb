@@ -890,39 +890,133 @@ yogurt3_product.photo.attach(io: yogurt3_pic, filename:"/yogurt_3_il_794xN.36183
 
 
 yogurt4_product = Product.create!({
-  product_name:"",
-  description:"",
-  price:,
+  product_name:"450ml Yogurt Water Bottle For Girls Fruit Drinking Bottle Kawaii Milk Yakult Cup Mug Kawaii Yogurt Fashion Simple Fruit Cartoon Water Bottle from KawaiiMoments",
+  description:"Material: food grade AS material
+
+Capacity: 450ml
+
+Temperature resistance: -20 degrees to 95 degrees
+
+
+Note:
+
+1. Due to the different shooting angle and color rendering, there are some differences between the product
+and the photo itself, which will not affect the use of the product.
+
+2. Because the product is manually measured, there are some errors, which will not affect the use of the product
+
+
+Unique design: The creative design of the milk carton shape comes from the inspiration of daily life, the shape is cute and interesting, fresh and fashionable. The thickened cup bottom body is durable.
+
+Transparent glass: The warm and lovely milk cup is decorated with pure and transparent simplicity. Whether it is milk or cola, or water, the glass milk box can double its characteristics.
+
+Non-toxic material: Made of food-grade AS material. Completely free from harmful chemicals and does not contaminate your food.
+
+Easy to clean: Hand-wash, also can put in dishwasher to clean. Suspends liquids above base for condensation-free use at the counter or table.
+
+Suitable for: This mini cup can be heated or store in a refrigerator
+
+Highlights
+
+100%Brand new high quality.
+
+
+
+Feature:
+
+1. Food grade PC material, safe and non-toxic, High temperature resistance, BPA free.
+
+2. Water leakage prevention design, 360° seal leakproof.
+
+3. Cartoon fashionable, easy to carry.
+
+4. Heat resistance: 0 ° C ~ 100 ° C
+
+
+Color: Strawberry, Peach, Banana, Avocado
+
+
+Note:
+- Due to the pandemic, there may be shipping delays for international deliveries. If your package takes longer to arrive than expected, please don't worry!
+
+- We recommend adding your phone number in the “Persoalization” during checkout, in case the post office needs to contact you
+
+- We do not allow cancellations or modifications of your order once placed. Please check carefully prior to ordering",
+  price: 9.90,
   category:"yogurt",
   seller_id: User.fourth.id,
   availability: 300
 })
-yogurt4_pic = URI.open("")
-yogurt4_product.photo.attach(io: yogurt4_pic, filename:"")
+yogurt4_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt4_il_1588xN.3910113357_mres.jpg")
+yogurt4_product.photo.attach(io: yogurt4_pic, filename:"/yogurt4_il_1588xN.3910113357_mres.jpg")
 
 
-# yogurt5_product = Product.create!({
-#   product_name:"",
-#   description:"",
-#   price:,
-#   category:"yogurt",
-#   seller_id: User.fourth.id,
-#   availability: 300
-# })
-# yogurt5_pic = URI.open("")
-# yogurt5_product.photo.attach(io: yogurt5_pic, filename:"")
+yogurt5_product = Product.create!({
+  product_name:"Copper Yogurt Bakrac, Turkish Yogurt Making, Copper Pot Pure from CopperMALL",
+  description:"Copper Yogurt Bakrac, Turkish Yogurt Making, Copper Pot Pure
+
+Our copper products are made of pure copper with traditional methods by hammering and heat processes. They are totally healthy and handcrafted.
+There might be pattern differences on products because they are handmade. It is a unique gift for your loved ones or yourself.
+
+This item is perfect for yogurt fermentation. In Turkish culture, it has been used for making yogurt for years. Also it is used for storage of any kind of food like water, juice etc. You can also use it as an amazing decor. It is a nice Mother's day gift.
+
+- Completely handcrafted
+- Made with 1 mm thick pure copper
+- Thinned inside for food safety
+- Brass handle
+- Free shipping to US, Canada and Europe
+
+Size:
+
+Capacity 2 LT
+Weight 785 gr -
+Height 5.9 inches (15 cm)
+Width 7 inches (18 cm)
+
+Capacity 3 LT
+Weight 945 gr -
+Height 6.3 inches (16 cm)
+Width 7.9 inches (20 cm)
+
+Care:
+Only hand wash and use soft materials like sponge or cloth.
 
 
-# yogurt6_product = Product.create!({
-#   product_name:"",
-#   description:"",
-#   price:,
-#   category:"yogurt",
-#   seller_id: User.fourth.id,
-#   availability: 300
-# })
-# yogurt6_pic = URI.open("")
-# yogurt6_product.photo.attach(io: yogurt6_pic, filename:"")
+Made in Turkey.
+---------------------------------------------------------------
+Please let me know if you have any questions.
+I will answer you as soon as possible.",
+  price: 86.25,
+  category:"yogurt",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+yogurt5_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt5_il_1588xN.3856979312_hbtf.jpg")
+yogurt5_product.photo.attach(io: yogurt5_pic, filename:"/yogurt5_il_1588xN.3856979312_hbtf.jpg")
+
+
+yogurt6_product = Product.create!({
+  product_name:"Modern: Mixed Berry (Pam's Favorite Yogurt) from DiamondStainedGlass",
+  description:"Modern Stained glass panel in berry and grey colors. Hangs horizontally or vertically (please let us know your preference).
+All pieces are shipped safely packed and insured by UPS
+
+
+Welcome to Diamond Stained Glass!
+Custom Work
+If you would like to discuss making a custom piece, we have an information form for Custom Pieces. Please email us at cannastainedglass [!at] gmail.com
+
+All our Best,
+Cheral and Lauren Canna
+
+Cheral and Lauren are a mother-daughter team of glass artists located outside Philadelphia, PA. Cheral's pieces tend to be very creative with a gorgeous use of color - she finds interesting details in pieces of glass and likes to build a design that highlights those unique details. Lauren's eye tends to be more traditional, with colors that complement one another and are more subdued. Lauren also enjoys creating works that celebrate fandom - Marvel, Star Wars, Dr Who, Harry Potter, nerd stuff. :)
+Cheral is a retired geneticist who worked on the Human Genome Project. Lauren is a conductor and owns a music school.",
+  price: 250
+  category:"yogurt",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+yogurt6_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt6_il_794xN.3837567024_8igo.jpg")
+yogurt6_product.photo.attach(io: yogurt6_pic, filename:"/yogurt6_il_794xN.3837567024_8igo.jpg")
 
 
 
