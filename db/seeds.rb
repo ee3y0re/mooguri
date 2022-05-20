@@ -280,6 +280,7 @@ cheese6_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/cheese6_i
 cheese6_product.photo.attach(io: cheese6_pic, filename:"/cheese6_il_794xN.2666295026_ilsz.jpg")
 
 
+
 ## lactose-free
 
 lactosefree1_product = Product.create!({
@@ -305,6 +306,115 @@ lactosefree2_product = Product.create!({
 lactosefree2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_2_il_794xN.3775381345_bkkr.jpg")
 lactosefree2_product.photo.attach(io: lactosefree2_pic, filename:"/lactose_free_2_il_794xN.3775381345_bkkr.jpg")
 
+lactosefree3_product = Product.create!({
+  product_name:"Roasted Marshmallows Covered in Schmilk (8-Pack) from SchmilkChocolate",
+  description:"Have you ever had torch-toasted vegan marshmallows, dressed in our classic Schmilk chocolate? Who said vegan milk chocolate couldn't be this much fun? A crispy-toasted beginning with a creamy-soft-smooth finish. Truly an edible candy pillow covered in the best vegan milk chocolate.
+
+Note: these marshmallows contain soy, but our chocolate remains soy-free and produced separately from marshmallow production
+
+Servings Per Pack: 2
+
+Weight: 5.6 oz
+
+Ingredients:
+
+Original Schmilk Chocolate: Cocoa butter**, sugar**, cashews*, cocoa liquor**, vanilla*, sunflower lecithin*, salt (*organic, **organic and fair-trade)
+
+Vegan Marshmallows (non-organic): Tapioca syrup*, cane sugar*, filtered water*, tapioca starch*, carrageenan*, soy protein*, natural vanilla flavor* (*non-GMO)
+
+Allergen Warning: Contains soy, cashews, tree nuts & traces of peanuts
+
+Nutrition Facts: Serving size: 2 pieces (39.68g) Amount per serving: Cal 213 (10.6% DV), Sug 24.5g, Fat 8.4g (12.9% DV), Sat Fat 5.0g (25.2% DV), Carbs 33.5g (12.6% DV), Protein 1.4g (2.9% DV), Fiber .6g (2.3%DV) Percent Daily Value (DV) are based on a 2,000 calorie diet",
+  price: 14.99,
+  category:"lactose-free",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+lactosefree3_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_3_il_794xN.3178536526_g934.jpg")
+lactosefree3_product.photo.attach(io: lactosefree3_pic, filename:"lactose_free_3_il_794xN.3178536526_g934.jpg")
+
+
+lactosefree4_product = Product.create!({
+  product_name:"My Tummy Hurts Aesthetic Tee Shirt | Groovy Graphic Tee | Trendy Y2K | Tumblr Graphic Tee | Celiac, Gluten-free, IBS, Lactose-free, Green Pink",
+  description:"My Tummy Hurts Aesthetic Tee Shirt | Groovy Graphic Tee | Trendy Y2K | Tumblr Graphic Tee | Celiac, Gluten-free, IBS, Lactose, Green Pink
+
+If you love super soft and extremely comfy shirts then you will absolutely love this Bella + Canvas unisex shirt!
+
+• This is a Unisex style tee, although it is looser and longer than an average women's tee it mostly true to size. For that oversized look please order a few sizes up! If you prefer a fitted look typically we suggest ordering your normal size or one size down if you like it snug.
+
+• Solid Colors: 4.2 oz., 100% airlume combed and ringspun cotton
+
+• Heather Colors: 4.2 oz., 52/48 Airlume combed and ringspun cotton/polyester
+
+• Heather Prism Colors: 99/1 airlume combed and ringspun cotton/ polyester (Unique coloring, grey flecks of heather pulled through the base color)
+
+• Machine wash cold, inside-out, tumble or hang dry
+
+• Printed in the US of A baby!
+
+Good luck with your tummy!",
+  price:19.99,
+  category:"lactose-free",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+lactosefree4_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/lactosefree4_il_794xN.3874866022_axyg.jpg")
+lactosefree4_product.photo.attach(io: lactosefree4_pic, filename:"/lactosefree4_il_794xN.3874866022_axyg.jpg")
+
+
+lactosefree5_product = Product.create!({
+  product_name:"Lactose Intolerant Decal from BearBonesVinylCo",
+  description:"Let everyone know you can't eat ice cream. This decal can go just about anywhere you can think of and has a use life up to 3-6 years for indoor and outdoor use. This decal comes in either matte or gloss, black or white vinyl and is around 4x6 inches in size, perfect for your car, MacBook, or waterbottle bottle.",
+  price: 3.99,
+  category:"lactose-free",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+lactosefree5_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/lactosefree5_il_1588xN.3922007995_8zeh.jpg")
+lactosefree5_product.photo.attach(io: lactosefree5_pic, filename:"/lactosefree5_il_1588xN.3922007995_8zeh.jpg")
+
+
+lactosefree6_product = Product.create!({
+  product_name:"Lactose Intolerant Valentines Day Card | Funny Cheese Card | For Boyfriend | For Girlfriend | Cheesy Love Gift | Dairy Free Card fom TeePeeCreationsGifts",
+  description:"This funny Valentines Day card features a sad block of cheese with the phrase “I Would Have Got You A Cheesy Valentines Day Card But You’re Lactose Intolerant” Ideal for your partner with lactose intolerance this Valentines Day, this card will surely make your recipient laugh and smile!
+
+Product Details
+300gsm premium matte card
+C6 coloured embossed envelope
+A6 size only (10.5 x 14.8cm OR 4.1 x 5.8 in)
+
+Made of Premium Quality
+My cards are made of a premium quality that makes it feels nice to touch. It’s thick and comes with a matte finish that provides a smooth and natural-looking surface, making you want to keep it forever!
+
+✏️ Additional Extras ✏️
+Messages can be added to the inside of the card too, just let me know what you would like in the personalisation box.
+
+Confetti is another extra which can be added as a fun touch to your card. The design of this matches the illustration.
+
+A Funny Gift Idea For Everyone
+Choosing the perfect gift might need a lot of time, but it won’t happen if you come to my store! I provide many adorable things that make a funny gift idea for everyone. One of them is surely this Christmas card. Give this Christmas card to loved ones and see their happy faces!
+
+Multi-buy Offer
+15% off when you buy 3 or more, 20% off when you buy 5 or more, 25% off when you buy 8 or more, 30% off when you buy 12 or more of any of my items. (Excludes items already on sale).
+
+Check Out My Other Products
+TeePeeCreationsGifts - https://www.etsy.com/uk/shop/TeePeeCreationsGifts
+
+Returns
+If you are not satisfied in any way, feel free to contact me to have a full return according to the return policy. Please take a look at my return policy for more details.
+
+Disclaimer
+Please note that colours shown on screen may vary slightly to the printed product as all monitors vary.",
+  price:,
+  category:"lactose-free",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+lactosefree6_pic = URI.open('https://mooguri-dev.s3.us-west-1.amazonaws.com/lactosefree6_il_1588xN.3521146214_qox9.jpg')
+lactosefree6_product.photo.attach(io: lactosefree6_pic, filename:"lactosefree6_il_1588xN.3521146214_qox9.jpg")
+
+
+
 ## milk
 
 milk1_product = Product.create!({
@@ -329,6 +439,203 @@ milk2_product = Product.create!({
 })
 milk2_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/milk2_il_794xN.3164754577_j3qo.jpg")
 milk2_product.photo.attach(io: milk2_pic, filename:"/milk2_il_794xN.3164754577_j3qo.jpg")
+
+milk3_product = Product.create!({
+  product_name:"Goat Milk Gift Set from Damgoodsoapandlotion",
+  description:"This gift set includes 2 bars of goat milk soap, goat milk and argan oil lotion, goat milk fizzy bath powder, and a lip balm. This is a great gift idea for someone special or yourself! Please choose from the scents below and note them in the comment section. Free shipping and gift packaging included in the low price!
+
+Lotion:
+Aloe Vera (unscented)
+Caribbean Coconut
+Lavender EO
+Japanese Cherry Blossom
+Jasmine
+Polynesian Hibiscus
+Sandalwood
+Sun Ripe Strawberry
+Sweet Orange
+Peppermint
+Unscented
+White Tea and Ginger
+
+Fizzy Powder:
+Unscented
+Fresh Cut Roses
+Lavender
+Caribbean Coconut
+Eucalyptus
+
+Lip Balm:
+Lemon
+Lavender
+Sweet Orange
+Wintergreen
+Peppermint
+Eucalyptus
+
+Bar Soap:Almond & Honey - Classic mixture of almond and warm honey notes.
+
+Alpine Cheer - Notes of fir needle, cinnamon stick, cranberries, crisp apple and cedarwood.
+
+Aqua Spa - Indulge in notes of modern rose and lily brightened with hints of orange, lime and ozone.
+
+Berry Warm- Ripe raspberry intermingled with orange zest and warm musk.
+
+Caribbean Coconut - A tropical twist of coconut milk and cool vanilla that will make you dream of lounging on a sunny beach.
+
+Citronella Essential Oil - Lemon-like aroma with grassy green undertones.
+
+Coffee Bean - The aroma of fresh roasted coffee beans with a hint of vanilla and sugar crystals.
+
+
+Cranberry - The aroma of tart delicious cranberries with a tangy sweetness.
+
+Desert Dreams - Succulent notes of mango nectar, cactus leaves and agave sugar that wrap around a heart of Siberian fir.
+
+Frankincense & Myrrh Essential Oil - Traditional riches of blended frankincense with myrrh.
+
+Gingerbread - A heart of cinnamon, nutmeg, and clove enhance the ginger, while a dash of almond adds a little something extra. Molasses and sugar base notes envelop the array of spices with a deliciously delightful sweetness.
+
+Ginger/Lime Essential Oil - Spicy warm aroma with an earthy undertone and the crisp citrus zing of a freshly sliced lime.
+
+
+Hot Apple Pie - Almost as good as your mother's with green apple, freshly shaved cinnamon, nutmeg and warm brown sugar.
+
+Lavender Essential Oil - A floral and herbal lavender bouquet.
+
+Lemon Eucalyptus Essential Oil - Grassy green notes with lemon-like aroma.
+
+Lilac - This sweet floral smells like true lilacs in full bloom.
+
+Nutcracker - A blend of Vanilla, Hazelnut, Maple Syrup, Banana, Coconut, Lime, Orange, Grapefruit, Bergamot, and Clove.
+
+Nutty Nog - Creamy steamed coconut milk is touched with grated nutmeg and a touch of brown sugar and cinnamon.
+
+Oatmeal & Honey - Crunchy granola blended with fresh oats, golden honey and vanilla bean.
+
+Orange Lemongrass Essential Oil - The uplifting aroma of sweet and sunny freshly peeled oranges and lemongrass.
+
+
+Polynesian Hibiscus - Wild and exotic, this fragrance is a combination of red hibiscus, island plumeria, Aloe Vera leaf, and dewy cassis petals.
+
+Sandalwood - Fragrant grains of sandalwood are polished with the sweetness of balsamic richness. Enchanting notes of deep mahogany lie in the heart of these precious woods.
+
+Sweet Pea - Sweet pea petals and watery pear entwine with sheer freesia, fresh berry, and soft, delicate musk.
+
+Tea Tree Essential Oil - True herbal, earthy and medicinal aroma of tea tree.
+
+Unscented",
+  price: 35.00,
+  category:"milk",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+milk3_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/milk_3_iap_640x640.3725646514_s8mlyp7s.jpeg")
+milk3_product.photo.attach(io: milk3_pic, filename:"/milk_3_iap_640x640.3725646514_s8mlyp7s.jpeg")
+
+
+milk4_product = Product.create!({
+  product_name:"Milk cable protector, anti break cable bite, kawaii milk accessories, milk funny gifts, strawberry milk stickers, milk plush, pink theme from CaseDramaRamaShop",
+  description:"Super kawaii Strawberry milk cable protector with a piggy on it.
+
+Protect your phone charging cable in a cute way.
+
+Included in package: x1 milk cable protector.
+
+Made of silicone and easy to install.
+
+Helps identify your cable in shared charging spaces and makes a cute personal statement.
+
+Perfect for strawberry milk love",
+  price: 4.99,
+  category:"milk",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+milk4_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/milk4_il_1588xN.3766224132_ncox.jpg")
+milk4_product.photo.attach(io: milk4_pic, filename:"milk4_il_1588xN.3766224132_ncox.jpg")
+
+
+milk5_product = Product.create!({
+  product_name:"Zodiac Milk Box Sticker, milk box sticker, zodiac sticker, kawaii laptop sticker, lofi style, kawaii style from MysticalMamaMagic",
+  description:"Zodiac Milk Box Sticker
+
+This sticker is perfect for decorating your laptop, water bottle, planner, and even your car!
+
+You will receive 1 Zodiac Milk Box Sticker of your choice! (Psst and a freebie!)
+
+Each sticker is 3” x 2.25” and is made with weather proof sticker paper, sealed with a uv resistant finish, and covered with clear vinyl. This allows them to be scratch resistant, UV resistant, and water resistant, making them great for outdoor use and even better for indoor use!
+
+For the best results in adhesion, please apply your sticker to clean, smooth, and dry surfaces.
+
+All orders are packaged with cardstock and a clear bag inside a kraft envelope. Shipped with Etsy’s tracking system and delivered through USPS.
+
+Processing Time: 1-2 Days
+* Processing time is not the same as shipping time.
+Shipping times may vary due to Covid-19.
+
+No returns/exchanges unless item arrives damaged. Photo proof is required and claims must be made within 7 days of receiving your order.
+
+Please ensure you have entered the correct shipping address. Cancellations are only approved within 1 hour of placing your order.
+
+Feel free to contact me if you have any questions, comments, or concerns!
+
+Note: Please be aware that the colors and paper you see on your screen may differ slightly from the actual colors of the print.
+
+Thank you for your support!",
+  price: 3.75,
+  category:"milk",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+milk5_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/milk5_il_1588xN.3213598017_72va.jpg")
+milk5_product.photo.attach(io: milk5_pic, filename:"/milk5_il_1588xN.3213598017_72va.jpg")
+
+
+milk6_product = Product.create!({
+  product_name:"Classic Milk Tea Boba Candle from AsianBobaGirl",
+  description:"For more candles & exclusive boba cosmetics, visit our new website: shopbobagirl.com!
+
+The Classic Milk Tea Candle
+
+A classic blend of smooth black tea with delicate notes of caramel based cream. Transform your room into a fresh cup of silky black tea perfectly balanced with velvety hints of roasted caramel. This is the staple classic of boba milk tea.
+
+Candle profile:
+Main profile: caramelized black tea
+Scent hints: custard, coconut, burnt caramel, rum
+Base: vanilla, maple
+
+All AsianBobaGirl candles are made with 100% soy melts, burning cleaner at 90% less soot than paraffin. Bring your favorite boba shop straight to you room and set the mood with soft-natural lighting for your bedroom, bathtub and workspace for the extra me-time you deserve. Various candle sizes come in different jar types - please refer to the listing images for reference. Each order comes with a single candle - the boba milk tea drink in the product shots are not included with your order.
+
+Candle Features
+- 3 inches x 3 inches x 2 inches pudding glass jars
+- 4 oz. glass mini jars with plastic lids (do not place lids on when candle is burning)
+- Made with 100% premium soy melts, a biodegradable and natural resource that cleans up with just plain old soap and water
+- Pure fragrance oil made from natural essential oils and synthetic aromas - never diluted for a strong concentrated aroma
+- Custom mixed and created for that perfect milk tea scent
+- AsianBobaGirl signature boba hand-painted or printed on glass
+- Mixed, hand-poured, and packaged in Los Angeles, CA
+
+Candle Best Practices:
+- During the first burn, please make sure to allow the candle to melt to the edges of the candle.
+Doing so will help release the milk tea fragrance.
+- The lid is plastic, please do not cap it on the candle while it's burning or when the glass is hot
+- A 4 oz. candle is ideal for small to medium sized rooms like bedrooms and bathrooms
+- Only burn your candle for 1-2 hours at a time.
+- Be cautious when picking up the candle. Glass can be hot to touch and the wax may still be melted.
+- Do not leave candle unattended while burning. Keep candle away from anything flammable
+- Discontinue use when only 1/4 inch of wax remains
+
+To purchase $1 sticker add-ons, please visit https://www.etsy.com/AsianBobaGirl/listing/1076618569/asian-food-stickers-add-on-only.",
+  price:16.50,
+  category:"milk",
+  seller_id: User.fourth.id,
+  availability: 300
+})
+milk6_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/milk6_il_1588xN.3494226927_nq3r.jpg")
+milk6_product.photo.attach(io: milk6_pic, filename:"/milk6_il_1588xN.3494226927_nq3r.jpg")
+
+
 
 ## pun
 
