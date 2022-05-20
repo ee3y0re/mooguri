@@ -204,6 +204,8 @@ class ReviewListItem extends React.Component {
 ```
 
 ## Future Goals
++ ScrollToTop implementation with React Hooks
+<!-- note to self: consider implementing https://stackoverflow.com/questions/36904185/react-router-scroll-to-top-on-every-transition -->
 + Coordinating categories links and component
 + Profile pages
 + Favorites
