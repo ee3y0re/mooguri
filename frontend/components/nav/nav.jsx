@@ -10,10 +10,14 @@ const Nav = () => {
   const currentCart = useSelector((wholeState) => {
     return wholeState.entities.carts;
   });
+  const activeSession = useSelector((state) => {
+    return state.session.id;
+  })
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchUserCartProducts());
+    if (activeSession) dispatch(fetchUserCartProducts());
   }, []);
 
   // let cartIds = Object.keys(currentCart);
