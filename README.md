@@ -18,7 +18,7 @@ https://mooguri.herokuapp.com/#/
 
 ## Adventures with Features
 Dear Reader,
-While class components and life-cycle methods will always have a special place in my heart❤️, I realized I am now hooked on hooks. While I have now been accustomed to practices, such as using useDispatch and direct imports of updating cart product items in my individual cart component, I keep traces of componentDidMount and classes extending React.Component throughout my app in user auth, product listings, and review CRUD features. This app is more than just a clone to me. This is a scrapbook of my React-Redux memories, through thick and thin. I am determined to learn more and create more "scrapbooks of my progress."
+While class components and life-cycle methods will always have a special place in my heart❤️, I realized I am now hooked on hooks. And yet, while I have now been accustomed to practices, such as using useDispatch and direct imports of updating cart product items in my individual cart component, I keep traces of componentDidMount and classes extending React.Component throughout my app in user auth, product listings, and review CRUD features. This app is more than just a clone to me. This is a scrapbook of my React-Redux memories, through thick and thin. I am determined to learn more and create more "scrapbooks of my progress."
 
 ### Cart
 #### Cart Create Backend Method
@@ -41,7 +41,7 @@ Create functionality allows users to add items to their cart. If an item already
     end
   end
 ```
-#### Cart Update
+#### Cart Update Backend and Frontend
 These are the portions of code, from backend to frontend, that enable users to have the ability to edit quantity of their items in their cart while having a fast and actively updated total cost of their cart.
 ```
   def update
@@ -53,6 +53,7 @@ These are the portions of code, from backend to frontend, that enable users to h
       render json: @cart.errors.full_messages, status: 404
     end
   end
+___________________________________________________________________________________
   
   const handleUpdateQty = (e) => {
     e.preventDefault();
@@ -68,7 +69,8 @@ These are the portions of code, from backend to frontend, that enable users to h
     dispatch(updateProductInCart(newCartProduct))
       .then(setQty(newCartProduct.qty))
   }
-    
+___________________________________________________________________________________ 
+
   <div className="checkout-dropdown-container">
     <select
       name="qty"
@@ -90,6 +92,107 @@ These are the portions of code, from backend to frontend, that enable users to h
       }
     </select>
   </div>
+```
+
+### Review
+Making reviews, I learned the importance of analyzing for the parent component and ensuring that it holds most control over state for accurate rendering as opposed to its children like the review list item.
+```
+class ProductSingular extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      formProcessed: false,
+      qty: 1
+    }
+    this.handleUpdateQty = this.handleUpdateQty.bind(this);
+    this.refreshList = this.refreshList.bind(this);
+  }
+
+  componentDidMount(){
+    this.props.fetchProduct(this.props.match.params.productId)
+  }
+
+  refreshList() {
+    const newState = !this.state.formProcessed;
+    this.setState({
+      formProcessed: newState,
+    });
+    this.componentDidMount();
+  }
+___________________________________________________________________________________
+
+  const { product, currentUser } = this.props;
+___________________________________________________________________________________
+
+  <div className="show-reviews">
+    <h1 className="review-head">{product.reviews?.length} reviews</h1>
+    <ReviewList
+      currentUser={this.props.currentUser} 
+      product={product} 
+      reviews={product.reviews} 
+      refreshList={this.refreshList}
+    />
+  </div>
+___________________________________________________________________________________
+
+class ReviewListItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // flag for showing review edit
+      editDisplay: false
+    }
+    //binding function toggling flag for review edit
+    this.handleEditClick = this.handleEditClick.bind(this);
+  }
+
+  //function toggling flag for review edit
+  handleEditClick(e) {
+    e.preventDefault();
+    const newStatus = !this.state.editDisplay;
+    this.setState({ editDisplay: newStatus });
+    // on handle submit edit, need to set edit display as false
+  }
+
+  render(){
+    const { 
+      review, dateFormatter, currentUser, product, refreshList, deleteReview
+    } = this.props;
+
+    return (
+      <div className="review-row">
+        <h2 className="review-author">{review.username}</h2>
+        <br />
+        <h3>{dateFormatter(review.createdAt)} </h3>
+        <br />
+        {
+          this.state.editDisplay ?
+            <EditReviewFormContainer 
+              review={review} 
+              product={product} 
+              refreshList={refreshList}
+              handleEditClick={this.handleEditClick}
+            /> :
+            <p className="review-body">{review.body}</p>
+        }
+        <br />
+        {
+          currentUser?.id === review.reviewerId ?
+            <ReviewButtons
+              review={review}
+              refreshList={refreshList}
+              editDisplay={this.state.editDisplay} 
+              handleEditClick={this.handleEditClick} 
+              handleDelete={deleteReview}
+            /> :
+            <></>
+        }
+        <br />
+        <br />
+      </div>
+    )
+  }
+};
 ```
 
 ## Future Goals
