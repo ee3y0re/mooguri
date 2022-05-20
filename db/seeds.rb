@@ -405,7 +405,7 @@ If you are not satisfied in any way, feel free to contact me to have a full retu
 
 Disclaimer
 Please note that colours shown on screen may vary slightly to the printed product as all monitors vary.",
-  price:,
+  price: 4.87,
   category:"lactose-free",
   seller_id: User.fourth.id,
   availability: 300
@@ -726,7 +726,7 @@ pun4_product = Product.create!({
 * This holds 14 oz worth of liquid and comes with an easy-grip handle and thumb rest. The tapered bottom fits in a standard cup holder. Lid has slide opening and slanted drinking surface.
 * Made out of stainless steel for durability.
 * Lid is dishwasher safe and shatter resistant.
-* NOTE: These are not "officially" endorsed as dishwasher safe by our vendor, although we have run them through hundreds of times with no problems. Hand wash is official recommendation for cleaning.
+* NOTE: These are not 'officially' endorsed as dishwasher safe by our vendor, although we have run them through hundreds of times with no problems. Hand wash is official recommendation for cleaning.
 
 — Can Holder —
 * Stainless steel
@@ -1010,7 +1010,7 @@ Cheral and Lauren Canna
 
 Cheral and Lauren are a mother-daughter team of glass artists located outside Philadelphia, PA. Cheral's pieces tend to be very creative with a gorgeous use of color - she finds interesting details in pieces of glass and likes to build a design that highlights those unique details. Lauren's eye tends to be more traditional, with colors that complement one another and are more subdued. Lauren also enjoys creating works that celebrate fandom - Marvel, Star Wars, Dr Who, Harry Potter, nerd stuff. :)
 Cheral is a retired geneticist who worked on the Human Genome Project. Lauren is a conductor and owns a music school.",
-  price: 250
+  price: 250,
   category:"yogurt",
   seller_id: User.fourth.id,
   availability: 300
