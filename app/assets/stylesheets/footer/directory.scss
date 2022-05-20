@@ -27,9 +27,13 @@
   // background-color: black;
 }
 
+.footer-column-list {
+  padding-top: 7px;
+}
+
 .footer-column-list-items {
   font-size: 13px;
-  margin-bottom: 11px;
+  margin-bottom: 28px;
 }
 
 .footer-column-list-links,
@@ -48,6 +52,20 @@
 .footer-icon-container > svg {
   height: 13px;
   fill: white
+}
+
+.social-links-list__email-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 105%;
+  margin-bottom: 15px;
+}
+
+.social-links-list__email-link, 
+.social-links-list__email-link:link {
+  color: white;
+  text-decoration: none;
 }
 
 .social-links-list {

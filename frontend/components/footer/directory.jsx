@@ -9,7 +9,7 @@ const Directory = () => {
       <div className="footer-inner-container">
         <div className="footer-columns">
           <h1 className="footer-column-heading">About</h1>
-          <ul>
+          <ul className="footer-column-list">
             <li className="footer-column-list-items">
               <a 
                 href="https://github.com/ee3y0re/mooguri" 
@@ -41,7 +41,7 @@ const Directory = () => {
         </div>
         <div className="footer-columns">
           <h1 className="footer-column-heading">Other Projects</h1>
-          <ul>
+          <ul className="footer-column-list">
             <li className="footer-column-list-items">
               <a 
                 href="https://ee3y0re.github.io/Sassper-the-Sassy-Ghost/"
@@ -72,7 +72,7 @@ const Directory = () => {
               </svg>
             </div>
           </h1>
-          <ul>
+          <ul className="footer-column-list">
             <li className="footer-column-list-items"><i>To my teachers,</i></li>
             <li className="footer-column-list-items"><i>My classmates,</i></li>
             <li className="footer-column-list-items"><i>And my loved ones</i></li>
@@ -80,6 +80,24 @@ const Directory = () => {
         </div>
         <div className="footer-columns">
           <h1 className="footer-column-heading">Let's keep in touch!</h1>
+          <div className="social-links-list__email-container">
+            <div className="social-links-list__svg-container">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 512 512"
+                className="social-links-list__icons"
+              >
+                {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
+                <path d="M0 128C0 92.65 28.65 64 64 64H448C483.3 64 512 92.65 512 128V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V128zM48 128V150.1L220.5 291.7C241.1 308.7 270.9 308.7 291.5 291.7L464 150.1V127.1C464 119.2 456.8 111.1 448 111.1H64C55.16 111.1 48 119.2 48 127.1L48 128zM48 212.2V384C48 392.8 55.16 400 64 400H448C456.8 400 464 392.8 464 384V212.2L322 328.8C283.6 360.3 228.4 360.3 189.1 328.8L48 212.2z" />
+              </svg>
+            </div>
+            <a 
+              className="social-links-list__email-link" 
+              href="mailto:ajoyvmon@gmail.com"
+            >
+              ajoyvmon@gmail.com
+            </a>
+          </div>
           <ul className="social-links-list">
             <li className="social-links-list__list-items">
               <a 

@@ -17,7 +17,8 @@ class ProductSnapshot extends React.Component {
             <h1 className="product-index-title">See MOO-re</h1>
             <ul className="ul-product-index-row-list">
               {
-                arrayOfAllProducts?.slice(0, 10).map((product) => {
+                // arrayOfAllProducts?.slice(0, 10).map((product) => {
+                arrayOfAllProducts?.map((product) => {
                   return (
                     <div className="product-index-row-list-items-container" key={product.id.toString()}>
                       <li className="product-index-row-list-items">
