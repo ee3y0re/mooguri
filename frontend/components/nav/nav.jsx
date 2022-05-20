@@ -66,7 +66,7 @@ const Nav = () => {
         </div>
       </div>
       <div id="nav-categories-container-underline">
-        <div className="temp" id="nav-categories-container">
+        {/* <div className="temp" id="nav-categories-container">
           <ul id="nav-cat-list">
             <li className="nav-cat-list-items">Mother's Day Gifts</li>
             <li className="nav-cat-list-items">Jewelry &amp; Accessories</li>
@@ -78,7 +78,7 @@ const Nav = () => {
             <li className="nav-cat-list-items">Craft Supplies</li>
             <li className="nav-cat-list-items">Gifts &amp; Gift Cards</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
