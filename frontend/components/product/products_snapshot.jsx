@@ -53,11 +53,6 @@ class ProductSnapshot extends React.Component {
             </ul>
           </div>
         </div>
-        {/* <div className="product-index-row">
-        <ul className="product-index-row-list">
-          <div className="product-index-row-list-items-container"><li ></li></div>
-        </ul>
-      </div> */}
       </div>
     );
   };
