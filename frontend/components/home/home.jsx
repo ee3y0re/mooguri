@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ProductSnapshotContainer from "../product/products_snapshot_container";
 import About from "../footer/about";
-import ProductSnapshot2 from "../product/products_snapshot_2";
+import ProductsSnapshot2Container from "../product/products_snapshot_2_container";
 
 const Home = () => {
   /* 
@@ -145,7 +145,7 @@ const Home = () => {
             </ul>
           </div>
         </div>
-        <ProductSnapshot2 />
+        <ProductsSnapshot2Container />
       </main>
       {/* <About /> */}
       {/* this is the image that partially covers color to create effect */}
