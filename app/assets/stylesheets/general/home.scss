@@ -36,8 +36,10 @@
 }
 
 .bubbles-container {
+  display: flex;
+  justify-content: center;
   max-width: 1401px;
-  margin-bottom: 42px;;
+  margin-bottom: 42px;
 }
 
 .bubbles-list {
