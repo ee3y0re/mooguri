@@ -10,6 +10,18 @@ class ProductSnapshot extends React.Component {
 
   render() { 
     const arrayOfAllProducts = Object.values(this.props.products);  
+    let firstSet = [];
+    for (let i = 0; i < arrayOfAllProducts.length; i++) {
+      if (i % 6 == 0) {
+        firstSet.push(arrayOfAllProducts[i]);
+      }
+    }
+    let secondSet = [];
+    for (let j = 1; j < arrayOfAllProducts.length; j += 6) {
+      secondSet.push(arrayOfAllProducts[j]);
+    }
+    let firstAndSecond = firstSet.concat(secondSet);
+
     return (
       <div className="section-product-index">
         <div className="product-index-grid-container">
@@ -17,12 +29,22 @@ class ProductSnapshot extends React.Component {
             <h1 className="product-index-title">See MOO-re</h1>
             <ul className="ul-product-index-row-list">
               {
-                // arrayOfAllProducts?.slice(0, 10).map((product) => {
-                arrayOfAllProducts?.map((product) => {
+                firstAndSecond?.map((product) => {
                   return (
-                    <div className="product-index-row-list-items-container" key={product.id.toString()}>
+                    <div 
+                      className="product-index-row-list-items-container" 
+                      key={product.id.toString()}
+                    >
                       <li className="product-index-row-list-items">
-                        <Link to={`/products/${product.id}`}><img src={product.photoUrl} alt={`${product.name}`} className="product-index-thumbnail" /></Link>
+                        <Link 
+                          to={`/products/${product.id}`}
+                        >
+                          <img 
+                            src={product.photoUrl} 
+                            alt={`${product.name}`} 
+                            className="product-index-thumbnail" 
+                          />
+                        </Link>
                       </li>
                     </div>
                   )
@@ -31,11 +53,6 @@ class ProductSnapshot extends React.Component {
             </ul>
           </div>
         </div>
-        {/* <div className="product-index-row">
-        <ul className="product-index-row-list">
-          <div className="product-index-row-list-items-container"><li ></li></div>
-        </ul>
-      </div> */}
       </div>
     );
   };

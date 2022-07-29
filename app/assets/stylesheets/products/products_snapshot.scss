@@ -24,7 +24,7 @@
   justify-content: center; //adds a little space before thumbnails
   flex-flow: wrap; //breaks line on thumbnails after reaching max width
   max-width: 1400px; //specifies how big container of containers of images are allowed to get before breaking down to line to fit content
-  margin-bottom: 100px;
+  margin-bottom: 69px;
 }
 
 .product-index-row-list-items-container {
@@ -51,3 +51,65 @@
 .product-show {
   opacity: 30%; //temporary transparency for creating div map
 }
+
+/* ProductSnapshot2 */
+.product-index-row-2 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 548px;
+  padding-top: 28px;
+  margin-bottom: 100px;
+}
+
+.product-index-row-2-item-container, 
+.product-index-row-2-item-container-2{
+  // max-width: 1400px;
+  // height: 213px;
+  // overflow: hidden;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 23px;
+}
+
+.product-index-row-2-item-img-contain, 
+.product-index-row-2-item-img-contain-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 365px; //prevents thumbnail container from stretching to full width of list container
+  border-radius: 20px; //rounds off the corners
+  box-shadow: 3px 3px 3px 3px #C6D5D8; //when photo doesn't fill up frame, allows shadow around boxes
+  // margin: 10px 10px; //5 space top 10 right, allows some before first thumbnail and after last thumbnail and more between thumbnails
+  background-color: #242424;
+}
+
+.product-index-row-2-item-img-contain {
+  height: 219.20px;
+}
+
+.product-index-row-2-item-img-contain-big {
+  height: 328.8px;;
+}
+
+.product-index-row-2-item-img,
+.product-index-row-2-item-img-big {
+    width: 100%;
+}
+
+// .product-index-row-2-item-img-contain {
+//   height: 40%;
+// }
+// .product-index-row-2-item-img-contain-big {
+//   height: 60%;
+// }
+
+// .product-index-row-2-item-img {
+//   background-color: #E2F0CB;
+//   height: 40%;
+// }
+
+// .product-index-row-2-item-img-big {
+//   height: 60%
+// }
