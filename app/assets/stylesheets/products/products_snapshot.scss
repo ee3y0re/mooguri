@@ -24,7 +24,7 @@
   justify-content: center; //adds a little space before thumbnails
   flex-flow: wrap; //breaks line on thumbnails after reaching max width
   max-width: 1400px; //specifies how big container of containers of images are allowed to get before breaking down to line to fit content
-  margin-bottom: 100px;
+  margin-bottom: 69px;
 }
 
 .product-index-row-list-items-container {
@@ -59,6 +59,7 @@
   overflow: hidden;
   height: 548px;
   padding-top: 28px;
+  margin-bottom: 100px;
 }
 
 .product-index-row-2-item-container, 
