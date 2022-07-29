@@ -1,7 +1,7 @@
 class Cart < ApplicationRecord
   validates :buyer_id, :cart_item_id, :qty, presence: true
 
-  belongs_to :buyer, optional: true,
+  belongs_to :buyer,
     foreign_key: :buyer_id,
     class_name: :User
 

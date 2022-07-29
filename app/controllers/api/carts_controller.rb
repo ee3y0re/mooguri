@@ -46,7 +46,7 @@ class Api::CartsController < ApplicationController
 
   ## delete a cart after user removes last item
   def destroy
-    ## testing line
+    ## testing block
     # @cart = Cart.find_by(id: params[:id]) # expecting cart instance
     # @cart_owner = User.first #expecting user
     # if @cart && @cart_owner.id === 1 && @cart.destroy
