@@ -42,13 +42,37 @@ class LoginForm extends React.Component {
 
   demoLogin(e){
     e.preventDefault();
-    const bestUser = Object.assign({}, 
-      {
-        email: "vanillab@abbymail.com",
-        password: "besticecream"
+    // const bestUser = Object.assign({}, 
+    //   {
+    //     email: "vanillab@abbymail.com",
+    //     password: "besticecream"
+    //   }
+    // );
+
+    const bestUserEmail = "vanillab@abbymail.com";
+    const bestUserPassword = "besticecream";
+
+
+    let charLengthReach = 0;
+    this.animateDemoLoginInt = setInterval(() => {
+      // set state with demo login credentials
+      this.setState({
+        email: charLengthReach < bestUserEmail.length ? this.state.email += bestUserEmail[charLengthReach] : bestUserEmail,
+        password: charLengthReach < bestUserPassword.length ? this.state.password += bestUserPassword[charLengthReach] : bestUserPassword
+      })
+      charLengthReach += 1;
+
+      if (charLengthReach === Math.max(bestUserEmail.length, bestUserPassword.length)) {
+        // if the animation counter reaches max amount of characters
+        // conditional start (nest below)
+        // stop the interval animation
+        clearInterval(this.animateDemoLoginInt);
+        const bestUser = Object.assign({}, this.state);
+        console.log(bestUser)
+        // this.props.processForm(bestUser).then(this.props.closeModal);
+        // conditional stop
       }
-    );
-    this.props.processForm(bestUser).then(this.props.closeModal);
+    }, 80);
   }
 
 
@@ -89,9 +113,18 @@ class LoginForm extends React.Component {
 
           {this.renderErrors()}
 
-          
-          <input id="auth-submit-button" type="submit" value={this.props.formType} />
-          <button id="auth-submit-button" onClick={this.demoLogin}>Demo User Login</button>
+          <input 
+            id="auth-submit-button" 
+            type="submit" 
+            value={this.props.formType} 
+          />
+
+          <button 
+            id="auth-submit-button" 
+            onClick={this.demoLogin}
+          >
+            Demo User Login
+          </button>
         </form>
       </div>
 
