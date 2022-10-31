@@ -1,6 +1,6 @@
-# fly.toml file generated for mooguri-01 on 2022-10-20T17:59:06-07:00
+# fly.toml file generated for mooguri-00 on 2022-10-20T20:56:44-07:00
 
-app = "mooguri-01"
+app = "mooguri-00"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -11,6 +11,7 @@ processes = []
     SERVER_COMMAND = "bin/rails fly:server"
 
 [deploy]
+  seed_command = "bin/rails fly:seed"
   release_command = "bin/rails fly:release"
 
 [env]
