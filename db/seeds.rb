@@ -1034,3 +1034,20 @@ Category.create!([
   { name: "Puns" }, #4
   { name: "Yogurt" } #5
 ])
+
+collection_sorted = []
+Product.all.each_slice(6) do |prod_1, prod_2, prod_3, prod_4, prod_5, prod_6| 
+  collection_sorted.push([prod_1, prod_2, prod_3, prod_4, prod_5, prod_6])
+end
+
+Category.all.each_with_index do |category, idx|
+  category_collection = collection_sorted[idx]
+  category_collection.each do |individ_prod|
+    Collection.create! (
+      {
+        product_id: individ_prod.id,
+        category_id: category.id
+      }
+    )
+  end
+end
