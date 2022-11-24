@@ -12,10 +12,10 @@
 
 
 ## desired result
-categories: {
-  {
-    id:,
-    category_name:
-    
-  }
-}
+# categories: {
+#   {
+#     id: 1,
+#     category_name: "puns"
+#     products: [19, 20]
+#   }
+# }
