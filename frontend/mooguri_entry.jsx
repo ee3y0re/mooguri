@@ -4,24 +4,19 @@ import Root from "./components/root";
 import configureStore from "./store/store";
 
 
-// // // testing start
-// test thunk actions to make sure actions and api util both work correctly
-// // // testing end
-
-
 document.addEventListener("DOMContentLoaded", () => {
 
   let store;
-  //check to see if there is a window.currentUser
+  // // check to see if there is a window.currentUser
   if (window.currentUser) {
-    //If there is, create a preloadedState like below:
+    // // If there is, create a preloadedState like below:
     const preloadedState = {
       entities: { // entities: users: 1: { user }
         users: { [window.currentUser.id]: window.currentUser }
-      }, //session: id: 1
+      }, // // session: id: 1
       session: { id: window.currentUser.id}
     };
-    //Pass this preloadedState to configureStore.
+    // // Pass this preloadedState to configureStore.
     store = configureStore(preloadedState)
     // Remove currentUser from the window
     delete window.currentUser;
@@ -30,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
+  // // uncomment below to see state while testing
+  // window.getState = store.getState; 
+  // window.dispatch = store.dispatch;
 
   const root = document.getElementById("root");
   // const store = configureStore();
