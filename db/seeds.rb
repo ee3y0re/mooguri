@@ -12,6 +12,7 @@ require 'open-uri'
 User.destroy_all
 Product.destroy_all
 Review.destroy_all
+Category.destroy_all
 
 ## All Users
 User.create!(
@@ -43,7 +44,7 @@ User.create!(
 #   product_name:"",
 #   description:"",
 #   price:,
-#   category:"",
+  # category:"",
 #   seller_id: User.fourth.id,
 #   availability: 300
 # })
@@ -62,7 +63,7 @@ cheese1_product = Product.create!({
   product_name: "Cheese Flight from KeystoneFarmsCheese", 
   description: "Any four 8 oz. blocks of cheese from our Best Sellers (NOTE: if you do not specify which 8 oz. blocks of cheese you would like to be included, we will choose four (2) blocks. Additional charges may occur on variety of cheese(s) selected). Pack of crackers. Do you have a large order of 10 or more gift packs? Learn more about our large quantity gift package options at our Business Gifts pages. Due to the perishable nature of our products, we do not ship over the weekend. Most orders placed Thursday-Sunday will ship the following Monday, unless Saturday delivery is available in your area. We will notify you with a tracking number once your package ships. *All orders will include an insulated box. Sorry, we do not ship to Hawaii or Alaska.", 
   price: 54.50, 
-  category: "cheese", 
+  # category: "cheese", 
   seller_id: User.fourth.id, 
   availability: 300,
 })
@@ -74,7 +75,7 @@ cheese2_product = Product.create!({
   product_name:"Personalized cheese board set, Custom cheese board set, Engraved cutting board, Wedding gifts, Gifts for the couple, Christmas gifts from JMlabonneimpression",
   description:"This personalized bamboo cheese board set is an ideal gift for weddings, bridal showers, engagement, and housewarming parties. Dimension: 13 1/2 x 13 1/2in. The set consists of: wooden board, cheese fork;, 3 cheese knives, 2 natural slate labels, 2 markers. Please enter the text that you would like to have appear on your product in the “Notes to Seller” box.",
   price: 103.98,
-  category:"cheese",
+  # category:"cheese",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -163,7 +164,7 @@ If you need item the sooner, please upgrade the shipping in the chart.
 
 Thank you...",
   price: 10.32,
-  category:"cheese",
+  # category:"cheese",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -188,7 +189,7 @@ It is made from polymer clay. The charms measure 1.6 cm, and the total lenght of
 
 Thank you for the visit!",
   price: 11.89,
-  category:"cheese",
+  # category:"cheese",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -248,7 +249,7 @@ CPSIA Compliant
 CARE INSTRUCTIONS:
 Machine wash cold. Tumble dry low inside-out. Do not use bleach. Some fading may occur. If you iron the shirt or bodysuit, take care to not iron the design directly; use a teflon sheet or parchment paper to shield the design from high heat.",
   price: 14.99,
-  category:"cheese",
+  # category:"cheese",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -272,7 +273,7 @@ Depending on the cut your package of cheese will be between 3.6-3.9 ounces (hand
 
 Packaged in a resealable bag",
   price: 6.50,
-  category:"cheese",
+  # category:"cheese",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -287,7 +288,7 @@ lactosefree1_product = Product.create!({
   product_name:'I WILL NOT TOLERATE: Hate, Bigotry, Racism, Homophobia, or Lactose. - Matte Vinyl 10" Bumper Sticker - Car Decal, from Curlworks',
   description: "Stand up for what's right!! Beautifully and vibrantly printed on durable weatherproof vinyl with a matte finish. 10 inches by 3 inches. Printed lovingly by https://www.wildeprints.com/. A 10-inch weatherproof matte vinyl sticker, perfect for your water bottle, laptop, and car!",
   price: 7,
-  category:"lactose-free",
+  # category:"lactose-free",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -299,7 +300,7 @@ lactosefree2_product = Product.create!({
   product_name:"Lactose intolerant, coffee mug, lactose free from mayoie",
   description:"- High quality mug makes the perfect gift for everyone. Printed on only the highest quality mugs. The print will never fade no matter how many times it is washed. Packaged, and shipped from the USA. Dishwasher and Microwave safe. Shipped in a custom made styrofoam package to ensure it arrives perfect. GUARANTEED.",
   price: 14.95,
-  category: "lactose-free",
+  # category: "lactose-free",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -326,7 +327,7 @@ Allergen Warning: Contains soy, cashews, tree nuts & traces of peanuts
 
 Nutrition Facts: Serving size: 2 pieces (39.68g) Amount per serving: Cal 213 (10.6% DV), Sug 24.5g, Fat 8.4g (12.9% DV), Sat Fat 5.0g (25.2% DV), Carbs 33.5g (12.6% DV), Protein 1.4g (2.9% DV), Fiber .6g (2.3%DV) Percent Daily Value (DV) are based on a 2,000 calorie diet",
   price: 14.99,
-  category:"lactose-free",
+  # category:"lactose-free",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -354,7 +355,7 @@ If you love super soft and extremely comfy shirts then you will absolutely love 
 
 Good luck with your tummy!",
   price:19.99,
-  category:"lactose-free",
+  # category:"lactose-free",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -366,7 +367,7 @@ lactosefree5_product = Product.create!({
   product_name:"Lactose Intolerant Decal from BearBonesVinylCo",
   description:"Let everyone know you can't eat ice cream. This decal can go just about anywhere you can think of and has a use life up to 3-6 years for indoor and outdoor use. This decal comes in either matte or gloss, black or white vinyl and is around 4x6 inches in size, perfect for your car, MacBook, or waterbottle bottle.",
   price: 3.99,
-  category:"lactose-free",
+  # category:"lactose-free",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -406,7 +407,7 @@ If you are not satisfied in any way, feel free to contact me to have a full retu
 Disclaimer
 Please note that colours shown on screen may vary slightly to the printed product as all monitors vary.",
   price: 4.87,
-  category:"lactose-free",
+  # category:"lactose-free",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -421,7 +422,7 @@ milk1_product = Product.create!({
   product_name: "Milk Jug Charm Miniature Food Jewelry Resin Charms Handmade Jewelry from AllSoCharming", 
   description: "Milk Jug Charm Miniature Food Jewelry Resin Charms Handmade Jewelry. A super realistic milk jug charm complete with it's own tiny nutrition label! Each charm comes attached to a silver lobster clasp and measures roughly 3/4 inches tall. If you are gifting this charm and would like to leave a short personal message with your order you can do so by adding the message to the 'notes to seller' section during checkout. All of my jewelry comes gift wrapped inside a padded jewelry box and is shipped via USPS First Class Mail inside a bubbled mailer.", 
   price: 12, 
-  category: "milk", 
+  # category: "milk", 
   seller_id: User.fourth.id, 
   availability: 300,
 })
@@ -433,7 +434,7 @@ milk2_product = Product.create!({
   product_name:"Glass Milk Carton Creamer, Glass Milk Bottle, Glass Milk Jug, Glass Milk Jar, Glass Cup, Kitchen Accessories from HVSHome",
   description:"Bring a touch of fun to your day with this cute glass milk carton. Made of non-toxic molded borosilicate glass. This novelty milk carton glass is perfect for smoothies, milkshakes, or even cocktails. This modern and quirky glass holds up to 10oz of liquid and is a brilliant addition to the breakfast table, to drink your morning coffee or a glass of juice. Hand wash. Imported. Glass Milk Carton Creamer. 4-inch W x 3-inch D x 4.25-inch H ● MADE OF MOLDED BOROSILICATE GLASS ● SUITABLE FOR HOT AND COLD DRINKS ● HOLDS 10OZ / 300 ML OF LIQUID ● HAND WASHING RECOMMENDED ● NON-TOXIC MATERIALS",
   price:13.99,
-  category:"milk",
+  # category:"milk",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -526,7 +527,7 @@ Tea Tree Essential Oil - True herbal, earthy and medicinal aroma of tea tree.
 
 Unscented",
   price: 35.00,
-  category:"milk",
+  # category:"milk",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -548,7 +549,7 @@ Helps identify your cable in shared charging spaces and makes a cute personal st
 
 Perfect for strawberry milk love",
   price: 4.99,
-  category:"milk",
+  # category:"milk",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -584,7 +585,7 @@ Note: Please be aware that the colors and paper you see on your screen may diffe
 
 Thank you for your support!",
   price: 3.75,
-  category:"milk",
+  # category:"milk",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -628,7 +629,7 @@ Doing so will help release the milk tea fragrance.
 
 To purchase $1 sticker add-ons, please visit https://www.etsy.com/AsianBobaGirl/listing/1076618569/asian-food-stickers-add-on-only.",
   price:16.50,
-  category:"milk",
+  # category:"milk",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -643,7 +644,7 @@ pun1_product = Product.create!({
   product_name:"Legen-Dairy Pun | Sticker or Magnet | Cute Pun, Cow Pun, Funny | Water Bottles, Laptops from artportraitsbyrachel",
   description:"'Legen-Dairy' Pun Design. Approximate size: 2.3x2.5. Sticker: This hand-drawn die-cut sticker is made of durable vinyl. The vinyl protects it from water, scratches, and sunlight. This makes it a perfect addition to any water bottle, journal, laptop, or more!. Note: These stickers are waterproof, but I do not recommend dishwasher use. For best results, gently hand wash with cool/warm water and mild soap. Magnet: This design is printed on thin flexible magnet and covered with a durable vinyl. The vinyl protects it from water, scratches, and other damage. This makes it the perfect addition to any refrigerator, whiteboard, locker, or more! The average magnet size is 2.5x2.5, with a thickness of 18 mil (457 microns). This means they are a thin magnet, but they are still strong! Each magnet can hold about 4 pieces of paper at once, but should not be used for heavy material or outdoor use (i.e. vehicles). Orders under $20 will be mailed in a sturdy envelope. This includes 'estimated tracking' by Pitney Bowes. Please track your order through Etsy updates or https://tracking.pb.com/. Orders above $20 will be sent in a bubble poly mailer, which includes USPS tracking. © 2021 Art by Rachel",
   price: 3.20,
-  category:"puns",
+  # category:"puns",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -655,7 +656,7 @@ pun2_product = Product.create!({
   product_name:"Friendship Wish Bracelet, Cheese Lover Card, Cheesy Gift, Cheddar Cheese Jewellery, Funny Wishlet from TheDreamingBuddha",
   description:"Friendship Wish Bracelet, Cheese Lover Card, Cheesy Gift, Cheddar Cheese Jewellery, Funny Wishlet. This handmade card reads - This may be cheesy, but I think you’re grate. Although perfect as a little gift on its own, this little wish bracelet can also be popped into a card or sent along with a present. The idea behind a wish bracelet is that you make a wish as you place it on your wrist. In time, the cord wears out and your wish comes true! This bracelet is meant to be tied on and has no closure. Each bracelet includes a charm and is made from quality coloured 1mm waxed cord in a variety of colours. The bracelet is mounted on recycled card, teamed with an envelope and carefully wrapped in a clear cellophane sleeve. The whole package measures 11.5 cm by 9.5 cm.",
   price: 3.93,
-  category:"puns",
+  # category:"puns",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -693,7 +694,7 @@ Image copyright is not transferred with the sale
 @catherinedoart
 @jellyarmchair",
   price: 5.15,
-  category:"pun",
+  # category:"pun",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -733,7 +734,7 @@ pun4_product = Product.create!({
 * Fits a 12oz can or bottle
 * Removable plastic lid with rubber overlayPlease see below for descriptions on each product:",
   price: 16.95,
-  category:"pun",
+  # category:"pun",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -765,7 +766,7 @@ Looking for a deal? Use one of the bulk purchasing options featured at the top o
 - 20 Cards for $50
 - 50 Cards for $100",
   price: 3.75,
-  category:"pun",
+  # category:"pun",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -806,7 +807,7 @@ Butter Half Card, Valentines Day Cards, Valentines Day Card, Pun Cards, Butter H
 
 Breakfast Club Comics©",
   price: 5.85,
-  category:"pun",
+  # category:"pun",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -828,7 +829,7 @@ yogurt1_product = Product.create!({
   available on our website. PositivelyProbiotic.com. Disclaimer: Please consult 
   your doctor before adding anything new to your diet!",
   price: 36.95,
-  category:"yogurt",
+  # category:"yogurt",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -843,7 +844,7 @@ yogurt2_product = Product.create!({
   Make yogurt in a crock pot, slow cooker, instant pot or stock pot using your favorite yogurt recipe. After it sets overnight, insert The Yogurt Tube in the center of your pot and store in the fridge. After a few hours, remove your yogurt pot from the fridge, and while leaving the filter in place, use the accompanying ladle to remove the strained whey from the center of the strainer. Leave the filter in place, and put your yogurt back in the fridge to continue straining. Repeat as necessary. Remove the filter once your yogurt is strained as desired, wash (dishwasher safe) and store for future use.
   IMPORTANT NOTES BEFORE YOU ORDER AND DURING USE: 1. Measure the total interior height of your chosen yogurt making pot WITH the lid on. Most stock pots and crock pots will accommodate this strainer, but measure first to be safe! The lid is required to hold the strainer in place when it is first inserted. 2. When you insert the strainer, it will initially displace a small volume of yogurt. This is temporary, once the first strain is achieved, the yogurt levels back down. 3. Once straining begins, the yogurt that is closest to the strainer will be the thickest, so it's always nice to scoop from closest to the filter for each serving. Once you've removed your serving, keep the filter in place so it can continue to strain, and put it back in the fridge. Note: The Yogurt Tube Original will strain approximately 14oz of yogurt at a time, the XL will strain 28oz at a time when inserted into a full pot of yogurt (the yogurt reaches near the top of the strainer). 4. Enjoy your yogurt, and your free time!",
   price: 24.95,
-  category:"yogurt",
+  # category:"yogurt",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -881,7 +882,7 @@ Please feel free to message us with any questions or concerns you may have, we l
 
 Follow us on social media platforms @genkiskincare for behind the scenes, product updates and seasonal promotions!",
   price: 9.00,
-  category:"yogurt",
+  # category:"yogurt",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -943,7 +944,7 @@ Note:
 
 - We do not allow cancellations or modifications of your order once placed. Please check carefully prior to ordering",
   price: 9.90,
-  category:"yogurt",
+  # category:"yogurt",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -987,7 +988,7 @@ Made in Turkey.
 Please let me know if you have any questions.
 I will answer you as soon as possible.",
   price: 86.25,
-  category:"yogurt",
+  # category:"yogurt",
   seller_id: User.fourth.id,
   availability: 300
 })
@@ -1011,14 +1012,12 @@ Cheral and Lauren Canna
 Cheral and Lauren are a mother-daughter team of glass artists located outside Philadelphia, PA. Cheral's pieces tend to be very creative with a gorgeous use of color - she finds interesting details in pieces of glass and likes to build a design that highlights those unique details. Lauren's eye tends to be more traditional, with colors that complement one another and are more subdued. Lauren also enjoys creating works that celebrate fandom - Marvel, Star Wars, Dr Who, Harry Potter, nerd stuff. :)
 Cheral is a retired geneticist who worked on the Human Genome Project. Lauren is a conductor and owns a music school.",
   price: 250,
-  category:"yogurt",
+  # category:"yogurt",
   seller_id: User.fourth.id,
   availability: 300
 })
 yogurt6_pic = URI.open("https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt6_il_794xN.3837567024_8igo.jpg")
 yogurt6_product.photo.attach(io: yogurt6_pic, filename:"/yogurt6_il_794xN.3837567024_8igo.jpg")
-
-
 
 Review.create!([
   { body: "I've got some BEEF with whoever made this site!", reviewer_id: User.third.id, username: User.third.username, product_id: Product.first.id },
@@ -1026,4 +1025,50 @@ Review.create!([
   { body: "Okay, NOW you're making my blood boil! >:C", reviewer_id: User.third.id, username: User.third.username, product_id: Product.first.id },
   { body: "Well, you're making my milk curdle *sigh*", reviewer_id: User.second.id, username: User.second.username, product_id: Product.first.id },
   { body: "You're not supposed to see this with good ole milk jug C;", reviewer_id: User.third.id, username: User.third.username, product_id: Product.second.id }
+])
+
+Category.create!([
+  { name: "Cheese" }, #1
+  { name: "Milk" }, #2
+  { name: "Lactose-free" }, #3
+  { name: "Puns" }, #4
+  { name: "Yogurt" } #5
+])
+
+Collection.create! ([
+  # cheese
+  { product_id: 1, category_id: 1 },
+  { product_id: 2, category_id: 1 },
+  { product_id: 3, category_id: 1 },
+  { product_id: 4, category_id: 1 },
+  { product_id: 5, category_id: 1 },
+  { product_id: 6, category_id: 1 },
+  # Milk
+  { product_id: 7, category_id: 2 },
+  { product_id: 8, category_id: 2 },
+  { product_id: 9, category_id: 2 },
+  { product_id: 10, category_id: 2 },
+  { product_id: 11, category_id: 2 },
+  { product_id: 12, category_id: 2 },
+  # Lactose-free
+  { product_id: 13, category_id: 3 },
+  { product_id: 14, category_id: 3 },
+  { product_id: 15, category_id: 3 },
+  { product_id: 16, category_id: 3 },
+  { product_id: 17, category_id: 3 },
+  { product_id: 18, category_id: 3 },
+  # Puns
+  { product_id: 19, category_id: 4 },
+  { product_id: 20, category_id: 4 },
+  { product_id: 21, category_id: 4 },
+  { product_id: 22, category_id: 4 },
+  { product_id: 23, category_id: 4 },
+  { product_id: 24, category_id: 4 },
+  # Yogurt
+  { product_id: 25, category_id: 5 },
+  { product_id: 26, category_id: 5 },
+  { product_id: 27, category_id: 5 },
+  { product_id: 28, category_id: 5 },
+  { product_id: 29, category_id: 5 },
+  { product_id: 30, category_id: 5 },
 ])

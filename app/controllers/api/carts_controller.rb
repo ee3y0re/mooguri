@@ -7,7 +7,7 @@ class Api::CartsController < ApplicationController
     # @carts = Cart.where(buyer_id: User.first.id);
 
     ## final line with current user
-    @carts = Cart.where(buyer_id: current_user.id);
+    @carts = Cart.where(buyer_id: current_user.id)
     render "/api/carts/index"
   end
 
