@@ -6,6 +6,5 @@ json.extract! product,
   :product_name, 
   :description, 
   :price, 
-  :category, 
   :seller_id, 
   :availability

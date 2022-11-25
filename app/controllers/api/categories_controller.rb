@@ -5,14 +5,13 @@ class Api::CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find_by(id: params[:id])
-    @prod_in_cat = Product.where(category: @category[:category_name])
-    render "/api/categories/show" if @category && @prod_in_cat 
+    @category_prods = Category.find_by(id: params[:id]).listings
+    render "/api/categories/show"
   end
 
   private
 
   def category_params
-    params.require(:category).permit(:category_name, :product_id)
+    params.require(:category).permit(:name, :product_id)
   end
 end
