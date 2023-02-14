@@ -26,17 +26,17 @@ const Home = () => {
           <div className="bubbles-container">
             <ul className="bubbles-list">
               <li className="bubbles-list-items">
-                <Link to="/products/18">
+                <Link to="/categories/1">
                   <div className="bubble-img-container">
-                    <img 
+                    {/* <img 
                       src="https://mooguri-dev.s3.us-west-1.amazonaws.com/milk6_il_1588xN.3494226927_nq3r.jpg" 
                       alt="milk-bubble" 
-                    />
+                    /> */}
                   </div>
                 </Link>
                 <p className="bubble-title">Milk</p>
               </li>
-              <li className="bubbles-list-items">
+              {/* <li className="bubbles-list-items">
                 <Link to="/products/21">
                   <div className="bubble-img-container">
                     <img 
@@ -79,7 +79,7 @@ const Home = () => {
                   </div>
                 </Link>
                 <p className="bubble-title">Puns</p>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
