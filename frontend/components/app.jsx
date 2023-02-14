@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./home/home";
 import ProductSingularContainer from "./product/product_singular_container";
-import Category from "./category/Category"
+import Category from "../modules/category/CategoryContainer"
 import SearchResult from "./search/search_result";
 import CartCheckout from "./cart/cart_checkout";
 import Directory from "./footer/directory";
