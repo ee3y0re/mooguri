@@ -37,6 +37,7 @@ export const listAllCategories = () => (dispatch) => {
 }
 
 export const listCategoryProducts = (categoryId) => (dispatch) => {
+  debugger
   return CategoryApiUtil.fetchProductsForCategories(categoryId)
     .then((products) => { return dispatch(receiveCategoryProducts(products))})
 } 
