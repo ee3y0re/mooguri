@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { listCategoryProducts } from "../../actions/category_actions";
+import CategoryProduct from "./CategoryProduct";
 
 const Category = (props) => {
   useEffect(() => {
@@ -19,22 +20,18 @@ const Category = (props) => {
     <div>
       <h1>{category.name}</h1>
       <h2>Find something you love</h2>
-      <ul>
-        <li>
-          <img
-            src={placeholder}
-            alt="placeholder image"
-            style={{
-              width: "100%",
-              maxWidth: "300px",
-              maxHeight: "300px",
-              objectFit: "cover",
-            }}
-          />
-          <h3>product title</h3>
-          <p>product price</p>
-          <p>product seller</p>
-        </li>
+      <ul style={{ display: "flex", flexWrap: "wrap" }}>
+        {products &&
+          products.map((product) => {
+            return (
+              <CategoryProduct
+                id={product.id}
+                name={product.product_name}
+                price={product.price}
+                seller={product.seller_id}
+              />
+            );
+          })}
       </ul>
     </div>
   );
