@@ -19,10 +19,10 @@ const receiveCategories = (categories) => {
   }
 }
 
-const receiveCategoryProducts = (products) => {
+const receiveCategoryProducts = (categoryProducts) => {
   return {
     type: "RECEIVE_CATEGORY_PRODUCTS",
-    products,
+    categoryProducts,
   };
 }
 
