@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { listCategoryProducts } from "../../actions/category_actions";
+import { fetchProducts } from "../../actions/product_actions";
 import CategoryProduct from "./CategoryProduct";
 
 const Category = (props) => {
   useEffect(() => {
     dispatch(listCategoryProducts(props.match.params.categoryId));
+    dispatch(fetchProducts());
   }, []);
 
-  const categoryResponse = useSelector((state) => state.entities.categories);
+  const category = useSelector((state) => state.entities.categories);
+  const allProducts = useSelector((state) =>
+    Object.values(state.entities.products)
+  );
   const dispatch = useDispatch();
-  const category = {
-    id: categoryResponse && categoryResponse.id,
-    name: categoryResponse && categoryResponse.name,
-  };
-  const products = categoryResponse && categoryResponse.products;
+  const products = allProducts.filter((product) =>
+    category.productIds.includes(product.id)
+  );
 
   return (
     <div>
@@ -25,10 +28,11 @@ const Category = (props) => {
           products.map((product) => {
             return (
               <CategoryProduct
+                key={product.id}
                 id={product.id}
-                name={product.product_name}
+                name={product.productName}
                 price={product.price}
-                seller={product.seller_id}
+                seller={product.sellerId}
               />
             );
           })}
