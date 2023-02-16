@@ -24,6 +24,10 @@
   // colors
   --main-orange: #f45800;
   --udder: #f4adad;
+  --free: #d4e9d7;
+  --best: #fdebd2;
+  --star: #9560b8;
+  --warning: #a61a2e;
   --jeans: #2f466c;
   
   h1 {
@@ -48,11 +52,8 @@
   p {
     margin-top: 6px;
     font-family: var(--standard);
-    font-size: 16px;
+    font-size: 22px;
   
-    @media (min-width: 900px) {
-      font-size: 22px;
-    }
   }
   
   .container {
