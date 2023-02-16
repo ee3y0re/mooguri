@@ -1,23 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./CategoryProduct.scss";
 
 const CategoryProduct = ({ id, name, price, seller }) => {
   return (
-    <li>
-      <Link to={`/products/${id}`}>
-        <img
-          src={placeholder}
-          alt="placeholder image"
-          style={{
-            width: "100%",
-            maxWidth: "142px",
-            maxHeight: "112px",
-            objectFit: "cover",
-          }}
-        />
-        <h3>{name}</h3>
-        <p>{price}</p>
-        <p>{seller}</p>
+    <li className="cat product">
+      <Link to={`/products/${id}`} className="link">
+        <img className="img" src={placeholder} alt="placeholder image" />
+        <h3 className="name">{name}</h3>
+        <p className="price">{price}</p>
+        <p className="seller">{seller}</p>
       </Link>
     </li>
   );

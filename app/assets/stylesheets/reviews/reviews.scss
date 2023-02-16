@@ -1,135 +1,135 @@
-// Place all the styles related to the Api/Reviews controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the Api/Reviews controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.review-container {
-  width: 100%;
-}
-
-.review-list-box {
-  display: flex;
-  flex-direction: column;
-  max-width: 847px;
-}
-
-.review-box {
-  width: 100%
-}
-
-.review-head {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 35px;
-  line-height: 42px;
-}
-
-#review-form-action {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid lightgray;
-}
-
-#review-not-logged-in {
-  font-size: 22px;
-  height: 55px;
-  margin-top: 20px;
-}
-
-// #create-review {
-//   padding-top: 7px;
-//   margin: 0;
-//   width: 126px;
-//   font-size: 16px;
+// .review-container {
+//   width: 100%;
 // }
 
-.review-row{
-  margin-top: 34px;
-  padding: 19px;
-}
+// .review-list-box {
+//   display: flex;
+//   flex-direction: column;
+//   max-width: 847px;
+// }
 
-.review-row-box-gray {
-  background-color: #ececec;
-  border-radius: 20px;
-}
+// .review-box {
+//   width: 100%
+// }
 
-.review-row-box-transparent {
-  background-color: #f9f9f9;
-  border-radius: 20px;
-}
+// .review-head {
+//   font-family: 'Nanum Myeongjo', serif;
+//   font-size: 35px;
+//   line-height: 42px;
+// }
 
-.review-author {
-  font-size: 18px;
-  color: #444444;
-}
+// #review-form-action {
+//   display: flex;
+//   align-items: center;
+//   border-bottom: 1px solid lightgray;
+// }
 
-.review-body {
-  font-size: 24px;
-  line-height: 1.4;
-  margin-bottom: 39px;
-}
+// #review-not-logged-in {
+//   font-size: 22px;
+//   height: 55px;
+//   margin-top: 20px;
+// }
 
-.review-edit-delete-buttons {
-  display: flex;
-  justify-content: space-between;
-}
+// // #create-review {
+// //   padding-top: 7px;
+// //   margin: 0;
+// //   width: 126px;
+// //   font-size: 16px;
+// // }
 
-.review-suggestions {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+// .review-row{
+//   margin-top: 34px;
+//   padding: 19px;
+// }
 
-.review-action {
-  width: 100%;
-}
+// .review-row-box-gray {
+//   background-color: #ececec;
+//   border-radius: 20px;
+// }
 
-.review-textarea {
-  height: 200px;
-  width: 100%;
-  resize: none;
-}
+// .review-row-box-transparent {
+//   background-color: #f9f9f9;
+//   border-radius: 20px;
+// }
 
-.review-textarea-edit {
-  width: 100%;
-  resize: none;
-}
+// .review-author {
+//   font-size: 18px;
+//   color: #444444;
+// }
 
-#create-review {
-  border-radius: 24px;
-  margin-top: 0px;
-  width: 137px;
-  text-align: center;
-}
+// .review-body {
+//   font-size: 24px;
+//   line-height: 1.4;
+//   margin-bottom: 39px;
+// }
 
-#save-review:disabled {
-  cursor: not-allowed;
-  pointer-events: none;;
-  color: lightgray;
-}
+// .review-edit-delete-buttons {
+//   display: flex;
+//   justify-content: space-between;
+// }
 
-.review-submit-buttons button, .review-submit-buttons input {
-  // background-color: pink;
-  font-family: 'Cambay', sans-serif;
-  font-size: 21px;
-  color: #444444;
-  border-radius: 30px;
-  cursor: pointer;
-  border: 0;
-  padding: .5%;
-  width: 86px;
-  // height: 43px;
-  text-align: left;
-  align-items: center;
-  padding-bottom: 1px;
-}
+// .review-suggestions {
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+// }
 
-.review-edit-delete-flexbox {
-  display: flex;
-  justify-content: space-between;
-}
-.review-delete-container {
-  display: block;
-  margin: auto;
-  padding-bottom: 7px;
-  height: 25px;
-  width: 25px;
-  background-color: transparent;
-}
+// .review-action {
+//   width: 100%;
+// }
+
+// .review-textarea {
+//   height: 200px;
+//   width: 100%;
+//   resize: none;
+// }
+
+// .review-textarea-edit {
+//   width: 100%;
+//   resize: none;
+// }
+
+// #create-review {
+//   border-radius: 24px;
+//   margin-top: 0px;
+//   width: 137px;
+//   text-align: center;
+// }
+
+// #save-review:disabled {
+//   cursor: not-allowed;
+//   pointer-events: none;;
+//   color: lightgray;
+// }
+
+// .review-submit-buttons button, .review-submit-buttons input {
+//   // background-color: pink;
+//   font-family: 'Cambay', sans-serif;
+//   font-size: 21px;
+//   color: #444444;
+//   border-radius: 30px;
+//   cursor: pointer;
+//   border: 0;
+//   padding: .5%;
+//   width: 86px;
+//   // height: 43px;
+//   text-align: left;
+//   align-items: center;
+//   padding-bottom: 1px;
+// }
+
+// .review-edit-delete-flexbox {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .review-delete-container {
+//   display: block;
+//   margin: auto;
+//   padding-bottom: 7px;
+//   height: 25px;
+//   width: 25px;
+//   background-color: transparent;
+// }

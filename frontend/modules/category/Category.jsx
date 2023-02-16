@@ -15,8 +15,10 @@ const Category = (props) => {
     Object.values(state.entities.products)
   );
   const dispatch = useDispatch();
-  const products = allProducts.filter((product) =>
-    category.productIds.includes(product.id)
+
+  if (!category || !allProducts) return null
+  const products = allProducts && allProducts?.filter((product) =>
+    category && category.productIds?.includes(product.id)
   );
 
   return (
