@@ -10,8 +10,8 @@ const CategoryProduct = ({ id, name, price, seller }) => {
           alt="placeholder image"
           style={{
             width: "100%",
-            maxWidth: "300px",
-            maxHeight: "300px",
+            maxWidth: "142px",
+            maxHeight: "112px",
             objectFit: "cover",
           }}
         />
