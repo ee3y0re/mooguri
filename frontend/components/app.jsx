@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./home/home";
 import ProductSingularContainer from "./product/product_singular_container";
-import Category from "../modules/category/Category"
+import Category from "./category/Category"
 import SearchResult from "./search/search_result";
 import CartCheckout from "./cart/cart_checkout";
 import Directory from "./footer/directory";
@@ -17,7 +17,7 @@ import CompleteCheckout from "./cart/complete_checkout";
 const App = () => {
   return (
     <div id="from-app">
-      <Nav />
+      {/* <Nav /> */}
       <Switch>
         <Route path="/search" component={SearchResult} />
         <Route
@@ -32,7 +32,7 @@ const App = () => {
         <Route path="/checkout-complete" component={CompleteCheckout} />
         <Route path="/" component={Home} />
       </Switch>
-      <Directory />
+      {/* <Directory /> */}
     </div>
   );
 };

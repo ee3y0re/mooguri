@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { listCategoryProducts } from "../../actions/category_actions";
 import { fetchProducts } from "../../actions/product_actions";
-import CategoryProduct from "./CategoryProduct";
+import CategoryProduct from "./product/CategoryProduct";
 
 const Category = (props) => {
   useEffect(() => {
@@ -22,7 +22,7 @@ const Category = (props) => {
   );
 
   return (
-    <div>
+    <div id="category-landing" className="container">
       <h1>{category.name}</h1>
       <h2>Find something you love</h2>
       <ul style={{ display: "flex", flexWrap: "wrap" }}>
