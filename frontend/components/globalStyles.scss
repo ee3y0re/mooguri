@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cambay&display=swap");
+
+:root {
+  // fonts
+  --fancy: "Nanum Myeongjo", serif;
+  --standard: "Cambay", sans-serif;
+  // colors
+  --main-orange: #f45800;
+  --udder: #f4adad;
+  --free: #d4e9d7;
+  --best: #fdebd2;
+  --star: #9560b8;
+  --warning: #a61a2e;
+  --jeans: #2f466c;
+
+  h1 {
+    font-family: var(--fancy);
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-family: var(--standard);
+    font-size: 1.5rem;
+  }
+
+  h3,
+  p {
+    padding-top: 6px;
+    font-family: var(--standard);
+    font-size: 1rem;
+  }
+
+  .container {
+    margin-top: 12px;
+    max-width: 1400px;
+    padding: 0 18px;
+  }
+}
+
+@media only screen and (min-width: 56.25rem) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}

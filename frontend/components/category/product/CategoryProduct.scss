@@ -1,11 +1,29 @@
-.cat.product {
-  p {
-    font-size: 16px;
-  }
+.cat {
+  --small-w: 425px;
+  --small-h: 260px;
+
+  &.product {
+    padding: 14px;
+    width: 100%;
+    max-width: var(--small-w);
+
+    .link {
+      &:link, &:visited, &:hover, :active {
+        color: black;
+        text-decoration: none;
+      }      
+    }
+
+    .name {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
     .img {
       width: 100%;
-      max-width: 142px;
-      max-height: 112px;
-      object-fit: cover;    
-    }    
+      max-height: var(--small-h);
+      object-fit: cover;
+    }
+  }
 }

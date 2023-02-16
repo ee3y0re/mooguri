@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { listCategoryProducts } from "../../actions/category_actions";
 import { fetchProducts } from "../../actions/product_actions";
 import CategoryProduct from "./product/CategoryProduct";
+import "./Category.scss"
 
 const Category = (props) => {
   useEffect(() => {
@@ -22,10 +23,10 @@ const Category = (props) => {
   );
 
   return (
-    <div id="category-landing" className="container">
-      <h1>{category.name}</h1>
-      <h2>Find something you love</h2>
-      <ul style={{ display: "flex", flexWrap: "wrap" }}>
+    <div id="category" className="container">
+      <h1 className="heading">{category.name}</h1>
+      <h2 className="subheading">Find something you love</h2>
+      <ul className="list">
         {products &&
           products.map((product) => {
             return (

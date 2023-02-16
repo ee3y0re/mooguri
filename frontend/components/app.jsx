@@ -8,7 +8,7 @@ import CartCheckout from "./cart/cart_checkout";
 import Directory from "./footer/directory";
 import Nav from "./nav/nav";
 import CompleteCheckout from "./cart/complete_checkout";
-import "../../app/assets/stylesheets/application.scss";
+import "./globalStyles.scss"
 
 //state change and props change cause rerender
 //always import containers not presentational EXCEPT child presentational
@@ -18,7 +18,7 @@ import "../../app/assets/stylesheets/application.scss";
 const App = () => {
   return (
     <div id="from-app">
-      {/* <Nav /> */}
+      <Nav />
       <Switch>
         <Route path="/search" component={SearchResult} />
         <Route
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/checkout-complete" component={CompleteCheckout} />
         <Route path="/" component={Home} />
       </Switch>
-      {/* <Directory /> */}
+      <Directory />
     </div>
   );
 };
