@@ -24,8 +24,8 @@ const Category = (props) => {
 
   return (
     <div id="category" className="container">
-      <h1 className="heading">{category.name}</h1>
-      <h2 className="subheading">Find something you love</h2>
+      <h2 className="heading">{category.name}</h2>
+      <h3 className="subheading">Find something you love</h3>
       <ul className="list">
         {products &&
           products.map((product) => {

@@ -7,7 +7,7 @@ const CategoryProduct = ({ id, name, price, seller }) => {
     <li className="cat product">
       <Link to={`/products/${id}`} className="link">
         <img className="img" src={placeholder} alt="placeholder image" />
-        <p className="name">{name}</p>
+        <h4 className="name">{name}</h4>
         <p className="price">{price}</p>
         <p className="seller">{seller}</p>
       </Link>
