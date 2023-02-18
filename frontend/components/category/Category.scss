@@ -1,7 +1,13 @@
 #category {
+  .container {
+    margin-top: 0.75rem;
+    width: 100%;
+    max-width: 87.5rem;
+    padding: 0 1.125rem;
+  }
   .list {
+    width: 100%;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
   }
 }

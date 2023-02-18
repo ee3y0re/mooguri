@@ -18,7 +18,7 @@ import "./globalStyles.scss"
 const App = () => {
   return (
     <div id="from-app">
-      <Nav />
+      {/* <Nav /> */}
       <Switch>
         <Route path="/search" component={SearchResult} />
         <Route
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/checkout-complete" component={CompleteCheckout} />
         <Route path="/" component={Home} />
       </Switch>
-      <Directory />
+      {/* <Directory /> */}
     </div>
   );
 };
