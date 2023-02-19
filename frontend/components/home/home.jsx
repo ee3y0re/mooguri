@@ -25,19 +25,20 @@ const Home = () => {
           {/* add categories table first */}
           <div className="bubbles-container">
             <ul className="bubbles-list">
+              {/* TODO:  */}
               <li className="bubbles-list-items">
-                <Link to="/categories/1">
+                <Link to="/categories/2">
                   <div className="bubble-img-container">
-                    {/* <img 
+                    <img 
                       src="https://mooguri-dev.s3.us-west-1.amazonaws.com/milk6_il_1588xN.3494226927_nq3r.jpg" 
                       alt="milk-bubble" 
-                    /> */}
+                    />
                   </div>
                 </Link>
                 <p className="bubble-title">Milk</p>
               </li>
-              {/* <li className="bubbles-list-items">
-                <Link to="/products/21">
+              <li className="bubbles-list-items">
+                <Link to="/categories/1">
                   <div className="bubble-img-container">
                     <img 
                       src="https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_3_il_794xN.3121609316_7f70.jpg" 
@@ -48,7 +49,7 @@ const Home = () => {
                 <p className="bubble-title">Cheese</p>
               </li>
               <li className="bubbles-list-items">
-                <Link to="/products/28">
+                <Link to="/categories/5">
                   <div className="bubble-img-container">
                     <img 
                       src="https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt4_il_1588xN.3910113357_mres.jpg" 
@@ -59,7 +60,7 @@ const Home = () => {
                 <p className="bubble-title">Yogurt</p>
               </li>
               <li className="bubbles-list-items">
-                <Link to="/products/8">
+                <Link to="/categories/3">
                   <div className="bubble-img-container">
                     <img 
                       src="https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_2_il_794xN.3775381345_bkkr.jpg" 
@@ -70,7 +71,7 @@ const Home = () => {
                 <p className="bubble-title">Lactose-free</p>
               </li>
               <li className="bubbles-list-items">
-                <Link to="/products/23">
+                <Link to="/categories/4">
                   <div className="bubble-img-container">
                     <img 
                       src="https://mooguri-dev.s3.us-west-1.amazonaws.com/pun5_il_1588xN.2828827873_89d5.jpg" 
@@ -79,7 +80,7 @@ const Home = () => {
                   </div>
                 </Link>
                 <p className="bubble-title">Puns</p>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>
