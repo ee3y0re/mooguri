@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { listCategoryProducts } from "../../actions/category_actions";
 import { fetchProducts } from "../../actions/product_actions";
+import Container from "../../modules/container/Container"
 import ProductItem from "../../modules/list/ProductItem";
 import "./Category.scss";
 
@@ -26,7 +27,7 @@ const Category = (props) => {
 
   return (
     <div id="category" className="category">
-      <div className="container">
+      <Container>
         <h2 className="heading">{category.name}</h2>
         <h3 className="subheading">Find something you love</h3>
         <ul className="list">
@@ -45,7 +46,7 @@ const Category = (props) => {
               );
             })}
         </ul>
-      </div>
+      </Container>
     </div>
   );
 };
