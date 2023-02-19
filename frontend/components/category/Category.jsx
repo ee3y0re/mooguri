@@ -37,6 +37,7 @@ const Category = (props) => {
                   className="item"
                   key={product.id}
                   id={product.id}
+                  imgSrc={product.photoUrl}
                   name={product.productName}
                   price={product.price}
                   seller={product.sellerId}
