@@ -34,6 +34,7 @@ const Category = (props) => {
             products.map((product) => {
               return (
                 <CategoryProduct
+                  className="item"
                   key={product.id}
                   id={product.id}
                   name={product.productName}

@@ -4,7 +4,7 @@ import "./CategoryProduct.scss"
 
 const CategoryProduct = ({ id, name, price, seller }) => {
   return (
-    <li className="cat product">
+    <li className="category-product">
       <Link to={`/products/${id}`} className="link">
         <img className="img" src={placeholder} alt="placeholder image" />
         <p className="name">{name}</p>

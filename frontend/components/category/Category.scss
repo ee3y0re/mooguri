@@ -1,13 +1,16 @@
 #category {
   .container {
     margin-top: 0.75rem;
-    width: 100%;
-    max-width: 87.5rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 1.125rem;
   }
   .list {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  li:first-of-type , li + li {
+    margin: 0 0.25rem;
   }
 }

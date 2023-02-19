@@ -1,1 +1,25 @@
+.category-product {
+  max-width: 4.4375rem;
 
+  .link {
+    .img {
+      width: 100%;
+      max-width: 4.4375rem;
+      max-height: 3.5rem;
+      object-fit: cover;
+      border-radius: 6%;
+    }
+
+    p {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .name {
+    }
+    .price {
+    }
+    .seller {
+    }
+  }
+}
