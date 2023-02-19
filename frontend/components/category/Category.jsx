@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { listCategoryProducts } from "../../actions/category_actions";
 import { fetchProducts } from "../../actions/product_actions";
-import CategoryProduct from "./product/CategoryProduct";
+import ProductItem from "../../modules/list/ProductItem";
 import "./Category.scss";
 
 const Category = (props) => {
@@ -33,7 +33,7 @@ const Category = (props) => {
           {products &&
             products.map((product) => {
               return (
-                <CategoryProduct
+                <ProductItem
                   className="item"
                   key={product.id}
                   id={product.id}

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./CategoryProduct.scss"
+import "./ProductItem.scss"
 
-const CategoryProduct = ({ id, imgSrc, name, price, seller }) => {
+const ProductItem = ({ id, imgSrc, name, price, seller }) => {
   return (
-    <li className="category-product">
+    <li className="product-item">
       <Link to={`/products/${id}`} className="link">
         <img className="img" src={imgSrc} alt={`${name} image`} />
         <p className="name">{name}</p>
@@ -15,4 +15,4 @@ const CategoryProduct = ({ id, imgSrc, name, price, seller }) => {
   );
 };
 
-export default CategoryProduct;
+export default ProductItem;
