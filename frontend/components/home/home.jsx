@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductSnapshotContainer from "../product/products_snapshot_container";
-import About from "../footer/about";
 import ProductsSnapshot2Container from "../product/products_snapshot_2_container";
+import About from "../footer/about";
 
 const Home = () => {
   /* 
@@ -15,6 +15,7 @@ const Home = () => {
   footer component
     other directory links
   */
+
   return (
     <div id="home-container">
       <div id="ribbon"></div>
