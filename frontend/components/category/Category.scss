@@ -1,16 +1,29 @@
 #category {
+  // take container selector and put into recyclable component
   .container {
     margin-top: 0.75rem;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.125rem;
   }
+
+  .heading {
+  }
+
+  .subheading {
+  }
+
   .list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
-  li:first-of-type , li + li {
+  li:first-of-type,
+  li + li {
     margin: 0 0.25rem;
+  }
+
+  .item {
   }
 }
