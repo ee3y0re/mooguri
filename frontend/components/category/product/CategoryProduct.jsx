@@ -9,7 +9,7 @@ const CategoryProduct = ({ id, name, price, seller }) => {
         <img className="img" src={placeholder} alt="placeholder image" />
         <p className="name">{name}</p>
         <p className="price">{price}</p>
-        <p className="seller">{seller}</p>
+        <p className="seller">Seller #{seller}</p>
       </Link>
     </li>
   );
