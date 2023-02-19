@@ -19,11 +19,19 @@
 h2 {
   font-family: var(--fancy);
   font-size: 1.25rem;
+
+  @media (min-width: 56.25rem) {
+    font-size: 2rem;
+  }
 }
 
 h3 {
   font-family: var(--standard);
   font-size: 1rem;
+
+  @media (min-width: 56.25rem) {
+    font-size: 1.75rem;
+  }
 }
 
 p {
@@ -34,15 +42,4 @@ p {
 
 ul {
   list-style: none;
-}
-
-
-@media (min-width: 56.25rem) {
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
 }
