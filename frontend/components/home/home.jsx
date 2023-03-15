@@ -1,113 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
 import { Link } from "react-router-dom";
-import { listAllCategories } from "../../actions/category_actions";
+import CategoriesList from "../category/CategoryList";
 import ProductSnapshotContainer from "../product/products_snapshot_container";
 import ProductsSnapshot2Container from "../product/products_snapshot_2_container";
 import About from "../footer/about";
 
 const Home = () => {
-  /* 
-  nav bar component
-  category bar component
-  main page
-  bubbles of categories
-  product snapshot
-  about and help
-  footer component
-  other directory links
-  */
-
-  const dispatch = useDispatch();
-  const [allCategories, setAllCategories] = useState([]);
-  useEffect(() => {
-    dispatch(listAllCategories()).then((result) => {
-      setAllCategories(result.categories)
-    });
-  }, []);
 
   return (
     <div id="home-container">
       <div id="ribbon"></div>
       <main id="front-page">
-        {/* after creating a bubbles component */}
-        <div id="top-banner">
-          <h1 id="greeting">Check out these cow-tegories</h1>
-          {/* add categories table first */}
-          <div className="bubbles-container">
-            <ul className="bubbles-list">
-              {/* TODO:  */}
-              {/* <li className="bubbles-list-items">
-                <Link to="/categories/2">
-                  <div className="bubble-img-container">
-                    <img
-                      src="https://mooguri-dev.s3.us-west-1.amazonaws.com/milk6_il_1588xN.3494226927_nq3r.jpg"
-                      alt="milk-bubble"
-                    />
-                  </div>
-                </Link>
-                <p className="bubble-title">Milk</p>
-              </li>
-              <li className="bubbles-list-items">
-                <Link to="/categories/1">
-                  <div className="bubble-img-container">
-                    <img
-                      src="https://mooguri-dev.s3.us-west-1.amazonaws.com/pun_3_il_794xN.3121609316_7f70.jpg"
-                      alt="cheese-bubble"
-                    />
-                  </div>
-                </Link>
-                <p className="bubble-title">Cheese</p>
-              </li>
-              <li className="bubbles-list-items">
-                <Link to="/categories/5">
-                  <div className="bubble-img-container">
-                    <img
-                      src="https://mooguri-dev.s3.us-west-1.amazonaws.com/yogurt4_il_1588xN.3910113357_mres.jpg"
-                      alt="yogurt-bubble"
-                    />
-                  </div>
-                </Link>
-                <p className="bubble-title">Yogurt</p>
-              </li>
-              <li className="bubbles-list-items">
-                <Link to="/categories/3">
-                  <div className="bubble-img-container">
-                    <img
-                      src="https://mooguri-dev.s3.us-west-1.amazonaws.com/lactose_free_2_il_794xN.3775381345_bkkr.jpg"
-                      alt="lactose-free-bubble"
-                    />
-                  </div>
-                </Link>
-                <p className="bubble-title">Lactose-free</p>
-              </li>
-              <li className="bubbles-list-items">
-                <Link to="/categories/4">
-                  <div className="bubble-img-container">
-                    <img
-                      src="https://mooguri-dev.s3.us-west-1.amazonaws.com/pun5_il_1588xN.2828827873_89d5.jpg"
-                      alt="pun-bubble"
-                    />
-                  </div>
-                </Link>
-                <p className="bubble-title">Puns</p>
-              </li> */}
-              {allCategories?.map((category) => (
-                <li key={category.id}>
-                  <Link to={`/categories/${category.id}`}>
-                    <img
-                      src="https://mooguri-dev.s3.us-west-1.amazonaws.com/milk6_il_1588xN.3494226927_nq3r.jpg"
-                      alt="milk-bubble"
-                      style={{maxWidth: '300px'}}
-                    />
-                  </Link>
-                  <p>{category.name}</p>
-                  {/* {category.name} */}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <CategoriesList />
         {/* <ProductSnapshotContainer />
         <div className="top-banner">
           <div className="bubbles-container">
