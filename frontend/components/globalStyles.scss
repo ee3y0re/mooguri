@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:300,400,500i,900,900i");
-@import url("https://fonts.googleapis.com/css2?family=Cambay:300,400,500i,900,900i");
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Bitter&display=swap");
 
 :root {
   // fonts
-  --fancy: "Nanum Myeongjo", serif;
-  --standard: "Cambay", sans-serif;
+  --fancy: 'Bitter', serif;
+  --standard: 'Azeret Mono', monospace;
+
   // colors
   --main-orange: #f45800;
   --udder: #f4adad;
@@ -37,7 +37,7 @@ h3 {
 p {
   padding-top: 0.375rem;
   font-family: var(--standard);
-  font-size: 0.8125rem;
+  font-size: 0.625rem;
 
   @media (min-width: 56.25rem) {
     font-size: 1rem;
