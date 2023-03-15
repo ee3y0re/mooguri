@@ -1,4 +1,4 @@
-const path = require('path'); // require a module that has methods to get us a directory
+const path = require("path"); // require a module that has methods to get us a directory
 
 module.exports = {
   entry: "./frontend/mooguri_entry.jsx", // specify where does webpack look?
@@ -6,7 +6,7 @@ module.exports = {
     path: path.resolve(__dirname, "app", "assets", "javascripts"), // resolves path into an absolute
     filename: "bundle.js",
   },
-  target: 'web',
+  target: "web",
   module: {
     rules: [
       {
@@ -28,6 +28,10 @@ module.exports = {
         ],
       },
     ],
+  },
+  devServer: {
+    hot: false, // optional, but you must not set both hot and liveReload to true
+    liveReload: true,
   },
   devtool: "source-map", // creates a bundle.js.map - without this chrome would only tell you where your errors are in the bundle file
   resolve: {
