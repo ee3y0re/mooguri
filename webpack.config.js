@@ -6,6 +6,7 @@ module.exports = {
     path: path.resolve(__dirname, "app", "assets", "javascripts"), // resolves path into an absolute
     filename: "bundle.js",
   },
+  target: 'web',
   module: {
     rules: [
       {
