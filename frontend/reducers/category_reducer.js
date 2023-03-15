@@ -21,8 +21,7 @@ const CategoryReducer = (state = {}, action) => {
   // 4
   switch (action.type) {
     case RECEIVE_CATEGORIES:
-      nextState = Object.assign({}, nextState, action.categories);
-      return nextState;
+      return action.categories;
     case RECEIVE_CATEGORY_PRODUCTS:
       return action.categoryProducts;
     default:

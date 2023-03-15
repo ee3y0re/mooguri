@@ -25,6 +25,7 @@ const Category = (props) => {
       (product) => category && category.productIds?.includes(product.id)
     );
 
+  if (!products) return null
   return (
     <div id="category" className="category">
       <Container>
