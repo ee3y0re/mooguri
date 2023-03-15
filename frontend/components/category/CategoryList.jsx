@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 // action imports
 import { listAllCategories } from "../../actions/category_actions";
+// stylesheet imports
+import "./CategoryList.scss";
 
 const CategoriesList = () => {
   const dispatch = useDispatch();
@@ -14,24 +16,24 @@ const CategoriesList = () => {
     });
   }, []);
   return (
-    <div id="top-banner">
-      <h1 id="greeting">Check out these cow-tegories</h1>
-      <div className="bubbles-container">
-        <ul className="bubbles-list">
-          {allCategories?.map((category) => (
-            <li key={category.id}>
-              <Link to={`/categories/${category.id}`}>
-                <img
-                  src="https://mooguri-dev.s3.us-west-1.amazonaws.com/milk6_il_1588xN.3494226927_nq3r.jpg"
-                  alt="milk-bubble"
-                  style={{ maxWidth: "300px" }}
-                />
-              </Link>
-              <p>{category.name}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="category-list">
+      <div className="category-banner"/>
+      <h2 className="category-heading">Check out these cow-tegories</h2>
+      <ul className="category-wrap">
+        {allCategories?.map((category) => (
+          <li className="category-bubble" key={category.id}>
+            <Link className="category-link" to={`/categories/${category.id}`}>
+              <img
+                className="category-img"
+                src="https://mooguri-dev.s3.us-west-1.amazonaws.com/milk6_il_1588xN.3494226927_nq3r.jpg"
+                alt="milk-bubble"
+                style={{ maxWidth: "300px" }}
+              />
+            </Link>
+            <p>{category.name}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

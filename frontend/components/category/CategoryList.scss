@@ -1,0 +1,17 @@
+.category {
+  &-list {
+    position: relative;
+  }
+  &-banner {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 24rem;
+    background-color: black;
+  }
+  &-heading {
+    padding: 1.125rem 0.75rem;
+    text-align: center;
+    color: white;
+  }
+}
