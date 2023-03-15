@@ -1,10 +1,4 @@
 #category {
-  .heading {
-  }
-
-  .subheading {
-  }
-
   .list {
     display: flex;
     flex-wrap: wrap;
@@ -19,8 +13,5 @@
     @media (min-width: 56.25rem) {
       margin: 0.625rem 0.625rem;
     }
-  }
-
-  .item {
   }
 }
