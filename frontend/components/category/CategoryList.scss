@@ -6,12 +6,37 @@
     position: absolute;
     z-index: -1;
     width: 100vw;
-    height: 24rem;
+    height: 16rem;
     background-color: black;
   }
   &-heading {
-    padding: 1.125rem 0.75rem;
+    padding: 2rem 0.75rem;
     text-align: center;
     color: white;
+  }
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 18rem;
+    height: 16rem;
+    li:nth-child(1), li:nth-child(2), li:nth-child(3) {
+      color: white;
+    }
+  }
+  &-bubble:first-of-type,
+  &-bubble + &-bubble {
+    margin: 0 0.5rem;
+  }
+  &-img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &-name {
+    text-align: center;
+    font-weight: 600;
   }
 }

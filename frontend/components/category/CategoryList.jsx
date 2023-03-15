@@ -27,10 +27,9 @@ const CategoriesList = () => {
                 className="category-img"
                 src="https://mooguri-dev.s3.us-west-1.amazonaws.com/milk6_il_1588xN.3494226927_nq3r.jpg"
                 alt="milk-bubble"
-                style={{ maxWidth: "300px" }}
               />
             </Link>
-            <p>{category.name}</p>
+            <p className="category-name">{category.name}</p>
           </li>
         ))}
       </ul>
