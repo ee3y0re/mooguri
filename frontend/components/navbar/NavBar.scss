@@ -39,13 +39,27 @@
       display: none;
     }
     &-counter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.125rem;
+      height: 1.125rem;
       position: absolute;
+      z-index: 1;
+      margin: auto;
+      bottom: 1.75rem;
+      left: 1.5625rem;
+      padding: 0;
+      background: var(--udder);
+      border-radius: 50%;
+      font-size: 0.6875rem;
+      text-align: center;
     }
     &-icon {
+      position: absolute;
+      margin: auto;
       top: 0;
       bottom: 0;
-      margin: auto;
-      position: absolute;
       left: 0;
       right: 0;
       max-width: 1.5rem;
