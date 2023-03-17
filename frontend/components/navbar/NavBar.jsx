@@ -37,16 +37,26 @@ const NavBar = () => {
         <Link to="/" className="nav-link">
           <h1 className="nav-logo">MOOguri</h1>
         </Link>
+        <div
+          className="test-dummy3"
+          style={{
+            width: "100%",
+            height: "60px",
+            backgroundColor: "lightBlue",
+          }}
+        ></div>
         <div className="nav-wrapper">
           <div
+            className="test-dummy1"
             style={{
-              width: "48px",
-              height: "48px",
+              width: "74px",
+              height: "74px",
               backgroundColor: "lavender",
             }}
           ></div>
           <div
-            style={{ width: "48px", height: "48px", backgroundColor: "gray" }}
+            className="test-dummy2"
+            style={{ width: "74px", height: "74px", backgroundColor: "gray" }}
           ></div>
           {/* <ModalContainer />
           <AuthContainer />
@@ -57,9 +67,9 @@ const NavBar = () => {
             </svg>
           </Link> */}
         </div>
-        <SearchBar />
       </div>
       {/* <div className="temp" id="nav-categories-container">
+        <SearchBar />
           <ul id="nav-cat-list">
             <li className="nav-cat-list-items">Mother's Day Gifts</li>
             <li className="nav-cat-list-items">Jewelry &amp; Accessories</li>
