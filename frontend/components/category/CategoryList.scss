@@ -1,0 +1,64 @@
+.category {
+  &-list {
+    position: relative;
+  }
+  &-banner {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 16rem;
+    background-color: black;
+
+    @media (min-width: 56.25rem) {
+      height: 10.375rem;
+    }
+  }
+  &-heading {
+    padding: 2rem 0.75rem;
+    text-align: center;
+    color: white;
+  }
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 18rem;
+    height: 16rem;
+    li:nth-child(1),
+    li:nth-child(2),
+    li:nth-child(3) {
+      color: white;
+    }
+
+    @media (min-width: 56.25rem) {
+      max-width: 45rem;
+      li:nth-child(1),
+      li:nth-child(2),
+      li:nth-child(3) {
+        color: black;
+      }
+    }
+  }
+  &-bubble:first-of-type,
+  &-bubble + &-bubble {
+    margin: 0 0.5rem;
+    @media (min-width: 56.25rem) {
+      margin: 0 0.875rem;
+    }
+  }
+  &-img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    @media (min-width: 56.25rem) {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+  &-name {
+    text-align: center;
+    font-weight: 600;
+  }
+}

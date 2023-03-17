@@ -1,198 +1,198 @@
-.splash { //delete, serves as temporary splash structure
-  display: flex;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-}
-
-.show-listing { //whole show page container
-  max-width: 1401px; //so that when resizing browser and zooming out, original template container is preserved
-  height: 100%; //allow items to expand down; may disable if adding lots of reviews
-  margin-top: 2%;
-}
-
-.show-image-container{
-  display: flex;
-  float: left;
-  max-width: 954px;
-  width: 69%;
-  height: 700px;
-}
-
-.show-image-minis {
-  width: 74px;
-  height: 100%;
-}
-
-.show-image-big {
-  position: relative;
-  left: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  max-width: 661px;
-  max-height: 661px;
-  border-radius: 20px;
-  border: 1px solid #c6d5d8;
-  box-shadow: 4px 4px 4px 4px #C6D5D8;
-  background-color: #242424;
-}
-
-.main-product-img {
-  max-width: 100%;
-}
-
-.show-buy-quick {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  float: right;
-  width: 30%;
-  height: fit-content;
-}
-
-.show-seller-name {
-  font-family: 'Cambay', sans-serif;
-  font-size: 20px;
-  margin-bottom: 2%;
-}
-
-.show-seller-info {
-  font-family: 'Cambay', sans-serif;
-  font-size: 21px;
-  margin-bottom: 6%;
-}
-
-.show-buy-title-lines > h1 {
-  height: max-content;
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 39px;
-  overflow-wrap: break-word;
-}
-
-.show-price-avail {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin-top: 6%;
-}
-
-.show-price {
-  font-family: 'Cambay', sans-serif;
-  font-size: 42px;
-  font-weight: 900;
-}
-
-.show-price-avail {
-  font-size: 21px;
-}
-
-.show-dropdown {
-  width: 100%;
-  height: 44px;
-  border-radius: 9px;
-  padding-left: 11px;
-  box-shadow: 4px 4px 4px 4px #c6d5d8;
-}
-
-.dark-button {
-  background-color: #222222;
-  color: white;
-  width: 100%;
-  height: 55px;
-  margin-top: 20px;
-  font-size: 15px;
-}
-
-.shop-item-trends {
-  font-size: 20px;
-  margin-top: 6%;
-  line-height: 18px;
-}
-
-.shop-item-trends > li {
-  margin-bottom: 9%;
-}
-
-.product-info-head {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 2%;
-}
-
-.product-info-details {
-  line-height: 34px;
-  overflow-wrap: break-word;
-  margin-bottom: 5px;
-}
-
-.show-buy-info-full {
-  // display: flex;
-  // flex-direction: column;
-  justify-content: space-around;
-  float: right;
-  width: 30%;
-  height: 100%;
-  margin-top: 61px;
-}
-
-.eta { 
-  margin-top: 12%;
-  margin-bottom: 12%;
-}
-
-.eta-2 {
-  margin-top: 9%;
-}
-
-
-.custom-small-title {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 37px;
-  line-height: 42px;
-}
-
-.show-reviews {
-  float: left;
-  // background-color: #7C8BFF;
-  max-width: 954px;
-  width: 69%;
-  height: 100%;
-  margin-top: 29px;
-}
-
-// // background colors only
-
 // .splash { //delete, serves as temporary splash structure
-//   background-color: #A5D6AF;
+//   display: flex;
+//   justify-content: center;
+//   height: auto;
+//   width: 100%;
 // }
 
 // .show-listing { //whole show page container
-//   background-color: #A691DB;
+//   max-width: 1401px; //so that when resizing browser and zooming out, original template container is preserved
+//   height: 100%; //allow items to expand down; may disable if adding lots of reviews
+//   margin-top: 2%;
 // }
 
 // .show-image-container{
-//   background-color: #F591CD;
+//   display: flex;
+//   float: left;
+//   max-width: 954px;
+//   width: 69%;
+//   height: 700px;
 // }
 
-.show-image-minis {
-  background-color: #FFC894;
-}
+// .show-image-minis {
+//   width: 74px;
+//   height: 100%;
+// }
+
+// .show-image-big {
+//   position: relative;
+//   left: 63px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   overflow: hidden;
+//   max-width: 661px;
+//   max-height: 661px;
+//   border-radius: 20px;
+//   border: 1px solid #c6d5d8;
+//   box-shadow: 4px 4px 4px 4px #C6D5D8;
+//   background-color: #242424;
+// }
+
+// .main-product-img {
+//   max-width: 100%;
+// }
 
 // .show-buy-quick {
-//   background-color: #FFF5BD;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   float: right;
+//   width: 30%;
+//   height: fit-content;
+// }
+
+// .show-seller-name {
+//   font-family: 'Cambay', sans-serif;
+//   font-size: 20px;
+//   margin-bottom: 2%;
+// }
+
+// .show-seller-info {
+//   font-family: 'Cambay', sans-serif;
+//   font-size: 21px;
+//   margin-bottom: 6%;
+// }
+
+// .show-buy-title-lines > h1 {
+//   height: max-content;
+//   font-family: 'Nanum Myeongjo', serif;
+//   font-size: 39px;
+//   overflow-wrap: break-word;
 // }
 
 // .show-price-avail {
-//   font-size: 17px;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: row;
+//   margin-top: 6%;
+// }
+
+// .show-price {
+//   font-family: 'Cambay', sans-serif;
+//   font-size: 42px;
+//   font-weight: 900;
+// }
+
+// .show-price-avail {
+//   font-size: 21px;
+// }
+
+// .show-dropdown {
+//   width: 100%;
+//   height: 44px;
+//   border-radius: 9px;
+//   padding-left: 11px;
+//   box-shadow: 4px 4px 4px 4px #c6d5d8;
+// }
+
+// .dark-button {
+//   background-color: #222222;
+//   color: white;
+//   width: 100%;
+//   height: 55px;
+//   margin-top: 20px;
+//   font-size: 15px;
+// }
+
+// .shop-item-trends {
+//   font-size: 20px;
+//   margin-top: 6%;
+//   line-height: 18px;
+// }
+
+// .shop-item-trends > li {
+//   margin-bottom: 9%;
+// }
+
+// .product-info-head {
+//   font-size: 26px;
+//   font-weight: bold;
+//   margin-bottom: 2%;
+// }
+
+// .product-info-details {
+//   line-height: 34px;
+//   overflow-wrap: break-word;
+//   margin-bottom: 5px;
 // }
 
 // .show-buy-info-full {
-//   background-color: #95FFF7;
+//   // display: flex;
+//   // flex-direction: column;
+//   justify-content: space-around;
+//   float: right;
+//   width: 30%;
+//   height: 100%;
+//   margin-top: 61px;
+// }
+
+// .eta { 
+//   margin-top: 12%;
+//   margin-bottom: 12%;
+// }
+
+// .eta-2 {
+//   margin-top: 9%;
+// }
+
+
+// .custom-small-title {
+//   font-family: 'Nanum Myeongjo', serif;
+//   font-size: 37px;
+//   line-height: 42px;
 // }
 
 // .show-reviews {
-//   background-color: #7C8BFF;
-//   height: 323px;
+//   float: left;
+//   // background-color: #7C8BFF;
+//   max-width: 954px;
+//   width: 69%;
+//   height: 100%;
+//   margin-top: 29px;
 // }
+
+// // // background colors only
+
+// // .splash { //delete, serves as temporary splash structure
+// //   background-color: #A5D6AF;
+// // }
+
+// // .show-listing { //whole show page container
+// //   background-color: #A691DB;
+// // }
+
+// // .show-image-container{
+// //   background-color: #F591CD;
+// // }
+
+// .show-image-minis {
+//   background-color: #FFC894;
+// }
+
+// // .show-buy-quick {
+// //   background-color: #FFF5BD;
+// // }
+
+// // .show-price-avail {
+// //   font-size: 17px;
+// // }
+
+// // .show-buy-info-full {
+// //   background-color: #95FFF7;
+// // }
+
+// // .show-reviews {
+// //   background-color: #7C8BFF;
+// //   height: 323px;
+// // }

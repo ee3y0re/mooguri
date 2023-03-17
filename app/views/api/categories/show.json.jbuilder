@@ -4,4 +4,7 @@
 # end
 
 ## array of individual product ids
-json.products @category_prods.map { |product| product.id }
+json.partial! 'api/categories/category', category: @category
+json.productIds @category_prods.map { |product| product.id }
+
+# json.products @category_prods.map { |product| product }

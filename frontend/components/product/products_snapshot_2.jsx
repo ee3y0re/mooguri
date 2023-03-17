@@ -22,8 +22,6 @@ class ProductSnapshot2 extends React.Component {
       }
     };
 
-    console.log(selectedProducts[7]?.id)
-
     return(
       <div className="section-product-index">
         <div className="product-index-grid-container">
