@@ -8,6 +8,10 @@
     width: 100vw;
     height: 16rem;
     background-color: black;
+
+    @media (min-width: 56.25rem) {
+      height: 10.375rem;
+    }
   }
   &-heading {
     padding: 2rem 0.75rem;
@@ -29,7 +33,11 @@
 
     @media (min-width: 56.25rem) {
       max-width: 45rem;
-      color: white;
+      li:nth-child(1),
+      li:nth-child(2),
+      li:nth-child(3) {
+        color: black;
+      }
     }
   }
   &-bubble:first-of-type,
