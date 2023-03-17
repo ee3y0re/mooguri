@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { logout } from "../../actions/session_actions"
 import { openModal } from "../../actions/modal_actions";
-import Auth from "./auth";
+import Auth from "./Auth";
 
 const mapStateToProps = (state) => {
   let currentUserId = state.session.id;
