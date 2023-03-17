@@ -28,4 +28,28 @@
   &-wrapper {
     display: flex;
   }
+
+  &-cart {
+    &-link {
+      position: relative;
+      width: 3rem;
+      height: 3rem;
+    }
+    &-empty {
+      display: none;
+    }
+    &-counter {
+      position: absolute;
+    }
+    &-icon {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      max-width: 1.5rem;
+      max-height: 1.5rem;
+    }
+  }
 }
