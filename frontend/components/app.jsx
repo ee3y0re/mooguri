@@ -6,7 +6,7 @@ import Category from "./category/Category";
 import SearchResult from "./search/search_result";
 import CartCheckout from "./cart/cart_checkout";
 import Directory from "./footer/directory";
-import Nav from "./nav/nav";
+import Nav from "./navbar/NavBar";
 import CompleteCheckout from "./cart/complete_checkout";
 import "./globalStyles.scss"
 
@@ -18,7 +18,7 @@ import "./globalStyles.scss"
 const App = () => {
   return (
     <div id="from-app">
-      {/* <Nav /> */}
+      <Nav />
       <Switch>
         <Route path="/search" component={SearchResult} />
         <Route
