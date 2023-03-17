@@ -37,33 +37,17 @@ const NavBar = () => {
         <Link to="/" className="nav-link">
           <h1 className="nav-logo">MOOguri</h1>
         </Link>
-        <div
-          className="test-dummy3"
-          style={{
-            width: "100%",
-            height: "60px",
-            backgroundColor: "lightBlue",
-          }}
-        ></div>
         <div className="nav-wrapper">
           <div
             className="test-dummy1"
             style={{
-              width: "48px",//"74px",
-              height: "48px",//"74px",
+              width: "48px", //"74px",
+              height: "48px", //"74px",
               backgroundColor: "lavender",
             }}
-          ></div>
-          {/* <div
-            className="test-dummy2"
-            style={{ 
-              width: "48px",//"74px", 
-              height: "48px",//"74px", 
-              backgroundColor: "gray" 
-            }}
-          ></div> */}
-          {/* <ModalContainer />
-          <AuthContainer /> */}
+          >meeple</div>
+          {/* <ModalContainer /> */}
+          {/* <AuthContainer /> */}
           <Link to="/checkout" className="nav-cart-link">
             <p className={cartNumClass}>{cartNum}</p>
             <svg className="nav-cart-icon" viewBox="0 0 576 512">
@@ -71,6 +55,7 @@ const NavBar = () => {
             </svg>
           </Link>
         </div>
+        <div className="test-dummy3">future search bar</div>
       </div>
       {/* <div className="temp" id="nav-categories-container">
         <SearchBar />
