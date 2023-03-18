@@ -1,0 +1,44 @@
+.button {
+  border: none;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 20.25rem;
+  font-family: var(--standard);
+
+  @media (min-width: 56.25rem) {
+    max-width: 10.875rem;
+  }
+
+  &.img {
+  }
+  &.filled {
+    background-color: var(--filled);
+    color: white;
+
+    &:hover {
+      background-color: var(--filled-hover);
+      scale: 1.1;
+      transform: scaleX(1.015) scaleY(1.035);
+      // transform: scaleX(1.015) scaleY(1.035) perspective(0.0625); // from etsy
+      /// scaleX stretches horizontally and scaleY stretches vertically
+      /// Perspective adds depth but not noticing a difference
+    }
+  }
+  &.clear {
+    color: var(--filled);
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    transform: scaleX(0.7) scaleY(0.7) perspective(1px);
+    transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),
+      background-color 150ms ease-out, box-shadow 200ms ease-out;
+    &:hover {
+      transform: scaleX(1.015) scaleY(1.035) perspective(1px);
+      background-color: lightblue;
+      box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+    }
+
+    &-with-border {
+    }
+  }
+}

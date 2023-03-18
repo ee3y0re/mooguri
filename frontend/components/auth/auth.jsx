@@ -1,22 +1,26 @@
 import React from "react";
+import "./Auth.scss";
+import Button from "../../modules/buttons/Button";
 
 const Auth = ({ currentUser, logout, openModal }) => {
-  const completedLogin = () => {
+  const SignOut = () => {
     return (
-      <div className="complete-login">
-        <button id="logout-button" onClick={logout}>Logout</button>
-      </div>
+      // <button className="button-drk" onClick={logout}>
+      //   SignOut
+      // </button>
+      <Button>Sign Out</Button>
     );
-  }
+  };
 
-  const needLogin = () => {
+  const SignIn = () => {
     return (
-      <nav id="login-nav">
-        <button id="login-button" onClick={() => openModal("Log In")}>Login</button>
-      </nav>
-    )
-  }
-  return currentUser ? completedLogin() : needLogin();
-}
+      // <button className="button-lgt" onClick={() => openModal("Log In")}>
+      //   Sign In
+      // </button>
+      <Button isTransparent>Sign In</Button>
+    );
+  };
+  return currentUser ? SignOut() : SignIn();
+};
 
 export default Auth;
