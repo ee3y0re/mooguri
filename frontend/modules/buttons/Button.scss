@@ -2,12 +2,9 @@
   &-container {
     position: relative;
     padding: 0.0625rem;
-    width: 100%;
-    min-width: 3rem;
-    max-width: 20.25rem;
-    max-height: 3rem;
+    width: 4.1525rem;
     @media (min-width: 56.25rem) {
-      max-width: 10.875rem;
+      width: 5.625rem;
     }
   }
 
@@ -23,6 +20,10 @@
 
   &-text {
     padding: 0;
+
+    @media (min-width: 56.25rem) {
+      font-size: 0.875rem;
+    }
   }
 
   &-animatebg {
