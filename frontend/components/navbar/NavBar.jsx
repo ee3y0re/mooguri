@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { fetchUserCartProducts } from "../../actions/cart_actions";
 import SearchBar from "../search/search_bar";
 import ModalContainer from "../modal/modal";
-import AuthContainer from "../auth/auth_container";
+import AuthContainer from "../auth/AuthContainer";
 import "./NavBar.scss";
-
+  
 const NavBar = () => {
   const currentCart = useSelector((wholeState) => {
     return wholeState.entities.carts;
@@ -38,16 +38,16 @@ const NavBar = () => {
           <h1 className="nav-logo">MOOguri</h1>
         </Link>
         <div className="nav-wrapper">
-          <div
+          {/* <div
             className="test-dummy1"
             style={{
               width: "48px", //"74px",
               height: "48px", //"74px",
               backgroundColor: "lavender",
             }}
-          >meeple</div>
+          >meeple</div> */}
           {/* <ModalContainer /> */}
-          {/* <AuthContainer /> */}
+          <AuthContainer />
           <Link to="/checkout" className="nav-cart-link">
             <p className={cartNumClass}>{cartNum}</p>
             <svg className="nav-cart-icon" viewBox="0 0 576 512">
