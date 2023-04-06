@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchUserCartProducts } from "../../actions/cart_actions";
-import SearchBar from "../search/SearchBar";
+import SearchBar from "./search/SearchBar";
 import ModalContainer from "../modal/modal";
 import AuthContainer from "../auth/AuthContainer";
 import "./NavBar.scss";
@@ -47,9 +47,9 @@ const NavBar = () => {
             </svg>
           </Link>
         </div>
-      <div className="test-dummy3">
-        <SearchBar />
-        {/* <ul id="nav-cat-list">
+        <div className="test-dummy3">
+          <SearchBar />
+          {/* <ul id="nav-cat-list">
             <li className="nav-cat-list-items">Mother's Day Gifts</li>
             <li className="nav-cat-list-items">Jewelry &amp; Accessories</li>
             <li className="nav-cat-list-items">Clothing &amp; Shoes</li>
@@ -60,7 +60,7 @@ const NavBar = () => {
             <li className="nav-cat-list-items">Craft Supplies</li>
             <li className="nav-cat-list-items">Gifts &amp; Gift Cards</li>
           </ul> */}
-      </div>
+        </div>
       </div>
     </section>
   );

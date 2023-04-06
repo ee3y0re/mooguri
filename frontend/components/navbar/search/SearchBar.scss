@@ -1,0 +1,23 @@
+.search {
+  &-form {
+    background-color: aliceblue;
+  }
+
+  &-input {
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 0.5625rem 2.625rem;
+    font-family: var(--standard);
+    font-size: 1rem;
+  }
+
+  &-icon {
+    width: 1.5rem;
+  }
+}
+
+// have search input fill up space
+// curve borders search input
+// add padding to add space between borders and placeholder text
+// add margins to increase space between edges of viewport and elements
+// change search input font

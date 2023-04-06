@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./home/Home";
 import ProductSingularContainer from "./product/product_singular_container";
 import Category from "./category/Category";
-import SearchResult from "./search/SearchResult";
+import SearchResult from "./navbar/search/SearchResult";
 import CartCheckout from "./cart/cart_checkout";
 import Directory from "./footer/directory";
 import Nav from "./navbar/NavBar";
