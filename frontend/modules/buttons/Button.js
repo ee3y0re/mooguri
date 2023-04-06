@@ -17,17 +17,15 @@ const Button = ({ children, isDisabled, to, clickEvent, styleKey }) => {
   };
 
   return (
-    <div className={`button-container ${classNameSelect()}`}>
-      <button
-        className={`button-base ${classNameSelect()}`}
-        disabled={isDisabled}
-        to={to}
-        onClick={() => clickEvent}
-      >
-        <p className={`button-text ${classNameSelect()}`}>{children}</p>
-      </button>
+    <button
+      className={`button-base ${classNameSelect()}`}
+      disabled={isDisabled}
+      to={to}
+      onClick={() => clickEvent}
+    >
+      <p className={`button-text ${classNameSelect()}`}>{children}</p>
       <div className={`button-animatebg ${classNameSelect()}`}></div>
-    </div>
+    </button>
   );
 };
 
