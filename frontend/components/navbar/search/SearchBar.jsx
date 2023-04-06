@@ -34,15 +34,21 @@ const SearchBar = () => {
 
   return (
     // return the search form
-    <form onSubmit={handleSearchSubmit} className="search-form">
+    <form onSubmit={handleSearchSubmit} className="search-form" tabIndex="-1">
       <input
+        tabIndex="0"
         type="search"
         placeholder="Search for anything"
         value={actualSearchInput}
         className="search-input"
         onChange={updateSearchInput}
       />
-      <Button type="submit" styleKey="clear" className="search-button">
+      <Button
+        type="submit"
+        styleKey="clear"
+        className="search-button"
+        tabIndex="0"
+      >
         <svg
           className="search-icon"
           xmlns="http://www.w3.org/2000/svg"

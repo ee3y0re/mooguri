@@ -7,14 +7,6 @@
     border: 1px var(--filled) solid;
     border-radius: 1.5rem;
     overflow: hidden;
-
-    &:focus-within {
-      > input, > button {
-        outline: 0.625rem dotted #212121;
-        outline: 0.3125rem auto -webkit-focus-ring-color;
-        outline-offset: -0.6875rem;
-      }
-    }
   }
 
   &-input {
@@ -29,7 +21,9 @@
     }
 
     &:focus-visible {
-      outline: none;
+      outline: 0.625rem dotted #212121;
+      outline: 0.3125rem auto -webkit-focus-ring-color;
+      outline-offset: -0.6875rem;
     }
   }
 
@@ -39,7 +33,9 @@
     border-radius: 0;
 
     &:focus-visible {
-      outline: none;
+      outline: 0.625rem dotted #212121;
+      outline: 0.3125rem auto -webkit-focus-ring-color;
+      outline-offset: -0.6875rem;
     }
   }
 
