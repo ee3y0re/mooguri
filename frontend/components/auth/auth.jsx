@@ -14,7 +14,7 @@ const Auth = ({ currentUser, logout, openModal }) => {
   const SignIn = () => {
     return (
       <Button styleKey="clear" onClick={() => openModal("Log In")}>
-        Sign In
+        Sign Indlsa;fjkld;asjkfl
       </Button>
     );
   };
