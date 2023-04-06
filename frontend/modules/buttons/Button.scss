@@ -19,8 +19,8 @@
       &:hover {
         > .button-animatebg {
           transform: scaleX(1.015) scaleY(1.035) perspective(1px);
-          background-color: rgba(34, 34, 34, 0.15);
-          box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+          background-color: #e2e2e2;
+          box-shadow: 0 4px 20px #e2e2e2;
         }
       }
     }
