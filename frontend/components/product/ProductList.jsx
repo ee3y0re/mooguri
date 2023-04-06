@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Container from "../../modules/container/Container";
 
 class ProductList extends React.Component {
-
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchProducts();
   }
 
-  render() { 
-    const arrayOfAllProducts = Object.values(this.props.products);  
+  render() {
+    const arrayOfAllProducts = Object.values(this.props.products);
     let firstSet = [];
     for (let i = 0; i < arrayOfAllProducts.length; i++) {
       if (i % 6 == 0) {
@@ -31,18 +30,18 @@ class ProductList extends React.Component {
       //         {
       //           firstAndSecond?.map((product) => {
       //             return (
-      //               <div 
-      //                 className="product-index-row-list-items-container" 
+      //               <div
+      //                 className="product-index-row-list-items-container"
       //                 key={product.id.toString()}
       //               >
       //                 <li className="product-index-row-list-items">
-      //                   <Link 
+      //                   <Link
       //                     to={`/products/${product.id}`}
       //                   >
-      //                     <img 
-      //                       src={product.photoUrl} 
-      //                       alt={`${product.name}`} 
-      //                       className="product-index-thumbnail" 
+      //                     <img
+      //                       src={product.photoUrl}
+      //                       alt={`${product.name}`}
+      //                       className="product-index-thumbnail"
       //                     />
       //                   </Link>
       //                 </li>
@@ -54,12 +53,26 @@ class ProductList extends React.Component {
       //     </div>
       //   </div>
       // </div>
-      <div className="sample-container">
-        
-      </div>
+      <Container className="sample-container">
+        <h3 className="sample-title">See Moo-re</h3>
+        <ul className="sample-list">
+          {firstAndSecond?.map((product) => {
+            return (
+              <li className="sample-item">
+                <Link to={`/products/${product.id}`}>
+                  <img
+                    src={product.photoUrl}
+                    alt={`${product.name}`}
+                    className="sample-img"
+                  />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </Container>
     );
-  };
+  }
 }
 
 export default ProductList;
-
