@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CategoriesList from "../category/CategoryList";
-import ProductListContainer from "../product/ProductListContainer";
+import ProductListContainer from "../product/list/ProductListContainer";
 import ProductsSnapshot2Container from "../product/products_snapshot_2_container";
 import About from "../footer/about";
 
