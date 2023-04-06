@@ -21,7 +21,7 @@ const Button = ({ children, isDisabled, to, clickEvent, styleKey }) => {
       className={`button-base ${classNameSelect()}`}
       disabled={isDisabled}
       to={to}
-      onClick={() => clickEvent}
+      onClick={clickEvent}
     >
       <p className={`button-text ${classNameSelect()}`}>{children}</p>
       <div className={`button-animatebg ${classNameSelect()}`}></div>
