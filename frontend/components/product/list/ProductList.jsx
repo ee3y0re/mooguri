@@ -29,7 +29,7 @@ class ProductList extends React.Component {
           {firstAndSecond?.map((product) => {
             return (
               <li className="sample-item">
-                <Link to={`/products/${product.id}`}>
+                <Link to={`/products/${product.id}`} className="sample-link">
                   <img
                     src={product.photoUrl}
                     alt={`${product.name}`}
