@@ -4,6 +4,7 @@
     align-items: center;
     margin: 0 1.125rem;
     height: 3rem;
+    box-sizing: border-box;
     border: 1px var(--filled) solid;
     border-radius: 1.5rem;
     overflow: hidden;
@@ -41,5 +42,6 @@
 
   &-icon {
     width: 1.5rem;
+    height: 1.5rem;
   }
 }

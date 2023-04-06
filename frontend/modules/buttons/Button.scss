@@ -29,7 +29,7 @@
     }
   }
 
-  &-text {
+  &-content {
     position: relative;
     z-index: 2;
     padding: 0.5rem;
@@ -37,10 +37,12 @@
 
     &.filled {
       color: white;
+      fill: white;
     }
 
     &.clear {
       color: var(--filled);
+      fill: var(--filled);
     }
 
     @media (min-width: 56.25rem) {

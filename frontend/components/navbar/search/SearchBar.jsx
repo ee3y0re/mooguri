@@ -38,7 +38,7 @@ const SearchBar = () => {
       <input
         tabIndex="0"
         type="search"
-        placeholder="Search for anything"
+        placeholder="Search..."
         value={actualSearchInput}
         className="search-input"
         onChange={updateSearchInput}
