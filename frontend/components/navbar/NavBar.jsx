@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchUserCartProducts } from "../../actions/cart_actions";
-import SearchBar from "../search/search_bar";
+import SearchBar from "./search/SearchBar";
 import ModalContainer from "../modal/modal";
 import AuthContainer from "../auth/AuthContainer";
 import "./NavBar.scss";
-  
+
 const NavBar = () => {
   const currentCart = useSelector((wholeState) => {
     return wholeState.entities.carts;
@@ -38,14 +38,6 @@ const NavBar = () => {
           <h1 className="nav-logo">MOOguri</h1>
         </Link>
         <div className="nav-wrapper">
-          {/* <div
-            className="test-dummy1"
-            style={{
-              width: "48px", //"74px",
-              height: "48px", //"74px",
-              backgroundColor: "lavender",
-            }}
-          >meeple</div> */}
           {/* <ModalContainer /> */}
           <AuthContainer />
           <Link to="/checkout" className="nav-cart-link">
@@ -55,11 +47,9 @@ const NavBar = () => {
             </svg>
           </Link>
         </div>
-        <div className="test-dummy3">future search bar</div>
-      </div>
-      {/* <div className="temp" id="nav-categories-container">
-        <SearchBar />
-          <ul id="nav-cat-list">
+        <div className="test-dummy3">
+          <SearchBar />
+          {/* <ul id="nav-cat-list">
             <li className="nav-cat-list-items">Mother's Day Gifts</li>
             <li className="nav-cat-list-items">Jewelry &amp; Accessories</li>
             <li className="nav-cat-list-items">Clothing &amp; Shoes</li>
@@ -69,9 +59,9 @@ const NavBar = () => {
             <li className="nav-cat-list-items">Art &amp; Collectibles</li>
             <li className="nav-cat-list-items">Craft Supplies</li>
             <li className="nav-cat-list-items">Gifts &amp; Gift Cards</li>
-          </ul>
-        </div> */}
-      {/* </div> */}
+          </ul> */}
+        </div>
+      </div>
     </section>
   );
 };

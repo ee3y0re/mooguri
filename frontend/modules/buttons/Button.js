@@ -2,7 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Button.scss";
 
-const Button = ({ children, isDisabled, to, clickEvent, styleKey }) => {
+const Button = ({
+  children,
+  className,
+  isDisabled,
+  to,
+  clickEvent,
+  styleKey,
+}) => {
   const classNameSelect = () => {
     switch (styleKey) {
       case "img":
@@ -16,18 +23,22 @@ const Button = ({ children, isDisabled, to, clickEvent, styleKey }) => {
     }
   };
 
+  console.log(className);
+
   return (
-    <div className={`button-container ${classNameSelect()}`}>
-      <button
-        className={`button-base ${classNameSelect()}`}
-        disabled={isDisabled}
-        to={to}
-        onClick={() => clickEvent}
-      >
-        <p className={`button-text ${classNameSelect()}`}>{children}</p>
-      </button>
+    <button
+      className={`button-base ${classNameSelect()} ${className}`}
+      disabled={isDisabled}
+      to={to}
+      onClick={clickEvent}
+    >
+      {typeof children === "string" ? (
+        <p className={`button-content ${classNameSelect()}`}>{children}</p>
+      ) : (
+        <div className={`button-content ${classNameSelect()}`}>{children}</div>
+      )}
       <div className={`button-animatebg ${classNameSelect()}`}></div>
-    </div>
+    </button>
   );
 };
 
