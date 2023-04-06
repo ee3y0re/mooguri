@@ -1,23 +1,33 @@
 .search {
   &-form {
-    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    margin: 0 1.125rem;
+    height: 3rem;
+    border: 1px var(--filled) solid;
+    border-radius: 1.5rem;
+    overflow: hidden;
   }
 
   &-input {
     width: 100%;
-    border-radius: 1.5rem;
+    height: 100%;
+    border: none;
     padding: 0.5625rem 2.625rem;
     font-family: var(--standard);
-    font-size: 1rem;
+    font-size: 0.625rem;
+    @media (min-width: 56.25rem) {
+      font-size: 1rem;
+    }
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
   }
 
   &-icon {
     width: 1.5rem;
   }
 }
-
-// have search input fill up space
-// curve borders search input
-// add padding to add space between borders and placeholder text
-// add margins to increase space between edges of viewport and elements
-// change search input font

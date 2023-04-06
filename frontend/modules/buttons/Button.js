@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Button.scss";
 
-const Button = ({ children, isDisabled, to, clickEvent, styleKey }) => {
+const Button = ({ children, className, isDisabled, to, clickEvent, styleKey }) => {
   const classNameSelect = () => {
     switch (styleKey) {
       case "img":
@@ -18,7 +18,7 @@ const Button = ({ children, isDisabled, to, clickEvent, styleKey }) => {
 
   return (
     <button
-      className={`button-base ${classNameSelect()}`}
+      className={`button-base ${classNameSelect()} ${className}`}
       disabled={isDisabled}
       to={to}
       onClick={clickEvent}
