@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CategoriesList from "../category/CategoryList";
-import ProductSnapshotContainer from "../product/products_snapshot_container";
+import ProductListContainer from "../product/ProductListContainer";
 import ProductsSnapshot2Container from "../product/products_snapshot_2_container";
 import About from "../footer/about";
 
@@ -12,8 +12,8 @@ const Home = () => {
       <div id="ribbon"></div>
       <main id="front-page">
         <CategoriesList />
-        {/* <ProductSnapshotContainer />
-        <div className="top-banner">
+        <ProductListContainer />
+        {/* <div className="top-banner">
           <div className="bubbles-container">
             <ul className="bubbles-list">
               <li className="bubbles-list-items">
@@ -73,8 +73,8 @@ const Home = () => {
               </li>
             </ul>
           </div>
-        </div>
-        <ProductsSnapshot2Container /> */}
+        </div> */}
+        {/* <ProductsSnapshot2Container /> */}
       </main>
       {/* <About /> */}
       {/* this is the image that partially covers color to create effect */}

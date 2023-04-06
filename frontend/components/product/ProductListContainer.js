@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { fetchProducts } from "../../actions/product_actions";
 import { fetchReviews } from "../../actions/review_actions";
-import ProductSnapshot from "./products_snapshot";
+import ProductList from "./ProductList";
 
 const mapStateToProps = (state) => {
   return {
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductSnapshot);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
