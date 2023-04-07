@@ -7,7 +7,7 @@ import { listAllCategories } from "../../actions/category_actions";
 // stylesheet imports
 import "./CategoryList.scss";
 
-const CategoriesList = () => {
+const CategoriesList = ({ displayBanner }) => {
   const dispatch = useDispatch();
   const [allCategories, setAllCategories] = useState([]);
   useEffect(() => {
@@ -17,8 +17,8 @@ const CategoriesList = () => {
   }, []);
   return (
     <div className="category-list">
-      <div className="category-banner"/>
-      <h2 className="category-heading">Check out these cow-tegories</h2>
+      {displayBanner && (<div className="category-banner"/>)}
+      {displayBanner && (<h2 className="category-heading">Check out these cow-tegories</h2>)}
       <ul className="category-wrap">
         {allCategories?.map((category) => (
           <li className="category-bubble" key={category.id}>
