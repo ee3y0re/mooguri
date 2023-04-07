@@ -14,7 +14,7 @@ const Home = () => {
         <CategoriesList displayBanner={true}/>
         <ProductListContainer />
         <CategoriesList displayBanner={false}/>
-        {/* <ProductsSnapshot2Container /> */}
+        <ProductsSnapshot2Container />
       </main>
       {/* <About /> */}
       {/* this is the image that partially covers color to create effect */}

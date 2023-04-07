@@ -28,7 +28,7 @@ class ProductList extends React.Component {
         <ul className="sample-list">
           {firstAndSecond?.map((product) => {
             return (
-              <li className="sample-item">
+              <li className="sample-item" key={product.id}>
                 <Link to={`/products/${product.id}`} className="sample-link">
                   <img
                     src={product.photoUrl}
