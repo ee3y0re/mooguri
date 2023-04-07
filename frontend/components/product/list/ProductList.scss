@@ -1,9 +1,11 @@
 .sample {
+  &-container {
+    margin: 3.125rem auto 0;
+  }
   &-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0;
     padding: 0;
   }
 
