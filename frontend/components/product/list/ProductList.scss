@@ -1,0 +1,35 @@
+.sample {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    margin: 0.2rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: none;
+    transition: box-shadow 0.2s ease-out;
+
+    &:hover {
+      box-shadow: 0 0 0.5rem var(--neutral-gray);
+    }
+    @media (min-width: 56.25rem) {
+      margin: 0.375rem;
+    }
+  }
+
+  &-img {
+    width: 8.25rem;
+    height: 6.875rem;
+    object-fit: cover;
+
+    @media (min-width: 56.25rem) {
+      width: 10.5rem;
+      height: 7.875rem;
+    }
+  }
+}
