@@ -23,8 +23,6 @@ const Button = ({
     }
   };
 
-  console.log(className);
-
   return (
     <button
       className={`button-base ${classNameSelect()} ${className}`}

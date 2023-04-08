@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Container from "../../modules/container/Container";
+import Container from "../../../modules/container/Container";
+import './ProductList2.scss'
 
-class ProductSnapshot2 extends React.Component {
+class ProductListTwo extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -25,13 +26,13 @@ class ProductSnapshot2 extends React.Component {
 
     return (
       <Container>
-        <ul className="sample-list">
+        <ul className="sample-two-list">
           {selectedProducts?.map((product) => {
             return (
-              <li className="sample-item" key={product.id}>
-                <Link className="sample-link" to={`/products/${product.id}`}>
+              <li className="sample-two-item" key={product.id}>
+                <Link className="sample-two-link" to={`/products/${product.id}`}>
                   <img
-                    className="sample-img"
+                    className="sample-two-img"
                     src={product.photoUrl}
                     alt={product.name}
                   />
@@ -45,4 +46,4 @@ class ProductSnapshot2 extends React.Component {
   }
 }
 
-export default ProductSnapshot2;
+export default ProductListTwo;

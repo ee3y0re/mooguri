@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CategoriesList from "../category/CategoryList";
 import ProductListContainer from "../product/list/ProductListContainer";
-import ProductsSnapshot2Container from "../product/products_snapshot_2_container";
+import ProductList2Container from "../product/list/ProductList2Container";
 import About from "../footer/about";
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
         <CategoriesList displayBanner={true}/>
         <ProductListContainer />
         <CategoriesList displayBanner={false}/>
-        <ProductsSnapshot2Container />
+        <ProductList2Container />
       </main>
       {/* <About /> */}
       {/* this is the image that partially covers color to create effect */}
