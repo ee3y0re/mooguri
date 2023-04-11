@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchProduct } from "../../actions/product_actions";
 import { createReview } from "../../actions/review_actions";
 import { fetchUserCartProducts, addProductToCart, updateProductInCart } from "../../actions/cart_actions";
-import ProductSingular from "./product_singular";
+import Product from "./Product";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -23,4 +23,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductSingular);
+export default connect(mapStateToProps, mapDispatchToProps)(Product);

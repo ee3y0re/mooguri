@@ -1,0 +1,10 @@
+.product {
+  &-img {
+    max-width: 17.75rem;
+    max-height: 12.875rem;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0.5rem var(--neutral-gray);
+  }
+}
