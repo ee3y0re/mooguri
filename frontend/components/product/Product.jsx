@@ -2,7 +2,7 @@
 import React from "react";
 import ReviewList from "../review/review_list";
 import Container from "../../modules/container/Container";
-import Button from "../../modules/buttons/Button"
+import Button from "../../modules/buttons/Button";
 import "./Product.scss";
 
 class Product extends React.Component {
@@ -95,43 +95,43 @@ class Product extends React.Component {
 
     return (
       <Container className="product-container">
-        <div className="product-wrapper intro"></div>
-        <img className="product-img" src={photoUrl} alt={productName} />
-        <div className="product-wrapper main">
-          <h2 className="product-name">{productName}</h2>
-          <p className="product-seller">Seller ID: {sellerId}</p>
-          <h3 className="product-price">${this.priceFormatter(price)}</h3>
-          <div className="product-qty">
-            <label htmlFor="qty">
-              <p className="product-qty-num">Quantity</p>
-            </label>
-            <select
-              name="qty"
-              className="product-dropdown"
-              onChange={this.handleUpdateQty}
-            >
-              {dropDownArr.map((choice, i) => {
-                return (
-                  <option className="product-option" value={choice} key={i}>
-                    {choice}
-                  </option>
-                );
-              })}
-            </select>
+        <div className="product-wrapper intro">
+          <img className="product-img" src={photoUrl} alt={productName} />
+          <div className="product-wrapper main">
+            <h2 className="product-name">{productName}</h2>
+            <p className="product-seller">Seller ID: {sellerId}</p>
+            <h3 className="product-price">${this.priceFormatter(price)}</h3>
+            <div className="product-qty">
+              <label htmlFor="qty">
+                <p className="product-qty-num">Quantity</p>
+              </label>
+              <select
+                name="qty"
+                className="product-dropdown"
+                onChange={this.handleUpdateQty}
+              >
+                {dropDownArr.map((choice, i) => {
+                  return (
+                    <option className="product-option" value={choice} key={i}>
+                      {choice}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            {!currentUser ? (
+              <p>Please log in to add to cart</p>
+            ) : (
+              <Button
+                styleKey="filled"
+                className="product-button"
+                onClick={this.handleAddToCartClick}
+              >
+                Add to Cart
+              </Button>
+            )}
           </div>
         </div>
-        {!currentUser ? (
-          <p>Please log in to add to cart</p>
-        ) : (
-          <Button
-            styleKey="filled"
-            className="product-button"
-            onClick={this.handleAddToCartClick}
-          >
-            Add to Cart
-          </Button>
-        )}
-
         <div className="product-wrapper specs">
           <div className="product-wrapper info">
             <p className="product-description-title">Description</p>
@@ -148,7 +148,7 @@ class Product extends React.Component {
               reviews={reviews}
               refreshList={this.refreshList}
             />
-          </div>          
+          </div>
         </div>
       </Container>
     );
