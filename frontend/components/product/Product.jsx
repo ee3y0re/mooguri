@@ -95,30 +95,30 @@ class Product extends React.Component {
 
     return (
       <Container className="product-container">
+        <div className="product-wrapper intro"></div>
         <img className="product-img" src={photoUrl} alt={productName} />
-        <div className="product-wrapper-main">
-          <h2>{productName}</h2>
-          <p>Seller ID: {sellerId}</p>
-          <h3>${this.priceFormatter(price)}</h3>
-        </div>
-        <div className="product-qty">
-          <label htmlFor="qty">
-            <p className="product-qty-num">Quantity</p>
-          </label>
-          <select
-            name="qty"
-            id="qty"
-            className="product-dropdown"
-            onChange={this.handleUpdateQty}
-          >
-            {dropDownArr.map((choice, i) => {
-              return (
-                <option className="product-option" value={choice} key={i}>
-                  {choice}
-                </option>
-              );
-            })}
-          </select>
+        <div className="product-wrapper main">
+          <h2 className="product-name">{productName}</h2>
+          <p className="product-seller">Seller ID: {sellerId}</p>
+          <h3 className="product-price">${this.priceFormatter(price)}</h3>
+          <div className="product-qty">
+            <label htmlFor="qty">
+              <p className="product-qty-num">Quantity</p>
+            </label>
+            <select
+              name="qty"
+              className="product-dropdown"
+              onChange={this.handleUpdateQty}
+            >
+              {dropDownArr.map((choice, i) => {
+                return (
+                  <option className="product-option" value={choice} key={i}>
+                    {choice}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
         </div>
         {!currentUser ? (
           <p>Please log in to add to cart</p>
@@ -132,15 +132,15 @@ class Product extends React.Component {
           </Button>
         )}
 
-        <div className="product-logistics-wrapper">
-          <div className="product-info-wrapper">
+        <div className="product-wrapper specs">
+          <div className="product-wrapper info">
             <p className="product-description-title">Description</p>
             <h3 className="product-description-details">{description}</h3>
             <p className="product-eta-title">Shipping and Return Policies</p>
             <h3 className="product-eta-subtitle">Estimated Arrival</h3>
             <h2 className="custom-eta-date">April 1-5</h2>
           </div>
-          <div className="product-reviews-wrapper">
+          <div className="product-wrapper reviews">
             <p className="product-reviews-title">{reviews?.length} reviews</p>
             <ReviewList
               currentUser={this.props.currentUser}

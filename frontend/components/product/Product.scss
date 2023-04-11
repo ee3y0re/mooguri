@@ -1,4 +1,9 @@
 .product {
+  &-container > *,
+  &-wrapper > * {
+    margin-top: 1rem;
+  }
+
   &-img {
     max-width: 17.75rem;
     max-height: 12.875rem;
@@ -6,5 +11,11 @@
     width: 100%;
     height: 100%;
     box-shadow: 0 0 0.5rem var(--neutral-gray);
+  }
+
+  &-dropdown {
+    font-family: var(--standard);
+    font-size: 0.625rem;
+    padding: 0.125rem;
   }
 }
