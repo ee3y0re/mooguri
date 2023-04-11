@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Container from "../../../modules/container/Container";
-import './ProductList2.scss'
+import "./ProductList2.scss";
 
 class ProductListTwo extends React.Component {
   constructor(props) {
@@ -16,27 +16,37 @@ class ProductListTwo extends React.Component {
     const products = Object.values(this.props.products);
     let selectedProducts = [];
     for (let i = 3; i < products.length; i += 6) {
-      if (i < 16) {
-        selectedProducts.push(products[i]);
-        selectedProducts.push(products[i + 1]);
-      } else {
-        selectedProducts.push(products[i]);
+      if (selectedProducts.length < 4) {
+        selectedProducts.push([products[i], products[i + 1]]);
       }
     }
+
+    console.log(selectedProducts);
 
     return (
       <Container>
         <ul className="sample-two-list">
-          {selectedProducts?.map((product) => {
+          {selectedProducts?.map((pair, i) => {
             return (
-              <li className="sample-two-item" key={product.id}>
-                <Link className="sample-two-link" to={`/products/${product.id}`}>
-                  <img
-                    className="sample-two-img"
-                    src={product.photoUrl}
-                    alt={product.name}
-                  />
-                </Link>
+              <li
+                key={i}
+                className={`sample-two-item ${i % 2 === 0 ? "even" : "odd"}`}
+              >
+                {pair.map((product) => {
+                  return (
+                    <Link
+                      key={product.id}
+                      className="sample-two-link"
+                      to={`/products/${product.id}`}
+                    >
+                      <img
+                        className="sample-two-img"
+                        src={product.photoUrl}
+                        alt={product.name}
+                      />
+                    </Link>
+                  );
+                })}
               </li>
             );
           })}
