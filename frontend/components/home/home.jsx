@@ -4,6 +4,7 @@ import CategoriesList from "../category/CategoryList";
 import ProductListContainer from "../product/list/ProductListContainer";
 import ProductList2Container from "../product/list/ProductList2Container";
 import About from "../footer/about";
+import './Home.scss'
 
 const Home = () => {
 
@@ -13,7 +14,7 @@ const Home = () => {
       <main id="front-page">
         <CategoriesList displayBanner={true}/>
         <ProductListContainer />
-        <CategoriesList displayBanner={false}/>
+        <CategoriesList displayBanner={false} className="categories-list-two"/>
         <ProductList2Container />
       </main>
       {/* <About /> */}
