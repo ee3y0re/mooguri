@@ -64,7 +64,7 @@ const Footer = () => {
           </ul>
         </li>
         <li className="footer-section contact">
-          <p className="footer-title">Let's Keep in Touch!</p>
+          <p className="footer-title social">Let's Keep in Touch!</p>
           <ul className="footer-link-list social">
             <li className="footer-link-item email">
               <a
