@@ -27,6 +27,8 @@
   }
 
   &-section {
+    padding: 0 0.0625rem;
+    
     &:not(.contact) {
       border-bottom: 0.125rem var(--neutral-gray) solid;
       display: flex;
