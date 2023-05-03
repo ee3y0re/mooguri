@@ -5,7 +5,7 @@ import ProductContainer from "./product/ProductContainer";
 import Category from "./category/Category";
 import SearchResult from "./navbar/search/SearchResult";
 import CartCheckout from "./cart/cart_checkout";
-import Directory from "./footer/Directory";
+import Directory from "./footer/Footer";
 import Nav from "./navbar/NavBar";
 import CompleteCheckout from "./cart/complete_checkout";
 import "./globalStyles.scss"
