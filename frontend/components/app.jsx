@@ -5,7 +5,7 @@ import ProductContainer from "./product/ProductContainer";
 import Category from "./category/Category";
 import SearchResult from "./navbar/search/SearchResult";
 import CartCheckout from "./cart/cart_checkout";
-import Directory from "./footer/directory";
+import Directory from "./footer/Directory";
 import Nav from "./navbar/NavBar";
 import CompleteCheckout from "./cart/complete_checkout";
 import "./globalStyles.scss"
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/checkout-complete" component={CompleteCheckout} />
         <Route path="/" component={Home} />
       </Switch>
-      {/* <Directory /> */}
+      <Directory />
     </div>
   );
 };
