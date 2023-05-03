@@ -30,7 +30,7 @@
     &:not(.contact) {
       border-bottom: 0.125rem var(--neutral-gray) solid;
       display: flex;
-      margin: 0  1rem 1.75rem;
+      margin: 0 1rem 1.75rem;
 
       @media (min-width: 56.25rem) {
         display: block;
@@ -42,6 +42,12 @@
 
   &-link-item {
     margin-bottom: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #182335;
+      box-shadow: #182335 0 0 0 0.5625rem;
+    }
   }
 
   &-title {
