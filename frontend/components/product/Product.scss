@@ -24,6 +24,7 @@
       }
 
       &.reviews {
+        flex-grow: 1;
         order: 1;
         margin-right: 1rem;
         background: var(--gray-tint);
@@ -49,7 +50,7 @@
     box-shadow: 0 0 0.5rem var(--neutral-gray);
 
     @media (min-width: 56.25rem) {
-      max-width: 37.5rem;
+      max-width: 25rem;
       max-height: 25rem;
     }
   }
