@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./ProductItem.scss"
+import "./ProductItem.scss";
 
 const ProductItem = ({ id, imgSrc, name, price, seller }) => {
   return (
     <li className="product-item">
-      <Link to={`/products/${id}`} className="link">
+      <Link
+        to={`/products/${id}`}
+        className="link"
+        onClick={window.scrollTo(0, 0)}
+      >
         <img className="img" src={imgSrc} alt={`${name} image`} />
         <p className="name">{name}</p>
         <p className="price">{price}</p>
