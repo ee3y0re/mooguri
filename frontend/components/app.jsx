@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./home/Home";
-import ProductSingularContainer from "./product/product_singular_container";
+import ProductContainer from "./product/ProductContainer";
 import Category from "./category/Category";
 import SearchResult from "./navbar/search/SearchResult";
 import CartCheckout from "./cart/cart_checkout";
@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/search" component={SearchResult} />
         <Route
           path="/products/:productId"
-          component={ProductSingularContainer}
+          component={ProductContainer}
         />
         <Route path="/categories/:categoryId" component={Category} />
         <Route path="/checkout" component={CartCheckout} />
