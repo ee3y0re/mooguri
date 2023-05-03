@@ -20,6 +20,10 @@
       margin-bottom: 0.375rem;
     }
 
+    @media (min-width: 28.25rem) {
+      width: 23%;
+    }
+
     @media (min-width: 56.25rem) {
       width: 23%;
       margin: 0.375rem;
