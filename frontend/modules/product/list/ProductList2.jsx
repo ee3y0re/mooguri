@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Container from "../../../modules/container/Container";
+import Container from "../../../components/container/Container";
 import "./ProductList2.scss";
 
 class ProductListTwo extends React.Component {

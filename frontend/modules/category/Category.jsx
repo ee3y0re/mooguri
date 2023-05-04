@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { listCategoryProducts } from "../../actions/categoryActions";
 import { fetchProducts } from "../../actions/productActions";
-import Container from "../../modules/container/Container"
-import ProductItem from "../../modules/list/ProductItem";
+import Container from "../../components/container/Container";
+import ProductItem from "../../components/list/ProductItem";
 import "./Category.scss";
 
 const Category = (props) => {
@@ -25,7 +25,7 @@ const Category = (props) => {
       (product) => category && category.productIds?.includes(product.id)
     );
 
-  if (!products) return null
+  if (!products) return null;
   return (
     <div id="category" className="category">
       <Container>

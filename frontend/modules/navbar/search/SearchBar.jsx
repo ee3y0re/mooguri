@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { withRouter, useLocation, useHistory } from "react-router-dom";
-import Button from "../../../modules/buttons/Button";
+import Button from "../../../components/buttons/Button";
 import "./SearchBar.scss";
 
 const SearchBar = () => {

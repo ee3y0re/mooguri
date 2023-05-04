@@ -1,6 +1,6 @@
 import React from "react";
 import "./Auth.scss";
-import Button from "../../modules/buttons/Button";
+import Button from "../../components/buttons/Button";
 
 const Auth = ({ currentUser, logout, openModal }) => {
   const SignOut = () => {

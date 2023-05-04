@@ -1,8 +1,8 @@
 //PRODUCT SHOW PT 1
 import React from "react";
 import ReviewList from "../review/review_list";
-import Container from "../../modules/container/Container";
-import Button from "../../modules/buttons/Button";
+import Container from "../../components/container/Container";
+import Button from "../../components/buttons/Button";
 import "./Product.scss";
 
 class Product extends React.Component {

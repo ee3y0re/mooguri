@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Container from "../../../modules/container/Container";
+import Container from "../../../components/container/Container";
 import "./ProductList.scss";
 
 class ProductList extends React.Component {
@@ -28,10 +28,7 @@ class ProductList extends React.Component {
         <ul className="sample-list">
           {firstAndSecond?.map((product) => {
             return (
-              <li
-                className="sample-item"
-                key={product.id}
-              >
+              <li className="sample-item" key={product.id}>
                 <Link to={`/products/${product.id}`} className="sample-link">
                   <img
                     src={product.photoUrl}
