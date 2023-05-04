@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchUserCartProducts } from "../../actions/cart_actions";
+import { fetchUserCartProducts } from "../../actions/cartActions";
 import SearchBar from "./search/SearchBar";
 import ModalContainer from "../modal/modal";
 import AuthContainer from "../auth/AuthContainer";

@@ -2,7 +2,11 @@
 import { connect } from "react-redux";
 import { fetchProduct } from "../../actions/product_actions";
 import { createReview } from "../../actions/review_actions";
-import { fetchUserCartProducts, addProductToCart, updateProductInCart } from "../../actions/cart_actions";
+import {
+  fetchUserCartProducts,
+  addProductToCart,
+  updateProductInCart,
+} from "../../actions/cartActions";
 import Product from "./Product";
 
 const mapStateToProps = (state, ownProps) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { deleteProductInCart } from "../../actions/cart_actions";
+import { deleteProductInCart } from "../../actions/cartActions";
 
 const Payment = ({ currentCart, itemsTotalProp, priceFormatter }) => {
   const dispatch = useDispatch();

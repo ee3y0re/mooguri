@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
-import { fetchUserCartProducts, deleteProductInCart } from "../../actions/cart_actions";
+import { fetchUserCartProducts, deleteProductInCart } from "../../actions/cartActions";
 import IndividualCart from "./individual_cart_item";
 import EmptyCart from "./empty_cart";
 import Payment from "./payment";
