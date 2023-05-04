@@ -28,7 +28,7 @@
 
   &-section {
     padding: 0 0.0625rem;
-    
+
     &:not(.contact) {
       border-bottom: 0.125rem var(--neutral-gray) solid;
       display: flex;
@@ -45,10 +45,15 @@
   &-link-item {
     margin-bottom: 1rem;
 
-    &:hover {
+    &:not(.special-thanks):hover {
       cursor: pointer;
+      border-radius: 2rem;
       background-color: #182335;
       box-shadow: #182335 0 0 0 0.5625rem;
+    }
+
+    &.special-thanks:hover {
+      cursor: default;
     }
   }
 

@@ -45,7 +45,7 @@ const Footer = () => {
           <ul className="footer-link-list">
             <li className="footer-link-item">
               <a
-                href="https://ee3y0re.github.io/Sassper-the-Sassy-Ghost/"
+                href="https://ee3y0re.github.io/sassper-the-sassy-ghost/"
                 target="_blank"
                 className="footer-link-url"
               >
@@ -58,9 +58,11 @@ const Footer = () => {
         <li className="footer-section">
           <p className="footer-title">Special Thanks</p>
           <ul className="footer-link-list">
-            <li className="footer-link-item">To my teachers,</li>
-            <li className="footer-link-item">My classmates,</li>
-            <li className="footer-link-item">And my loved ones</li>
+            <li className="footer-link-item special-thanks">To my teachers,</li>
+            <li className="footer-link-item special-thanks">My classmates,</li>
+            <li className="footer-link-item special-thanks">
+              And my loved ones
+            </li>
           </ul>
         </li>
         <li className="footer-section contact">
