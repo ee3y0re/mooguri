@@ -1,4 +1,4 @@
-import { RECEIVE_PRODUCT, RECEIVE_PRODUCTS } from "../actions/product_actions"
+import { RECEIVE_PRODUCT, RECEIVE_PRODUCTS } from "../actions/productActions";
 import { RECEIVE_REVIEW } from "../actions/review_actions";
 
 const ProductsReducer = (state = {}, action) => {

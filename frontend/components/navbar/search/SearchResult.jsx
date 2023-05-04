@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 // use the value in the url to be able to map the products
 import { withRouter, useLocation, Link } from "react-router-dom";
 // import the action for getting all products
-import { fetchProducts } from "../../../actions/product_actions";
+import { fetchProducts } from "../../../actions/productActions";
 
 const SearchResult = () => {
   // // set up the part of state that returns after calling fetchProducts
