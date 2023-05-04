@@ -1,6 +1,6 @@
 // REVIEW FORM CONTAINER
 import { connect } from "react-redux";
-import { createReview } from "../../actions/review_actions";
+import { createReview } from "../../actions/reviewActions";
 import CreateReviewForm from "./create_review_form";
 
 const mstp = (state) => {

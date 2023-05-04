@@ -1,7 +1,7 @@
 // PRODUCT SHOW CONTAINER
 import { connect } from "react-redux";
 import { fetchProduct } from "../../actions/productActions";
-import { createReview } from "../../actions/review_actions";
+import { createReview } from "../../actions/reviewActions";
 import {
   fetchUserCartProducts,
   addProductToCart,

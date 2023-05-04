@@ -42,7 +42,7 @@ export const clearReviewErrors = () => {
 // use the below thunk action creator to test
 
 export const fetchReviews = () => (dispatch) => {
-  // review_actions.js: 34 Uncaught TypeError: _util_review_api_util__WEBPACK_IMPORTED_MODULE_0__ is not a function
+  // reviewActions.js: 34 Uncaught TypeError: _util_review_api_util__WEBPACK_IMPORTED_MODULE_0__ is not a function
   // ReviewApiUtil(function()) should be ReviewApiUtil.function()
   return ReviewApiUtil.fetchReviews()
     .then((reviews) => { return dispatch(receiveReviews(reviews)) });

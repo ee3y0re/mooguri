@@ -1,5 +1,5 @@
 import { RECEIVE_PRODUCT, RECEIVE_PRODUCTS } from "../actions/productActions";
-import { RECEIVE_REVIEW } from "../actions/review_actions";
+import { RECEIVE_REVIEW } from "../actions/reviewActions";
 
 const ProductsReducer = (state = {}, action) => {
   Object.freeze(state);

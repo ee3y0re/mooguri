@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { deleteReview } from "../../actions/review_actions";
+import { deleteReview } from "../../actions/reviewActions";
 import ReviewListItem from "./review_list_item";
 
 const mdtp = (dispatch) => {
