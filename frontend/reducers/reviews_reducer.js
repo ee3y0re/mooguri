@@ -1,8 +1,8 @@
 import {
   RECEIVE_REVIEWS,
   RECEIVE_REVIEW,
-  REMOVE_REVIEW
-} from "../actions/review_actions";
+  REMOVE_REVIEW,
+} from "../actions/reviewActions";
 
 
 const ReviewsReducer = (state = {}, action) => {

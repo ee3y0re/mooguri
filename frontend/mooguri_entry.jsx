@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Root from "./components/root";
+import Root from "./modules/root";
 import configureStore from "./store/store";
 
 import {
   listAllCategories,
-  listCategoryProducts
-} from "./actions/category_actions" // near the top
+  listCategoryProducts,
+} from "./actions/categoryActions"; // near the top
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;

@@ -1,8 +1,8 @@
 import {
-  RECEIVE_CART_PRODUCTS, 
-  RECEIVE_CART_PRODUCT, 
-  DELETE_CART_PRODUCT
-} from "../actions/cart_actions";
+  RECEIVE_CART_PRODUCTS,
+  RECEIVE_CART_PRODUCT,
+  DELETE_CART_PRODUCT,
+} from "../actions/cartActions";
 
 const CartsReducer = (state = {}, action) => {
   Object.freeze(state);
