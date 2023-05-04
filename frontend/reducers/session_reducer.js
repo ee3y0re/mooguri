@@ -1,8 +1,8 @@
 //keeps track of current user
 import {
   RECEIEVE_CURRENT_USER,
-  LOGOUT_CURRENT_USER
-} from "../actions/session_actions"
+  LOGOUT_CURRENT_USER,
+} from "../actions/sessionActions";
 
 const _nullState = {
   id: null

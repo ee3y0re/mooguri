@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { signup, clearSessionErrors } from "../../actions/session_actions";
+import { signup, clearSessionErrors } from "../../actions/sessionActions";
 import SignupForm from "./signup_form";
 import { withRouter } from "react-router-dom";
 import { closeModal } from "../../actions/modalActions";
