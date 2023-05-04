@@ -43,7 +43,7 @@ export const listCategoryProducts = (categoryId) => (dispatch) => {
 
 // test by adding the following to the entry file
 /*
-import * as CategoryFunct from "./actions/category_actions" // near the top
+import * as CategoryFunct from "./actions/categoryActions" // near the top
 
 ... 
 

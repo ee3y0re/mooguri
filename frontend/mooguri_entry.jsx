@@ -5,8 +5,8 @@ import configureStore from "./store/store";
 
 import {
   listAllCategories,
-  listCategoryProducts
-} from "./actions/category_actions" // near the top
+  listCategoryProducts,
+} from "./actions/categoryActions"; // near the top
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;

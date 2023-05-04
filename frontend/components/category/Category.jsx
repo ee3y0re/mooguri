@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { listCategoryProducts } from "../../actions/category_actions";
+import { listCategoryProducts } from "../../actions/categoryActions";
 import { fetchProducts } from "../../actions/product_actions";
 import Container from "../../modules/container/Container"
 import ProductItem from "../../modules/list/ProductItem";

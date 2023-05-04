@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 // action imports
-import { listAllCategories } from "../../actions/category_actions";
+import { listAllCategories } from "../../actions/categoryActions";
 // stylesheet imports
 import "./CategoryList.scss";
 
