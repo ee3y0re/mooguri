@@ -1,5 +1,5 @@
 import React from "react";
-import { closeModal } from "../../actions/modal_actions";
+import { closeModal } from "../../actions/modalActions";
 import { connect } from "react-redux";
 import LoginFormContainer from "../login/login_form_container";
 import SignupFormContainer from "../signup/signup_form_container";
@@ -30,13 +30,13 @@ const Modal = ({ closeModal, modal }) => {
     //clicking outside of modal closes modal
     <div className="modal-background" onClick={closeModal}>
       {/* prevent modal closing when clicking inside */}
-      <div className="modal-child" onClick={(e) => e.stopPropagation()}> 
+      <div className="modal-child" onClick={(e) => e.stopPropagation()}>
         {/* from the switch statement of what kind of component to show */}
-        { component }
+        {component}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
@@ -46,7 +46,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
   };
 };
 

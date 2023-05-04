@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { signup, clearSessionErrors } from "../../actions/session_actions";
 import SignupForm from "./signup_form";
 import { withRouter } from "react-router-dom";
-import { closeModal } from "../../actions/modal_actions";
+import { closeModal } from "../../actions/modalActions";
 
 const mapStateToProps = (state) => {
   let currentUserId = state.session.id;
@@ -10,16 +10,19 @@ const mapStateToProps = (state) => {
   return {
     currentUser: allUsers[currentUserId],
     errors: state.errors.session,
-    formType: "Sign Up"
+    formType: "Sign Up",
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    processForm: user => dispatch(signup(user)),
+    processForm: (user) => dispatch(signup(user)),
     closeModal: () => dispatch(closeModal()),
-    clearSessionErrors: () => dispatch(clearSessionErrors())
+    clearSessionErrors: () => dispatch(clearSessionErrors()),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SignupForm));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(SignupForm));

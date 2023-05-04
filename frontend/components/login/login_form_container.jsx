@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { login, clearSessionErrors } from "../../actions/session_actions";
 //remember to import the presentational component itself
 import LoginForm from "./login_form";
-import { openModal, closeModal } from "../../actions/modal_actions";
+import { openModal, closeModal } from "../../actions/modalActions";
 
 const mapStateToProps = (state) => {
   let currentUserId = state.session.id;
@@ -13,20 +13,20 @@ const mapStateToProps = (state) => {
   return {
     currentUser: allUsers[currentUserId],
     errors: state.errors.session,
-    formType: "Log In"
+    formType: "Log In",
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    processForm: user => dispatch(login(user)),
+    processForm: (user) => dispatch(login(user)),
     otherForm: (
       <button id="signup-button" onClick={() => dispatch(openModal("Sign Up"))}>
         Sign Up
       </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    clearSessionErrors: () => dispatch(clearSessionErrors())
+    clearSessionErrors: () => dispatch(clearSessionErrors()),
   };
 };
 
