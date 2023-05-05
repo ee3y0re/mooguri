@@ -5,7 +5,7 @@ import Button from "../../components/buttons/Button";
 const Auth = ({ currentUser, logout, openModal }) => {
   const SignOut = () => {
     return (
-      <Button styleKey="clear" clickEvent={logout}>
+      <Button styleKey="clear" onClick={logout}>
         Sign Out
       </Button>
     );
@@ -13,7 +13,7 @@ const Auth = ({ currentUser, logout, openModal }) => {
 
   const SignIn = () => {
     return (
-      <Button styleKey="clear" clickEvent={() => openModal("Log In")}>
+      <Button styleKey="clear" onClick={() => openModal("Log In")}>
         Sign In
       </Button>
     );
