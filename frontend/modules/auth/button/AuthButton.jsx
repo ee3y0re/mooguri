@@ -1,8 +1,7 @@
 import React from "react";
-import "./Auth.scss";
-import Button from "../../components/buttons/Button";
+import Button from "../../../components/buttons/Button";
 
-const Auth = ({ currentUser, logout, openModal }) => {
+const AuthButton = ({ currentUser, logout, openModal }) => {
   const SignOut = () => {
     return (
       <Button styleKey="clear" onClick={logout}>
@@ -21,4 +20,4 @@ const Auth = ({ currentUser, logout, openModal }) => {
   return currentUser ? SignOut() : SignIn();
 };
 
-export default Auth;
+export default AuthButton;

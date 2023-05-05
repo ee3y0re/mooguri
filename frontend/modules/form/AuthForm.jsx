@@ -1,6 +1,6 @@
 import React from "react";
 import "./AuthForm.scss";
-import Button from "../../components/buttons/Button";
+import Button from "../../../components/buttons/Button";
 
 class AuthForm extends React.Component {
   constructor(props) {
@@ -64,7 +64,9 @@ class AuthForm extends React.Component {
           onChange={this.update("password")}
         />
         {this.renderErrors()}
-        <Button type="submit" styleKey="filled">{this.props.formType}</Button>
+        <Button type="submit" styleKey="filled">
+          {this.props.formType}
+        </Button>
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
-import { signup, clearSessionErrors } from "../../actions/sessionActions";
-import SignupForm from "./AuthForm";
+import { signup, clearSessionErrors } from "../../../actions/sessionActions";
+import AuthForm from "./AuthForm";
 import { withRouter } from "react-router-dom";
-import { closeModal } from "../../actions/modalActions";
+import { closeModal } from "../../../actions/modalActions";
 
 const mapStateToProps = (state) => {
   let currentUserId = state.session.id;
@@ -30,4 +30,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withRouter(SignupForm));
+)(withRouter(AuthForm));
