@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchUserCartProducts } from "../../actions/cartActions";
 import SearchBar from "./search/SearchBar";
-import ModalContainer from "../modal/modal";
 import AuthContainer from "../auth/AuthContainer";
 import "./NavBar.scss";
 
@@ -38,7 +37,6 @@ const NavBar = () => {
           <h1 className="nav-logo">MOOguri</h1>
         </Link>
         <div className="nav-wrapper">
-          <ModalContainer />
           <AuthContainer />
           <Link to="/checkout" className="nav-cart-link">
             <p className={cartNumClass}>{cartNum}</p>
