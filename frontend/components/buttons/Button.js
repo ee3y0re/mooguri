@@ -7,8 +7,9 @@ const Button = ({
   className,
   isDisabled,
   to,
-  clickEvent,
+  onClick,
   styleKey,
+  type
 }) => {
   const classNameSelect = () => {
     switch (styleKey) {
@@ -28,7 +29,8 @@ const Button = ({
       className={`button-base ${classNameSelect()} ${className}`}
       disabled={isDisabled}
       to={to}
-      onClick={clickEvent}
+      onClick={onClick}
+      type={type}
     >
       {typeof children === "string" ? (
         <p className={`button-content ${classNameSelect()}`}>{children}</p>
