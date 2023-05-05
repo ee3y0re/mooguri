@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { signup, clearSessionErrors } from "../../actions/sessionActions";
-import SignupForm from "./signup_form";
+import SignupForm from "./AuthForm";
 import { withRouter } from "react-router-dom";
 import { closeModal } from "../../actions/modalActions";
 
@@ -11,6 +11,11 @@ const mapStateToProps = (state) => {
     currentUser: allUsers[currentUserId],
     errors: state.errors.session,
     formType: "Sign Up",
+    stateStart: {
+      username: "",
+      email: "",
+      password: "",
+    },
   };
 };
 
