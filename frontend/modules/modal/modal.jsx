@@ -2,7 +2,7 @@ import React from "react";
 import { closeModal } from "../../actions/modalActions";
 import { connect } from "react-redux";
 import LoginFormContainer from "../login/login_form_container";
-import SignupFormContainer from "../signup/signup_form_container";
+import SignupFormContainer from "../signup/SignUpFormContainer";
 import "./Modal.scss";
 
 const Modal = ({ closeModal, modal }) => {
@@ -26,6 +26,8 @@ const Modal = ({ closeModal, modal }) => {
     default:
       return null; //if neither signin or login, close modal
   }
+
+  // add close button to modal
 
   return (
     //clicking outside of modal closes modal
