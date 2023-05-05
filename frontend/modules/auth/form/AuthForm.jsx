@@ -51,13 +51,14 @@ class AuthForm extends React.Component {
             />
           </>
         )}
+        {!isSignup && this.props.otherForm}
         <label className="auth-label">Email:</label>
         <input
           className="auth-input"
           type="text"
           onChange={this.update("email")}
         />
-        <label id="signup-password">Password:</label>
+        <label className="auth-label">Password:</label>
         <input
           className="auth-input"
           type="password"
