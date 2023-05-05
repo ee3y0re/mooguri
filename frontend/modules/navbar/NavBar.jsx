@@ -38,7 +38,7 @@ const NavBar = () => {
           <h1 className="nav-logo">MOOguri</h1>
         </Link>
         <div className="nav-wrapper">
-          {/* <ModalContainer /> */}
+          <ModalContainer />
           <AuthContainer />
           <Link to="/checkout" className="nav-cart-link">
             <p className={cartNumClass}>{cartNum}</p>
