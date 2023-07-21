@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import Home from "./home/Home";
+import ModalContainer from '../modules/modal/Modal'
 import ProductContainer from "./product/ProductContainer";
 import Category from "./category/Category";
 import SearchResult from "./navbar/search/SearchResult";
@@ -22,7 +23,8 @@ const App = () => {
   }, [pathname]);
   
   return (
-    <div id="from-app">
+    <div id="from-app" >
+      <ModalContainer />
       <Nav />
       <Switch>
         <Route path="/search" component={SearchResult} />

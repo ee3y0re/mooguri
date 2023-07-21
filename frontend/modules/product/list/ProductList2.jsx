@@ -21,8 +21,6 @@ class ProductListTwo extends React.Component {
       }
     }
 
-    console.log(selectedProducts);
-
     return (
       <Container>
         <ul className="sample-two-list">

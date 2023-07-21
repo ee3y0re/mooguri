@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import { logout } from "../../actions/sessionActions";
-import { openModal } from "../../actions/modalActions";
-import Auth from "./Auth";
+import { logout } from "../../../actions/sessionActions";
+import { openModal } from "../../../actions/modalActions";
+import AuthButton from "./AuthButton";
 
 const mapStateToProps = (state) => {
   let currentUserId = state.session.id;
@@ -19,4 +19,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Auth);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthButton);

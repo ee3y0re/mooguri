@@ -1,8 +1,9 @@
 import React from "react";
 import { closeModal } from "../../actions/modalActions";
 import { connect } from "react-redux";
-import LoginFormContainer from "../login/login_form_container";
-import SignupFormContainer from "../signup/signup_form_container";
+import LoginFormContainer from "../auth/form/LoginFormContainer";
+import SignupFormContainer from "../auth/form/SignUpFormContainer";
+import "./Modal.scss";
 
 const Modal = ({ closeModal, modal }) => {
   /* If our modal slice is null, we'll return null from our component, 
@@ -17,20 +18,22 @@ const Modal = ({ closeModal, modal }) => {
   div. */
   switch (modal) {
     case "Log In":
-      component = <LoginFormContainer />;
+      component = <LoginFormContainer keyword={modal} />;
       break;
     case "Sign Up":
-      component = <SignupFormContainer />;
+      component = <SignupFormContainer keyword={modal} />;
       break;
     default:
       return null; //if neither signin or login, close modal
   }
 
+  // add close button to modal
+
   return (
     //clicking outside of modal closes modal
     <div className="modal-background" onClick={closeModal}>
       {/* prevent modal closing when clicking inside */}
-      <div className="modal-child" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-box" onClick={(e) => e.stopPropagation()}>
         {/* from the switch statement of what kind of component to show */}
         {component}
       </div>
