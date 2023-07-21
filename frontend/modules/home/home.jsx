@@ -10,10 +10,10 @@ const Home = () => {
     <div id="home-container">
       <div id="ribbon"></div>
       <main id="front-page">
-        {/* <CategoriesList displayBanner={true}/>
+        <CategoriesList displayBanner={true}/>
         <ProductListContainer />
         <CategoriesList displayBanner={false} className="categories-list-two"/>
-        <ProductList2Container /> */}
+        <ProductList2Container />
       </main>
     </div>
   );
