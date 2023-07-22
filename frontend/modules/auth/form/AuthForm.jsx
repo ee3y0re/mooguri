@@ -25,6 +25,19 @@ class AuthForm extends React.Component {
     };
   }
 
+  demoLogin = (e) => {
+    e.preventDefault();
+    const bestUser = Object.assign(
+      {},
+      {
+        email: "vanillab@abbymail.com",
+        password: "besticecream",
+      }
+    );
+
+    this.props.processForm(bestUser).then(this.props.closeModal);
+  }
+
   renderErrors() {
     return (
       <ul>
@@ -38,8 +51,8 @@ class AuthForm extends React.Component {
   render() {
     const isSignup = this.props.formType === "Sign Up";
     return (
-      <div className="auth-container">
-        <h3>{this.props.formType}</h3>
+      <form className="auth-container" onSubmit={this.handleSubmit}>
+        <h3 className="auth-heading">{this.props.formType}</h3>
         {isSignup && <p className="auth-subtext">Registration is easy</p>}
         {isSignup && (
           <>
@@ -65,10 +78,15 @@ class AuthForm extends React.Component {
           onChange={this.update("password")}
         />
         {this.renderErrors()}
-        <Button type="submit" styleKey="filled">
+        <Button className="auth-button" type="submit" styleKey="filled">
           {this.props.formType}
         </Button>
-      </div>
+        {!isSignup && (
+          <Button className="auth-button" styleKey="filled" onClick={this.demoLogin}>
+            Demo User Login
+          </Button>
+        )}
+      </form>
     );
   }
 }
