@@ -6,10 +6,13 @@ import "./ProductList2.scss";
 class ProductListTwo extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isLoading: true,
+    };
   }
 
   componentDidMount() {
-    this.props.fetchProducts;
+    this.props.fetchProducts().then(this.setState({ isLoading: false }));
   }
   render() {
     if (!this.props.products) return null;
@@ -24,30 +27,34 @@ class ProductListTwo extends React.Component {
     return (
       <Container>
         <ul className="sample-two-list">
-          {selectedProducts?.map((pair, i) => {
-            return (
-              <li
-                key={i}
-                className={`sample-two-item ${i % 2 === 0 ? "even" : "odd"}`}
-              >
-                {pair.map((product) => {
-                  return (
-                    <Link
-                      key={product.id}
-                      className="sample-two-link"
-                      to={`/products/${product.id}`}
-                    >
-                      <img
-                        className="sample-two-img"
-                        src={product.photoUrl}
-                        alt={product.name}
-                      />
-                    </Link>
-                  );
-                })}
-              </li>
-            );
-          })}
+          {this.state.isLoading ? (
+            <>loading</>
+          ) : (
+            selectedProducts?.map((pair, i) => {
+              return (
+                <li
+                  key={i}
+                  className={`sample-two-item ${i % 2 === 0 ? "even" : "odd"}`}
+                >
+                  {pair.map((product) => {
+                    return (
+                      <Link
+                        key={product.id}
+                        className="sample-two-link"
+                        to={`/products/${product.id}`}
+                      >
+                        <img
+                          className="sample-two-img"
+                          src={product.photoUrl}
+                          alt={product.name}
+                        />
+                      </Link>
+                    );
+                  })}
+                </li>
+              );
+            })
+          )}
         </ul>
       </Container>
     );
