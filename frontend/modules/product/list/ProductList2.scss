@@ -30,6 +30,12 @@
     }
 
     &.even {
+      a > img {
+        background: var(--gray-tint);
+        border-radius: 1.5rem;
+        height: 100%;
+      }
+
       a:nth-child(1) {
         img {
           @media (min-width: 56.25rem) {
@@ -40,6 +46,12 @@
     }
 
     &.odd {
+      a > img {
+        background: var(--gray-tint);
+        border-radius: 1.5rem;
+        height: 100%;
+      }
+
       a:nth-child(2) {
         img {
           @media (min-width: 56.25rem) {
