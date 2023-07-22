@@ -5,6 +5,7 @@ import { fetchUserCartProducts, deleteProductInCart } from "../../actions/cartAc
 import IndividualCart from "./individual_cart_item";
 import EmptyCart from "./empty_cart";
 import Payment from "./payment";
+import "./CartCheckout.scss"
 
 const CartCheckout = () => {
 
@@ -92,13 +93,13 @@ const CartCheckout = () => {
             <div className="checkout-single-item">
               <div>
                 <div className="checkout-title-and-main-redirect">
-                  <h1>
+                  <h2>
                     {
                       cartIds.length === 1 ?
                       "1 item in your cart" :
                       `${cartIds.length} items in your cart`
                     }
-                  </h1>
+                  </h2>
                   <button className="checkout-bold-heading">
                     <Link to="/">Keep Shopping</Link>
                   </button>
