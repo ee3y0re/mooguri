@@ -25,7 +25,7 @@ class ProductListTwo extends React.Component {
     }
 
     return (
-      <Container>
+      <Container className="product-list-two">
         <ul className="sample-two-list">
           {this.state.isLoading ? (
             <>loading</>

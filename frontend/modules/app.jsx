@@ -27,12 +27,12 @@ const App = () => {
       <ModalContainer />
       <Nav />
       <Switch>
-        {/* <Route path="/search" component={SearchResult} />
+        <Route path="/search" component={SearchResult} />
         <Route path="/products/:productId" component={ProductContainer} />
         <Route path="/categories/:categoryId" component={Category} />
         <Route path="/checkout" component={CartCheckout} />
         <Route path="/checkout-complete" component={CompleteCheckout} />
-        <Route path="/" component={Home} /> */}
+        <Route path="/" component={Home} />
       </Switch>
       <Directory />
     </div>

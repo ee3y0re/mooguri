@@ -1,3 +1,10 @@
+.container {
+  &.product-list-two {
+    margin-top: 1.125rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .sample-two {
   &-container {
     margin: 3.125rem auto;
