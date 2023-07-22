@@ -1,4 +1,8 @@
 .auth {
+  &-heading, &-input, &-button {
+    margin-bottom: 1.125rem;
+  }
+
   &-container {
     display: flex;
     flex-direction: column;
@@ -17,7 +21,6 @@
   }
 
   &-input {
-    margin-bottom: 1.125rem;
     padding: 0 0.825rem;
     height: 3rem;
     border: none;
