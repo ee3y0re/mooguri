@@ -60,7 +60,7 @@
     transition: box-shadow 0.2s ease-out;
 
     &:hover {
-      box-shadow: 0 0 0.5rem var(--neutral-gray);
+      box-shadow: 0 0 0.5rem var(--gray-tint);
     }
 
     @media (min-width: 56.25rem) {
