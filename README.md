@@ -5,9 +5,6 @@
 ## It's like Etsy, but for cow-comrades, dairy-devotees, and everyone beyond and in-between!
 Mooguri is an Etsy clone, and like Etsy, it is an ecommerce site that keeps a focus for vintage goods and crafted items, but this time cow-themed. 
 
-## Live Link
-https://mooguri.herokuapp.com/#/
-
 ## Technologies Used
 + NPM for managing dependencies, scripts, and general state of application
 + Webpack for configuring bundling of files
